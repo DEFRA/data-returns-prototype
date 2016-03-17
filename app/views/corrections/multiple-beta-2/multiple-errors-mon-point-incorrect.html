@@ -1,0 +1,292 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($){
+					$(function(){
+						$('select').selectToAutocomplete();
+						$('input').autocomplete ({sortResults:false})
+					});
+				})(jQuery);
+	</script>
+	<script>
+		if(sessionStorage.parameter) {
+			sessionStorage.removeItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main id="content" role="main">
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to monitor point</h1>
+		<p>Before you can send <filename> you must refer to the sampling or emission point described in your permit (eg Boreholes 1).</p>
+		<p>Make sure your reference only contains letters and numbers. Remove any symbols.</p>
+	</div>
+
+	<div class="error-table">
+		<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
+		<!-- For fixed header positioning only for Sticky JS -->
+		<table id="errorTableHeader">
+			<thead>
+				<tr>
+					<th width="50%">Error</th>
+					<th width="50%">Row(s)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				  <td>"TG/001GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1608&ndash;1610</a></li>
+				      <li><a href="#">2271&ndash;2282</a></li>
+				      <li><a href="#">2514&ndash;2525</a></li>
+				      <li><a href="#">2672&ndash;2683</a></li>
+				      <li><a href="#">3146&ndash;3157</a></li>
+				      <li><a href="#">3435&ndash;3446</a></li>
+				      <li><a href="#">3559&ndash;3570</a></li>
+				      <li><a href="#">3625&ndash;3636</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/002GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1609&ndash;1611</a></li>
+				      <li><a href="#">2272&ndash;2283</a></li>
+				      <li><a href="#">2515&ndash;2526</a></li>
+				      <li><a href="#">2673&ndash;2684</a></li>
+				      <li><a href="#">3147&ndash;3158</a></li>
+				      <li><a href="#">3436&ndash;3447</a></li>
+				      <li><a href="#">3560&ndash;3571</a></li>
+				      <li><a href="#">3626&ndash;3637</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/002WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1610&ndash;1612</a></li>
+				      <li><a href="#">2273&ndash;2284</a></li>
+				      <li><a href="#">2516&ndash;2527</a></li>
+				      <li><a href="#">2674&ndash;2685</a></li>
+				      <li><a href="#">3148&ndash;3159</a></li>
+				      <li><a href="#">3437&ndash;3448</a></li>
+				      <li><a href="#">3561&ndash;3572</a></li>
+				      <li><a href="#">3627&ndash;3638</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/003GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1611&ndash;1613</a></li>
+				      <li><a href="#">2274&ndash;2285</a></li>
+				      <li><a href="#">2517&ndash;2528</a></li>
+				      <li><a href="#">2675&ndash;2686</a></li>
+				      <li><a href="#">3149&ndash;3160</a></li>
+				      <li><a href="#">3438&ndash;3449</a></li>
+				      <li><a href="#">3562&ndash;3573</a></li>
+				      <li><a href="#">3628&ndash;3639</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/003WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1612&ndash;1614</a></li>
+				      <li><a href="#">2275&ndash;2286</a></li>
+				      <li><a href="#">2518&ndash;2529</a></li>
+				      <li><a href="#">2676&ndash;2687</a></li>
+				      <li><a href="#">3150&ndash;3161</a></li>
+				      <li><a href="#">3439&ndash;3450</a></li>
+				      <li><a href="#">3563&ndash;3574</a></li>
+				      <li><a href="#">3629&ndash;3640</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/004GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1613&ndash;1615</a></li>
+				      <li><a href="#">2276&ndash;2287</a></li>
+				      <li><a href="#">2519&ndash;2530</a></li>
+				      <li><a href="#">2677&ndash;2688</a></li>
+				      <li><a href="#">3151&ndash;3162</a></li>
+				      <li><a href="#">3440&ndash;3451</a></li>
+				      <li><a href="#">3564&ndash;3575</a></li>
+				      <li><a href="#">3630&ndash;3641</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/004WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1614&ndash;1616</a></li>
+				      <li><a href="#">2277&ndash;2288</a></li>
+				      <li><a href="#">2520&ndash;2531</a></li>
+				      <li><a href="#">2678&ndash;2689</a></li>
+				      <li><a href="#">3152&ndash;3163</a></li>
+				      <li><a href="#">3441&ndash;3452</a></li>
+				      <li><a href="#">3565&ndash;3576</a></li>
+				      <li><a href="#">3631&ndash;3642</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/005GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1615&ndash;1617</a></li>
+				      <li><a href="#">2278&ndash;2289</a></li>
+				      <li><a href="#">2521&ndash;2532</a></li>
+				      <li><a href="#">2679&ndash;2690</a></li>
+				      <li><a href="#">3153&ndash;3164</a></li>
+				      <li><a href="#">3442&ndash;3453</a></li>
+				      <li><a href="#">3566&ndash;3577</a></li>
+				      <li><a href="#">3632&ndash;3643</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/005WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1616&ndash;1618</a></li>
+				      <li><a href="#">2279&ndash;2290</a></li>
+				      <li><a href="#">2522&ndash;2533</a></li>
+				      <li><a href="#">2680&ndash;2691</a></li>
+				      <li><a href="#">3154&ndash;3165</a></li>
+				      <li><a href="#">3443&ndash;3454</a></li>
+				      <li><a href="#">3567&ndash;3578</a></li>
+				      <li><a href="#">3633&ndash;3644</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/006GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1617&ndash;1619</a></li>
+				      <li><a href="#">2280&ndash;2291</a></li>
+				      <li><a href="#">2523&ndash;2534</a></li>
+				      <li><a href="#">2681&ndash;2692</a></li>
+				      <li><a href="#">3155&ndash;3166</a></li>
+				      <li><a href="#">3444&ndash;3455</a></li>
+				      <li><a href="#">3568&ndash;3579</a></li>
+				      <li><a href="#">3634&ndash;3645</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/006WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1618&ndash;1620</a></li>
+				      <li><a href="#">2281&ndash;2292</a></li>
+				      <li><a href="#">2524&ndash;2535</a></li>
+				      <li><a href="#">2682&ndash;2693</a></li>
+				      <li><a href="#">3156&ndash;3167</a></li>
+				      <li><a href="#">3445&ndash;3456</a></li>
+				      <li><a href="#">3569&ndash;3580</a></li>
+				      <li><a href="#">3635&ndash;3646
+				  </a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/007GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1619&ndash;1621</a></li>
+				      <li><a href="#">2282&ndash;2293</a></li>
+				      <li><a href="#">2525&ndash;2536</a></li>
+				      <li><a href="#">2683&ndash;2694</a></li>
+				      <li><a href="#">3157&ndash;3168</a></li>
+				      <li><a href="#">3446&ndash;3457</a></li>
+				      <li><a href="#">3570&ndash;3581</a></li>
+				      <li><a href="#">3636&ndash;3647</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/007WM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1620&ndash;1622</a></li>
+				      <li><a href="#">2283&ndash;2294</a></li>
+				      <li><a href="#">2526&ndash;2537</a></li>
+				      <li><a href="#">2684&ndash;2695</a></li>
+				      <li><a href="#">3158&ndash;3169</a></li>
+				      <li><a href="#">3447&ndash;3458</a></li>
+				      <li><a href="#">3571&ndash;3582</a></li>
+				      <li><a href="#">3637&ndash;3648</a></li>
+				    </ul>
+				  </td>
+				</tr>
+				<tr>
+				  <td>"TG/008GM"</td>
+				  <td>
+				    <ul class="list">
+				      <li><a href="#">1621&ndash;1623</a></li>
+				      <li><a href="#">2284&ndash;2295</a></li>
+				      <li><a href="#">2527&ndash;2538</a></li>
+				      <li><a href="#">2685&ndash;2696</a></li>
+				      <li><a href="#">3159&ndash;3170</a></li>
+				      <li><a href="#">3448&ndash;3459</a></li>
+				      <li><a href="#">3572&ndash;3583</a></li>
+				      <li><a href="#">3638&ndash;3649</a></li>
+				    </ul>
+				  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- error-table -->
+	<p class="back">
+		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
+	</p>
+	<script>
+		var options = {
+				item: '<li><div class="parameter"></div></li>',
+				page:10,
+				visibleItems: [	]
+		};
+	</script>
+	<script type="text/javascript">
+		var $buttons = $('.button').click(function() {
+				if (this.id == 'all') {
+					$('#parent > tr').fadeIn(450);
+				} else {
+					var $el = $('.' + this.id).fadeIn(450);
+					$('#parent > tr').not($el).hide();
+				}
+				$buttons.removeClass('active');
+				$(this).addClass('active');
+			})
+	</script>
+</main>
+{{/content}}
+
+{{/layout}}

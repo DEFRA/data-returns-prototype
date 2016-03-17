@@ -1,0 +1,11 @@
+@import "dr-elements/buttons";
+@import "dr-elements/components";
+@import "dr-elements/file-upload";
+@import "dr-elements/form-validation";
+@import "dr-elements/panels";
+@import "dr-elements/tables";
+
+
+a[rel="external"]::after {
+    background-position: right 4px;
+  }

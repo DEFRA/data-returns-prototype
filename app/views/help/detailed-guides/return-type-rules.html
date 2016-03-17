@@ -1,0 +1,91 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main">
+<div class="grid-row">
+	<div class="column-quarter">&nbsp;</div>
+	<div class="column-three-quarters">
+		<h3 id="return-type-rules">Return Type Rules</h3>
+		<p>Return Types are derived from the old monitoring return forms at the back of your permit. They have been prefixed with the name of the monitoring regime e.g. Environmental Permitting Regulations or Industrial Emissions Directive (EPR/IED) or Pollution Inventory (PI). Each Return Type will have specific formatting rules depending on the type of information. Some of them will be very specific e.g. Landfill Gas, while others will span several sectors such as Surface Water or Air Emissions.</p>
+	</div>
+	<!-- column-three-quarters -->
+</div>
+<div class="grid-row">
+	<div class="column-quarter">&nbsp;</div>
+	<div class="column-three-quarters">
+		<table>
+			<tr>
+				<th>Return type</th>
+				<th>Rules</th>
+			</tr>
+			<tr>
+				<td>EPR/IED Air (point source) emissions return</td>
+				<td>Units will always be mg/m
+					<sup>3</sup>with Hourly mean reference period. To be measured as per M2 (or such other subsequent guidance as may be agreed in writing with the Environment Agency).</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Air (ambient) monitoring return</td>
+				<td>Units will be fibre/ml with 2 hour reference periods or g/hr for particulates</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Leachate level return</td>
+				<td>Units in m, monthly for operational cells, quarterly for non operational. State whether m&gt;AOD or m&gt;cell base as qualifier in txt value field</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Leachate quality return</td>
+				<td>In accordance with MEPP, quarterly or annually. Units should be a concentration,  physical parameter (pH, electrical conductivity, COD) or depth in m.</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Surface Water emissions return</td>
+				<td>Units either flow (l/s or m
+					<sup>3</sup>/day) or concentration mg/l (exceptions: pH and Temperature). With either instantaneous or spot sample reference period.</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Groundwater quality/level return</td>
+				<td>Units either length (depth), concentration, or physical parameter such as pH, Total alkalinity or electrical conductivity. Reference Period MEPP, MEPP - up gradient, MEPP - down or cross gradient, or Spot sample</td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>EPR/IED Landfill Gas surface emissions</li>
+						<li>EPR/IED Landfill Gas Perimeter</li>
+						<li>EPR/IED Landfill Gas In Waste</li>
+						<li>EPR/IED Landfill Gas infrastructure monitoring</li>
+					</ul>
+				</td>
+				<td>Unit %v/v (exceptions - pressures mbr / millibar).</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Sewer emissions return</td>
+				<td>Spot sample</td>
+			</tr>
+			<tr>
+				<td>EPR/IED ETP or Tankering emissions return</td>
+				<td>Spot sample</td>
+			</tr>
+			<tr>
+				<td>EPR/IED Landfill Annual monitoring report</td>
+				<td>Performance of MWh produced, flow (e.g. m3 /hr or Normalised m3/yr), % methane v/v or volume (m3 for available capacity)</td>
+			</tr>
+		</table>
+	</div>
+	<!-- column-three-quarters -->
+</div>
+</main>
+
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,12 @@
+.error-table {
+	margin-bottom:30px;
+	td {
+		vertical-align:top;
+		p:first-child {
+			margin-top:0;
+		}
+		p:last-child {
+			margin-bottom:0;
+		}
+	}
+}

@@ -1,0 +1,188 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($){
+					$(function(){
+						$('select').selectToAutocomplete();
+						$('input').autocomplete ({sortResults:false})
+					});
+				})(jQuery);
+	</script>
+	<script>
+		if(sessionStorage.parameter) {
+			sessionStorage.removeItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main id="content" role="main">
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to parameter</h1>
+		<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
+	</div>
+	<div class="header">
+		<h2 class="heading-medium">How to fix it</h2>
+		<p>The following parameters are not typed exactly as it’s given in a controlled list supplied by the EA</p>
+		<p>
+			<a href="#" rel="external">Which parameters are allowable?</a>
+		</p>
+	</div>
+			<div class="error-table">
+				<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
+				<!-- For fixed header positioning only for Sticky JS -->
+				<table id="errorTableHeader">
+					<thead>
+						<tr>
+							<th width="50%">Error</th>
+							<th width="50%">Rows</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						  <td>"Gas comments" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">639&ndash;642</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"BH comments" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">1597&ndash;1644</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"No Dip Comment" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">2172&ndash;2175</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Alkalinity CaCO3" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">2176&ndash;2209</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Chromium - Total Unfiltered" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">2735&ndash;2745</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Ethyl benzene" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">2757&ndash;2790</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Nickel - Total Unfiltered" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">3030&ndash;3040</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"No Sample Comment" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">3041&ndash;3073</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Lead - Total Unfiltered" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">3074&ndash;3084</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Zinc - Total Unfiltered)" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li><a href="#">3410&ndash;</a></li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Visible oil &amp; grease" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li>
+						        <a href="#"></a>
+						      </li>
+						    </ul>
+						  </td>
+						</tr>
+						<tr>
+						  <td>"Cover Level (mAOD)" is not in the EA controlled list</td>
+						  <td>
+						    <ul>
+						      <li>
+						        <a href="#"></a>
+						      </li>
+						    </ul>
+						  </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- error-table -->
+
+	<p class="back">
+		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
+	</p>
+	<script>
+		var options = {
+				item: '<li><div class="parameter"></div></li>',
+				page:10,
+				visibleItems: [	]
+		};
+	</script>
+	<script type="text/javascript">
+		var $buttons = $('.button').click(function() {
+				if (this.id == 'all') {
+					$('#parent > tr').fadeIn(450);
+				} else {
+					var $el = $('.' + this.id).fadeIn(450);
+					$('#parent > tr').not($el).hide();
+				}
+				$buttons.removeClass('active');
+				$(this).addClass('active');
+			})
+	</script>
+</main>
+
+{{/content}}
+
+{{/layout}}

@@ -1,0 +1,426 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+  <script>
+    (function($){
+      $(function(){
+        $('select').selectToAutocomplete();
+        $('input').autocomplete ({sortResults:false})
+      });
+    })(jQuery);
+  </script>
+
+	<script>
+		if(sessionStorage.parameter) {
+		  sessionStorage.refmoveItem('parameter');
+		}
+	</script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main">
+
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+	<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+		Make corrections
+	</h1>
+
+	<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
+
+	</div>
+
+	<div class="error-table">
+		<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
+		<!-- For fixed header positioning only for Sticky JS -->
+		<table id="errorTableHeader" class="responsive-stacked-table">
+			<thead>
+			<tr>
+				<th width="15%">Column</th>
+				<th width="25%">Error</th>
+				<th width="60%">How to fix it</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><abbr title="Return type">Rtn_Type</abbr></td>
+				<td>Missing</td>
+				<td>
+					<p>You must give a valid return type exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-rtn-type-missing">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td><abbr title="Return type">Rtn_Type</abbr></td>
+				<td>Incorrect</td>
+				<td>
+					<p>You must give a valid return type exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-rtn-type-incorrect">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td><abbr title="Monitoring Point">Mon_Point</abbr></td>
+				<td>Missing</td>
+				<td>
+					<p>You must give a monitoring point for your data.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-mon-point-missing">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td><abbr title="Monitoring Date/Time (Start)">Mon_Date</abbr></td>
+				<td>Incorrect</td>
+				<td>
+					<p>You must give a monitoring date. This must be formatted as:</p>
+					<ul class="list list-bullet">
+						<li>DD-MM-YYYY or YYYY-MM-DD</li>
+						<li>only use hyphens as separators</li>
+					</ul>
+					<p>Monitoring time is optional according to return type, but should be formatted as hh:mm:ss</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-mon-date-incorrect">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>Parameter</td>
+				<td>Missing</td>
+				<td>
+					<p>You must enter the parameter type exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-parameter-missing">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>Parameter</td>
+				<td>Incorrect</td>
+				<td>
+					<p>You must enter the parameter type exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-parameter-incorrect">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td><abbr title="Numerical value">Value</abbr></td>
+				<td>Missing</td>
+				<td>
+					<p>You must give a numerical value for your data. It can include zeros.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-value-missing">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td><abbr title="Numerical value">Value</abbr></td>
+				<td>Incorrect</td>
+				<td>
+					<p>You must give a numerical value for your data. It can include zeros.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-value-incorrect">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>Unit</td>
+				<td>Missing</td>
+				<td>
+					<p>You must give a unit for measurements exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-unit-missing">See details of all errors</a></p>
+				</td>
+			</tr>
+			<tr>
+				<td>Unit</td>
+				<td>Incorrect</td>
+				<td>
+					<p>You must give a unit for measurements exactly as given in the EA controlled list.</p>
+					<p><a href="/corrections/multiple-beta/multiple-errors-unit-incorrect">See details of all errors</a></p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div><!-- error-table -->
+
+	<div class="text"><p>You must correct any errors before this file can be sent to the Environment Agency.</p></div>
+
+	<form action="/02-send-your-data/01-upload-your-data" class="form" method="post">
+		<div class="form-group">
+			<input type="submit" value="Start again" class="button">
+		</div>
+	</form>
+
+	<script>
+		var options = {
+		    item: '<li><div class="parameter"></div></li>',
+		    page:10,
+		    visibleItems: [  ]
+		};
+	</script>
+
+  <script type="text/javascript">
+	  var $buttons = $('.button').click(function() {
+	    if (this.id == 'all') {
+	      $('#parent > tr').fadeIn(450);
+	    } else {
+	      var $el = $('.' + this.id).fadeIn(450);
+	      $('#parent > tr').not($el).hide();
+	    }
+	    $buttons.removeClass('active');
+	    $(this).addClass('active');
+	  })
+  </script>
+
+  <script type="text/javascript">
+	  (function(){
+	      new Clipboard('#copy-button-01');
+	      new Clipboard('#copy-button-02');
+        new Clipboard('#copy-button-03');
+        new Clipboard('#copy-button-04');
+        new Clipboard('#copy-button-05');
+        new Clipboard('#copy-button-06');
+        new Clipboard('#copy-button-07');
+        new Clipboard('#copy-button-08');
+        new Clipboard('#copy-button-09');
+        new Clipboard('#copy-button-10');
+        new Clipboard('#copy-button-11');
+        new Clipboard('#copy-button-12');
+        new Clipboard('#copy-button-13');
+	  })();
+  </script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#copy-button-01').addClass("hidden");
+		$('li.return-type-01').addClass("static");
+	  $('.return-type-01').mouseover(function() {
+	    $('#copy-button-01').addClass("visible");
+	    $('#copy-button-01').removeClass("hidden");
+      $('li.return-type-01').addClass("hover");
+      $('li.return-type-01').removeClass("static");
+	    return false;
+	  });
+    $('.return-type-01').mouseout(function() {
+      $('#copy-button-01').addClass("hidden");
+      $('#copy-button-01').removeClass("visible");
+      $('li.return-type-01').addClass("static");
+      $('li.return-type-01').removeClass("hover");
+      return false;
+    });
+
+  	$('#copy-button-02').addClass("hidden");
+  	$('li.return-type-02').addClass("static");
+    $('.return-type-02').mouseover(function() {
+      $('#copy-button-02').addClass("visible");
+      $('#copy-button-02').removeClass("hidden");
+      $('li.return-type-02').addClass("hover");
+      $('li.return-type-02').removeClass("static");
+      return false;
+    });
+    $('.return-type-02').mouseout(function() {
+      $('#copy-button-02').addClass("hidden");
+      $('#copy-button-02').removeClass("visible");
+      $('li.return-type-02').addClass("static");
+      $('li.return-type-02').removeClass("hover");
+      return false;
+    });
+
+  	$('#copy-button-03').addClass("hidden");
+  	$('li.return-type-03').addClass("static");
+    $('.return-type-03').mouseover(function() {
+      $('#copy-button-03').addClass("visible");
+      $('#copy-button-03').removeClass("hidden");
+      $('li.return-type-03').addClass("hover");
+      $('li.return-type-03').removeClass("static");
+      return false;
+    });
+    $('.return-type-03').mouseout(function() {
+      $('#copy-button-03').addClass("hidden");
+      $('#copy-button-03').removeClass("visible");
+      $('li.return-type-03').addClass("static");
+      $('li.return-type-03').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-04').addClass("hidden");
+    $('li.return-type-04').addClass("static");
+    $('.return-type-04').mouseover(function() {
+      $('#copy-button-04').addClass("visible");
+      $('#copy-button-04').removeClass("hidden");
+      $('li.return-type-04').addClass("hover");
+      $('li.return-type-04').removeClass("static");
+      return false;
+    });
+    $('.return-type-04').mouseout(function() {
+      $('#copy-button-04').addClass("hidden");
+      $('#copy-button-04').removeClass("visible");
+      $('li.return-type-04').addClass("static");
+      $('li.return-type-04').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-05').addClass("hidden");
+    $('li.return-type-05').addClass("static");
+    $('.return-type-05').mouseover(function() {
+      $('#copy-button-05').addClass("visible");
+      $('#copy-button-05').removeClass("hidden");
+      $('li.return-type-05').addClass("hover");
+      $('li.return-type-05').removeClass("static");
+      return false;
+    });
+    $('.return-type-05').mouseout(function() {
+      $('#copy-button-05').addClass("hidden");
+      $('#copy-button-05').removeClass("visible");
+      $('li.return-type-05').addClass("static");
+      $('li.return-type-05').removeClass("hover");
+      return false;
+    });
+
+  	$('#copy-button-06').addClass("hidden");
+  	$('li.return-type-06').addClass("static");
+    $('.return-type-06').mouseover(function() {
+      $('#copy-button-06').addClass("visible");
+      $('#copy-button-06').removeClass("hidden");
+      $('li.return-type-06').addClass("hover");
+      $('li.return-type-06').removeClass("static");
+      return false;
+    });
+    $('.return-type-06').mouseout(function() {
+      $('#copy-button-06').addClass("hidden");
+      $('#copy-button-06').removeClass("visible");
+      $('li.return-type-06').addClass("static");
+      $('li.return-type-06').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-07').addClass("hidden");
+    $('li.return-type-07').addClass("static");
+    $('.return-type-07').mouseover(function() {
+      $('#copy-button-07').addClass("visible");
+      $('#copy-button-07').removeClass("hidden");
+      $('li.return-type-07').addClass("hover");
+      $('li.return-type-07').removeClass("static");
+      return false;
+    });
+    $('.return-type-07').mouseout(function() {
+      $('#copy-button-07').addClass("hidden");
+      $('#copy-button-07').removeClass("visible");
+      $('li.return-type-07').addClass("static");
+      $('li.return-type-07').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-08').addClass("hidden");
+    $('li.return-type-08').addClass("static");
+    $('.return-type-08').mouseover(function() {
+      $('#copy-button-08').addClass("visible");
+      $('#copy-button-08').removeClass("hidden");
+      $('li.return-type-08').addClass("hover");
+      $('li.return-type-08').removeClass("static");
+      return false;
+    });
+    $('.return-type-08').mouseout(function() {
+      $('#copy-button-08').addClass("hidden");
+      $('#copy-button-08').removeClass("visible");
+      $('li.return-type-08').addClass("static");
+      $('li.return-type-08').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-09').addClass("hidden");
+    $('li.return-type-09').addClass("static");
+    $('.return-type-09').mouseover(function() {
+      $('#copy-button-09').addClass("visible");
+      $('#copy-button-09').removeClass("hidden");
+      $('li.return-type-09').addClass("hover");
+      $('li.return-type-09').removeClass("static");
+      return false;
+    });
+    $('.return-type-09').mouseout(function() {
+      $('#copy-button-09').addClass("hidden");
+      $('#copy-button-09').removeClass("visible");
+      $('li.return-type-09').addClass("static");
+      $('li.return-type-09').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-10').addClass("hidden");
+    $('li.return-type-10').addClass("static");
+    $('.return-type-10').mouseover(function() {
+      $('#copy-button-10').addClass("visible");
+      $('#copy-button-10').removeClass("hidden");
+      $('li.return-type-10').addClass("hover");
+      $('li.return-type-10').removeClass("static");
+      return false;
+    });
+    $('.return-type-10').mouseout(function() {
+      $('#copy-button-10').addClass("hidden");
+      $('#copy-button-10').removeClass("visible");
+      $('li.return-type-10').addClass("static");
+      $('li.return-type-10').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-11').addClass("hidden");
+    $('li.return-type-11').addClass("static");
+    $('.return-type-11').mouseover(function() {
+      $('#copy-button-11').addClass("visible");
+      $('#copy-button-11').removeClass("hidden");
+      $('li.return-type-11').addClass("hover");
+      $('li.return-type-11').removeClass("static");
+      return false;
+    });
+    $('.return-type-11').mouseout(function() {
+      $('#copy-button-11').addClass("hidden");
+      $('#copy-button-11').removeClass("visible");
+      $('li.return-type-11').addClass("static");
+      $('li.return-type-11').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-12').addClass("hidden");
+    $('li.return-type-12').addClass("static");
+    $('.return-type-12').mouseover(function() {
+      $('#copy-button-12').addClass("visible");
+      $('#copy-button-12').removeClass("hidden");
+      $('li.return-type-12').addClass("hover");
+      $('li.return-type-12').removeClass("static");
+      return false;
+    });
+    $('.return-type-12').mouseout(function() {
+      $('#copy-button-12').addClass("hidden");
+      $('#copy-button-12').removeClass("visible");
+      $('li.return-type-12').addClass("static");
+      $('li.return-type-12').removeClass("hover");
+      return false;
+    });
+
+    $('#copy-button-13').addClass("hidden");
+    $('li.return-type-13').addClass("static");
+    $('.return-type-13').mouseover(function() {
+      $('#copy-button-13').addClass("visible");
+      $('#copy-button-13').removeClass("hidden");
+      $('li.return-type-13').addClass("hover");
+      $('li.return-type-13').removeClass("static");
+      return false;
+    });
+    $('.return-type-13').mouseout(function() {
+      $('#copy-button-13').addClass("hidden");
+      $('#copy-button-13').removeClass("visible");
+      $('li.return-type-13').addClass("static");
+      $('li.return-type-13').removeClass("hover");
+      return false;
+    });
+	});
+ </script>
+</main>
+
+{{/content}}
+
+{{/layout}}

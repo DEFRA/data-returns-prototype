@@ -1,0 +1,255 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+
+</header>
+
+<main id="content" role="main">	
+	<h1 class="heading-xlarge">Data Returns units and measures</h2>
+	<!-- feel free to change this page to suit your needs -->
+	<div class="error-table">
+		<div class="error-table-units">
+			<div class="grid-row">
+				<div class="filter column-half">
+					<h2 class="heading-small">Filter the units by measure type</h2>
+					<button class="show-all active button button-secondary" id="all">Show all units</button>
+					<div class="responsive-tabs">
+					  <h2>Simple units</h2>
+					  <div>
+					    <ul class="measure-type">
+					    	<li><button class="button button-secondary" id="a">Mass</button></li>
+					    	<li><button class="button button-secondary" id="b">Length</button></li>
+					    	<li><button class="button button-secondary" id="c">Area</button></li>
+					    	<li><button class="button button-secondary" id="d">Volume</button></li>
+					    	<li><button class="button button-secondary" id="e">Time</button></li>
+					    	<li><button class="button button-secondary" id="f">Energy and Power</button></li>
+					    	<li><button class="button button-secondary" id="g">Electricity</button></li>
+					    	<li><button class="button button-secondary" id="h">Electromagnetic Radiation</button></li>
+					    	<li><button class="button button-secondary" id="i">Radioactive Decay</button></li>
+					    	<li><button class="button button-secondary" id="g">Temperature</button></li>
+					    	<li><button class="button button-secondary" id="h">Pressure</button></li>
+					    	<li><button class="button button-secondary" id="i">Miscellaneous</button></li>
+					    </ul>
+					  </div>
+					  <h2>Composite units</h2>
+					  <div>
+						  <ul class="measure-type">
+						  	<li><button class="button button-secondary" id="m">Concentration (Mass/Mass)</button></li>
+						  	<li><button class="button button-secondary" id="n">Concentration (Mass/Volume)</button></li>
+						  	<li><button class="button button-secondary" id="o">Concentration (Mass/Area)</button></li>
+						  	<li><button class="button button-secondary" id="p">Concentration (Volume/Volume)</button></li>
+						  	<li><button class="button button-secondary" id="q">Flow (Mass/Time)</button></li>
+						  	<li><button class="button button-secondary" id="r">Flow (Volume/Time)</button></li>
+						  	<li><button class="button button-secondary" id="s">Speed (Length/Time)</button></li>
+						  	<li><button class="button button-secondary" id="t">Radioactivity</button></li>
+						  	<li><button class="button button-secondary" id="u">Electrical Flow</button></li>
+						  </ul>
+					  </div>
+					</div>
+				</div><!-- column-half -->
+				<div class="result column-half">	
+					<div class="table-container">
+						<table>
+							<thead>
+								<tr>
+									<th class="heading-small unit">Unit</th>
+									<th class="heading-small description">Description</th>
+								</tr>
+							</thead>
+							<tbody id="parent">
+								<tr class="simple box a"><td>ug</td><td>Microgram</td></tr>
+								<tr class="simple box a"><td>mg</td><td>Milligram</td></tr>
+								<tr class="simple box a"><td>g</td><td>Gram</td></tr>
+								<tr class="simple box a"><td>kg</td><td>Kilogram</td></tr>
+								<tr class="simple box a"><td>t</td><td>Tonne</td></tr>
+								<tr class="simple box a"><td>mol</td><td>mole, an amount of a substance</td></tr>
+								<tr class="simple box b"><td>mm</td><td>Millimetre</td></tr>
+								<tr class="simple box b"><td>cm</td><td>Centimetre</td></tr>
+								<tr class="simple box b"><td>m</td><td>Metre</td></tr>
+								<tr class="simple box b"><td>km</td><td>Kilometre</td></tr>
+								<tr class="simple box c"><td>mm2 </td><td>Square millimetre</td></tr>
+								<tr class="simple box c"><td>cm2</td><td>Square centimetre</td></tr>
+								<tr class="simple box c"><td>m2</td><td>Square metre</td></tr>
+								<tr class="simple box c"><td>km2</td><td>Square kilometre</td></tr>
+								<tr class="simple box c"><td>Ha</td><td>Hectare</td></tr>
+								<tr class="simple box d"><td>mm3</td><td>Cubic millimetre</td></tr>
+								<tr class="simple box d"><td>cm3</td><td>Cubic centimetre</td></tr>
+								<tr class="simple box d"><td>m3</td><td>Cubic metre</td></tr>
+								<tr class="simple box d"><td>ul</td><td>Microlitre</td></tr>
+								<tr class="simple box d"><td>ml</td><td>Millilitre</td></tr>
+								<tr class="simple box d"><td>l</td><td>Litre</td></tr>
+								<tr class="simple box e"><td>s</td><td>Second</td></tr>
+								<tr class="simple box e"><td>min</td><td>Minute</td></tr>
+								<tr class="simple box e"><td>hr</td><td>Hour</td></tr>
+								<tr class="simple box e"><td>day</td><td>Day</td></tr>
+								<tr class="simple box e"><td>wk</td><td>Week</td></tr>
+								<tr class="simple box e"><td>mth</td><td>Month</td></tr>
+								<tr class="simple box e"><td>qrt</td><td>Quarter</td></tr>
+								<tr class="simple box e"><td>yr</td><td>Year</td></tr>
+								<tr class="simple box f"><td>J</td><td>Joule</td></tr>
+								<tr class="simple box f"><td>kJ</td><td>Kilojoule</td></tr>
+								<tr class="simple box f"><td>MJ</td><td>Megajoule</td></tr>
+								<tr class="simple box f"><td>TJ</td><td>Terrajoule</td></tr>
+								<tr class="simple box f"><td>W</td><td>Watt</td></tr>
+								<tr class="simple box f"><td>kW</td><td>Kilowatt</td></tr>
+								<tr class="simple box f"><td>MW</td><td>Megawatt</td></tr>
+								<tr class="simple box f"><td>GW</td><td>Gigawatt</td></tr>
+								<tr class="simple box f"><td>TW</td><td>Terrawatt</td></tr>
+								<tr class="simple box g"><td>mV</td><td>Millivolt</td></tr>
+								<tr class="simple box g"><td>V</td><td>Volt</td></tr>
+								<tr class="simple box g"><td>kV</td><td>Kilovolt</td></tr>
+								<tr class="simple box g"><td>MV</td><td>Megavolt</td></tr>
+								<tr class="simple box g"><td>mA</td><td>Milliamp</td></tr>
+								<tr class="simple box g"><td>A</td><td>Amp</td></tr>
+								<tr class="simple box g"><td>kA</td><td>Kiloamp</td></tr>
+								<tr class="simple box h"><td>Hz</td><td>Hertz</td></tr>
+								<tr class="simple box h"><td>kHz</td><td>Kilohertz</td></tr>
+								<tr class="simple box h"><td>MHz</td><td>Megahertz</td></tr>
+								<tr class="simple box i"><td>Bq</td><td>Becquerels</td></tr>
+								<tr class="simple box j"><td>ºC</td><td>degrees Celsius</td></tr>
+								<tr class="simple box j"><td>DegC</td><td>degrees Celsius</td></tr>
+								<tr class="simple box k"><td>Pa</td><td>Pascal, unit of pressure</td></tr>
+								<tr class="simple box k"><td>mBar</td><td>Millibar</td></tr>
+								<tr class="simple box k"><td>Bar</td><td>Bar</td></tr>
+								<tr class="simple box l"><td>pH</td><td>Acidity measure</td></tr>
+								<tr class="simple box l"><td>%</td><td>Percentage, a number expressed as a fraction of 100</td></tr>
+								<tr class="simple box l"><td>Hazen</td><td>Hazen</td></tr>
+								<tr class="simple box l"><td>ppm</td><td>Parts per million</td></tr>
+								<tr class="simple box l"><td>ppb</td><td>Parts per billion</td></tr>
+								<tr class="simple box l"><td>95%ile</td><td>95 Percentile</td></tr>
+								<tr class="simple box l"><td>FTU</td><td>Formazin Turbidity Unit</td></tr>
+								<tr class="composite box m"><td>ug/kg</td><td>Microgram per Kilogram</td></tr>
+								<tr class="composite box m"><td>mg/kg</td><td>Milligram per Kilogram</td></tr>
+								<tr class="composite box m"><td>g/t</td><td>Gram per Tonne</td></tr>
+								<tr class="composite box n"><td>ug/l</td><td>Microgram per Litre</td></tr>
+								<tr class="composite box n"><td>mg/l</td><td>Milligram per Litre</td></tr>
+								<tr class="composite box n"><td>g/l</td><td>Gram per Litre</td></tr>
+								<tr class="composite box n"><td>kg/l</td><td>Kilogram per Litre</td></tr>
+								<tr class="composite box n"><td>ug/m3</td><td>Microgram per Cubic metre</td></tr>
+								<tr class="composite box n"><td>mg/m3</td><td>Milligram per Cubic metre</td></tr>
+								<tr class="composite box n"><td>g/m3</td><td>Gram per Cubic metre</td></tr>
+								<tr class="composite box n"><td>kg/m3</td><td>Kilogram per Cubic metre</td></tr>
+								<tr class="composite box o"><td>ug/m2</td><td>Microgram per Square metre</td></tr>
+								<tr class="composite box o"><td>mg/m2</td><td>Milligram per Square metre</td></tr>
+								<tr class="composite box o"><td>g/m2</td><td>Gram per Square metre</td></tr>
+								<tr class="composite box o"><td>kg/m2</td><td>Kilogram per Square metre</td></tr>
+								<tr class="composite box p"><td>% v/v</td><td>Percentage volume for volume</td></tr>
+								<tr class="composite box q"><td>ug/s</td><td>Microgram per Second</td></tr>
+								<tr class="composite box q"><td>mg/s</td><td>Milligram per Second</td></tr>
+								<tr class="composite box q"><td>g/s</td><td>Gram per Second</td></tr>
+								<tr class="composite box q"><td>kg/s</td><td>Kilogram per Second</td></tr>
+								<tr class="composite box q"><td>mg/min</td><td>Milligram per Minute</td></tr>
+								<tr class="composite box q"><td>g/min</td><td>Gram per Minute</td></tr>
+								<tr class="composite box q"><td>kg/min</td><td>Kilogram per Minute</td></tr>
+								<tr class="composite box q"><td>t/min</td><td>Tonne per Minute</td></tr>
+								<tr class="composite box q"><td>ug/hr</td><td>Microgram per Hour</td></tr>
+								<tr class="composite box q"><td>mg/hr</td><td>Milligram per Hour</td></tr>
+								<tr class="composite box q"><td>g/hr</td><td>Gram per Hour</td></tr>
+								<tr class="composite box q"><td>kg/hr</td><td>Kilogram per Hour</td></tr>
+								<tr class="composite box q"><td>t/hr</td><td>Tonne per Hour</td></tr>
+								<tr class="composite box q"><td>ug/day</td><td>Microgram per Day</td></tr>
+								<tr class="composite box q"><td>mg/day</td><td>Milligram per Day</td></tr>
+								<tr class="composite box q"><td>g/day</td><td>Gram per Day</td></tr>
+								<tr class="composite box q"><td>kg/day</td><td>Kilogram per Day</td></tr>
+								<tr class="composite box q"><td>t/day</td><td>Tonne per Day</td></tr>
+								<tr class="composite box q"><td>ug/wk</td><td>Microgram per Week</td></tr>
+								<tr class="composite box q"><td>mg/wk</td><td>Milligram per Week</td></tr>
+								<tr class="composite box q"><td>g/wk</td><td>Gram per Week</td></tr>
+								<tr class="composite box q"><td>kg/wk</td><td>Kilogram per Week</td></tr>
+								<tr class="composite box q"><td>t/wk</td><td>Tonne per Week</td></tr>
+								<tr class="composite box q"><td>kg/yr</td><td>Kilogram per Year</td></tr>
+								<tr class="composite box q"><td>t/yr</td><td>Tonne per Year</td></tr>
+								<tr class="composite box r"><td>mm3/s</td><td>Cubic millimetre per Second</td></tr>
+								<tr class="composite box r"><td>cm3/s</td><td>Cubic centimetre per Second</td></tr>
+								<tr class="composite box r"><td>m3/s</td><td>Cubic metre per Second</td></tr>
+								<tr class="composite box r"><td>ul/s</td><td>Microlitre per Second</td></tr>
+								<tr class="composite box r"><td>ml/s</td><td>Millilitre per Second</td></tr>
+								<tr class="composite box r"><td>l/s</td><td>Litre per Second</td></tr>
+								<tr class="composite box r"><td>mm3/min</td><td>Cubic millimetre per Minute</td></tr>
+								<tr class="composite box r"><td>cm3/min</td><td>Cubic centimetre per Minute</td></tr>
+								<tr class="composite box r"><td>m3/min</td><td>Cubic metre per Minute</td></tr>
+								<tr class="composite box r"><td>ul/min</td><td>Microlitre per Minute</td></tr>
+								<tr class="composite box r"><td>ml/min</td><td>Millilitre per Minute</td></tr>
+								<tr class="composite box r"><td>l/min</td><td>Litre per Minute</td></tr>
+								<tr class="composite box r"><td>cm3/hr</td><td>Cubic centimetre per Hour</td></tr>
+								<tr class="composite box r"><td>m3/hr</td><td>Cubic metre per Hour</td></tr>
+								<tr class="composite box r"><td>ul/hr</td><td>Microlitre per Hour</td></tr>
+								<tr class="composite box r"><td>ml/hr</td><td>Millilitre per Hour</td></tr>
+								<tr class="composite box r"><td>l/hr</td><td>Litre per Hour</td></tr>
+								<tr class="composite box r"><td>mm3/day</td><td>Cubic millimetre per Day</td></tr>
+								<tr class="composite box r"><td>cm3/day</td><td>Cubic centimetre per Day</td></tr>
+								<tr class="composite box r"><td>m3/day</td><td>Cubic metre per Day</td></tr>
+								<tr class="composite box r"><td>ul/day</td><td>Microlitre per Day</td></tr>
+								<tr class="composite box r"><td>ml/day</td><td>Millilitre per Day</td></tr>
+								<tr class="composite box r"><td>l/day</td><td>Litre per Day</td></tr>
+								<tr class="composite box r"><td>mm3/wk</td><td>Cubic millimetre per Week</td></tr>
+								<tr class="composite box r"><td>cm3/wk</td><td>Cubic centimetre per Week</td></tr>
+								<tr class="composite box r"><td>m3/wk</td><td>Cubic metre per Week</td></tr>
+								<tr class="composite box r"><td>ul/wk</td><td>Microlitre per Week</td></tr>
+								<tr class="composite box r"><td>ml/wk</td><td>Millilitre per Week</td></tr>
+								<tr class="composite box r"><td>l/wk</td><td>Litre per Week</td></tr>
+								<tr class="composite box r"><td>m3/yr</td><td>Cubic metre per Year</td></tr>
+								<tr class="composite box r"><td>l/yr</td><td>Litre per Year</td></tr>
+								<tr class="composite box s"><td>cm/s</td><td>Centimetre per Second</td></tr>
+								<tr class="composite box s"><td>m/s</td><td>Metre per Second</td></tr>
+								<tr class="composite box s"><td>cm/min</td><td>Centimetre per Minute</td></tr>
+								<tr class="composite box s"><td>m/min</td><td>Metre per Minute</td></tr>
+								<tr class="composite box s"><td>cm/hr</td><td>Centimetre per Hour</td></tr>
+								<tr class="composite box s"><td>m/hr</td><td>Metre per Hour</td></tr>
+								<tr class="composite box s"><td>km/hr</td><td>Kilometre per Hour</td></tr>
+								<tr class="composite box s"><td>cm/day</td><td>Centimetre per Day</td></tr>
+								<tr class="composite box s"><td>m/day</td><td>Metre per Day</td></tr>
+								<tr class="composite box s"><td>km/day</td><td>Kilometre per Day</td></tr>
+								<tr class="composite box s"><td>cm/wk</td><td>Centimetre per Week</td></tr>
+								<tr class="composite box s"><td>m/wk</td><td>Metre per Week</td></tr>
+								<tr class="composite box s"><td>km/wk</td><td>Kilometre per Week</td></tr>
+								<tr class="composite box s"><td>cm/mth</td><td>Centimetre per Month</td></tr>
+								<tr class="composite box s"><td>m/mth</td><td>Metre per Month</td></tr>
+								<tr class="composite box s"><td>cm/yr</td><td>Centimetre per Year</td></tr>
+								<tr class="composite box s"><td>m/yr</td><td>Metre per Year</td></tr>
+								<tr class="composite box s"><td>km/yr</td><td>Kilometre per Year</td></tr>
+								<tr class="composite box t"><td>Bq/cm2</td><td>Becquerels per Square centimetre</td></tr>
+								<tr class="composite box t"><td>Bq/m2</td><td>Becquerels per Square metre</td></tr>
+								<tr class="composite box t"><td>Bq/cm3</td><td>Becquerels per Cubic centimetre</td></tr>
+								<tr class="composite box t"><td>Bq/m3</td><td>Becquerels per Cubic metre</td></tr>
+								<tr class="composite box t"><td>Bq/g</td><td>Becquerels per Gram</td></tr>
+								<tr class="composite box t"><td>Bq/kg</td><td>Becquerels per Kilogram</td></tr>
+								<tr class="composite box t"><td>Bq/l</td><td>Becquerels per Litre</td></tr>
+								<tr class="composite box u"><td>kWh</td><td>Kilowatt Hour</td></tr>
+								<tr class="composite box u"><td>MWh</td><td>Megawatt Hour</td></tr>
+								<tr class="composite box u"><td>GWh</td><td>Gigawatt Hour</td></tr>
+							</tbody>
+						</table>
+					</div><!-- table-container -->
+				</div><!-- column-half -->
+			</div><!-- grid-row -->
+		</div><!-- units -->
+	</div><!-- error-table -->
+</main>
+
+<script type="text/javascript">
+  var $buttons = $('.button').click(function() {
+    if (this.id == 'all') {
+      $('#parent > tr').fadeIn(450);
+    } else {
+      var $el = $('.' + this.id).fadeIn(450);
+      $('#parent > tr').not($el).hide();
+    }
+    $buttons.removeClass('active');
+    $(this).addClass('active');
+  })
+</script>
+
+
+{{/content}}
+
+{{/layout}}

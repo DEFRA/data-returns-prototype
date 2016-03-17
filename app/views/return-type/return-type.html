@@ -1,0 +1,414 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+  <script>
+    (function($){
+      $(function(){
+        $('select').selectToAutocomplete();
+        $('input').autocomplete ({sortResults:false})
+      });
+    })(jQuery);
+  </script>
+
+	<script>
+		if(sessionStorage.parameter) {
+		  sessionStorage.removeItem('parameter');
+		}
+	</script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main">
+
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+		<h1 class="heading-xlarge">
+			<span id="title">Data returns return type</span>
+		</h1>
+		<div class="error-table">
+			<div class="error-table-return-type">
+				<p>What return types are applicable to this permit?</span></p>
+		  	<ul class="">
+		  		<li class="return-type-01">
+		  			<span id="return-type-01">EPR/IED self monitoring periodic Air (point source) emissions return</span>
+		  			<button id="copy-button-01" class="button button-secondary" data-clipboard-target="#return-type-01">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-02">
+		  			<span id="return-type-02">EPR/IED self monitoring periodic Air (ambient) monitoring return</span>
+		  			<button id="copy-button-02" class="button button-secondary" data-clipboard-target="#return-type-02">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-03">
+		  			<span id="return-type-03">EPR/IED self monitoring periodic Leachate level return</span>
+		  			<button id="copy-button-03" class="button button-secondary" data-clipboard-target="#return-type-03">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-04">
+		  			<span id="return-type-04">EPR/IED self monitoring periodic Leachate quality return</span>
+		  			<button id="copy-button-04" class="button button-secondary" data-clipboard-target="#return-type-04">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-05">
+		  			<span id="return-type-05">EPR/IED self monitoring periodic Surface Water emissions return</span>
+		  			<button id="copy-button-05" class="button button-secondary" data-clipboard-target="#return-type-05">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-06">
+		  			<span id="return-type-06">EPR/IED self monitoring periodic Groundwater quality/level return</span>
+		  			<button id="copy-button-06" class="button button-secondary" data-clipboard-target="#return-type-06">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-07">
+		  			<span id="return-type-07">EPR/IED self monitoring periodic Landfill Gas surface emissions return</span>
+		  			<button id="copy-button-07" class="button button-secondary" data-clipboard-target="#return-type-07">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-08">
+		  			<span id="return-type-08">EPR/IED self monitoring periodic Landfill Gas surface water quality return</span>
+		  			<button id="copy-button-08" class="button button-secondary" data-clipboard-target="#return-type-08">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-09">
+		  			<span id="return-type-09">EPR/IED self monitoring periodic Landfill Gas perimeter monitoring return</span>
+		  			<button id="copy-button-09" class="button button-secondary" data-clipboard-target="#return-type-09">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-10">
+		  			<span id="return-type-10">EPR/IED self monitoring periodic Landfill Gas in waste monitoring return</span>
+		  			<button id="copy-button-10" class="button button-secondary" data-clipboard-target="#return-type-10">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-11">
+		  			<span id="return-type-11">EPR/IED self monitoring periodic Landfill Gas infrastructure monitoring return</span>
+		  			<button id="copy-button-11" class="button button-secondary" data-clipboard-target="#return-type-11">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-12">
+		  			<span id="return-type-12">EPR/IED self monitoring periodic Sewer, ETP or Tankering emissions return</span>
+		  			<button id="copy-button-12" class="button button-secondary" data-clipboard-target="#return-type-12">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-13">
+		  			<span id="return-type-13">EPR/IED self monitoring periodic leachate production/treatment</span>
+		  			<button id="copy-button-13" class="button button-secondary" data-clipboard-target="#return-type-13">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-14">
+		  			<span id="return-type-14">EPR/IED self monitoring periodic landfill gas production/treatment</span>
+		  			<button id="copy-button-14" class="button button-secondary" data-clipboard-target="#return-type-14">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-15">
+		  			<span id="return-type-15">EPR/IED schedule 5/6 incident report</span>
+		  			<button id="copy-button-15" class="button button-secondary" data-clipboard-target="#return-type-15">Copy to clipboard</button>
+		  		</li>
+		  		<li class="return-type-16">
+		  			<span id="return-type-16">EPR/IED Landfill Annual Report</span>
+		  			<button id="copy-button-16" class="button button-secondary" data-clipboard-target="#return-type-16">Copy to clipboard</button>
+		  		</li>
+		  	</ul>
+	  	</div>
+		</div>
+
+  <script type="text/javascript">
+	  (function(){
+	      new Clipboard('#copy-button-01');
+	      new Clipboard('#copy-button-02');
+        new Clipboard('#copy-button-03');
+        new Clipboard('#copy-button-04');
+        new Clipboard('#copy-button-05');
+        new Clipboard('#copy-button-06');
+        new Clipboard('#copy-button-07');
+        new Clipboard('#copy-button-08');
+        new Clipboard('#copy-button-09');
+        new Clipboard('#copy-button-10');
+        new Clipboard('#copy-button-11');
+        new Clipboard('#copy-button-12');
+        new Clipboard('#copy-button-13');
+        new Clipboard('#copy-button-14');
+        new Clipboard('#copy-button-15');
+        new Clipboard('#copy-button-16');
+	  })();
+  </script>
+
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$('#copy-button-01').addClass("hidden");
+  		$('li.return-type-01').addClass("static");
+  	  $('.return-type-01').mouseover(function() {
+  	    $('#copy-button-01').addClass("visible");
+  	    $('#copy-button-01').removeClass("hidden");
+	      $('li.return-type-01').addClass("hover");
+	      $('li.return-type-01').removeClass("static");
+  	    return false;
+  	  });
+	    $('.return-type-01').mouseout(function() {
+	      $('#copy-button-01').addClass("hidden");
+	      $('#copy-button-01').removeClass("visible");
+	      $('li.return-type-01').addClass("static");
+	      $('li.return-type-01').removeClass("hover");
+	      return false;
+	    });
+
+    	$('#copy-button-02').addClass("hidden");
+    	$('li.return-type-02').addClass("static");
+      $('.return-type-02').mouseover(function() {
+        $('#copy-button-02').addClass("visible");
+        $('#copy-button-02').removeClass("hidden");
+        $('li.return-type-02').addClass("hover");
+        $('li.return-type-02').removeClass("static");
+        return false;
+      });
+      $('.return-type-02').mouseout(function() {
+        $('#copy-button-02').addClass("hidden");
+        $('#copy-button-02').removeClass("visible");
+        $('li.return-type-02').addClass("static");
+        $('li.return-type-02').removeClass("hover");
+        return false;
+      });
+
+    	$('#copy-button-03').addClass("hidden");
+    	$('li.return-type-03').addClass("static");
+      $('.return-type-03').mouseover(function() {
+        $('#copy-button-03').addClass("visible");
+        $('#copy-button-03').removeClass("hidden");
+        $('li.return-type-03').addClass("hover");
+        $('li.return-type-03').removeClass("static");
+        return false;
+      });
+      $('.return-type-03').mouseout(function() {
+        $('#copy-button-03').addClass("hidden");
+        $('#copy-button-03').removeClass("visible");
+        $('li.return-type-03').addClass("static");
+        $('li.return-type-03').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-04').addClass("hidden");
+      $('li.return-type-04').addClass("static");
+      $('.return-type-04').mouseover(function() {
+        $('#copy-button-04').addClass("visible");
+        $('#copy-button-04').removeClass("hidden");
+        $('li.return-type-04').addClass("hover");
+        $('li.return-type-04').removeClass("static");
+        return false;
+      });
+      $('.return-type-04').mouseout(function() {
+        $('#copy-button-04').addClass("hidden");
+        $('#copy-button-04').removeClass("visible");
+        $('li.return-type-04').addClass("static");
+        $('li.return-type-04').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-05').addClass("hidden");
+      $('li.return-type-05').addClass("static");
+      $('.return-type-05').mouseover(function() {
+        $('#copy-button-05').addClass("visible");
+        $('#copy-button-05').removeClass("hidden");
+        $('li.return-type-05').addClass("hover");
+        $('li.return-type-05').removeClass("static");
+        return false;
+      });
+      $('.return-type-05').mouseout(function() {
+        $('#copy-button-05').addClass("hidden");
+        $('#copy-button-05').removeClass("visible");
+        $('li.return-type-05').addClass("static");
+        $('li.return-type-05').removeClass("hover");
+        return false;
+      });
+
+    	$('#copy-button-06').addClass("hidden");
+    	$('li.return-type-06').addClass("static");
+      $('.return-type-06').mouseover(function() {
+        $('#copy-button-06').addClass("visible");
+        $('#copy-button-06').removeClass("hidden");
+        $('li.return-type-06').addClass("hover");
+        $('li.return-type-06').removeClass("static");
+        return false;
+      });
+      $('.return-type-06').mouseout(function() {
+        $('#copy-button-06').addClass("hidden");
+        $('#copy-button-06').removeClass("visible");
+        $('li.return-type-06').addClass("static");
+        $('li.return-type-06').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-07').addClass("hidden");
+      $('li.return-type-07').addClass("static");
+      $('.return-type-07').mouseover(function() {
+        $('#copy-button-07').addClass("visible");
+        $('#copy-button-07').removeClass("hidden");
+        $('li.return-type-07').addClass("hover");
+        $('li.return-type-07').removeClass("static");
+        return false;
+      });
+      $('.return-type-07').mouseout(function() {
+        $('#copy-button-07').addClass("hidden");
+        $('#copy-button-07').removeClass("visible");
+        $('li.return-type-07').addClass("static");
+        $('li.return-type-07').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-08').addClass("hidden");
+      $('li.return-type-08').addClass("static");
+      $('.return-type-08').mouseover(function() {
+        $('#copy-button-08').addClass("visible");
+        $('#copy-button-08').removeClass("hidden");
+        $('li.return-type-08').addClass("hover");
+        $('li.return-type-08').removeClass("static");
+        return false;
+      });
+      $('.return-type-08').mouseout(function() {
+        $('#copy-button-08').addClass("hidden");
+        $('#copy-button-08').removeClass("visible");
+        $('li.return-type-08').addClass("static");
+        $('li.return-type-08').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-09').addClass("hidden");
+      $('li.return-type-09').addClass("static");
+      $('.return-type-09').mouseover(function() {
+        $('#copy-button-09').addClass("visible");
+        $('#copy-button-09').removeClass("hidden");
+        $('li.return-type-09').addClass("hover");
+        $('li.return-type-09').removeClass("static");
+        return false;
+      });
+      $('.return-type-09').mouseout(function() {
+        $('#copy-button-09').addClass("hidden");
+        $('#copy-button-09').removeClass("visible");
+        $('li.return-type-09').addClass("static");
+        $('li.return-type-09').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-10').addClass("hidden");
+      $('li.return-type-10').addClass("static");
+      $('.return-type-10').mouseover(function() {
+        $('#copy-button-10').addClass("visible");
+        $('#copy-button-10').removeClass("hidden");
+        $('li.return-type-10').addClass("hover");
+        $('li.return-type-10').removeClass("static");
+        return false;
+      });
+      $('.return-type-10').mouseout(function() {
+        $('#copy-button-10').addClass("hidden");
+        $('#copy-button-10').removeClass("visible");
+        $('li.return-type-10').addClass("static");
+        $('li.return-type-10').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-11').addClass("hidden");
+      $('li.return-type-11').addClass("static");
+      $('.return-type-11').mouseover(function() {
+        $('#copy-button-11').addClass("visible");
+        $('#copy-button-11').removeClass("hidden");
+        $('li.return-type-11').addClass("hover");
+        $('li.return-type-11').removeClass("static");
+        return false;
+      });
+      $('.return-type-11').mouseout(function() {
+        $('#copy-button-11').addClass("hidden");
+        $('#copy-button-11').removeClass("visible");
+        $('li.return-type-11').addClass("static");
+        $('li.return-type-11').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-12').addClass("hidden");
+      $('li.return-type-12').addClass("static");
+      $('.return-type-12').mouseover(function() {
+        $('#copy-button-12').addClass("visible");
+        $('#copy-button-12').removeClass("hidden");
+        $('li.return-type-12').addClass("hover");
+        $('li.return-type-12').removeClass("static");
+        return false;
+      });
+      $('.return-type-12').mouseout(function() {
+        $('#copy-button-12').addClass("hidden");
+        $('#copy-button-12').removeClass("visible");
+        $('li.return-type-12').addClass("static");
+        $('li.return-type-12').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-13').addClass("hidden");
+      $('li.return-type-13').addClass("static");
+      $('.return-type-13').mouseover(function() {
+        $('#copy-button-13').addClass("visible");
+        $('#copy-button-13').removeClass("hidden");
+        $('li.return-type-13').addClass("hover");
+        $('li.return-type-13').removeClass("static");
+        return false;
+      });
+      $('.return-type-13').mouseout(function() {
+        $('#copy-button-13').addClass("hidden");
+        $('#copy-button-13').removeClass("visible");
+        $('li.return-type-13').addClass("static");
+        $('li.return-type-13').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-14').addClass("hidden");
+      $('li.return-type-14').addClass("static");
+      $('.return-type-14').mouseover(function() {
+        $('#copy-button-14').addClass("visible");
+        $('#copy-button-14').removeClass("hidden");
+        $('li.return-type-14').addClass("hover");
+        $('li.return-type-14').removeClass("static");
+        return false;
+      });
+      $('.return-type-14').mouseout(function() {
+        $('#copy-button-14').addClass("hidden");
+        $('#copy-button-14').removeClass("visible");
+        $('li.return-type-14').addClass("static");
+        $('li.return-type-14').removeClass("hover");
+        return false;
+      });
+
+      $('#copy-button-15').addClass("hidden");
+      $('li.return-type-15').addClass("static");
+      $('.return-type-15').mouseover(function() {
+        $('#copy-button-15').addClass("visible");
+        $('#copy-button-15').removeClass("hidden");
+        $('li.return-type-15').addClass("hover");
+        $('li.return-type-15').removeClass("static");
+        return false;
+      });
+      $('.return-type-15').mouseout(function() {
+        $('#copy-button-15').addClass("hidden");
+        $('#copy-button-15').removeClass("visible");
+        $('li.return-type-15').addClass("static");
+        $('li.return-type-15').removeClass("hover");
+        return false;
+      });
+      $('#copy-button-16').addClass("hidden");
+      $('li.return-type-16').addClass("static");
+      $('.return-type-16').mouseover(function() {
+        $('#copy-button-16').addClass("visible");
+        $('#copy-button-16').removeClass("hidden");
+        $('li.return-type-16').addClass("hover");
+        $('li.return-type-16').removeClass("static");
+        return false;
+      });
+      $('.return-type-16').mouseout(function() {
+        $('#copy-button-16').addClass("hidden");
+        $('#copy-button-16').removeClass("visible");
+        $('li.return-type-16').addClass("static");
+        $('li.return-type-16').removeClass("hover");
+        return false;
+      });
+  	});
+   </script>
+</main>
+
+{{/content}}
+
+{{/layout}}
