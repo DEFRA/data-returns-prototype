@@ -90,8 +90,8 @@ p + .help-notice {
 		color: $red;
 	}
 	.checking {
-		.loading { 
-			img { 
+		.loading {
+			img {
 				vertical-align: middle;
 			}
 		}
@@ -119,7 +119,7 @@ p + .help-notice {
 .panel-indent.error {
 	border-left: 4px solid $red;
 }
- 
+
 .file-summary {
 	margin-top:0;
 	margin-bottom:30px;
@@ -137,4 +137,3 @@ p + .help-notice {
 input.validation-code {
 	width:100px;
 }
-

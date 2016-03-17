@@ -9,3 +9,8 @@
 a[rel="external"]::after {
     background-position: right 4px;
   }
+
+a:hover[rel="external"]::after {
+    background-position: right 4px;
+    color:$link-active-colour;
+  }
