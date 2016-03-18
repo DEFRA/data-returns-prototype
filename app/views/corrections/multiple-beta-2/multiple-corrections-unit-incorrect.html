@@ -35,103 +35,52 @@
 	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
 		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to unit</h1>
 		<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
+			<p>You must give a unit of measurement for your returns - exactly as given in the EA controlled list. You cannot leave this field blank.</p>
+			<p>Give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar. Use 'pH' or 'meteorological' where appropriate.</p>
+			<p>See the full <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/units-and-measures" target="_blank" rel="external">controlled list of units</a>.</p>
 	</div>
-	<div class="header">
-		<h2 class="heading-medium">How to fix it</h2>
-		<p>You must give a unit for your measurements exactly as it’s given in a controlled list supplied by the EA.</p>
-		<p>
-			<a href="#" rel="external">Which units apply to this permit?</p>	</div>
-
-		<div class="grid-row">
-			<div class="column-two-thirds">
-				<div class="error-table">
-					<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
-					<!-- For fixed header positioning only for Sticky JS -->
-					<table id="errorTableHeader">
-						<thead>
-							<tr>
-								<th width="10%">Row(s)</th>
-								<th width="90%">Error</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>12</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>13</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>23</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>24</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>25</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>41</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>45</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>48</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>49</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>50</td>
-								<td>"Milliliters"</td>
-							</tr>
-							<tr>
-								<td>54</td>
-								<td>"Milliliters"</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<!-- error-table -->
-
-			</div><!-- column-two-thirds -->
-		</div><!-- grid-row -->
-
-		<p class="back"><a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
-		</p>
-		<script>
-			var options = {
-					item: '<li><div class="parameter"></div></li>',
-					page:10,
-					visibleItems: [	]
-			};
-		</script>
-		<script type="text/javascript">
-			var $buttons = $('.button').click(function() {
-					if (this.id == 'all') {
-						$('#parent > tr').fadeIn(450);
-					} else {
-						var $el = $('.' + this.id).fadeIn(450);
-						$('#parent > tr').not($el).hide();
-					}
-					$buttons.removeClass('active');
-					$(this).addClass('active');
-				})
-		</script>
+	<p class="back">
+		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
+	</p>
+	<div class="error-table">
+		<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
+		<!-- For fixed header positioning only for Sticky JS -->
+		<table id="errorTableHeader">
+			<thead>
+				<tr>
+					<th width="50%">Error</th>
+					<th width="50%">Row(s)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>"Milliliters"</td>
+					<td>1&ndash;45</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!-- error-table -->
+	<a href="#content">Back to top</a>
+	<script>
+		var options = {
+				item: '<li><div class="parameter"></div></li>',
+				page:10,
+				visibleItems: [	]
+		};
+	</script>
+	<script type="text/javascript">
+		var $buttons = $('.button').click(function() {
+				if (this.id == 'all') {
+					$('#parent > tr').fadeIn(450);
+				} else {
+					var $el = $('.' + this.id).fadeIn(450);
+					$('#parent > tr').not($el).hide();
+				}
+				$buttons.removeClass('active');
+				$(this).addClass('active');
+			})
+	</script>
 </main>{{/content}}
 
 {{/layout}}
