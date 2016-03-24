@@ -1,0 +1,326 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+  <script>
+    (function($){
+      $(function(){
+        $('select').selectToAutocomplete();
+        $('input').autocomplete ({sortResults:false})
+      });
+    })(jQuery);
+  </script>
+
+	<script>
+		if(sessionStorage.parameter) {
+		  sessionStorage.removeItem('parameter');
+		}
+	</script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main" class="help">
+
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<h1 class="heading-xlarge">
+		<span id="title">Example file</span>
+	</h1>
+	<div class="text">
+		<p class="lede">An example data returns file</p>
+		<!-- <p>You can
+			<a href="#" onclick="alert('Not yet implemented!');return false;">create a PDF of the errors</a> (opens in a new window or tab).</p> -->
+	</div>
+	<div class="example-file">
+	<table>
+	  <tbody>
+	    <tr>
+	      <th>EA_ID</th>
+	      <th>Rtn_Type</th>
+	      <th>Mon_Point</th>
+	      <th>Mon_Date</th>
+	      <th>Parameter</th>
+	      <th>Value</th>
+	      <th>Unit</th>
+	      <th>Ref_Period</th>
+	      <th>Mon_Period</th>
+	      <th>Smpl_Ref</th>
+	      <th>Smpl_By</th>
+	      <th>Txt_Value</th>
+	      <th>Site_Name</th>
+	      <th>Comments</th>
+	      <th>Meth_Stand</th>
+	      <th>CiC</th>
+	      <th>CAS</th>
+	      <th>RD_Code</th>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Air (point source) emissions return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Air (ambient) monitoring return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1-Dichloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Leachate level return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Leachate quality return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Surface emissions return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Ground quality/level return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Landfill Gas surface emissions</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Landfill Gas Perimeter</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Landfill Gas in Waste</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Landfill Gas infrastructure monitoring</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Sewer emissions return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED ETP or Tankering emissions return</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	    <tr>
+	      <td>AP3192NT</td>
+	      <td>EPR/IED Landfill Annual monitoring report</td>
+	      <td>Monitor point 1</td>
+	      <td>8/5/2015</td>
+	      <td>1,1,2,2-Tetrachloroethane</td>
+	      <td>100</td>
+	      <td>ug</td>
+	      <td>Continuous</td>
+	      <td>Annual</td>
+	      <td>Sample Reference</td>
+	      <td>Sampled By</td>
+	      <td>Text value</td>
+	      <td>Safle Allyriadau Bethesda</td>
+	      <td>Comments</td>
+	      <td>BS EN 12260</td>
+	      <td>TRUE</td>
+	      <td>R1</td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+</main>
+
+
+{{/content}}
+
+{{/layout}}

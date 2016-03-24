@@ -2201,6 +2201,16 @@ p + .help-notice {
   color: #0b0c0c;
 }
 
+.example-file {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.example-file table th, .example-file table td {
+  white-space: nowrap;
+}
+
 .img-responsive {
   min-width: 100%;
   width: 100%;
