@@ -61,14 +61,16 @@
 			</thead>
 			<tbody>
 			<tr>
-				<td><abbr title="Return type">Rtn_Type</abbr></td>
+				<td><abbr title="Monitoring Date/Time (Start)">Mon_Date</abbr></td>
 				<td>Incorrect</td>
 				<td>
-					<p>You must give a valid return type name - eg EPR/IED Air (point source) emissions return - exactly as given in the EA controlled list of 13 return types.</p>
-					<p>Check your permit or licence for details of return types you must cover.</p>
-					<p><a href="/corrections/multiple-beta-2/multiple-corrections-rtn-type">See details of which rows to correct</a></p>
+					<p>You must give a date in this field, but time is optional. If you're giving time then you must use a T between date and time, without spaces.</p>
+					<p>Format the date as YYYY-MM-DD or DD-MM-YYYY.</p>
+					<p>Format time as Thh:mm:ss.</p>
+					<p>Use dashes not slashes.</p>
+					<p><a href="/corrections/multiple-beta-2/multiple-corrections-mon-date">See details of which rows to correct</a>.</p>
 				</td>
-				<td>See the full <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/return-type-rules" target="_blank" rel="external">return type controlled list</a>.</td>
+				<td>Read the full rules on <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/date-and-time" target="_blank" rel="external">date and time.</a></td>
 			</tr>
 			<tr>
 				<td><abbr title="Monitoring Point">Mon_Point</abbr></td>
@@ -82,18 +84,6 @@
 				<td>Make sure your reference only contains letters and numbers. Remove any symbols.</td>
 			</tr>
 			<tr>
-				<td><abbr title="Monitoring Date/Time (Start)">Mon_Date</abbr></td>
-				<td>Incorrect</td>
-				<td>
-					<p>You must give a date in this field, but time is optional. If you're giving time then you must use a T between date and time, without spaces.</p>
-					<p>Format the date as YYYY-MM-DD or DD-MM-YYYY.</p>
-					<p>Format time as Thh:mm:ss.</p>
-					<p>Use dashes not slashes.</p>
-					<p><a href="/corrections/multiple-beta-2/multiple-corrections-mon-date">See details of which rows to correct</a>.</p>
-				</td>
-				<td>Read the full rules on <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/date-and-time" target="_blank" rel="external">date and time.</a></td>
-			</tr>
-			<tr>
 				<td>Parameter</td>
 				<td>Incorrect</td>
 				<td>
@@ -103,18 +93,31 @@
 				<td>See the full EA <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/parameters" target="_blank" rel="external">controlled list for allowable parameters</a>.</td>
 			</tr>
 			<tr>
-				<td>Value</td>
+				<td><abbr title="Return type">Rtn_Type</abbr></td>
 				<td>Incorrect</td>
 				<td>
-					<p>You must give an allowable value for your data. As well as numbers you can include the symbols &lt; or &gt;. You can also include zeros.</p>
-					<p>Don’t include any other text characters.</p>
-					<p><a href="/corrections/multiple-beta-2/multiple-corrections-value">See details of which rows to correct</a></p>
+					<p>You must give a valid return type name - eg EPR/IED Air (point source) emissions return - exactly as given in the EA controlled list of 13 return types.</p>
+					<p>Check your permit or licence for details of return types you must cover.</p>
+					<p><a href="/corrections/multiple-beta-2/multiple-corrections-rtn-type">See details of which rows to correct</a></p>
 				</td>
-				<td>Further information (eg BRT, or waterlogged) should be put in the Comments field.</td>
+				<td>See the full <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/return-type-rules" target="_blank" rel="external">return type controlled list</a>.</td>
 			</tr>
 			<tr>
+				<td><abbr title="Sample reference">Smpl_Ref</abbr></td>
+				<td>Incorrect</td>
+				<td>
+					<p>Sample Reference (Smpl_Ref) values should only contain letters and numbers. Remove any symbols.</p>
+					<p><a href="/corrections/multiple-beta-2/multiple-corrections-smpl-ref">See details of which rows to correct</a></p>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+
+
+
+
+			<tr>
 				<td>Unit</td>
-				<td>Missing</td>
+				<td>Missing and incorrect</td>
 				<td>
 					<p>You must give a unit of measurement for your returns - exactly as given in the EA controlled list.</p>
 					<p>You cannot leave this field blank.</p>
@@ -124,6 +127,18 @@
 				</td>
 				<td>See the full <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/units-and-measures" target="_blank" rel="external">controlled list of units</a>.</td>
 			</tr>
+
+			<tr>
+				<td>Value</td>
+				<td>Missing and Incorrect</td>
+				<td>
+					<p>You must give an allowable value for your data. As well as numbers you can include the symbols &lt; or &gt;. You can also include zeros.</p>
+					<p>Don’t include any other text characters.</p>
+					<p><a href="/corrections/multiple-beta-2/multiple-corrections-value">See details of which rows to correct</a></p>
+				</td>
+				<td>Further information (eg BRT, or waterlogged) should be put in the Comments field.</td>
+			</tr>
+
 			</tbody>
 		</table>
 	</div><!-- error-table -->

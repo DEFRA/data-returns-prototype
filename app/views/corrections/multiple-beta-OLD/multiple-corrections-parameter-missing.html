@@ -33,45 +33,37 @@
 	  </p>
 	</div>
 	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to unit</h1>
+		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to parameter</h1>
 		<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
-			<p>You must give a unit of measurement for your returns - exactly as given in the EA controlled list. You cannot leave this field blank.</p>
-			<p>Give emissions readings in :v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar. Use 'pH' or 'meteorological' where appropriate.</p>
-			<p>See the full <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/units-and-measures" target="_blank" rel="external">controlled list of units</a>.</p>
 	</div>
-	<p class="back">
-		<a class="button" href="/corrections/multiple-corrections-private-beta-02">Back to corrections table</a>
-	</p>
+	<div class="header">
+		<h2 class="heading-medium">How to fix it</h2>
+		<h2 class="heading-medium">How to fix it</h2>
+		<p>You must enter the parameter type exactly as it’s given in a controlled list supplied by the EA.</p>
+		<p>
+			<a href="#" rel="external">Which parameters are allowable?</a>
+		</p>
+	</div>
 	<div class="error-table">
-		<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
-		<!-- For fixed header positioning only for Sticky JS -->
 		<table id="errorTableHeader">
 			<thead>
 				<tr>
-					<th width="50%">Error</th>
-					<th width="50%">Row(s)</th>
+					<th width="15%">Error</th>
+					<th width="85%">Rows</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>"Milliliters"</td>
-					<td>1&ndash;45</td>
-				</tr>
-				<tr>
 					<td>Missing</td>
-					<td>
-						638&ndash;642,
-						1597&ndash;1644,
-						2172&ndash;2175,
-						3041&ndash;3208,
-						3622&ndash;3688
-					</td>
+					<td>1, 14, 38, 66, 118, 119, 120, 121, 139</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<!-- error-table -->
-	<a href="#content">Back to top</a>
+	<p class="back">
+		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
+	</p>
 	<script>
 		var options = {
 				item: '<li><div class="parameter"></div></li>',
@@ -91,6 +83,8 @@
 				$(this).addClass('active');
 			})
 	</script>
-</main>{{/content}}
+</main>
+
+{{/content}}
 
 {{/layout}}

@@ -1,0 +1,173 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($){
+					$(function(){
+						$('select').selectToAutocomplete();
+						$('input').autocomplete ({sortResults:false})
+					});
+				})(jQuery);
+	</script>
+	<script>
+		if(sessionStorage.parameter) {
+			sessionStorage.removeItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main id="content" role="main">
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to Mon_Date</h1>
+		<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
+	</div>
+	<div class="header">
+		<h2 class="heading-medium">How to fix it</h2>
+		<p>You must give a monitoring date. This must be formatted as:</p>
+		<ul class="list list-bullet">
+			<li>DD-MM-YYYY or YYYY-MM-DD</li>
+			<li>only use hyphens as separators</li>
+		</ul>
+		<p>Monitoring time is optional according to return type, but should be formatted as hh:mm:ss</p>
+		<p>
+			<a href="#" rel="external">How do I format time data to meet EA standards?</a>
+		</p>
+	</div>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<div class="error-table">
+				<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
+				<!-- For fixed header positioning only for Sticky JS -->
+				<table id="errorTableHeader">
+					<thead>
+						<tr>
+							<th width="10%">Row(s)</th>
+							<th width="90%">Error</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>"12-02-16"</td>
+							</tr>
+						<tr>
+							<td>2</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>11</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>12</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>13</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>14</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>15</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>16</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>17</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>18</td>
+							<td>"12-02-16"</td>
+						</tr>
+						<tr>
+							<td>19</td>
+							<td>"12-02-16"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- error-table -->
+		</div>
+		<!-- column-two-thirds -->
+	</div>
+	<!-- grid-row -->
+	<p class="back">
+		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
+	</p>
+	<script>
+		var options = {
+				item: '<li><div class="parameter"></div></li>',
+				page:10,
+				visibleItems: [	]
+		};
+	</script>
+	<script type="text/javascript">
+		var $buttons = $('.button').click(function() {
+				if (this.id == 'all') {
+					$('#parent > tr').fadeIn(450);
+				} else {
+					var $el = $('.' + this.id).fadeIn(450);
+					$('#parent > tr').not($el).hide();
+				}
+				$buttons.removeClass('active');
+				$(this).addClass('active');
+			})
+	</script>
+</main>
+{{/content}}
+
+{{/layout}}

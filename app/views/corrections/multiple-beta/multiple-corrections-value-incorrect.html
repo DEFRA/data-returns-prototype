@@ -25,116 +25,107 @@
 	</script>
 	<script src="/public/javascripts/clipboard.min.js"></script>
 </header>
-<main id="content" role="main">
-	<div class="phase-banner-beta">
-	  <p>
-	    <strong class="phase-tag">BETA</strong>
-	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-	  </p>
-	</div>
-	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
-		<h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Make corrections to value</h1>
-		<p>Before you can send &lt;filename&gt; you need to make these corrections:</p>
-	</div>
-	<div class="header">
-		<h2 class="heading-medium">How to fix it</h2>
-		<p>You must give a numerical value for your data. It can include zeros.</p>
-		<p>
-			<a href="#" rel="external">How do I format values data to meet EA standards?</a>
-		</p>
-	</div>
-	<div class="grid-row">
-		<div class="column-two-thirds">
-			<div class="error-table">
-				<!-- <h2 class="heading-small">Errors found in 'failures.csv' - </h2> -->
-				<!-- For fixed header positioning only for Sticky JS -->
-				<table id="errorTableHeader">
-					<thead>
-						<tr>
-							<th width="10%">Row(s)</th>
-							<th width="90%">Error</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>"00,1"</td>
-						</tr>
-						<tr>
-							<td>12</td>
-							<td>"0,1"</td>
-						</tr>
-						<tr>
-							<td>13</td>
-							<td>"12,1"</td>
-						</tr>
-						<tr>
-							<td>23</td>
-							<td>"(10)"</td>
-						</tr>
-						<tr>
-							<td>24</td>
-							<td>"(10)"</td>
-						</tr>
-						<tr>
-							<td>25</td>
-							<td>"(10)"</td>
-						</tr>
-						<tr>
-							<td>41</td>
-							<td>"(0.1)"</td>
-						</tr>
-						<tr>
-							<td>45</td>
-							<td>"10,"</td>
-						</tr>
-						<tr>
-							<td>48</td>
-							<td>"10,"</td>
-						</tr>
-						<tr>
-							<td>49</td>
-							<td>"10,"</td>
-						</tr>
-						<tr>
-							<td>50</td>
-							<td>"10,"</td>
-						</tr>
-						<tr>
-							<td>54</td>
-							<td>"10,"</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<!-- error-table -->
-		</div>
-		<!-- column-two-thirds -->
-	</div>
-	<!-- grid-row -->
-	<p class="back">
-		<a class="button" href="javascript: history.go(-1)">Back to corrections table</a>
-	</p>
-	<script>
-		var options = {
-				item: '<li><div class="parameter"></div></li>',
-				page:10,
-				visibleItems: [	]
-		};
-	</script>
-	<script type="text/javascript">
-		var $buttons = $('.button').click(function() {
-				if (this.id == 'all') {
-					$('#parent > tr').fadeIn(450);
-				} else {
-					var $el = $('.' + this.id).fadeIn(450);
-					$('#parent > tr').not($el).hide();
-				}
-				$buttons.removeClass('active');
-				$(this).addClass('active');
-			})
-	</script>
+<main role="main" id="content">
+
+  <div class="phase-banner-beta" id="37"><p id="38"><strong class="phase-tag" id="39">BETA</strong><span id="40">This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk" id="41">feedback</a> will help us to improve it.</span></p></div>
+
+  <div tabindex="-1" aria-labelledby="error-summary-heading-example-1" role="group" class="error-summary" id="42">
+    <h1 id="error-summary-heading-example-1" class="heading-medium error-summary-heading">Make corrections to Value</h1>
+    <p id="44">Before you can send Trigon Data Return 2015v3.csv you need to make corrections:</p>
+  </div>
+  <div class="header" id="45">
+    <h2 class="heading-medium" id="46">How to make corrections</h2>
+    <p id="47">Value field is incorrect.  Please refer to the DEP for further information with regard to supplying values.</p>
+    <p id="48">See <a rel="external" target="_blank" href="http://data-returns-help.herokuapp.com" id="49">how to format Environment Agency data</a>.</p>
+  </div>
+  <div class="grid-row" id="50">
+    <div class="column-two-thirds" id="51">
+      <div class="error-table" id="52">
+        <table id="errorTableHeader">
+          <thead id="54">
+            <tr id="55">
+              <th width="50%" id="56">Row(s)</th>
+              <th width="50%" id="57">Error</th>
+            </tr>
+          </thead>
+          <tbody id="58">
+            <tr id="59">
+              <td id="60">2177</td>
+              <td id="61">Nil</td>
+            </tr>
+            <tr id="62">
+              <td id="63">2178</td>
+              <td id="64">Nil</td>
+            </tr>
+            <tr id="65">
+              <td id="66">2179</td>
+              <td id="67">Nil</td>
+            </tr>
+            <tr id="68">
+              <td id="69">2181</td>
+              <td id="70">Nil</td>
+            </tr>
+            <tr id="71">
+              <td id="72">2182</td>
+              <td id="73">Nil</td>
+            </tr>
+            <tr id="74">
+              <td id="75">2183</td>
+              <td id="76">Nil</td>
+            </tr>
+            <tr id="77">
+              <td id="78">2185</td>
+              <td id="79">Nil</td>
+            </tr>
+            <tr id="80">
+              <td id="81">2187</td>
+              <td id="82">Nil</td>
+            </tr>
+            <tr id="83">
+              <td id="84">2189</td>
+              <td id="85">Nil</td>
+            </tr>
+            <tr id="86">
+              <td id="87">2191</td>
+              <td id="88">Nil</td>
+            </tr>
+            <tr id="89">
+              <td id="90">2192</td>
+              <td id="91">Nil</td>
+            </tr>
+            <tr id="92">
+              <td id="93">2193</td>
+              <td id="94">Nil</td>
+            </tr>
+            <tr id="95">
+              <td id="96">2194</td>
+              <td id="97">Nil</td>
+            </tr>
+            <tr id="98">
+              <td id="99">2196</td>
+              <td id="100">Nil</td>
+            </tr>
+            <tr id="101">
+              <td id="102">2197</td>
+              <td id="103">Nil</td>
+            </tr>
+            <tr id="104">
+              <td id="105">2198</td>
+              <td id="106">Nil</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- error-table -->
+    </div>
+    <!-- column-two-thirds -->
+  </div>
+  <!-- grid-row -->
+  <p class="back" id="107">
+    <a href="/02-send-your-data/09-errors" class="button" id="108">Back to corrections table</a>
+  </p>
 </main>
+
 {{/content}}
 
 {{/layout}}
