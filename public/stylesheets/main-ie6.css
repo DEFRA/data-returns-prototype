@@ -2036,6 +2036,30 @@ input.validation-code {
   margin-bottom: 0;
 }
 
+.example-file {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.example-file table th, .example-file table td {
+  white-space: nowrap;
+}
+
+.example-file-1 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.example-file-1 table th, .example-file-1 table td {
+  white-space: nowrap;
+}
+
 a[rel="external"]::after {
   background-position: right 4px;
+}
+
+a:hover[rel="external"]::after {
+  background-position: right 4px;
+  color: #2b8cc4;
 }

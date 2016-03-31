@@ -2201,16 +2201,6 @@ p + .help-notice {
   color: #0b0c0c;
 }
 
-.example-file {
-  overflow-x: auto;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.example-file table th, .example-file table td {
-  white-space: nowrap;
-}
-
 .img-responsive {
   min-width: 100%;
   width: 100%;
@@ -2330,6 +2320,25 @@ input.validation-code {
 
 .error-table td p:last-child {
   margin-bottom: 0;
+}
+
+.example-file {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.example-file table th, .example-file table td {
+  white-space: nowrap;
+}
+
+.example-file-1 {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.example-file-1 table th, .example-file-1 table td {
+  white-space: nowrap;
 }
 
 a[rel="external"]::after {

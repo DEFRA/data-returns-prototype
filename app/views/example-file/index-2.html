@@ -1,47 +1,29 @@
-{{<layout}}
+{{<unbranded}}
 
 {{$pageTitle}}
-	GOV.UK prototyping kit
+  Example data return
 {{/pageTitle}}
 
 {{$content}}
 
-<header class="page-header">
+<style>
+	html {
+		background:white;
+	}
+	#content {
+		max-width:inherit;
+		padding:0 25px;
+	}
+</style>
 
-<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
-<script src="/public/javascripts/jquery-ui.min.js"></script>
-<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
-  <script>
-    (function($){
-      $(function(){
-        $('select').selectToAutocomplete();
-        $('input').autocomplete ({sortResults:false})
-      });
-    })(jQuery);
-  </script>
+<main id="content" role="main" class="">
 
-	<script>
-		if(sessionStorage.parameter) {
-		  sessionStorage.removeItem('parameter');
-		}
-	</script>
-<script src="/public/javascripts/clipboard.min.js"></script>
+ <p><a href="javascript:history.go(-1)">&lt; Back</a></p>
 
-</header>
-
-<main id="content" role="main">
-
-	<div class="phase-banner-beta">
-	  <p>
-	    <strong class="phase-tag">BETA</strong>
-	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-	  </p>
-	</div>
 	<h1 class="heading-xlarge">
 		<span id="title">An example data return</span>
 	</h1>
-
-	<div class="example-file">
+	<div class="example-file-1">
 		<table cellspacing="0" cellpadding="0">
 		  <tbody>
 		    <tr>
@@ -329,7 +311,6 @@
 	</div>
 </main>
 
-
 {{/content}}
 
-{{/layout}}
+{{/unbranded}}
