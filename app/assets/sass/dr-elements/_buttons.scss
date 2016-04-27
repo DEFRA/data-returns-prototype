@@ -1,4 +1,7 @@
 .button-secondary {
 	@include button($grey-3);
 	text-align:center;
-} 
+}
+.button-choose-files {
+	margin-bottom:15px;
+}

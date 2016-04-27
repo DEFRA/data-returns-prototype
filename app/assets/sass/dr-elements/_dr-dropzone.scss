@@ -1,0 +1,157 @@
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+
+@mixin prefix($map, $vendors: webkit moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    // Dump regular property anyway
+    #{$prop}: #{$value};
+  }
+}
+
+
+@include keyframes(passing-through) {
+
+  0% {
+    opacity: 0;
+    @include prefix((transform: translateY(40px)));
+  }
+
+  30%, 70% {
+    opacity: 1;
+    @include prefix((transform: translateY(0px)));
+  }
+
+  100% {
+    opacity: 0;
+    @include prefix((transform: translateY(-40px)));
+  }
+}
+
+
+@include keyframes(slide-in) {
+
+  0% {
+    opacity: 0;
+    @include prefix((transform: translateY(40px)));
+  }
+
+  30% {
+    opacity: 1;
+    @include prefix((transform: translateY(0px)));
+  }
+}
+
+@include keyframes(pulse) {
+  0% { @include prefix((transform: scale(1))); }
+  10% { @include prefix((transform: scale(1.1))); }
+  20% { @include prefix((transform: scale(1))); }
+
+}
+
+
+.dz-drag-hover {
+  height:100%;
+}
+
+.dz-drag-hover-div {
+  display: none;
+}
+
+.dz-drag-hover .dz-drag-hover-div {
+  display: table;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  div {
+    border: 10px solid $yellow;
+    display:table-cell;
+  }
+}
+
+.dz-preview {
+  position: relative;
+  .dz-progress {
+    height: 40px;
+    left: 0;
+    margin-left: -5px;
+    margin-top: -22px;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1000;
+
+    // Fix for chrome bug: https://code.google.com/p/chromium/issues/detail?id=157218
+    -webkit-transform: scale(1);
+    overflow: hidden;
+
+    .dz-upload {
+      background-color: transparent;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: width 1500ms ease-in-out 0s;
+      width: 0;
+      @include prefix((transition: width 1500ms ease-in-out));
+    }
+  }
+  .dz-error-message {
+    color: $red;
+    display: none;
+    position: relative;
+    z-index: 1000;
+  }
+  &.dz-error {
+    .dz-error-message, .dz-error-mark {
+      display: block;
+    }
+  }
+  &.dz-success {
+    .dz-success-mark {
+      display: block;
+    }
+  }
+  .dz-error-mark, .dz-success-mark {
+    position: absolute;
+    display: none;
+    left: 30px;
+    top: 30px;
+    width: 54px;
+    height: 58px;
+    left: 50%;
+    margin-left: -(54px/2);
+  }
+  &.dz-processing .dz-progress {
+    ::before {
+    content: "Read this: ";
+    }
+  }
+  &.dz-complete .dz-progress {
+    opacity: 0;
+  }
+  &:not(.dz-processing) {
+    .dz-progress {
+      @include prefix((animation: pulse 6s ease infinite));
+    }
+  }
+}

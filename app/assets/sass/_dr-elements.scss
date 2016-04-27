@@ -6,6 +6,10 @@
 @import "dr-elements/tables";
 
 
+/* @import "dr-elements/dropzone";*/
+@import "dr-elements/dr-dropzone";
+
+
 a[rel="external"]::after {
     background-position: right 4px;
   }

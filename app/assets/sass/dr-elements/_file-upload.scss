@@ -9,7 +9,7 @@
 		margin-top:15px;
 	}
 }
- 
+
 .help-text-reg {
 	margin-bottom:30px;
 }
@@ -34,7 +34,7 @@
     background: white;
     cursor: inherit;
     display: block;
-    
+
 }
 
 .statusbar {
@@ -43,9 +43,25 @@
 	border-left: 4px solid #fff;
 	min-height: 25px;
 	width: auto;
-	padding: 10px 0 5px 10px;
+	padding: 10px 0 5px;
 	vertical-align: top;
 	font-size: 16px;
+	.filename, .status, .action {
+		width:(100% / 3);
+		display: inline-block;
+		position: relative;
+	}
+	.action {
+		button.remove {
+			font-size: 16px;
+			background: white;
+			border:0;
+			padding:0;
+		}
+		button.remove:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .statusbar-title {

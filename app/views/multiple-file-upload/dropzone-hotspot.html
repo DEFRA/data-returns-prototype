@@ -1,0 +1,70 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/dropzone.js"></script>
+	<script>
+		Dropzone.options.uploadWidget = {
+		  paramName: 'file',
+		  maxFilesize: 10, // MB
+		  maxFiles: 10,
+		  dictDefaultMessage: 'Drag an image here to upload, or click to select one',
+			createImageThumbnails:false,
+		  headers: {
+		    'x-csrf-token': document.querySelectorAll('meta[name=csrf-token]')[0].getAttributeNode('content').value,
+		  },
+		  acceptedFiles: 'image/*',
+		  init: function() {
+		    this.on('success', function( file, resp ){
+		      console.log( file );
+		      console.log( resp );
+		    });
+		    this.on('thumbnail', function(file) {
+		      if ( file.width < 640 || file.height < 480 ) {
+		        file.rejectDimensions();
+		      }
+		      else {
+		        file.acceptDimensions();
+		      }
+		    });
+		  },
+		  accept: function(file, done) {
+		    file.acceptDimensions = done;
+		    file.rejectDimensions = function() {
+		      done('The image must be at least 640 x 480px')
+		    };
+		  }
+		};
+	</script>
+</header>
+
+<main id="content" role="main" class="help">
+
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+	<h1 class="heading-large">Choose your files</h1>
+	<p class="lede">Make sure you've formatted your data using the rules and saved your file as <abbr title="Comma-separated values">CSV</abbr>.</p>
+
+
+	<div class="form-group">
+		<form id="upload-widget" method="post" action="/upload" class="dropzone"></form>
+	</div>
+	<input id="check-for-errors-btn" class="button" type="submit" value="Continue" name="submit" disabled="disabled">
+
+
+</main>
+
+{{/content}}
+
+{{/layout}}
