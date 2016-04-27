@@ -143,7 +143,7 @@
   }
   &.dz-processing .dz-progress {
     ::before {
-    content: "Read this: ";
+      content: "Checking&hellip;";
     }
   }
   &.dz-complete .dz-progress {

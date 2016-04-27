@@ -2322,7 +2322,7 @@ input.validation-code {
 }
 
 .dz-preview.dz-processing .dz-progress ::before {
-  content: "Read this: ";
+  content: "Checking&hellip;";
 }
 
 .dz-preview.dz-complete .dz-progress {
