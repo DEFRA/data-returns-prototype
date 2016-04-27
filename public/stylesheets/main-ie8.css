@@ -2322,7 +2322,8 @@ input.validation-code {
 }
 
 .dz-preview.dz-processing .dz-progress ::before {
-  content: "Checking&hellip;";
+  content: "Checking...";
+  line-height: 1.3157894737;
 }
 
 .dz-preview.dz-complete .dz-progress {
