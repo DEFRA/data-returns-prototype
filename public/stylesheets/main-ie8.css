@@ -1939,7 +1939,6 @@ input.validation-code {
 .statusbar {
   border-top: none;
   border-bottom: 1px solid #BFC1C3;
-  border-left: 4px solid #fff;
   min-height: 25px;
   width: auto;
   padding: 10px 0 5px;
@@ -1955,7 +1954,7 @@ input.validation-code {
 
 .statusbar .action button.remove {
   font-size: 16px;
-  background: white;
+  background: transparent none repeat scroll 0 0;
   border: 0;
   padding: 0;
 }
@@ -2238,12 +2237,28 @@ input.validation-code {
   }
 }
 
+.dropzone {
+  background-color: #f8f8f8;
+  border: 5px dashed #dee0e2;
+  padding: 5px 15px;
+}
+
+.dropzone .dz-message {
+  min-height: 85px;
+  text-align: center;
+  padding-top: 60px;
+}
+
 .dz-drag-hover {
   height: 100%;
 }
 
 .dz-drag-hover-div {
   display: none;
+}
+
+.dz-drag-hover.dropzone {
+  border: 5px solid #ffbf47;
 }
 
 .dz-drag-hover .dz-drag-hover-div {

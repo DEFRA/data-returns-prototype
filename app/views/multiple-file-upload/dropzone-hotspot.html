@@ -10,39 +10,6 @@
 	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
 	<script src="/public/javascripts/jquery-ui.min.js"></script>
 	<script src="/public/javascripts/dropzone.js"></script>
-	<script>
-		Dropzone.options.uploadWidget = {
-		  paramName: 'file',
-		  maxFilesize: 10, // MB
-		  maxFiles: 10,
-		  dictDefaultMessage: 'Drag an image here to upload, or click to select one',
-			createImageThumbnails:false,
-		  headers: {
-		    'x-csrf-token': document.querySelectorAll('meta[name=csrf-token]')[0].getAttributeNode('content').value,
-		  },
-		  acceptedFiles: 'image/*',
-		  init: function() {
-		    this.on('success', function( file, resp ){
-		      console.log( file );
-		      console.log( resp );
-		    });
-		    this.on('thumbnail', function(file) {
-		      if ( file.width < 640 || file.height < 480 ) {
-		        file.rejectDimensions();
-		      }
-		      else {
-		        file.acceptDimensions();
-		      }
-		    });
-		  },
-		  accept: function(file, done) {
-		    file.acceptDimensions = done;
-		    file.rejectDimensions = function() {
-		      done('The image must be at least 640 x 480px')
-		    };
-		  }
-		};
-	</script>
 </header>
 
 <main id="content" role="main" class="help">
@@ -56,14 +23,65 @@
 	<h1 class="heading-large">Choose your files</h1>
 	<p class="lede">Make sure you've formatted your data using the rules and saved your file as <abbr title="Comma-separated values">CSV</abbr>.</p>
 
+	<div id="actions" class="row">
+		 <!-- The fileinput-button span is used to style the file input field as button -->
+		 <button class="button button-secondary button-choose-files fileinput-button">Choose files</button>
 
-	<div class="form-group">
-		<form id="upload-widget" method="post" action="/upload" class="dropzone"></form>
-	</div>
-	<input id="check-for-errors-btn" class="button" type="submit" value="Continue" name="submit" disabled="disabled">
+			<div id="file-upload" class="dropzone">
+				<div class="files" id="previews">
+					<div id="preview-template" style="display: none;">
+						<div class="statusbar">
+							<div class="filename">
+								<span class="name" data-dz-name></span>
+								&#40;<span class="size" data-dz-size></span>&#41;
+							</div><!-- inline-block break fix--><div class="status">
+							<div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+								<div class="dz-upload" style="width:0%;" data-dz-uploadprogress></div>
+						 	</div>
+			 					<div class="dz-error-message"><span data-dz-errormessage></span></div>
+						 </div><!-- inline-block break fix --><div class="action">
+								<button style="display:none" class="start">
+										<span>Start</span>
+								</button>
+								<button style="display:none" data-dz-remove class="cancel">
+										<span>Cancel</span>
+								</button>
+								<button data-dz-remove class="link remove">
+									<span>Remove file</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- #file-upload -->
 
+		 <!-- The global file processing state -->
+	 </div>
 
+	 	<div class="statusbar statusbar-title" style="display:none">
+	 		<div class="filename">Name of data file to be checked</div><!-- inline-block break fix --><div class="status">Status</div><!-- inline-block break fix --><div class="action">Action</div>
+	 	</div>
+
+		<script>
+		Dropzone.options.fileUpload = {
+			url: "/target-url", // Set the url
+			previewsContainer: "#previews", // Define the container to display the previews
+			previewTemplate: document.getElementById('preview-template').innerHTML,
+			clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+		};
+
+		 Dropzone.on("addedfile", function(file) {
+			 // Show the status bar when files is dragged over dropzone
+			 document.querySelector(".statusbar").style.display = "block";
+		 });
+
+		</script>
+
+	 <div class="dz-drag-hover-div"><div></div></div>
 </main>
+
+
 
 {{/content}}
 
