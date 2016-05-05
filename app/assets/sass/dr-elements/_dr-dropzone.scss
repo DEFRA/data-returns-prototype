@@ -170,7 +170,8 @@
   &.dz-processing .dz-progress {
     ::before {
       content: "Checking...";
-      line-height: 1.3157894737;
+      line-height: 3;
+      margin-left: 4px;
     }
   }
   &.dz-complete .dz-progress {
