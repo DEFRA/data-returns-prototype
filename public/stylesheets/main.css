@@ -2271,6 +2271,10 @@ input.validation-code {
   display: block;
 }
 
+.files {
+  margin-bottom: 30px;
+}
+
 .statusbar {
   border-top: none;
   border-bottom: 1px solid #BFC1C3;
@@ -2351,6 +2355,13 @@ input.validation-code {
   .filename {
     width: 190px;
   }
+}
+
+.loading img {
+  height: 19px;
+  padding-bottom: 4px;
+  vertical-align: middle;
+  width: 19px;
 }
 
 .error-summary .error-message {
@@ -2616,6 +2627,7 @@ input.validation-code {
   background-color: #f8f8f8;
   border: 5px dashed #dee0e2;
   padding: 5px 15px;
+  margin-bottom: 30px;
 }
 
 .dropzone .dz-message {

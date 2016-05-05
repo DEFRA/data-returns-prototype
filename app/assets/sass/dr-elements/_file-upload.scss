@@ -37,6 +37,10 @@
 
 }
 
+.files {
+	margin-bottom:30px;
+}
+
 .statusbar {
 	border-top: none;
 	border-bottom:1px solid #BFC1C3;
@@ -107,5 +111,14 @@
 	text-overflow: ellipsis;
 	@include media(tablet) {
 		width: 190px;
+	}
+}
+
+.loading {
+	img {
+		height: 19px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+    width: 19px;
 	}
 }
