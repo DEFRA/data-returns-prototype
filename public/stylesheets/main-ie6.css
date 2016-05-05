@@ -1988,27 +1988,61 @@ input.validation-code {
 .statusbar {
   border-top: none;
   border-bottom: 1px solid #BFC1C3;
-  min-height: 25px;
   width: auto;
-  padding: 10px 0 5px;
-  vertical-align: top;
+  padding: 5px 0 3px;
+  vertical-align: middle;
   font-size: 16px;
 }
 
-.statusbar .filename, .statusbar .status, .statusbar .action {
-  width: 33.3333333333%;
-  display: inline-block;
+.statusbar .filename, .statusbar .status, .statusbar .action, .statusbar .remove {
   position: relative;
+  margin: 5px 0;
 }
 
-.statusbar .action button.remove {
+.statusbar .action {
+  width: 60%;
+  display: inline-block;
+}
+
+.statusbar .remove {
+  width: 40%;
+  text-align: right;
+  display: inline-block;
+}
+
+.statusbar .filename, .statusbar .status, .statusbar .action, .statusbar .remove {
+  display: inline-block;
+}
+
+.statusbar .filename {
+  width: 35%;
+}
+
+.statusbar .status {
+  width: 30%;
+}
+
+.statusbar .action {
+  width: 20%;
+}
+
+.statusbar .remove {
+  width: 15%;
+}
+
+.statusbar .remove button.delete {
   font-size: 16px;
   background: transparent none repeat scroll 0 0;
   border: 0;
   padding: 0;
 }
 
-.statusbar .action button.remove:hover {
+.statusbar .remove button.delete span {
+  display: none;
+  display: inline;
+}
+
+.statusbar .remove button.delete:hover {
   cursor: pointer;
 }
 
@@ -2018,13 +2052,11 @@ input.validation-code {
 
 .filename {
   display: inline-block;
-  vertical-align: top;
-  width: 190px;
-  min-height: 25px;
-  max-height: 50px;
+  vertical-align: middle;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  width: 190px;
 }
 
 .error-summary .error-message {
@@ -2324,11 +2356,11 @@ input.validation-code {
   display: table-cell;
 }
 
-.dz-preview {
+.dz-processing, .dz-complete {
   position: relative;
 }
 
-.dz-preview .dz-progress {
+.dz-processing .dz-progress, .dz-complete .dz-progress {
   height: 40px;
   left: 0;
   margin-left: -5px;
@@ -2344,7 +2376,7 @@ input.validation-code {
   overflow: hidden;
 }
 
-.dz-preview .dz-progress .dz-upload {
+.dz-processing .dz-progress .dz-upload, .dz-complete .dz-progress .dz-upload {
   background-color: transparent;
   bottom: 0;
   left: 0;
@@ -2359,42 +2391,61 @@ input.validation-code {
   transition: width 1500ms ease-in-out;
 }
 
-.dz-preview .dz-error-message {
-  color: #b10e1e;
+.dz-processing .dz-error-message,
+.dz-processing .dz-success-message,
+.dz-processing .dz-checking-message, .dz-complete .dz-error-message,
+.dz-complete .dz-success-message,
+.dz-complete .dz-checking-message {
   display: none;
   position: relative;
   z-index: 1000;
 }
 
-.dz-preview.dz-error .dz-error-message, .dz-preview.dz-error .dz-error-mark {
-  display: block;
+.dz-processing.dz-error .dz-error-message,
+.dz-processing.dz-error .dz-success-message, .dz-processing.dz-success .dz-error-message,
+.dz-processing.dz-success .dz-success-message, .dz-processing.dz-checking .dz-error-message,
+.dz-processing.dz-checking .dz-success-message, .dz-complete.dz-error .dz-error-message,
+.dz-complete.dz-error .dz-success-message, .dz-complete.dz-success .dz-error-message,
+.dz-complete.dz-success .dz-success-message, .dz-complete.dz-checking .dz-error-message,
+.dz-complete.dz-checking .dz-success-message {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2px 4px 0;
 }
 
-.dz-preview.dz-success .dz-success-mark {
-  display: block;
+.dz-processing .dz-error-message, .dz-complete .dz-error-message {
+  color: #b10e1e;
+  border: 1px solid #b10e1e;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 
-.dz-preview .dz-error-mark, .dz-preview .dz-success-mark {
-  position: absolute;
-  display: none;
-  left: 30px;
-  top: 30px;
-  width: 54px;
-  height: 58px;
-  left: 50%;
-  margin-left: -27px;
+.dz-processing .dz-success-message, .dz-complete .dz-success-message {
+  color: #006435;
+  border: 1px solid #006435;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
 }
 
-.dz-preview.dz-processing .dz-progress ::before {
+.dz-processing .dz-checking-message, .dz-complete .dz-checking-message {
+  display: inline-block;
+  padding: inherit;
+}
+
+.dz-processing.dz-processing .dz-progress ::before, .dz-complete.dz-processing .dz-progress ::before {
   content: "Checking...";
   line-height: 1.3157894737;
 }
 
-.dz-preview.dz-complete .dz-progress {
+.dz-processing.dz-complete .dz-progress, .dz-complete.dz-complete .dz-progress {
   opacity: 0;
 }
 
-.dz-preview:not(.dz-processing) .dz-progress {
+.dz-processing:not(.dz-processing) .dz-progress, .dz-complete:not(.dz-processing) .dz-progress {
   -webkit-animation: pulse 6s ease infinite;
   -moz-animation: pulse 6s ease infinite;
   -ms-animation: pulse 6s ease infinite;

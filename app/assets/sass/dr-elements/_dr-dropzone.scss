@@ -104,7 +104,7 @@
   }
 }
 
-.dz-preview {
+.dz-processing, .dz-complete {
   position: relative;
   .dz-progress {
     height: 40px;
@@ -134,31 +134,38 @@
       @include prefix((transition: width 1500ms ease-in-out));
     }
   }
-  .dz-error-message {
-    color: $red;
+  .dz-error-message,
+  .dz-success-message,
+  .dz-checking-message {
     display: none;
     position: relative;
     z-index: 1000;
   }
-  &.dz-error {
-    .dz-error-message, .dz-error-mark {
-      display: block;
+  &.dz-error,
+  &.dz-success,
+  &.dz-checking {
+    .dz-error-message,
+    .dz-success-message {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding:2px 4px 0;
     }
   }
-  &.dz-success {
-    .dz-success-mark {
-      display: block;
-    }
+  .dz-error-message {
+    color: $red;
+    border:1px solid $red;
+    @include border-radius(2px);
   }
-  .dz-error-mark, .dz-success-mark {
-    position: absolute;
-    display: none;
-    left: 30px;
-    top: 30px;
-    width: 54px;
-    height: 58px;
-    left: 50%;
-    margin-left: -(54px/2);
+  .dz-success-message {
+    color: $green;
+    border:1px solid $green;
+    @include border-radius(2px);
+  }
+  .dz-checking-message {
+    display: inline-block;
+    padding:inherit;
   }
   &.dz-processing .dz-progress {
     ::before {

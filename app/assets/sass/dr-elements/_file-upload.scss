@@ -40,24 +40,56 @@
 .statusbar {
 	border-top: none;
 	border-bottom:1px solid #BFC1C3;
-	min-height: 25px;
 	width: auto;
-	padding: 10px 0 5px;
-	vertical-align: top;
+	padding: 5px 0 3px;
+	vertical-align: middle;
 	font-size: 16px;
-	.filename, .status, .action {
-		width:(100% / 3);
-		display: inline-block;
+	.filename, .status, .action, .remove  {
 		position: relative;
+		margin: 5px 0;
 	}
 	.action {
-		button.remove {
+	 width:60%;
+	 display: inline-block;
+	}
+	.remove {
+		width:40%;
+		text-align:right;
+		display: inline-block;
+	}
+	@include media(tablet) {
+		.filename, .status, .action, .remove  {
+			display: inline-block;
+		}
+		.filename {
+		 width:35%;
+		}
+		.status {
+		 width:30%;
+		}
+		.action {
+		 width:20%;
+		}
+		.remove {
+			width:15%;
+		}
+	}
+
+	.remove {
+		button.delete {
 			font-size: 16px;
 			background: transparent none repeat scroll 0 0;
 			border:0;
 			padding:0;
+			span {
+				display:none;
+				@include media(tablet) {
+					display:inline;
+				}
+			}
 		}
-		button.remove:hover {
+
+		button.delete:hover {
 			cursor: pointer;
 		}
 	}
@@ -69,11 +101,11 @@
 
 .filename {
 	display: inline-block;
-	vertical-align: top;
-	width: 190px;
-	min-height:25px;
-	max-height: 50px;
+	vertical-align: middle;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	@include media(tablet) {
+		width: 190px;
+	}
 }

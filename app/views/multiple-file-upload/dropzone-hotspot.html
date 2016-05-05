@@ -28,26 +28,28 @@
 		 <button class="button button-secondary button-choose-files fileinput-button">Choose files</button>
 
 			<div id="file-upload" class="dropzone">
+
+	 	 	<div class="statusbar statusbar-title" style="display:none">
+	 	 		<div class="filename">Name of data file to be checked</div><!-- inline-block break fix --><div class="status">Status</div><!-- inline-block break fix --><div class="action">Action</div>
+	 	 	</div>
+
 				<div class="files" id="previews">
 					<div id="preview-template" style="display: none;">
-						<div class="statusbar">
+						<div class="statusbar" class="dz-preview">
 							<div class="filename">
 								<span class="name" data-dz-name></span>
-								&#40;<span class="size" data-dz-size></span>&#41;
 							</div><!-- inline-block break fix--><div class="status">
 							<div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
 								<div class="dz-upload" style="width:0%;" data-dz-uploadprogress></div>
 						 	</div>
 			 					<div class="dz-error-message"><span data-dz-errormessage></span></div>
 						 </div><!-- inline-block break fix --><div class="action">
-								<button style="display:none" class="start">
-										<span>Start</span>
-								</button>
-								<button style="display:none" data-dz-remove class="cancel">
-										<span>Cancel</span>
-								</button>
-								<button data-dz-remove class="link remove">
-									<span>Remove file</span>
+	     					<a class="link" href="#">
+								  <span>View details</span>
+								</a>
+	     				</div><!-- inline-block break fix --><div class="remove">
+								<button data-dz-remove class="link delete">
+									Remove<span> file</span>
 								</button>
 							</div>
 						</div>
@@ -59,15 +61,12 @@
 		 <!-- The global file processing state -->
 	 </div>
 
-	 	<div class="statusbar statusbar-title" style="display:none">
-	 		<div class="filename">Name of data file to be checked</div><!-- inline-block break fix --><div class="status">Status</div><!-- inline-block break fix --><div class="action">Action</div>
-	 	</div>
-
 		<script>
 		Dropzone.options.fileUpload = {
 			url: "/target-url", // Set the url
 			previewsContainer: "#previews", // Define the container to display the previews
 			previewTemplate: document.getElementById('preview-template').innerHTML,
+			dictDefaultMessage:"Or drag and drop files here.",
 			clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
 		};
 
@@ -76,9 +75,13 @@
 			 document.querySelector(".statusbar").style.display = "block";
 		 });
 
+		 Dropzone.on("reset", function(file) {
+			 // Hide the status bar when dropzone is reset
+			 document.querySelector(".statusbar").style.display = "none";
+		 });
+
 		</script>
 
-	 <div class="dz-drag-hover-div"><div></div></div>
 </main>
 
 

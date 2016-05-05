@@ -43,6 +43,7 @@
 		 </div>
 	 </div>
 
+
 	 	<div class="statusbar statusbar-title" style="display:none">
 	 		<div class="filename">Name of data file to be checked</div><!-- inline-block break fix --><div class="status">Status</div><!-- inline-block break fix --><div class="action">Action</div>
 	 	</div>
@@ -52,21 +53,24 @@
 			<div class="statusbar">
 				<div class="filename">
 					<span class="name" data-dz-name></span>
-					&#40;<span class="size" data-dz-size></span>&#41;
 				</div><!-- inline-block break fix--><div class="status">
 				<div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
 					<div class="dz-upload" style="width:0%;" data-dz-uploadprogress></div>
 			 	</div>
  					<div class="dz-error-message"><span data-dz-errormessage></span></div>
 			 </div><!-- inline-block break fix --><div class="action">
+					<a class="link" href="#">
+						<span>View details</span>
+					</a>
+				</div><!-- inline-block break fix --><div class="remove">
 					<button style="display:none" class="start">
 							<span>Start</span>
 					</button>
 					<button style="display:none" data-dz-remove class="cancel">
 							<span>Cancel</span>
 					</button>
-					<button data-dz-remove class="link remove">
-						<span>Remove file</span>
+					<button class="link delete" data-dz-remove="">
+						Remove<span> file</span>
 					</button>
 				</div>
 			</div>
