@@ -2428,6 +2428,201 @@ input.validation-code {
   margin-bottom: 0;
 }
 
+/* REQUIRED for core functionality of tab.js */
+.responsive-tabs__heading {
+  display: none;
+}
+
+.responsive-tabs__list__item {
+  display: inline;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .responsive-tabs__list {
+    display: none;
+  }
+  .responsive-tabs__heading {
+    display: block;
+    cursor: pointer;
+  }
+  .responsive-tabs__panel--closed-accordion-only {
+    display: none;
+  }
+  .error-table-units .filter {
+    float: none;
+    width: 100%;
+  }
+  .responsive-stacked-table thead {
+    display: none;
+  }
+  .responsive-stacked-table tr,
+  .responsive-stacked-table th,
+  .responsive-stacked-table td {
+    display: block;
+    margin: 2px 0;
+  }
+  .responsive-stacked-table td {
+    border: none;
+  }
+  .responsive-stacked-table tr td:first-child {
+    border-top: 1px solid #000;
+    font-weight: bold;
+  }
+  .responsive-stacked-table tr td:first-child {
+    font-weight: 300;
+  }
+  .responsive-stacked-table td:before {
+    display: block;
+    font-weight: bold;
+  }
+  .responsive-stacked-table td:nth-of-type(1):before {
+    content: "Row:";
+  }
+  .responsive-stacked-table td:nth-of-type(2):before {
+    content: "Column:";
+  }
+  .responsive-stacked-table td:nth-of-type(3):before {
+    content: "Error:";
+  }
+  .responsive-stacked-table td:nth-of-type(4):before {
+    content: "How to fix it:";
+  }
+  .responsive-stacked-table td td,
+  .responsive-stacked-table td td:first-child {
+    border-top: 1px solid #bfc1c3;
+  }
+  .responsive-stacked-table td td:nth-of-type(1):before {
+    content: none;
+  }
+  .responsive-stacked-table td td:nth-of-type(2):before {
+    content: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .responsive-tabs__panel--closed-accordion-only {
+    display: block;
+  }
+}
+
+/* END - Required for core functionality of tab.js */
+.responsive-tabs-wrapper {
+  clear: both;
+  zoom: 1;
+}
+
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+  content: "";
+  display: table;
+}
+
+.responsive-tabs-wrapper:after {
+  clear: both;
+}
+
+.responsive-tabs__heading:focus,
+.responsive-tabs__list__item:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.responsive-tabs__heading--active:focus,
+.responsive-tabs__list__item--active:focus {
+  outline: 3px solid #ffbf47;
+}
+
+.responsive-tabs__list {
+  margin: 2em 0 0 0;
+  padding: 0;
+  border-bottom: 1px solid #bfc1c3;
+  padding-bottom: 19px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.responsive-tabs__list__item {
+  padding: 10px 20px;
+  margin-right: 0.3em;
+  border: 1px solid #dee0e2;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: #dee0e2;
+  line-height: 16px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.responsive-tabs__list__item:hover {
+  background: #dee0e2;
+}
+
+.responsive-tabs__list__item--active,
+.responsive-tabs__list__item--active:hover {
+  background: #fff;
+  border: 1px solid #bfc1c3;
+  border-bottom: 0;
+  color: #0b0c0c;
+  padding: 16px 20px 17px;
+}
+
+.responsive-tabs__panel {
+  margin-bottom: 1.05263em;
+}
+
+.responsive-tabs__panel p {
+  margin: 15px 0 10px 0;
+}
+
+.responsive-tabs th p {
+  margin-right: 15px;
+}
+
+.responsive-tabs td {
+  padding-right: 5px;
+}
+
+.back-to-top a {
+  float: right;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 640px) {
+  .responsive-tabs__heading {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background: #dee0e2;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .responsive-tabs__heading:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #000;
+  }
+  .responsive-tabs__heading:hover,
+  .responsive-tabs__heading--active:hover {
+    background-color: #fff;
+  }
+  .responsive-tabs__heading--active {
+    background: #fff;
+  }
+  .responsive-tabs__heading--active:after {
+    border-bottom: 10px solid #000;
+    border-top: 0;
+  }
+  .responsive-tabs {
+    width: 100%;
+  }
+}
+
 /* @import "dr-elements/dropzone";*/
 @-webkit-keyframes passing-through {
   0% {
