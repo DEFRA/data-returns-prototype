@@ -1,0 +1,61 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+
+    <script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+    <script src="/public/javascripts/jquery-ui.min.js"></script>
+
+</header>
+
+<main role="main" id="content">
+
+    <div class="phase-banner-beta">
+        <p><strong class="phase-tag">BETA</strong><span>This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk?Subject=Feedback from Data Returns (default)">feedback</a> will help us to improve it.</span></p>
+    </div>
+    <form class="form" method="post">
+        <h1 class="heading-large">Confirm your file</h1>
+
+				<p class="lede">The data returns file you’re going to send is about:</p>
+
+				<div class="text panel panel-border-wide">
+					<p>File: Trigon Data Return 2015_1.csv</p>
+					<dl>
+						<dt class="heading-small">Trigon Landfill Site 1</dt>
+						<dd>BX4054ID</dd>
+						<dd>BX4055ID</dd>
+						<dd>BX4056ID</dd>
+						<dt class="heading-small">Trigon Landfill Site 2</dt>
+						<dd>BX4057ID</dd>
+						<dt class="heading-small">Trigon Landfill Site 3</dt>
+						<dd>BX4058ID</dd>
+						<dd>BX4059ID</dd>
+					</dl>
+				</div>
+
+				<details class="help-text-reg">
+		      <summary><span class="summary">These details aren’t right</span></summary>
+		      <div class="panel panel-border-wide">
+		        <p>Do you need to choose a different file? <a href="/file/choose" id="details-wrong-link">Start again</a> so you can send the right file and details.</p>
+		      </div>
+		    </details>
+
+        <!-- Primary button -->
+        <div class="form-group confirmed">
+            <input type="button" onclick="location.href = '/02-send-your-data/06-check';" value="Continue" class="button" id="continue.btn">
+        </div>
+
+        <!-- /text -->
+    </form>
+    <div style="display:none" class="form-group permit-not-found">
+        <input type="submit" onclick="location.href = '/02-send-your-data/01-choose-your-file';" value="Start again" class="button" id="start-again-btn">
+    </div>
+</main>
+{{/content}}
+
+{{/layout}}
