@@ -2112,6 +2112,22 @@ input.validation-code {
   white-space: nowrap;
 }
 
+.multiple {
+  margin-bottom: 30px;
+}
+
+.multiple td {
+  vertical-align: top;
+}
+
+.multiple td p:first-child {
+  margin-top: 0;
+}
+
+.multiple td p:last-child {
+  margin-bottom: 0;
+}
+
 /* @import "dr-elements/dropzone";*/
 @-webkit-keyframes passing-through {
   0% {
