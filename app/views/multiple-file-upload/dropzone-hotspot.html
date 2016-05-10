@@ -55,7 +55,7 @@
 		</div>
 		<!-- #file-upload -->
 
-	 <p>You must correct any errors before this file can be sent to the Environment Agency.</p>
+	 <p class="correct-errors">You must correct any errors before this file can be sent to the Environment Agency.</p>
 	 <input type="submit" disabled="disabled" name="submit" value="Continue" class="button" id="check-for-errors-btn">
 
 
@@ -77,6 +77,16 @@
 		 Dropzone.on("reset", function(file) {
 			 // Hide the status bar when dropzone is reset
 			 document.querySelector(".statusbar").style.display = "none";
+		 });
+
+		 myDropzone.on("addedfile", function(file) {
+			 // Show the status bar when files is dragged over dropzone
+			 document.querySelector(".correct-errors").style.display = "block";
+		 });
+
+		 myDropzone.on("reset", function(file) {
+			 // Hide the status bar when dropzone is reset
+			 document.querySelector(".correct-errors").style.display = "none";
 		 });
 
 		</script>
