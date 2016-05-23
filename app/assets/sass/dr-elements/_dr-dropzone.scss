@@ -106,7 +106,7 @@
 .dz-processing, .dz-complete {
   position: relative;
   .dz-progress {
-    height: 40px;
+    height: 42.5px;
     left: 0;
     margin-left: -5px;
     margin-top: -22px;
@@ -166,19 +166,42 @@
     display: inline-block;
     padding:inherit;
   }
-  &.dz-processing .dz-progress {
-    ::before {
-      content: "Checking...";
-      line-height: 3;
-      margin-left: 4px;
-    }
-  }
   &.dz-complete .dz-progress {
     opacity: 0;
   }
   &:not(.dz-processing) {
     .dz-progress {
       @include prefix((animation: pulse 6s ease infinite));
+    }
+  }
+}
+
+
+/* Mock up only */
+.live {
+  .dz-processing, .dz-complete {
+    &.dz-processing .dz-progress {
+    ::before {
+      content: "Checking...";
+      line-height: 3;
+      margin-left: 4px;
+      }
+    }
+  }
+}
+.mock {
+  .dz-processing, .dz-complete {
+    &.dz-processing .dz-progress {
+      opacity: 1;
+      .dz-upload {
+        background-color: rgba(24,26,27,0.1);
+        line-height: 3;
+        span {
+          display: inline-block;
+          line-height: 2;
+          margin: 5px 0 0 5px;
+        }
+      }
     }
   }
 }

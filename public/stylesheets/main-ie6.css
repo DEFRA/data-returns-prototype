@@ -2484,7 +2484,7 @@ input.validation-code {
 }
 
 .dz-processing .dz-progress, .dz-complete .dz-progress {
-  height: 40px;
+  height: 42.5px;
   left: 0;
   margin-left: -5px;
   margin-top: -22px;
@@ -2559,12 +2559,6 @@ input.validation-code {
   padding: inherit;
 }
 
-.dz-processing.dz-processing .dz-progress ::before, .dz-complete.dz-processing .dz-progress ::before {
-  content: "Checking...";
-  line-height: 3;
-  margin-left: 4px;
-}
-
 .dz-processing.dz-complete .dz-progress, .dz-complete.dz-complete .dz-progress {
   opacity: 0;
 }
@@ -2575,6 +2569,28 @@ input.validation-code {
   -ms-animation: pulse 6s ease infinite;
   -o-animation: pulse 6s ease infinite;
   animation: pulse 6s ease infinite;
+}
+
+/* Mock up only */
+.live .dz-processing.dz-processing .dz-progress ::before, .live .dz-complete.dz-processing .dz-progress ::before {
+  content: "Checking...";
+  line-height: 3;
+  margin-left: 4px;
+}
+
+.mock .dz-processing.dz-processing .dz-progress, .mock .dz-complete.dz-processing .dz-progress {
+  opacity: 1;
+}
+
+.mock .dz-processing.dz-processing .dz-progress .dz-upload, .mock .dz-complete.dz-processing .dz-progress .dz-upload {
+  background-color: rgba(24, 26, 27, 0.1);
+  line-height: 3;
+}
+
+.mock .dz-processing.dz-processing .dz-progress .dz-upload span, .mock .dz-complete.dz-processing .dz-progress .dz-upload span {
+  display: inline-block;
+  line-height: 2;
+  margin: 5px 0 0 5px;
 }
 
 a[rel="external"]::after {
