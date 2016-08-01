@@ -1947,6 +1947,10 @@ input.validation-code {
   width: 100px;
 }
 
+.govuk-box-highlight {
+  padding: 2em 0 3em 0;
+}
+
 .file-upload .well {
   margin-bottom: 30px;
 }
@@ -1993,14 +1997,27 @@ input.validation-code {
   border-top: none;
   border-bottom: 1px solid #BFC1C3;
   width: auto;
-  padding: 5px 0 3px;
   vertical-align: middle;
   font-size: 16px;
+  position: relative;
 }
 
-.statusbar .filename, .statusbar .status, .statusbar .action, .statusbar .remove {
+.statusbar .filename, .statusbar .action, .statusbar .remove, .statusbar .status {
   position: relative;
   margin: 5px 0;
+  padding: 5px 0 3px;
+  vertical-align: top;
+}
+
+.statusbar .status {
+  margin: 0;
+  padding: 0;
+}
+
+.statusbar .status .dz-checking-message, .statusbar .status .dz-error-message, .statusbar .status .dz-success-message {
+  position: relative;
+  margin: 8px 0;
+  padding: 5px 0 3px;
 }
 
 .statusbar .action {
@@ -2039,6 +2056,7 @@ input.validation-code {
   background: transparent none repeat scroll 0 0;
   border: 0;
   padding: 0;
+  line-height: 1;
 }
 
 .statusbar .remove button.delete span {
@@ -2484,34 +2502,35 @@ input.validation-code {
 }
 
 .dz-processing .dz-progress, .dz-complete .dz-progress {
-  height: 42.5px;
-  left: 0;
   margin-left: -5px;
-  margin-top: -22px;
-  opacity: 1;
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  z-index: 1000;
-  -webkit-transform: scale(1);
-  overflow: hidden;
+  /*
+    height: 43px;
+    left: 0;
+    margin-top: -18px;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1000;
+
+    // Fix for chrome bug: https://code.google.com/p/chromium/issues/detail?id=157218
+    -webkit-transform: scale(1);
+    overflow: hidden;
+    */
 }
 
 .dz-processing .dz-progress .dz-upload, .dz-complete .dz-progress .dz-upload {
-  background-color: transparent;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: width 1500ms ease-in-out 0s;
-  width: 0;
-  -webkit-transition: width 1500ms ease-in-out;
-  -moz-transition: width 1500ms ease-in-out;
-  -ms-transition: width 1500ms ease-in-out;
-  -o-transition: width 1500ms ease-in-out;
-  transition: width 1500ms ease-in-out;
+  /* background-color: transparent;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: width 1500ms ease-in-out 0s;
+      width: 0;
+      @include prefix((transition: width 1500ms ease-in-out));
+      */
 }
 
 .dz-processing .dz-error-message,
@@ -2584,13 +2603,12 @@ input.validation-code {
 
 .mock .dz-processing.dz-processing .dz-progress .dz-upload, .mock .dz-complete.dz-processing .dz-progress .dz-upload {
   background-color: rgba(24, 26, 27, 0.1);
-  line-height: 3;
 }
 
 .mock .dz-processing.dz-processing .dz-progress .dz-upload span, .mock .dz-complete.dz-processing .dz-progress .dz-upload span {
   display: inline-block;
-  line-height: 2;
-  margin: 5px 0 0 5px;
+  margin: 5px 0;
+  padding: 5px 0 3px 5px;
 }
 
 a[rel="external"]::after {

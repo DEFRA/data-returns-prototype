@@ -1,109 +1,185 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title></title>
 	<style type="text/css">
 		/* Based on The MailChimp Reset INLINE: Yes. */
 		/* Client-specific Styles */
-		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
-		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+
+		#outlook a {
+			padding: 0;
+		}
+		/* Force Outlook to provide a "view in browser" menu link. */
+
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+		}
 		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
-		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
-		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+
+		.ExternalClass {
+			width: 100%;
+		}
+		/* Force Hotmail to display emails at full width */
+
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height: 100%;
+		}
 		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
 		/* End reset */
-
 		/* Some sensible defaults for images
 		Bring inline: Yes. */
-		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
-		a img {border:none;}
-		.image_fix {display:block;}
 
+		img {
+			outline: none;
+			text-decoration: none;
+			-ms-interpolation-mode: bicubic;
+		}
+
+		a img {
+			border: none;
+		}
+
+		.image_fix {
+			display: block;
+		}
 		/* Yahoo paragraph fix
 		Bring inline: Yes. */
-		p {margin: 15px 0;}
 
+		p {
+			margin: 15px 0;
+		}
 		/* Hotmail header color reset
 		Bring inline: Yes. */
-		h1, h2, h3, h4, h5, h6 {color: #0B0C0C !important;}
 
-		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: #005EA5 !important;}
-
-    	h1 a:hover, h2 a:hover,  h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-        color: #2E8ACA !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
-        }
-
-		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
-		color: #2E8ACA !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: #0B0C0C !important;
 		}
 
-		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-		color: #005EA5 !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		h1 a,
+		h2 a,
+		h3 a,
+		h4 a,
+		h5 a,
+		h6 a {
+			color: #005EA5 !important;
 		}
 
+		h1 a:hover,
+		h2 a:hover,
+		h3 a:hover,
+		h4 a:hover,
+		h5 a:hover,
+		h6 a:hover {
+			color: #2E8ACA !important;
+			/* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		h1 a:active,
+		h2 a:active,
+		h3 a:active,
+		h4 a:active,
+		h5 a:active,
+		h6 a:active {
+			color: #2E8ACA !important;
+			/* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		h1 a:visited,
+		h2 a:visited,
+		h3 a:visited,
+		h4 a:visited,
+		h5 a:visited,
+		h6 a:visited {
+			color: #005EA5 !important;
+			/* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
 		/* Outlook 07, 10 Padding issue fix
 		Bring inline: No.*/
-		table td {border-collapse: collapse;}
 
+		table td {
+			border-collapse: collapse;
+		}
 		/* Remove spacing around Outlook 07, 10 tables
 		Bring inline: Yes */
-		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
 
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
 		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
 		Bring inline: Yes. */
-		a {color: #005EA5;}
 
-
+		a {
+			color: #005EA5;
+		}
 		/***************************************************
 		****************************************************
 		MOBILE TARGETING
 		****************************************************
 		***************************************************/
+
 		@media only screen and (max-device-width: 480px) {
 			/* Part one of controlling phone number linking for mobile. */
-			a[href^="tel"], a[href^="sms"] {
-						text-decoration: none;
-						color: blue; /* or whatever your want */
-						pointer-events: none;
-						cursor: default;
-					}
-
-			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-						text-decoration: default;
-						color: orange !important;
-						pointer-events: auto;
-						cursor: default;
-					}
-
+			a[href^="tel"],
+			a[href^="sms"] {
+				text-decoration: none;
+				color: blue;
+				/* or whatever your want */
+				pointer-events: none;
+				cursor: default;
+			}
+			.mobile_link a[href^="tel"],
+			.mobile_link a[href^="sms"] {
+				text-decoration: default;
+				color: orange !important;
+				pointer-events: auto;
+				cursor: default;
+			}
 		}
-
 		/* More Specific Targeting */
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		/* You guessed it, ipad (tablets, smaller screens, etc) */
+			/* You guessed it, ipad (tablets, smaller screens, etc) */
 			/* repeating for the ipad */
-			a[href^="tel"], a[href^="sms"] {
-						text-decoration: none;
-						color: blue; /* or whatever your want */
-						pointer-events: none;
-						cursor: default;
-					}
-
-			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-						text-decoration: default;
-						color: orange !important;
-						pointer-events: auto;
-						cursor: default;
-					}
+			a[href^="tel"],
+			a[href^="sms"] {
+				text-decoration: none;
+				color: blue;
+				/* or whatever your want */
+				pointer-events: none;
+				cursor: default;
+			}
+			.mobile_link a[href^="tel"],
+			.mobile_link a[href^="sms"] {
+				text-decoration: default;
+				color: orange !important;
+				pointer-events: auto;
+				cursor: default;
+			}
 		}
 	</style>
-  </head>
-  <body>
+</head>
 
-
-    <!--[if mso]>
+<body>
+	<!--[if mso]>
         <table width="100%"><tr><td width="100%" style="width: 100%; height: 55px; display: block; background-color: #0B0C0C;">
             <center>
             <table><tr><td width="35">
@@ -112,40 +188,23 @@
             </td></tr>
         </table>
     <![endif]-->
-
-
-		<div id="header" style="mso-hide:all; width:100%; height: 55px; display: block; background-color: #0B0C0C;">
-		  <div class="wrapper" style="color:white !important; text-decoration:none !important; max-width: 570px; margin: 0 auto; height: 55px; padding: 0 15px;">
-              <img width="35" height="31" id="govuk-masthead" style="vertical-align: middle;" src="http://www.tax.service.gov.uk/assets/2.30.0/images/gov.uk_logotype_crown.png" alt="GOV.UK" />
-      		<span style="font-family: sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.5px; line-height: 57px; padding-left: 3px; vertical-align: middle;">
+	<div id="header" style="mso-hide:all; width:100%; height: 55px; display: block; background-color: #0B0C0C;">
+		<div class="wrapper" style="color:white !important; text-decoration:none !important; max-width: 570px; margin: 0 auto; height: 55px; padding: 0 15px;"> <img width="35" height="31" id="govuk-masthead" style="vertical-align: middle;" src="http://www.tax.service.gov.uk/assets/2.30.0/images/gov.uk_logotype_crown.png" alt="GOV.UK" /> <span style="font-family: sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.5px; line-height: 57px; padding-left: 3px; vertical-align: middle;">
               <a href="http://www.gov.uk" style="text-decoration:none; color:#ffffff;">GOV.UK</a>
-          </span>
-		  </div>
-		</div>
-
-		<!--[if mso]>
+          </span> </div>
+	</div>
+	<!--[if mso]>
 		 <center>
 		 <table><tr><td width="570">
 		<![endif]-->
-
-<div class="wrapper" style="max-width: 570px; padding: 0 15px; margin: 0 auto;">
-
-  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 30px 0 30px 0;">Use this code from the Environment Agency to confirm your details and send data returns online:</p>
-
-	<h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 36px; line-height: 1.315789474; font-weight: 700; margin: 19px 0 38px 0;">1234</h1>
-
-  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Go to your browser to enter this code. Then you can send your data returns file saved as CSV.</p>
-
-  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We’ll send a receipt to this email address.</p>
-
-  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your site officer will get a notification about this data return file and may need to get in touch with you directly.</p>
-
-  <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Ignore this email if you didn’t ask for a code.</p>
-
-
-	<img id="ea-masthead" class="ea-logo" src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/organisation/logo/199/EAlogo.png">
-
-	<!-- Hidden for now
+	<div class="wrapper" style="max-width: 570px; padding: 0 15px; margin: 0 auto;">
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 30px 0 30px 0;">Use this code from the Environment Agency to confirm your details and send data returns online:</p>
+		<h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 36px; line-height: 1.315789474; font-weight: 700; margin: 19px 0 38px 0;">1234</h1>
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Go to your browser to enter this code. Then you can send your data returns file saved as CSV.</p>
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">We’ll send a receipt to this email address.</p>
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your site officer will get a notification about this data return file and may need to get in touch with you directly.</p>
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Ignore this email if you didn’t ask for a code.</p> <img id="ea-masthead" class="ea-logo" src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/organisation/logo/199/EAlogo.png">
+		<!-- Hidden for now
 	<div class="footer">
 		<ul>
 			<li><strong>Telephone:</strong> 03708 506 506</li>
@@ -161,8 +220,7 @@
 		<p>Email address: <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a></p>
 
 	</div>
--->
-</div>
-
+--></div>
 </body>
+
 </html>
