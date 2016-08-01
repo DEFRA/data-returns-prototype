@@ -135,51 +135,54 @@
 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You successfully sent a data returns file to the Environment Agency on:</p>
 
 
-	<table align="left" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 580px; border-left: 10px #dee0e2 solid; margin: 0 0 45px 0;">
-	    <tr>
-	        <td style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">Date:</td>
-			    <td style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">
-						<strong>{DD/MM/YYYY}</strong>
-					</td>
-			</tr>
-	    <tr>
-	        <td style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">Time:</td>
-			    <td style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">
-						<strong>{hh:mm - 24-hour clock}</strong>
-					</td>
-			</tr>
+	<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 580px; border-left: 10px #dee0e2 solid; margin: 0 0 0 0;">
+		<tr>
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left; font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">Date:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">
+					{DD/MM/YYYY}
+				</td>
+		</tr>
+		<tr>
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">Time:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">
+					{hh:mm - 24-hour clock}
+				</td>
+		</tr>
 	</table>
 
-	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Your details:</p>
+	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 45px 0 30px 0;">Your details:</p>
 
 
-	<table align="left" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 580px; border-left: 10px #dee0e2 solid; margin: 0 0 45px 0;">
+	<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 580px; border-left: 10px #dee0e2 solid; margin: 0;">
 		<tr>
-			<td>
-				<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 15px 0 0 14px; padding:5px 0 5px 0; vertical-align:top;">File: {filename}</p>
-				<dl style="width: 100%; max-width: 580px; margin: 0 0 15px 14px;">
-					<dt style="font-family: Helvetica, Arial, sans-serif; font-weight:700; font-size: 19px; line-height: 1.315789474; margin: 15px 0 5px 0;">
-						<strong>Site name</strong>
-					</dt>
-					<dd style="font-family: Helvetica, Arial, sans-serif; font-weight:400; font-size: 19px; line-height: 1.315789474; margin: 0 0 0 0;">
-						{EA_ID}<br>
-						{EA_ID}
-					</dd>
-					<dt style="font-family: Helvetica, Arial, sans-serif; font-weight:700; font-size: 19px; line-height: 1.315789474; margin: 15px 0 5px 0;">
-						<strong>Site name</strong>
-					</dt>
-			    <dd style="font-family: Helvetica, Arial, sans-serif; font-weight:400; font-size: 19px; line-height: 1.315789474; margin: 0 0 0 0;">
-						{EA_ID}<br>
-						{EA_ID}<br>
-						{EA_ID}
-					</dd>
-				</dl>
-			</td>
+			<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">File:</th>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{filename}</td>
+		<tr>
+		<tr>
+			<th rowspan="3" style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">{site_name}:</th>
+		</tr>
+		<tr>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{EA_ID}<td>
+		</tr>
+		<tr>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{EA_ID}<td>
+		</tr>
+		<tr>
+			<th rowspan="4" style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; vertical-align:top; width:25%">{site_name}:</th>
+		</tr>
+		<tr>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{EA_ID}<td>
+		</tr>
+		<tr>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{EA_ID}<td>
+		</tr>
+		<tr>
+			<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px 14px; vertical-align:top;">{EA_ID}<td>
 		</tr>
 	</table>
 
 
-	<h2 style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; line-height: 1.315789474; font-weight: 700; margin: 38px 0 19px 0;">What happens next?</h2>
+	<h2 style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; line-height: 1.315789474; font-weight: 700; margin: 58px 0 19px 0;">What happens next?</h2>
 
   <p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Now you’ve sent your data returns file your compliance officer can check your data for quality and regulatory compliance.  We may need to contact you using the email address you gave to discuss compliance.</p>
 
