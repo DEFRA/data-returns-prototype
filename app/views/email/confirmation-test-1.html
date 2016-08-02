@@ -190,28 +190,91 @@
 
 		<h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 36px; line-height: 1.315789474; font-weight: 700; margin: 19px 0 38px 0;">Your data returns receipt</h1>
 
-		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0; ">You successfully sent a data returns file to the Environment Agency on: <span style="font-weight:bold;">{DD/MM/YYYY}</span> at <span style="font-weight:bold;">{hh:mm - 24-hour clock}</span></p>
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0; ">You successfully sent a data returns file to the Environment Agency on:</p>
+
+		<table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 565px; border-left: 10px #dee0e2 solid; margin: 0 0 0 0;">
+			<tr>
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left; font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%">Date:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;"> {DD/MM/YYYY} </td>
+			</tr>
+			<tr>
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%">Time:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;"> {hh:mm - 24-hour clock} </td>
+			</tr>
+		</table>
 
 		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 45px 0 30px 0;">Your details:</p>
 
-		<div style="width:100%; max-width: 565px; border-left: 10px #dee0e2 solid; padding-left:16px;">
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{filename}</p>
+		<!-- Rowspan (breaks in Outlook) -->
+		<table cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width: 565px; border-left: 10px #dee0e2 solid; margin:0 0 30px 0; padding:0;">
+			<tr style="margin:0;">
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 0 14px; width:35%;">File:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474;  margin:0;padding:5px 0 5px; vertical-align:top;">{filename}</td>
+			</tr>
+			<tr style="margin:0;">
+				<th rowspan="3" style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left; font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 0 14px; width:35%; vertical-align:top;">{site_name}:</th>
+			</tr>
+			<tr style="margin:0;">
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474 margin:0;; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+			</tr>
+			<tr style="margin:0;">
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+			</tr>
+			<tr style="margin:0;">
+				<th rowspan="4" style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%; vertical-align:top;">{site_name}:</th>
+			</tr>
+			<tr style="margin:0;">
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+			</tr>
+			<tr style="margin:0;">
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+			</tr>
+			<tr style="margin:0;">
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+			</tr>
+		</table>
 
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:15px 0 0; padding:0; vertical-align:top;">{site_name}</p>
 
-			<ul style="list-style-type:none; margin:0; padding:0;">
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-			</ul>
+		<!-- Nested table (works in Outlook) -->
+		<table cellpadding="0" cellspacing="0" border="0" style="width:100%; max-width: 565px; border-left: 10px #dee0e2 solid; margin:0 0 30px 0; padding:0;">
+			<tr style="margin:0;">
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%;">File:</th>
+				<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{filename}</td>
+			</tr>
+			<tr style="margin:0;">
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%; vertical-align:top;">{site_name}:</th>
+				<td>
 
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474;  margin:15px 0 0; padding:0; vertical-align:top;">{site_name}</p>
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 100%;padding:0;margin:0;">
+						<tr style="margin:0;">
+							<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+						</tr>
+						<tr style="margin:0;">
+							<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+						</tr>
+					</table>
 
-			<ul style="list-style-type:none; margin:0; padding:0;">
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-			</ul>
-		</div>
+					</td>
+			</tr>
+			<tr style="margin:0;">
+				<th style="font-family: Helvetica, Arial, sans-serif; font-weight:normal; text-align:left;  font-size: 19px; line-height: 1.315789474; padding:5px 0 0 14px; width:35%; vertical-align:top;">{site_name}:</th>
+				<td>
+
+					<table cellpadding="0" cellspacing="0" border="0" style="width: 100%;padding:0;margin:0;">
+						<tr style="margin:0;">
+							<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+						</tr>
+						<tr style="margin:0;">
+							<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+						</tr>
+						<tr style="margin:0;">
+							<td style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; padding:5px 0 5px; vertical-align:top;">{EA_ID}</td>
+						</tr>
+					</table>
+
+					</td>
+			</tr>
+		</table>
 
 		<h2 style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; line-height: 1.315789474; font-weight: 700; margin: 58px 0 19px 0;">What happens next?</h2>
 		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Now you’ve sent your data returns file your compliance officer can check your data for quality and regulatory compliance. We may need to contact you using the email address you gave to discuss compliance.</p>
