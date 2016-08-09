@@ -5,6 +5,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title></title>
+	<!--[if lse mso 14]>
+	<style type="text/css">
+			ul {
+					mso-special-format:nobullet•;
+				}
+	</style>
+  <![endif]-->
 	<style type="text/css">
 		/* Based on The MailChimp Reset INLINE: Yes. */
 		/* Client-specific Styles */
@@ -21,24 +28,6 @@
 			margin: 0;
 			padding: 0;
 		}
-		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
-
-		.ExternalClass {
-			width: 100%;
-		}
-		/* Force Hotmail to display emails at full width */
-
-		.ExternalClass,
-		.ExternalClass p,
-		.ExternalClass span,
-		.ExternalClass font,
-		.ExternalClass td,
-		.ExternalClass div {
-			line-height: 100%;
-		}
-		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
-		/* End reset */
-		/* Some sensible defaults for imagesBring inline: Yes. */
 
 		img {
 			outline: none;
@@ -54,11 +43,6 @@
 			display: block;
 		}
 		/* Yahoo paragraph fixBring inline: Yes. */
-
-		p {
-			margin: 15px 0;
-		}
-		/* Hotmail header color resetBring inline: Yes. */
 
 		h1,
 		h2,
@@ -124,47 +108,7 @@
 		a {
 			color: #005EA5;
 		}
-		/*******************************************************************************************************MOBILE TARGETING*******************************************************************************************************/
 
-		@media only screen and (max-device-width: 480px) {
-			/* Part one of controlling phone number linking for mobile. */
-			a[href^="tel"],
-			a[href^="sms"] {
-				text-decoration: none;
-				color: blue;
-				/* or whatever your want */
-				pointer-events: none;
-				cursor: default;
-			}
-			.mobile_link a[href^="tel"],
-			.mobile_link a[href^="sms"] {
-				text-decoration: default;
-				color: orange !important;
-				pointer-events: auto;
-				cursor: default;
-			}
-		}
-		/* More Specific Targeting */
-
-		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-			/* You guessed it, ipad (tablets, smaller screens, etc) */
-			/* repeating for the ipad */
-			a[href^="tel"],
-			a[href^="sms"] {
-				text-decoration: none;
-				color: blue;
-				/* or whatever your want */
-				pointer-events: none;
-				cursor: default;
-			}
-			.mobile_link a[href^="tel"],
-			.mobile_link a[href^="sms"] {
-				text-decoration: default;
-				color: orange !important;
-				pointer-events: auto;
-				cursor: default;
-			}
-		}
 	</style>
 </head>
 
@@ -179,59 +123,37 @@
     </table>
     <![endif]-->
 	<div id="header" style="mso-hide:all; width:100%; height: 55px; display: block; background-color: #0B0C0C;">
-		<div class="wrapper" style="color:white !important; text-decoration:none !important; max-width: 565px; margin: 0 auto; height: 55px; padding: 0 15px;"> <img width="35" height="31" id="govuk-masthead" style="vertical-align: middle;" src="http://www.tax.service.gov.uk/assets/2.30.0/images/gov.uk_logotype_crown.png" alt="GOV.UK" /> <span style="font-family: sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.5px; line-height: 57px; padding-left: 3px; vertical-align: middle;">
-              <a href="http://www.gov.uk" style="text-decoration:none; color:#ffffff;">GOV.UK</a>
-          </span> </div>
+		<div class="wrapper" style="color:white !important; text-decoration:none !important; max-width: 565px; margin: 0 auto; height: 55px; padding: 0 15px;"> <img width="35" height="31" id="govuk-masthead" style="vertical-align: middle;" src="http://www.tax.service.gov.uk/assets/2.30.0/images/gov.uk_logotype_crown.png" alt="GOV.UK" /> <span style="font-family: sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.5px; line-height: 57px; padding-left: 3px; vertical-align: middle;"> <a href="http://www.gov.uk" style="text-decoration:none; color:#ffffff;">GOV.UK</a></span>			</div>
 	</div>
-
 	<!--[if mso]><center><table><tr><td width="570"><![endif]-->
-
 	<div class="wrapper" style="max-width: 565px; padding: 0 15px; margin: 0 auto;">
-
 		<h1 style="font-family: Helvetica, Arial, sans-serif; font-size: 36px; line-height: 1.315789474; font-weight: 700; margin: 19px 0 38px 0;">Your data returns receipt</h1>
-
-		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0; ">You successfully sent a data returns file to the Environment Agency on: <span style="font-weight:bold;">{DD/MM/YYYY}</span> at <span style="font-weight:bold;">{hh:mm - 24-hour clock}</span></p>
-
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0; ">You successfully sent a data returns file to the Environment Agency on: <span style="font-weight:600;">{DD/MM/YYYY}</span> at <span style="font-weight:600;">{hh:mm - 24-hour clock}</span></p>
 		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 45px 0 30px 0;">Your details:</p>
-
-		<div style="width:100%; max-width: 565px; border-left: 10px #dee0e2 solid; padding-left:16px;">
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{filename}</p>
-
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:15px 0 0; padding:0; vertical-align:top;">{site_name}</p>
-
-			<ul style="list-style-type:none; margin:0; padding:0;">
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+	  <div style="width:100%; max-width: 565px; border-left: 10px #dee0e2 solid; padding:10px 0 10px 16px;">
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:15px 0 0; padding:0; vertical-align:top;">{filename}</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:600; font-size: 19px; line-height: 1.315789474; margin:0 0 0 25px; padding:0; vertical-align:top;">{site_name}</p>
+			<ul style="list-style-type:none; margin:0 0 0 25px; padding:0;">
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
 			</ul>
-
-			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474;  margin:15px 0 0; padding:0; vertical-align:top;">{site_name}</p>
-
-			<ul style="list-style-type:none; margin:0; padding:0;">
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
-				<li style="font-family: Helvetica, Arial, sans-serif; font-weight:bold; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:600; font-size: 19px; line-height: 1.315789474; margin:0 0 0 25px; padding:0; vertical-align:top;">{site_name}</p>
+			<ul style="list-style-type:none; margin:0 0 0 25px; padding:0;">
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+			</ul>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:15px 0 0; padding:0; vertical-align:top;">{filename}</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-weight:600; font-size: 19px; line-height: 1.315789474; margin:0 0 0 25px; padding:0; vertical-align:top;">{site_name}</p>
+			<ul style="list-style-type:none; margin:0 0 0 25px; padding:0;">
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
+				<li style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin:0; padding:0; vertical-align:top;">{EA_ID}</li>
 			</ul>
 		</div>
-
 		<h2 style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; line-height: 1.315789474; font-weight: 700; margin: 58px 0 19px 0;">What happens next?</h2>
 		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Now you’ve sent your data returns file your compliance officer can check your data for quality and regulatory compliance. We may need to contact you using the email address you gave to discuss compliance.</p>
 		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">You can use the service to <a href="#">send another data returns file online</a>.</p>
-		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Send us <a href="#">feedback</a> to help us improve this new service.</p> <img id="ea-masthead" class="ea-logo" style="margin: 15px 0;" src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/organisation/logo/199/EAlogo.png">
-
-		<!--
-		<div class="footer">
-			<ul style="color: #0B0C0C; font-family: sans-serif; margin: 15px 0; padding-left: 0; list-style-type: none;"><li style="color: #6F777B !important; font-size: 16px; line-height: 1.25;"><strong>Telephone:</strong> 03708 506 506</li><li style="color: #6F777B !important; font-size: 16px; line-height: 1.25;"><strong>Telephone from outside the UK:</strong> 00 44 1709 389 201</li></ul>
-			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; color: #6F777B; line-height: 1.315789474; margin: 0 0 30px 0;">(Mon to Fri, 8am to 6pm)</p>
-			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; color: #6F777B; line-height: 1.315789474; margin: 0 0 30px 0;">Minicom service, for the hard of hearing: 03702 422 549 National Customer Contact Centre.</p>
-			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; color: #6F777B; line-height: 1.315789474; margin: 0 0 30px 0;">Details of call charges can be found on the GOV.UK website</p>
-			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; color: #6F777B; line-height: 1.315789474; margin: 0 0 30px 0;">Email address: <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a></p>
-		</div>
-		-->
-
-  </div>
-
+		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 19px; line-height: 1.315789474; margin: 0 0 30px 0;">Send us <a href="#">feedback</a> to help us improve this new service.</p> <img id="ea-masthead" class="ea-logo" style="margin: 15px 0;" src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/organisation/logo/199/EAlogo.png">		</div>
 	<!--[if mso]></td></tr></table></center><![endif]-->
-
 </body>
-
 </html>
