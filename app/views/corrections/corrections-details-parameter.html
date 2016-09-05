@@ -1,0 +1,109 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($) {
+			$(function() {
+				$('select').selectToAutocomplete();
+				$('input').autocomplete({
+					sortResults: false
+				})
+			});
+		})(jQuery);
+	</script>
+	<script>
+		if (sessionStorage.parameter) {
+			sessionStorage.refmoveItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main role="main" id="content">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk?Subject=Feedback from Data Returns (default)">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 id="make-corrections" class="heading-medium error-summary-heading">How to correct parameter errors</h1>
+		<p>You must give the agreed name for the chemical or substance you’re monitoring - exactly as given in the <a href="#">EA controlled list of parameters</a>.</p>
+	</div>
+	<p class="back"> <a href="corrections-table" class="button" id="back.btn">Back to corrections table</a> </p>
+	<table class="error-table" id="errorTableHeader">
+		<thead>
+			<tr>
+				<th>Your data</th>
+				<th>Error</th>
+				<th>Row number(s)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Dip to leachate</td>
+					<td>Incorrect</td>
+				<td>2-72</td>
+			</tr>
+			<tr>
+				<td>Leachate Head above surveyed base</td>
+					<td>Incorrect</td>
+				<td>73-143</td>
+			</tr>
+			<tr>
+				<td>Redox</td>
+					<td>Incorrect</td>
+				<td>152-155</td>
+			</tr>
+			<tr>
+				<td>Ammoniacal-N as N</td>
+					<td>Incorrect</td>
+				<td>160-163</td>
+			</tr>
+			<tr>
+				<td>Chem Oxygen Demand</td>
+					<td>Incorrect</td>
+				<td>168-171</td>
+			</tr>
+			<tr>
+				<td>Tot Organic Carbon</td>
+					<td>Incorrect</td>
+				<td>172-175</td>
+			</tr>
+			<tr>
+				<td>Alkalinity tot as CACO3</td>
+					<td>Incorrect</td>
+				<td>176-179</td>
+			</tr>
+			<tr>
+				<td>Bio Oxygen Demand</td>
+					<td>Incorrect</td>
+				<td>180-183</td>
+			</tr>
+			<tr>
+				<td>Tot Oxidised Nitrogen</td>
+					<td>Incorrect</td>
+				<td>216-219</td>
+			</tr>
+			<tr>
+				<td>Data Comments</td>
+					<td>Incorrect</td>
+				<td>220-224</td>
+			</tr>
+			<tr>
+				<td>Calcium, Dissolved</td>
+					<td>Incorrect</td>
+				<td>225-228</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+{{/content}}
+
+{{/layout}}

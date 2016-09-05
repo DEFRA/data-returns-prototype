@@ -1,0 +1,61 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($) {
+			$(function() {
+				$('select').selectToAutocomplete();
+				$('input').autocomplete({
+					sortResults: false
+				})
+			});
+		})(jQuery);
+	</script>
+	<script>
+		if (sessionStorage.parameter) {
+			sessionStorage.refmoveItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main role="main" id="content">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk?Subject=Feedback from Data Returns (default)">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 id="make-corrections" class="heading-medium error-summary-heading">How to correct value errors</h1>
+		<p>You must give an allowable value for your data. As well as numbers you can include the symbols < or >. You can also include zeros.</p>
+		<p>Don’t include any other text characters.</p>
+		<p>Further information (eg BRT, or waterlogged) should be put in the Comments field. Read the full rules for EPR data compliance monitoring. <a href="#">EA controlled list</a>.</p>
+	</div>
+	<p class="back"> <a href="corrections-table" class="button" id="back.btn">Back to corrections table</a> </p>
+	<table class="error-table" id="errorTableHeader">
+		<thead>
+			<tr>
+				<th>Your data</th>
+				<th>Error</th>
+				<th>Row number(s)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>~1.5</td>
+				<td>Incorrect</td>
+				<td>216-219</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+{{/content}}
+
+{{/layout}}
