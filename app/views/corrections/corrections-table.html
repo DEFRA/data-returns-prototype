@@ -39,12 +39,12 @@
 		<div class="form-group">
 			<input type="submit" value="Back to file list" class="button"> </div>
 	</form>
-	<table class="error-table" id="errorTableHeader">
+	<table class="corrections-table" id="errorTableHeader">
 		<thead>
 			<tr>
-				<th width="12%">Column</th>
-				<th width="13%">Error</th>
-				<th width="40%">Correction</th>
+				<th class="th-field-heading">Field heading</th>
+				<th class="th-errors">Errors</th>
+				<th class="th-correction">Correction</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -53,9 +53,10 @@
 					Parameter
 					<hidden value="DR9030" id="Parameter_error_code"></hidden>
 				</td>
-				<td><a href="corrections-details-parameter">Incorrect on 168 rows</a></td>
+				<td><a href="corrections-details-parameter">View 168 errors</a></td>
 				<td>
-					<p>You must give the agreed name for the chemical or substance you’re monitoring - exactly as given in the <a href="#">EA controlled list of parameters</a>.</p>
+					<p>You must enter the agreed name for the chemical or substance you’re monitoring - exactly as given in the EA controlled list for parameter.</p>
+					<p>Download the <a href="#">EA controlled list of parameters</a>.</p>
 				</td>
 			</tr>
 			<tr>
@@ -63,10 +64,10 @@
 					<abbr title="Return type">Rtn_Type</abbr>
 					<hidden value="DR9010" id="Rtn_Type_error_code"></hidden>
 				</td>
-				<td><a href="corrections-details-return-type">Incorrect on 228 rows</a></td>
+				<td><a href="corrections-details-return-type">View 228 errors</a></td>
 				<td>
-					<p>You must give a valid return type name - eg EPR/IED Air (point source) emissions return - exactly as given in the <a href="#">EA controlled list of 13 return types</a>.</p>
-					<p>Check your permit or licence for details of return types you must cover.</p>
+					<p>You must give a valid return type name exactly as given in the EA controlled list of return types. Check your permit or licence for details of return types you must cover.</p>
+					<p>Download the full <a href="#">EA return type controlled list</a>.</p>
 				</td>
 			</tr>
 			<tr>
@@ -74,10 +75,12 @@
 					Unit
 					<hidden value="DR9050" id="Unit_error_code"></hidden>
 				</td>
-				<td><a href="corrections-details-unit">Incorrect on 143 rows</a></td>
+				<td><a href="corrections-details-unit">View 143 errors</a></td>
 				<td>
-					<p>You must give a unit of measurement for your returns - exactly as given in the <a href="#">EA controlled list</a>. You cannot leave this field blank.</p>
-					<p>Give emissions readings in %v/v or mg/mg3. Give temperature in DegC. Give pressure in KPa or mBar. Use 'pH' or 'meteorological' where appropriate.</p>
+					<p>You must give a unit or measure for your returns exactly as given in the EA controlled list.</p>
+					<p>You must give Unit value because you’ve submitted data in Value field. Select a unit from the EA controlled list.</p>
+					<p>You must leave the Unit field blank because you’ve submitted data in the Txt_Value field. Find out more about <a href="#">exceptions and special cases</a>.</p>
+					<p>Download the full <a href="#">EA unit or measure controlled list</a>.</p>
 				</td>
 			</tr>
 			<tr>
@@ -85,20 +88,22 @@
 					Value
 					<hidden value="DR9040" id="Value_error_code"></hidden>
 				</td>
-				<td><a href="corrections-details-value">Incorrect on 3 rows</a></td>
+				<td><a href="corrections-details-value">View 3 errors</a></td>
 				<td>
-					<p>You must give an allowable value for your data. As well as numbers you can include the symbols &lt; or &gt;. You can also include zeros.</p>
-					<p>Don’t include any other text characters.</p>
-					<p>Further information (eg BRT, or waterlogged) should be put in the Comments field. Read the <a href="http://data-returns-help.herokuapp.com/help/detailed-guides/regime-specific-rules" target="DRHELPPAGE" rel="external">full rules for EPR data compliance monitoring</a>.</p>
+					<p>You must give an allowable value for your data. As well as numbers you can include the symbols < or >. You can also include 0 (zeros). Don’t include any other text characters.</p>
+					<p>If you need to give a non-numerical reading use ‘See comment’ in Txt_Value and add an entry in the Comments field.</p>
+					<p>See the <a href="#">Environment Agency data formatting rules</a>.</p>
 				</td>
 			</tr>
 			<tr>
 				<td>Multiple
 					<hidden value="DR9040" id="Value_error_code"></hidden>
 				</td>
-				<td><a href="corrections-details-multiple">Incorrect on 73 rows</a></td>
+				<td><a href="corrections-details-multiple">View 73 errors</a></td>
 				<td>
-					<p>You must specify either Value or Txt_Value, but not both.</p>
+					<p>You’ve submitted data in both the Value and Txt_Value fields.</p>
+					<p>You can only enter numerical results in the Value field, leaving the Txt_Value field blank.</p>
+					<p>For non-numerical results you must use the Txt_Value field, using a standard term from the controlled list, and leave the Value field blank.</p>
 				</td>
 			</tr>
 		</tbody>

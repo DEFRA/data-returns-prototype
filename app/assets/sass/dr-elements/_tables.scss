@@ -1,5 +1,20 @@
-.error-table {
+.corrections-table {
 	margin-bottom:30px;
+	.th-field-heading {
+		width:12%;
+	}
+	.th-errors {
+		width:13%;
+	}
+	.th-correction {
+		width:40%;
+	}
+	.th-row {
+		width:15%;
+	}
+	.th-error {
+		width:15%;
+	}
 	td {
 		vertical-align:top;
 		p:first-child {

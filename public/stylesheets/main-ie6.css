@@ -2101,19 +2101,39 @@ input.validation-code {
   margin-bottom: 0;
 }
 
-.error-table {
+.corrections-table {
   margin-bottom: 30px;
 }
 
-.error-table td {
+.corrections-table .th-field-heading {
+  width: 12%;
+}
+
+.corrections-table .th-errors {
+  width: 13%;
+}
+
+.corrections-table .th-correction {
+  width: 40%;
+}
+
+.corrections-table .th-row {
+  width: 15%;
+}
+
+.corrections-table .th-error {
+  width: 15%;
+}
+
+.corrections-table td {
   vertical-align: top;
 }
 
-.error-table td p:first-child {
+.corrections-table td p:first-child {
   margin-top: 0;
 }
 
-.error-table td p:last-child {
+.corrections-table td p:last-child {
   margin-bottom: 0;
 }
 
