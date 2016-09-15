@@ -1,136 +1,174 @@
+.drag-drop-indicator {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	.drag-drop-message {
+		border: 10px solid $yellow;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		@include core-48;
+		font-weight: bold;
+	}
+}
+
+.file-drop-active .drag-drop-indicator {
+	display: table;
+	background: rgba(255,255,255,0.8)
+}
+
 .file-upload {
-	.well {
-		margin-bottom:30px;
-		.button-choose-file {
-			margin:15px 0;
+	.uploader-container {
+		.form-control {
+			width: 75%;
+		}
+		p.choose-file {
+			display: inline-block;
+			margin-left: 10px;
+			margin-top: 8px;
+			vertical-align: top;
+		}
+		@include media(mobile) {
+			p.choose-file {
+				display: none;
+			}
 		}
 	}
-	#banner-notification {
-		margin-top:15px;
+
+	.upload-list {
+		clear: both;
+		table-layout: fixed;
+		.file-pending {
+			display:inline-block;
+			padding-right:24px;
+			background-image: url(/public/images/icons/loading.gif);
+			background-repeat: no-repeat;
+			background-position: center right;
+		}
+		/* Mobile formatting */
+		@include media(mobile) {
+			display: block;
+			.statusbar.statusbar-header::after {
+				content: "Your files";
+				font-weight: bold;
+			}
+			.statusbar.statusbar-header {
+				.data-source {
+					display: none;
+				}
+			}
+			thead, tr, tbody {
+				display: block;
+			}
+			.statusbar-header {
+				.data-source, .status, .details, .remove {
+					display: none;
+				}
+			}
+			.data-source, .status, .details, .remove {
+				display: block;
+				width: 100%;
+				padding-right: 0;
+				border-bottom: 0;
+			}
+			.data-source {
+				border-top: 1px solid $grey-2;
+			}
+			.details, .remove {
+				width: 50%;
+				display: inline-block;
+			}
+		}
 	}
-}
 
-.help-text-reg {
-	margin-bottom:30px;
-}
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-    margin-bottom:15px;
-}
-
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-
-}
-
-.files {
-	margin-bottom:30px;
-}
-
-.statusbar {
-	border-top: none;
-	border-bottom:1px solid #BFC1C3;
-	width: auto;
-	vertical-align: middle;
-	font-size: 16px;
-	position: relative;
-	.filename, .action, .remove, .status  {
+	.statusbar {
+		border-top: none;
 		position: relative;
-		margin: 5px 0;
-		padding: 5px 0 3px;
-		vertical-align: top;
+		.data-source, .status, .details, .remove {
+			position: relative;
+		}
+		.data-source {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 16px;
+			.filename {
+				white-space: nowrap;
+			}
+			.sheet {
+				display: block;
+			    padding: 0.3em 0;
+			    white-space: nowrap;
+			}
+			/*
+			.sheet::before {
+				content:": ";
+			}
+			*/
+		}
+		.remove {
+			text-align: right;
+			padding-right: 0;
+		}
+		@include media(tablet) {
+			.data-source, .status, .details, .remove {
+			}
+			.data-source {
+				width: 45%;
+			}
+			.status {
+				width: 25%;
+			}
+			.details {
+				width: 20%;
+			}
+			.remove {
+				width: 10%;
+			}
+		}
 	}
 	.status {
-		margin: 0;
-		padding: 0;
-		.dz-checking-message, .dz-error-message, .dz-success-message {
-			position: relative;
-			margin: 8px 0;
-			padding: 5px 0 3px;
+		.file-error, .file-ready {
+			display: inline-block;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 2px 4px 0;
+			@include border-radius(2px);
+		}
+		.file-ready {
+			color: $green;
+			border: 1px solid $green;
+		}
+		.file-error {
+			color: $red;
+			border: 1px solid $red;
+		}
+	}
+	@include media(mobile) {
+		.statusbar {
+			padding: 10px 0;
 		}
 	}
 	.action {
-	 width:60%;
-	 display: inline-block;
-	}
-	.remove {
-		width:40%;
-		text-align:right;
+		width: 60%;
 		display: inline-block;
 	}
-	@include media(tablet) {
-		.filename, .status, .action, .remove  {
-			display: inline-block;
-		}
-		.filename {
-		 width:35%;
-		}
-		.status {
-		 width:30%;
-		}
-		.action {
-		 width:20%;
-		}
-		.remove {
-			width:15%;
-		}
-	}
-
 	.remove {
-		button.delete {
-			font-size: 16px;
+		text-align: right;
+		.link {
 			background: transparent none repeat scroll 0 0;
-			border:0;
-			padding:0;
-			line-height: 1;
-			span {
-				display:none;
-				@include media(tablet) {
-					display:inline;
-				}
-			}
+			border: 0;
+			padding-right: 0;
 		}
-
-		button.delete:hover {
+		.link:hover {
 			cursor: pointer;
 		}
 	}
 }
 
-.statusbar-title {
-	font-weight:600;
-}
-
-.filename {
-	display: inline-block;
-	vertical-align: middle;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	@include media(tablet) {
-		width: 190px;
-	}
-}
-
-.loading {
-	img {
-		height: 19px;
-    padding-bottom: 4px;
-    vertical-align: middle;
-    width: 19px;
-	}
+/* Don't display the drag drop message in IE8 where it isn't supported */
+.lte-ie8 p.drag-drop-files-message {
+	display: none !important;
 }
