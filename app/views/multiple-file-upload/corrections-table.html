@@ -1,0 +1,114 @@
+{{<layout}}
+
+{{$pageTitle}}
+	GOV.UK prototyping kit
+{{/pageTitle}}
+
+{{$content}}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script>
+		(function($) {
+			$(function() {
+				$('select').selectToAutocomplete();
+				$('input').autocomplete({
+					sortResults: false
+				})
+			});
+		})(jQuery);
+	</script>
+	<script>
+		if (sessionStorage.parameter) {
+			sessionStorage.refmoveItem('parameter');
+		}
+	</script>
+	<script src="/public/javascripts/clipboard.min.js"></script>
+</header>
+<main id="content" role="main">
+	<div class="phase-banner-beta">
+		<p> <strong class="phase-tag">BETA</strong> <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+		<h1 id="make-corrections" class="heading-medium error-summary-heading">You can't send CORY sample file_1 DW Data Returns.xls : Hill Valley</h1>
+		<p>Before you can send your data you need to make these corrections:</p>
+	</div>
+	<div class="form-group">
+		<a href="spreadsheet" class="button" id="back.btn">Back to file list</a>
+	</div>
+	<table class="corrections-table" id="errorTableHeader">
+		<thead>
+			<tr>
+				<th class="th-field-heading">Field heading</th>
+				<th class="th-errors">Errors</th>
+				<th class="th-correction">Correction</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					Parameter
+					<hidden value="DR9030" id="Parameter_error_code"></hidden>
+				</td>
+				<td><a href="corrections-details-parameter">View 168 errors</a></td>
+				<td>
+					<p>You must enter the agreed name for the chemical or substance you’re monitoring - exactly as given in the EA controlled list for parameter.</p>
+					<p>Download the <a href="#">EA controlled list of parameters</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<abbr title="Return type">Rtn_Type</abbr>
+					<hidden value="DR9010" id="Rtn_Type_error_code"></hidden>
+				</td>
+				<td><a href="#">View 228 errors</a></td>
+				<td>
+					<p>You must give a valid return type name exactly as given in the EA controlled list of return types. Check your permit or licence for details of return types you must cover.</p>
+					<p>Download the full <a href="#">EA return type controlled list</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Unit
+					<hidden value="DR9050" id="Unit_error_code"></hidden>
+				</td>
+				<td><a href="#">View 143 errors</a></td>
+				<td>
+					<p>You must give a unit or measure for your returns exactly as given in the EA controlled list.</p>
+					<p>You must give Unit value because you’ve submitted data in Value field. Select a unit from the EA controlled list.</p>
+					<p>You must leave the Unit field blank because you’ve submitted data in the Txt_Value field. Find out more about <a href="#">exceptions and special cases</a>.</p>
+					<p>Download the full <a href="#">EA unit or measure controlled list</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Value
+					<hidden value="DR9040" id="Value_error_code"></hidden>
+				</td>
+				<td><a href="#">View 3 errors</a></td>
+				<td>
+					<p>You must give an allowable value for your data. As well as numbers you can include the symbols < or >. You can also include 0 (zeros). Don’t include any other text characters.</p>
+					<p>If you need to give a non-numerical reading use ‘See comment’ in Txt_Value and add an entry in the Comments field.</p>
+					<p>See the <a href="#">Environment Agency data formatting rules</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Multiple
+					<hidden value="DR9040" id="Value_error_code"></hidden>
+				</td>
+				<td><a href="#">View 73 errors</a></td>
+				<td>
+					<p>You’ve submitted data in both the Value and Txt_Value fields.</p>
+					<p>You can only enter numerical results in the Value field, leaving the Txt_Value field blank.</p>
+					<p>For non-numerical results you must use the Txt_Value field, using a standard term from the controlled list, and leave the Value field blank.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+{{/content}}
+
+{{/layout}}

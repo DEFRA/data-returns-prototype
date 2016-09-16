@@ -2422,6 +2422,8 @@ input.validation-code {
 .file-upload .remove .link {
   background: transparent none repeat scroll 0 0;
   border: 0;
+  margin-left: -4px;
+  padding-left: 0;
   padding-right: 0;
 }
 
@@ -2452,23 +2454,27 @@ input.validation-code {
 }
 
 .corrections-table .th-field-heading {
-  width: 12%;
+  width: 16.6666666667%;
 }
 
 .corrections-table .th-errors {
-  width: 13%;
+  width: 16.6666666667%;
 }
 
 .corrections-table .th-correction {
-  width: 40%;
+  width: 66.6666666667%;
 }
 
 .corrections-table .th-row {
-  width: 15%;
+  width: 16.6666666667%;
 }
 
 .corrections-table .th-error {
-  width: 15%;
+  width: 16.6666666667%;
+}
+
+.corrections-table .th-data {
+  width: 66.6666666667%;
 }
 
 .corrections-table td {

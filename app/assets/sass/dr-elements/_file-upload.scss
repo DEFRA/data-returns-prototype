@@ -160,7 +160,9 @@
 		.link {
 			background: transparent none repeat scroll 0 0;
 			border: 0;
-			padding-right: 0;
+			margin-left: -4px;
+		    padding-left: 0;
+		    padding-right: 0;
 		}
 		.link:hover {
 			cursor: pointer;

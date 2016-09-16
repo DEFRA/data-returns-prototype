@@ -1,19 +1,22 @@
 .corrections-table {
 	margin-bottom:30px;
 	.th-field-heading {
-		width:12%;
+		width:percentage(1/6);
 	}
 	.th-errors {
-		width:13%;
+		width:percentage(1/6);
 	}
 	.th-correction {
-		width:40%;
+		width:percentage(2/3);
 	}
 	.th-row {
-		width:15%;
+		width:percentage(1/6);
 	}
 	.th-error {
-		width:15%;
+		width:percentage(1/6);
+	}
+	.th-data {
+		width:percentage(2/3);
 	}
 	td {
 		vertical-align:top;
