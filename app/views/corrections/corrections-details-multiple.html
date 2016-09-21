@@ -31,11 +31,11 @@
 	<div class="phase-banner-beta">
 		<p><strong class="phase-tag">BETA</strong><span>This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk?Subject=Feedback from Data Returns (default)">feedback</a> will help us to improve it.</span></p>
 	</div>
-	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
 		<h1 id="make-corrections" class="heading-medium error-summary-heading">Correct multiple errors</h1>
 		<ul class="error-summary-list">
 			<li>
-				<a href="#">Your data is conflicting</a>
+				<a href="#conflicting">Your data is conflicting</a>
 				<p>You’ve submitted data in both the Value and Txt_Value fields.</p>
 				<p>You can only enter numerical results in the Value field, leaving the Txt_Value field blank.</p>
 				<p>For non-numerical results you must use the Txt_Value field, using a standard term from the controlled list, and leave the Value field blank.</p>
@@ -52,12 +52,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
+			<tr id="conflicting">
 				<td>73-143</td>
 				<td>Conflicting</td>
 				<td></td>
 			</tr>
-			<tr>
+			<tr id="missing">
 				<td>220-224</td>
 				<td>Missing</td>
 				<td></td>

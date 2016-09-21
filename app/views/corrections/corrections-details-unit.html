@@ -31,19 +31,19 @@
 	<div class="phase-banner-beta">
 		<p><strong class="phase-tag">BETA</strong><span>This is a new service &ndash; your <a href="mailto:Data_Returns@environment-agency.gov.uk?Subject=Feedback from Data Returns (default)">feedback</a> will help us to improve it.</span></p>
 	</div>
-	<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example" tabindex="-1">
+	<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
 		<h1 id="make-corrections" class="heading-medium error-summary-heading">Correct unit errors</h1>
 		<ul class="error-summary-list">
 			<li>
-				<a href="#">Your data is incorrect</a>
+				<a href="#incorrect">Your data is incorrect</a>
 				<p>You must give a unit or measure for your returns exactly as given in the EA controlled list.</p>
 			</li>
 			<li>
-				<a href="#">Your data is missing</a>
+				<a href="#missing">Your data is missing</a>
 				<p>You must enter data in this field because you’ve submitted data in Value field. Select a unit from the EA controlled list.</p>
 			</li>
 			<li>
-				<a href="#">Your data is conflicting</a>
+				<a href="#conflicting">Your data is conflicting</a>
 				<p>You must leave the Unit field blank because you’ve submitted data in the Txt_Value field.</p>
 			</li>
 		</ul>
@@ -60,17 +60,17 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
+			<tr id="conflicting">
 				<td>73-143</td>
 				<td>Conflicting</td>
 				<td></td>
 			</tr>
-			<tr>
+			<tr id="incorrect">
 				<td>156-159</td>
 				<td>Incorrect</td>
 				<td>Leachate Head above surveyed base</td>
 			</tr>
-			<tr>
+			<tr id="missing">
 				<td>148-151</td>
 				<td>Missing</td>
 				<td></td>
