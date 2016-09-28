@@ -1,5 +1,9 @@
 .corrections-table {
 	margin-bottom:30px;
+	caption {
+		text-align: left;
+		margin:15px 0;
+	}
 	.th-field-heading {
 		width:percentage(1/6);
 	}

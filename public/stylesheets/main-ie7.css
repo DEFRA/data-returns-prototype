@@ -2113,6 +2113,11 @@ input.validation-code {
   margin-bottom: 30px;
 }
 
+.corrections-table caption {
+  text-align: left;
+  margin: 15px 0;
+}
+
 .corrections-table .th-field-heading {
   width: 16.6666666667%;
 }
