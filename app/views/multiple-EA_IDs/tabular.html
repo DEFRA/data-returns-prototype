@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 	GOV.UK prototyping kit
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <header class="page-header">
 
@@ -65,6 +65,6 @@
         <input type="submit" onclick="location.href = '/02-send-your-data/01-choose-your-file';" value="Start again" class="button" id="start-again-btn">
     </div>
 </main>
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

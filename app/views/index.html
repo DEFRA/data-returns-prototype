@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 	GOV.UK prototyping kit
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
 
@@ -52,6 +52,13 @@
 		</li>
 		<li>
 			<a href="/multiple-file-upload/dropzone-full-page">Drop zone - full page</a>
+		</li>
+	</ul>
+
+	<h3 class="heading-small">Permit lookup</h3>
+	<ul>
+		<li>
+			<a href="/permit-lookup/permit-lookup">Permit Lookup tool</a>
 		</li>
 	</ul>
 
@@ -123,6 +130,6 @@
 	</div>
 </main>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

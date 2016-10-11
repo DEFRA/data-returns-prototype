@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 	GOV.UK prototyping kit
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <header class="page-header">
 	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
@@ -69,6 +69,6 @@
 	<!-- error-table -->
 	<a href="#content">Back to top</a>
 </main>
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

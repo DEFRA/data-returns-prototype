@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 	GOV.UK prototyping kit
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <header class="page-header">
 
@@ -252,6 +252,6 @@
 </script>
 
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

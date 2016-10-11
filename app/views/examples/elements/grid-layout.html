@@ -1,9 +1,13 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$content}}
+{% block page_title %}
+  Example - Grid layout
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main">
 
-  <a class="link-back" href="/examples/">Back to the GOV.UK prototype kit examples</a>
+  {% include "includes/breadcrumb_examples.html" %}
 
   <h1 class="heading-xlarge">
     New grid layout example
@@ -114,6 +118,4 @@
   </div>
 
 </main>
-{{/content}}
-
-{{/layout}}
+{% endblock %}

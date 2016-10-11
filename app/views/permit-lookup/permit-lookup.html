@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/public/javascripts/datatables.js"></script>
+<script type="text/javascript" src="/public/javascripts/pollution-inventory.js"></script>
+
+<main id="content" role="main">
+  <div class="phase-banner-beta"><p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p></div>
+	<h1 class="heading-large">Find your EA ID</h1>
+	<div class="text">
+	  <p>Use this tool to ensure your data is ready to send the EA with correctly formatted EA ID and site name.</p>
+		<details>
+			<summary><span class="summary">What's an EA ID?</span></summary>
+			<div class="panel panel-border-narrow">
+				<p>Your EA unique identifier. It's usually your permit number.</p>
+			</div>
+		</details>
+	</div>
+
+	<div class="form-group">
+		<table id="permit-lookup" class="display permit-lookup"></table>
+	</div>
+</main>
+
+{% endblock %}
+
+

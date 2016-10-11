@@ -1,10 +1,10 @@
 {{<unbranded}}
 
-{{$pageTitle}}
+{% block page_title %}
   Example data return
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <style>
 	html {
@@ -312,6 +312,6 @@
 	</div>
 </main>
 
-{{/content}}
+{% endblock %}
 
 {{/unbranded}}

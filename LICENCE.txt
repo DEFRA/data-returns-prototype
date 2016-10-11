@@ -1,17 +1,3 @@
-All code originating from the Environment Agency is covered by the following
-license.
---------------------------------------------------------------------------------
-Copyright (c) 2014 Environment Agency
-
-This source code is licensed under the Open Government Licence v3.0. To view this
-licence, visit www.nationalarchives.gov.uk/doc/open-government-licence/version/3
-or write to the Information Policy Team, The National Archives, Kew, Richmond,
-Surrey, TW9 4DU.
-
-
-All code originating from the GOV.UK prototyping kit is covered by the following
-license.
---------------------------------------------------------------------------------
 Copyright (C) 2014 HM Government (Government Digital Service)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of

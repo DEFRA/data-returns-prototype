@@ -1,21 +1,44 @@
-# Data Returns Sandbox
+# GOV.UK Prototype kit
 
-A repository for Environment Agency data returns based on GOV.UK guidance. It contains experimentation of possible ideas and alternatives for the data returns service.
+## News
 
-The content in this repository is draft status. It is not intended for wider public use and only to support the development of the Data returns service.
+**Upgrading from version 1 to 2:** the latest version of the kit (2.0.0 and later) is not compatible with previous versions. If you update your old prototypes you'll need to [convert them as well](https://github.com/alphagov/govuk_prototype_kit/blob/master/docs/updating-the-kit.md).
 
-## License
+## About the prototype kit
 
-THIS INFORMATION IS LICENSED UNDER THE CONDITIONS OF THE OPEN GOVERNMENT LICENCE found at:
+The prototype kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
 
-http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3
+Read the [project principles](docs/principles.md).
 
-The following attribution statement MUST be cited in your products and applications when using this information.
+## Security
 
-> Contains public sector information licensed under the Open Government license v3
+If you publish your prototypes online, they **must** be protected by a [username and password](docs/guides/publishing-on-heroku.md). This is to prevent members of the public finding prototypes and thinking they are real services.
 
-### About the license
+You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
 
-The Open Government Licence (OGL) was developed by the Controller of Her Majesty’s Stationery Office (HMSO) to enable information providers in the public sector to license the use and re-use of their information under a common open licence.
+## Installation instructions
 
-It is designed to encourage use and re-use of information freely and flexibly, with only a few conditions.
+- [Installation guide for new users (non technical)](docs/install/introduction.md)
+- [Installation guide for developers (technical)](docs/developer-install-instructions.md)
+
+## Guides
+
+1. [Setting up git](docs/guides/setting-up-git.md)
+2. [Publishing on the web (Heroku)](docs/guides/publishing-on-heroku.md)
+3. [Using GOV.UK Verify](docs/guides/using-verify.md)
+
+## Other documentation
+
+- [Prototype kit principles](docs/principles.md)
+- [Making pages](docs/making-pages.md)
+- [Writing CSS](docs/writing-css.md)
+- [Updating the kit to the latest version](docs/updating-the-kit.md)
+- [Tips and tricks](docs/tips-and-tricks.md)
+- [Creating routes (server-side programming)](docs/creating-routes.md)
+
+## Community
+
+We have two Slack channels for the Prototype kit. You'll need a government email address to join them.
+
+* [Slack channel for users of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit/)
+* [Slack channel for developers of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev/)

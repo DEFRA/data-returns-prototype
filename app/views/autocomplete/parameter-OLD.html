@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
+{% block page_title %}
 	GOV.UK prototyping kit
-{{/pageTitle}}
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
 	<h1 class="heading-xlarge">Data Returns parameter list</h2>
@@ -34,6 +34,6 @@
 	};
 </script>
 
-{{/content}}
+{% endblock %}
 
-{{/layout}}
+

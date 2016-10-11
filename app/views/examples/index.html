@@ -1,22 +1,31 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
-  GOV.UK prototyping kit
-{{/pageTitle}}
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
 
-  <h1 class="heading-xlarge">Examples</h1>
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/">GOV.UK prototype kit</a></li>
+    </ol>
+  </div>
+
+  <h1 class="heading-xlarge">Example pages and patterns</h1>
+
+  <p class="text">
+    Use these as the basis for your prototypes.
+    We recommend making copies of the examples rather than directly editing them.
+  </p>
 
   <div class="grid-row">
 
     <div class="column-third">
-
       <h2 class="heading-medium">Page elements</h2>
-
-      <ul class="list-bullet">
+      <ul class="list list-bullet">
         <li>
           <a href="/examples/elements/grid-layout">
             Grid layout
@@ -43,14 +52,12 @@
           </a>
         </li>
       </ul>
-
     </div>
 
     <div class="column-third">
 
       <h2 class="heading-medium">Page templates</h2>
-
-      <ul class="list-bullet">
+      <ul class="list list-bullet">
         <li>
           <a href="/examples/blank-govuk">
             Blank
@@ -82,18 +89,22 @@
           </a>
         </li>
       </ul>
-
     </div>
 
     <div class="column-third">
 
       <h2 class="heading-medium">Template features</h2>
-
-      <ul class="list-bullet">
+      <ul class="list list-bullet">
         <li>
           <a href="/examples/template-data">
             Passing data into a template
           </a>
+        </li>
+        <li>
+          <a href="/examples/branching">
+            Branching
+          </a>
+          <p class="font-xsmall">(Showing a different page based on user input)</p>
         </li>
         <li>
           <a href="/examples/template-partial-areas">
@@ -101,13 +112,10 @@
           </a>
         </li>
       </ul>
-
     </div>
 
   </div>
 
 </main>
 
-{{/content}}
-
-{{/layout}}
+{% endblock %}
