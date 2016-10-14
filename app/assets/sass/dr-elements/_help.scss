@@ -26,7 +26,6 @@
 			margin-bottom:0;
 		}
 	}
-
 	.example-file-wrapper {
 		overflow: auto;
 		margin-bottom:30px;
@@ -122,21 +121,17 @@
 			margin-top: 30px;
 			padding: 5px;
   	}
-  	h2 {
-      @include bold-27();
-			margin-top:45px;
-  	}
-  	h3 {
-  	  @include bold-24();
-  	}
-  	h4, caption {
-  	  @include bold-19();
-			margin-top:45px;
-  	}
-  	strong {
-  		font-weight:bold;
-  	}
   	table {
+
+		.th-field-heading {
+			width:percentage(1/6);
+		}
+		.th-description {
+			width:percentage(4/6);
+		}
+		.th-example {
+			width:percentage(1/6);
+		}
   		margin-bottom:45px;
 			caption {
 				@include bold-16();
