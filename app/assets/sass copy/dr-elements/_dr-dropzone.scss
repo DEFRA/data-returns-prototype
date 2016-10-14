@@ -1,0 +1,209 @@
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+
+@mixin prefix($map, $vendors: webkit moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    // Dump regular property anyway
+    #{$prop}: #{$value};
+  }
+}
+
+
+@include keyframes(passing-through) {
+
+  0% {
+    opacity: 0;
+    @include prefix((transform: translateY(40px)));
+  }
+
+  30%, 70% {
+    opacity: 1;
+    @include prefix((transform: translateY(0px)));
+  }
+
+  100% {
+    opacity: 0;
+    @include prefix((transform: translateY(-40px)));
+  }
+}
+
+
+@include keyframes(slide-in) {
+
+  0% {
+    opacity: 0;
+    @include prefix((transform: translateY(40px)));
+  }
+
+  30% {
+    opacity: 1;
+    @include prefix((transform: translateY(0px)));
+  }
+}
+
+@include keyframes(pulse) {
+  0% { @include prefix((transform: scale(1))); }
+  10% { @include prefix((transform: scale(1.1))); }
+  20% { @include prefix((transform: scale(1))); }
+
+}
+
+//* Dropzone hover *//
+.dropzone {
+  background-color: $grey-4;
+  border:5px dashed $grey-3;
+  padding: 5px 15px;
+  margin-bottom:30px;
+  .dz-message {
+    min-height: 85px;
+    text-align: center;
+    padding-top:60px;
+  }
+}
+//* Dropzone hover ends *//
+
+.dz-drag-hover {
+  height:100%;
+}
+
+.dz-drag-hover-div {
+  display: none;
+}
+
+.dz-drag-hover {
+  &.dropzone {
+      border: 5px solid $yellow;
+    }
+  .dz-drag-hover-div {
+    display: table;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    div {
+      border: 10px solid $yellow;
+      display:table-cell;
+    }
+  }
+}
+
+.dz-processing, .dz-complete {
+  position: relative;
+  .dz-progress {
+    margin-left: -5px;
+    /*
+    height: 43px;
+    left: 0;
+    margin-top: -18px;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1000;
+
+    // Fix for chrome bug: https://code.google.com/p/chromium/issues/detail?id=157218
+    -webkit-transform: scale(1);
+    overflow: hidden;
+    */
+
+    .dz-upload {
+      /* background-color: transparent;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: width 1500ms ease-in-out 0s;
+      width: 0;
+      @include prefix((transition: width 1500ms ease-in-out));
+      */
+    }
+  }
+  .dz-error-message,
+  .dz-success-message,
+  .dz-checking-message {
+    display: none;
+    position: relative;
+    z-index: 1000;
+  }
+  &.dz-error,
+  &.dz-success,
+  &.dz-checking {
+    .dz-error-message,
+    .dz-success-message {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding:2px 4px 0;
+    }
+  }
+  .dz-error-message {
+    color: $red;
+    border:1px solid $red;
+    @include border-radius(2px);
+  }
+  .dz-success-message {
+    color: $green;
+    border:1px solid $green;
+    @include border-radius(2px);
+  }
+  .dz-checking-message {
+    display: inline-block;
+    padding:inherit;
+  }
+  &.dz-complete .dz-progress {
+    opacity: 0;
+  }
+  &:not(.dz-processing) {
+    .dz-progress {
+      @include prefix((animation: pulse 6s ease infinite));
+    }
+  }
+}
+
+
+/* Mock up only */
+.live {
+  .dz-processing, .dz-complete {
+    &.dz-processing .dz-progress {
+    ::before {
+      content: "Checking...";
+      line-height: 3;
+      margin-left: 4px;
+      }
+    }
+  }
+}
+.mock {
+  .dz-processing, .dz-complete {
+    &.dz-processing .dz-progress {
+      opacity: 1;
+      .dz-upload {
+        background-color: rgba(24,26,27,0.1);
+        span {
+          display: inline-block;
+          margin: 5px 0;
+          padding: 5px 0 3px 5px;
+        }
+      }
+    }
+  }
+}

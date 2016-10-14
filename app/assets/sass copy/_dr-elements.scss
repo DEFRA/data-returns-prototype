@@ -1,0 +1,23 @@
+@import "dr-elements/buttons";
+@import "dr-elements/components";
+@import "dr-elements/file-upload";
+@import "dr-elements/form-validation";
+@import "dr-elements/panels";
+@import "dr-elements/tables";
+@import "dr-elements/datatables";
+@import "dr-elements/tabs";
+@import "dr-elements/permit-lookup";
+@import "dr-elements/help";
+
+/* @import "dr-elements/dropzone";*/
+@import "dr-elements/dr-dropzone";
+
+
+a[rel="external"]::after {
+    background-position: right 4px;
+  }
+
+a:hover[rel="external"]::after {
+    background-position: right 4px;
+    color:$link-active-colour;
+  }

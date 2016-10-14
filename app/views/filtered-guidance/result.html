@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+			<div class="heading">
+				<p class="type">Send your EA data returns online</p>
+				<h1 class="heading-large">How to format EA data returns</h1>
+			</div>
+			<aside class="meta metadata-list">
+				<dl>
+					<dt>From:</dt>
+					<dd class="js-hide-extra-metadata"> <a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> </dd> <dt>First published:</dt>
+					<dd>
+						<time class="date" datetime="2016-01-13T16:25:00+01:00"> September 2016</time>
+					</dd>
+				</dl>
+			</aside>
+
+			<p class="lede">Follow rules to format data that meets Environment Agency standards then send your data returns online.</p>
+
+			<nav id="page-navigation" class="contextual-info">
+				<h1>Contents</h1>
+				<ol class="dash-list">
+					<li>
+						<a href="#">General EA data formatting rules</a>
+					</li>
+					{% if (showlandfill) %}
+					<li><a href="#">Landfill compliance monitoring: data formatting rules</a></li>
+					{% endif %}
+
+					{% if (showpollutioninventory) %}
+					<li><a href="#">Pollution inventory compliance monitoring: data formatting rules</a></li>
+					{% endif %}
+
+					{% if (showcombustion) %}
+				   <li><a href="#">Combustion compliance monitoring: data formatting rules</a></li>
+					{% endif %}
+				</ol>
+			</nav>
+
+			<div class="grid-row">
+				<div class="column-two-thirds">
+					<h2>General EA data formatting rules</h2>
+					<p>Before you send your landfill data returns file you need to apply data formatting rules under fixed field headings. This will help you meet Environment Agency data standards, reduce ambiguity and improve consistency in your data returns.</p>
+					<p>You can set up your data management systems to produce an automated export of data in the correct format then you need to save your file as CSV to send it online.</p>
+					<p>You can use the online service to submit landfill emissions compliance data covering up to 18 months in the past.</p>
+				</div>
+			</div>
+
+
+		{% if (showlandfill) %}
+			<section class="group" id="document_collection">
+				<div class="grid-row">
+					<div class="column-two-thirds">
+						<h2 id="data-rules">Landfill compliance monitoring: data formatting rules</h2>
+
+						<p>These rules explain how you must prepare and present compliance monitoring data for landfill operations according to each field heading in your file.</p>
+						<p>You must use the short field headings in your file. You can send data under the short headings in any order.</p>
+						<p>Some fields are mandatory for all data returns. Where possible you should give data for other fields as specified in your permit or licence and particular type of return.</p>
+						<p>Some fields only accept entries from the Environment Agency <a href="/">controlled lists</a> of standard terms, which you can download to apply in your software.</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="grid-row">
+  					<div class="column-full">
+						<section id="attachment" class="attachment embedded">
+							<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
+							<div class="attachment-details">
+								<h2 class="title">Example data return for Landfill compliance monitoring</h2>
+								<p class="metadata">
+									<span class="preview">
+									<strong>
+										<a href="/help/example-data-return">View online</a>
+									</strong>
+									</span>
+								</p>
+							</div>
+						</section>
+						<table>
+							<thead>
+								<tr>
+									<th>Field short heading</th>
+									<th>Description and rules</th>
+									<th>Example</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>EA_ID</td>
+									<td>
+										<p>Your EA unique identifier:</p>
+										<ul class="list list-bullet">
+											<li>permits - 2 capital letters, 4 numbers and 2 capital letters (eg, AB1234ZZ)</li>
+											<li>Waste Management Licences - 5- or 6-figure number (eg, 654321)</li>
+										</ul>
+										<p>You must complete this field in all data returns. Give the core reference without any separators, slashes or variation numbers.</p>
+										<p>You can send data returns for multiple permits or licence numbers in one CSV file. Make sure your file is no larger than around 2MB.</p>
+									</td>
+									<td>AB1234ZZ or 654321</td>
+								</tr>
+								<tr>
+									<td>Site_Name</td>
+									<td>
+										<p>You must give your reference for the site as this field allows EA to cross check your site name against EA_ID.</p>
+										<p>Only use letters and numbers. Remove unnecessary commas before you save as CSV. Limit character length to 255.</p>
+									</td>
+									<td>
+										<p>NJG Ltd</p>
+										<p>Leeds Landfill Site</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Rtn_Period</td>
+									<td>
+										<p>Name of date range covering the entire return. Use the formatting rules in the return period controlled list. Give this information where possible.</p>
+										<p>To give details of date and time for the individual monitoring item use Mon_Date, see details below.</p>
+									</td>
+									<td>Qtr 2 2016</td>
+								</tr>
+								<tr>
+									<td>Rtn_Type</td>
+									<td>
+										<p>You must give the type of data return, to which the row of data relates, based on reporting requirements in your permit or licence.</p>
+										<p>Select an entry from the return type controlled list. You can return data for more than 1 return type in a single CSV file. </p>
+									</td>
+									<td>Landfill gas borehole</td>
+								</tr>
+								<tr>
+									<td>Mon_Point</td>
+									<td>
+										<p>You must give a monitoring point reference where the sample was taken. Refer to the sampling or emission point described in your permit or licence. For certain return types monitoring point is the same as site name.</p>
+										<p>This field should only contain letters, numbers and spaces. Remove any symbols.</p>
+									</td>
+									<td>Borehole 1</td>
+								</tr>
+								<tr>
+									<td>Mon_Date</td>
+									<td>
+										<p>Monitoring date/time. This is the date and, where necessary, time (eg, for a spot sample). If you're monitoring for a period of time (eg, a week), give the date at the end of the monitoring period.</p>
+										<p>You must give a date in this field, but time is optional. If you're giving time then you can use a T or a space between date and time. Format time as hh:mm:ss using the 24-hour clock.</p>
+										<p>You must use dashes or slashes between numbers. Format the date as YYYY-MM-DD, using dashes only. You can also use DD-MM-YYYY or DD/MM/YYYY.</p>
+										<p>You cannot submit data returns with a Mon_Date that is in the future.</p>
+									</td>
+									<td>
+										<p>2016-08-31 15:28:02</p>
+										<p>2016-08-31T15:28:04</p>
+										<p>31-08-2016</p>
+										<p>31/08/2016</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Parameter</td>
+									<td>
+										<p>You must give the chemical substance or parameter you're monitoring. Select an entry from the parameter controlled list.</p>
+										<p>A CSV file will insert double quotes if the parameter name includes a comma, eg "1,4-Dioxane".</p>
+									</td>
+									<td>CH4</td>
+								</tr>
+								<tr>
+									<td>Qualifier</td>
+									<td>
+										<p>You can use this field to give further definition to a chosen parameter to make it more specific. You can only give an entry from the qualifier controlled list.</p>
+										<p>Use this field where there’s a basic parameter that can have different values (and different limits) depending on the specifics, eg 'Dry weight' or 'Wet weight'.</p>
+										<p>More than 1 qualifier can be applied to a parameter. Where possible you should give qualifiers here rather than as a suffix in the Parameter field.</p>
+									</td>
+									<td>Filtered</td>
+								</tr>
+								<tr>
+									<td>Ref_Period</td>
+									<td>
+										<p>Give the reference period for the sample, as specified in your permit or licence. This field explains how the sample was taken - eg, '24 hour total', 'Half hour average', 'Monthly mean'.</p>
+										<p>You can only give an entry from the reference period controlled list.</p>
+										<p>You can leave this field blank if there are no reference period requirements stated in your permit or licence. You can also leave it blank for instantaneous or spot sample readings. Alternatively you can select these options from the controlled list.</p>
+									</td>
+									<td>Daily mean</td>
+								</tr>
+								<tr>
+									<td>Value</td>
+									<td>
+										<p>You must give the numerical value of your measurement. As well as numbers you can include the symbols &lt; or&gt;. You can also include 0 (zero). Don’t include any other text characters.</p>
+										<p>Further information (eg 'BRT', or 'Waterlogged') should be put in the Comments field.</p>
+										<p>Non-numerical values should be entered in Txt_Value, see below.</p>
+									</td>
+									<td>0.2</td>
+								</tr>
+								<tr>
+									<td>Txt_Value</td>
+									<td>
+										<p>A field for a text-based response - eg, ‘ Yes’, ‘No’, 'No result' and 'See comments'. You can only give an entry from the text value controlled list.</p><p>Only use ‘See comments’ in this field when the result is descriptive text, eg appearance or site weather conditions. You cannot use this field to simply add comments about your result. (For more information see exceptions and special cases below.)</p>
+									</td>
+									<td>No result</td>
+								</tr>
+								<tr>
+									<td>Unit</td>
+									<td>
+										<p>You must give the unit or measure used in your data return. Select an entry from the unit or measure controlled list.</p>
+									</td>
+									<td>m</td>
+								</tr>
+								<tr>
+									<td>Meth_Stand</td>
+									<td>
+										<p>Method or standard used for monitoring is important for some returns so you should provide an entry where possible. </p>
+										<p>You can only give an entry from the monitoring standard or method controlled list.</p>
+									</td>
+									<td>BS EN 14791</td>
+								</tr>
+								<tr>
+									<td>Comments</td>
+									<td>
+										<p>Use this optional field for free-text comments about the row of data - eg, if you were unable to take a reading.</p>
+										<p>You can also use this field if you wish to give your own system references to store with the results.</p>
+										<p>Avoid unnecessary commas and symbols. You can enter a maximum of 255 characters.</p>
+									</td>
+									<td>Borehole blocked</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+					{% endif %}
+
+					{% if (showpollutioninventory) %}
+						<h2>Pollution inventory compliance monitoring: data formatting ruless</h2>
+						<p>Here is the pollution inventory guidance</p>
+					{% endif %}
+
+				   {% if (showcombustion) %}
+					   <h2>Combustion data formatting rules</h2>
+					   <p>Here is the combustion guidance</p>
+				   {% endif %}
+
+
+
+<!--
+			{% if (hisname=="Martin") %}
+			  {% include "inc/martin.txt" %}
+			  <p>And from the template Martin</p>
+			{% else %}
+			  {% include "inc/not-martin.txt" %}
+			  <p>And from the template Paul</p>
+			{% endif %}
+-->
+		</div>
+		<div class="form-group">
+		  <input class="button" type="submit" value="Continue">
+		</div>
+ 	</form>
+</main>
+{% endblock %}
