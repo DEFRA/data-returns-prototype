@@ -1,0 +1,232 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<div class="heading">
+		<p class="type">Send your EA data returns online</p>
+		<h1 class="heading-large">How to format LCP compliance monitoring data returns</h1>
+	</div>
+	<aside class="meta metadata-list">
+		<dl>
+			<dt>From:</dt>
+			<dd class="js-hide-extra-metadata"> <a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> </dd> <dt>First published:</dt>
+			<dd>
+				<time class="date" datetime="2016-01-13T16:25:00+01:00"> September 2016</time>
+			</dd>
+		</dl>
+	</aside>
+
+	<p class="lede">Follow rules to format data that meets Environment Agency standards then send your data returns online.</p>
+
+	<nav id="page-navigation" class="contextual-info">
+		<h1>Contents</h1>
+		<ol class="dash-list">
+			<li>
+				<a href="#lcp-compliance-monitoring-data-rules">LCP compliance monitoring data rules</a>
+			</li>
+			<li>
+				<a href="#exceptions">Exceptions and special cases</a>
+			</li>
+			<li>
+				<a href="#controlled-lists">Data returns controlled lists</a>
+			</li>
+			<li>
+				<a href="#documents">Example LCP data return</a>
+			</li>
+		</ol>
+	</nav>
+	<div class="grid-row">
+		<div class="column-full">
+			<section id="lcp-compliance-monitoring-data-rules">
+				<h2 class="heading-medium">LCP compliance monitoring data rules</h2>
+				<table>
+					<thead>
+				        <tr>
+							<th class="th-field">Field short heading</th>
+							<th class="th-description th-rules">Description and rules</th>
+							<th class="th-example">Example</th>
+				        </tr>
+					</thead>
+					<tbody>
+				        <tr>
+				            <td>EA_ID</td>
+				            <td>Enter the 8-character permit reference. This should be 2 letters, 4 numbers and 2 letters, without any prefixes or suffixes, eg EPR/ or /V002.You must complete this field in all data returns. You can send data returns for multiple permits. Make sure your file is no larger than around 2MB.</td>
+				            <td>AB1234ZZ</td>
+				        </tr>
+				        <tr>
+				            <td>Site_Name</td>
+				            <td>Enter the site name for your installation as given in your permit.Only use letters and numbers. Limit the character length to 255.</td>
+				            <td>Mycity Power Station</td>
+				        </tr>
+				        <tr>
+				            <td>Rtn_Period</td>
+				            <td>Enter the return year in a 4-digit format (YYYY).</td>
+				            <td>2016&nbsp;&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Rtn_Type</td>
+				            <td>Enter&nbsp;IED chap 3 inventory, as given in the return type controlled list. [DEP1300]<sup><a href="#cmnt1">[a]</a></sup></td>
+				            <td>IED chap 3 inventory<sup><a href="#cmnt2">[b]</a></sup></td>
+				        </tr>
+				        <tr>
+				            <td>Mon_Point</td>
+				            <td>Give your LCP reference as given in your permit<sup><a href="#cmnt3">[c]</a></sup>. It should be in the format of 3 letters, space and three digits: eg, LCP 001.</td>
+				            <td>LCP 001</td>
+				        </tr>
+				        <tr>
+				            <td>Mon_Date</td>
+				            <td>Leave blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Parameter</td>
+				            <td>Give a parameter from&nbsp;the controlled list. [DEP1000]<sup><a href="#cmnt4">[d]</a></sup></td>
+				            <td>Annual energy input</td>
+				        </tr>
+				        <tr>
+				            <td>Qualifier</td>
+				            <td>Leave blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Ref_Period</td>
+				            <td>Leave blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Value</td>
+				            <td>Enter numerical value.<sup><a href="#cmnt5">[e]</a></sup></td>
+				            <td>4.5</td>
+				        </tr>
+				        <tr>
+				            <td>Txt_Value</td>
+				            <td>Leave blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Unit</td>
+				            <td>You must give the unit or measure used in your data return. Select an entry from the unit or measure controlled list.&nbsp;[DEP1200]<sup><a href="#cmnt6">[f]</a></sup></td>
+				            <td>TJ</td>
+				        </tr>
+				        <tr>
+				            <td>Meth_Stand</td>
+				            <td>Leave blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Comments</td>
+				            <td>Use this optional field for free-text comments about the row of data - eg, if you were unable to take a reading. <sup><a href="#cmnt7">[g]</a></sup>You can also use this field if you wish to give your own system references to store with the results.Avoid unnecessary&nbsp;commas and symbols. You can enter a maximum of 255 characters.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				    </tbody>
+				</table>
+			</section>
+
+			<section id="controlled-lists">
+				<h2 class="heading-medium">Data returns controlled lists</h2>
+				<div class="text">
+					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
+					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
+				</div>
+				<ol class="document-list">
+					<li class="publication document-row">
+						<h3><a href="#1">Unit or measure</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T15:00:02+00:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#2">Parameter (substance name)</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T15:00:02+00:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#3">Reference period</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#4">Return period</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#5">Monitoring standard or method</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T15:00:02+00:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#6">Return type</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T15:00:02+00:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#7">Text value</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#8">Qualifier</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#9">Waste codes</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#10">D or R codes</a></h3>
+						<ul class="attributes">
+							<li class="date"><abbr class="public_timestamp" title="2016-09-24T09:05:00+01:00">24 September 2016</abbr></li>
+							<li class="display-type attribute">Controlled list</li>
+						</ul>
+					</li>
+				</ol>
+			</section>
+			<section id="documents" class="attachment embedded">
+				<h2 class="heading-medium">Documents</h2>
+				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
+				<div class="attachment-details">
+					<h2 class="title">Example LCP data return</h2>
+					<p class="metadata">
+						<span class="preview">
+						<strong>
+							<a href="/help/example-data-return">View online</a>
+						</strong>
+						</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+</main>
+{% endblock %}

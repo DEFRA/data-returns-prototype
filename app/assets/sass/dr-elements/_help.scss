@@ -127,6 +127,12 @@
 			width:percentage(1/6);
 		}
 		.th-description {
+			width:percentage(2/6);
+		}
+		.th-rules {
+			width:percentage(2/6);
+		}
+		.th-description.th-rules {
 			width:percentage(4/6);
 		}
 		.th-example {
