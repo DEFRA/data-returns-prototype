@@ -39,7 +39,7 @@
 				<a href="#exceptions">Exceptions and special cases</a>
 			</li>
 			<li>
-				<a href="#controlled-lists">Data returns controlled lists</a>
+				<a href="#controlled-lists">Landfill data returns controlled lists</a>
 			</li>
 			<li>
 				<a href="#documents">Example landfill data return</a>
@@ -49,7 +49,7 @@
 	<div class="grid-row">
 		<div class="column-full">
 			<section id="landfill-compliance-monitoring-data-rules">
-				<h2 class="heading-medium">Landfill compliance monitoring data rules</h2>
+				<h2 class="heading-large">Landfill compliance monitoring data rules</h2>
 				<table>
 					<thead>
 						<tr>
@@ -192,10 +192,10 @@
 				</table>
 			</section>
 			<section id="exceptions">
-				<h2 class="heading-medium" id="exceptions">Exceptions and special cases</h2>
+				<h2 class="heading-large" id="exceptions">Exceptions and special cases</h2>
 				<div class="text">
 					<p>There are some exceptions where you may not have to fill mandatory fields because of circumstances, or special cases where your data needs to be adapted. The table below describes these exceptions and explains how you must format your data in these circumstances. It also gives example data.</p>
-					<h3 class="heading-small">When you need to give a ‘No result’ measurement</h3>
+					<h3 class="heading-medium">When you need to give a ‘No result’ measurement</h3>
 					<p>You should leave the Value field blank and enter ‘No result’ in the Txt_Value field if you’re reporting on a parameter but can’t give a measurement (eg, because a borehole is blocked). You should also give an explanation in the Comments field.</p><p>You must give a line of data for each parameter, including instances where you couldn’t take a measurement.</p>
 				</div><!-- text -->
 				<div class="example-file-wrapper">
@@ -241,7 +241,7 @@
 					</div><!-- example-file -->
 				</div><!-- example-file-wrapper -->
 				<div class="text">
-					<h3 class="heading-small">When Ref_Period covers multiple measurements in a single calculation</h3>
+					<h3 class="heading-medium">When Ref_Period covers multiple measurements in a single calculation</h3>
 					<p>Give date and time data from the end of a period if you’re reporting a Ref_Period measurement calculated across multiple readings such as ‘Average’, ‘Maximum daily’ or ‘Minimum daily’. In the example below the single date and time entered for a Ref_Period of ‘Hourly mean’ represents a set of readings taken from 3pm to 4pm on 1 August 2016.</p>
 				</div><!-- text -->
 				<div class="example-file-wrapper">
@@ -287,7 +287,7 @@
 					</div><!-- example-file -->
 				</div><!-- example-file-wrapper -->
 				<div class="text">
-					<h3 class="heading-small">When you need to report a descriptive measurement</h3>
+					<h3 class="heading-medium">When you need to report a descriptive measurement</h3>
 					<p>You may need to report on parameters, for example ‘Weather conditions’, that have no numerical result so you should give a description instead. To do this leave the Value and Units fields blank and enter ‘See comment’ in Txt_Value. Then you must enter a description in the Comments field. </p>
 				</div><!-- text -->
 				<div class="example-file-wrapper">
@@ -333,8 +333,88 @@
 					</div><!-- example-file -->
 				</div><!-- example-file-wrapper -->
 			</section>
+
+			<section id="controlled-lists">
+				<h2 class="heading-large">Landfill data returns controlled lists</h2>
+				<div class="text">
+					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
+					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
+				</div>
+				<ol class="document-list">
+					<li class="publication document-row">
+						<h3>Unit or measure</h3>
+						<ul class="attributes">
+							<li><a href="#1">View online</a></li>
+							<li><a href="#1">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Parameter (substance name)</h3>
+						<ul class="attributes">
+							<li><a href="#2">View online</a></li>
+							<li><a href="#2">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Reference period</h3>
+						<ul class="attributes">
+							<li><a href="#3">View online</a></li>
+							<li><a href="#3">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Return period</h3>
+						<ul class="attributes">
+							<li><a href="#4">View online</a></li>
+							<li><a href="#4">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Monitoring standard or method</h3>
+						<ul class="attributes">
+							<li><a href="#5">View online</a></li>
+							<li><a href="#5">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Return type</h3>
+						<ul class="attributes">
+							<li><a href="#6">View online</a></li>
+							<li><a href="#6">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Text value</h3>
+						<ul class="attributes">
+							<li><a href="#7">View online</a></li>
+							<li><a href="#7">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Qualifier</h3>
+						<ul class="attributes">
+							<li><a href="#8">View online</a></li>
+							<li><a href="#8">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>Waste codes</h3>
+						<ul class="attributes">
+							<li><a href="#9">View online</a></li>
+							<li><a href="#9">Download CSV</a></li>
+						</ul>
+					</li>
+					<li class="publication document-row">
+						<h3>D or R codes</h3>
+						<ul class="attributes">
+							<li><a href="#10">View online</a></li>
+							<li><a href="#10">Download CSV</a></li>
+						</ul>
+					</li>
+				</ol>
+			</section>
 			<section id="documents" class="attachment embedded">
-				<h2 class="heading-medium">Documents</h2>
+				<h2 class="heading-large">Documents</h2>
 				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
 				<div class="attachment-details">
 					<h2 class="title">Example Landfill data return</h2>
