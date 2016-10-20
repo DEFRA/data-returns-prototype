@@ -2,6 +2,7 @@
 	@include button($grey-3);
 	text-align:center;
 }
-.button-choose-files {
-	margin-bottom:15px;
+
+.button-secondary:active {
+	outline: 3px solid $yellow;
 }
