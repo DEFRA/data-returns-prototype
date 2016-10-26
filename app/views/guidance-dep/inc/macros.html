@@ -1,0 +1,23 @@
+
+
+
+{% macro tablerow(field,desc,rules,exmp) %}
+<tr>
+  <td class="dr_field">
+    {{ field }}
+  </td>
+  <td class="dr_description">
+    {{ desc | safe }}
+  </td>
+  <td class="dr_rules">
+    <ul>
+    {% for rule in rules %}
+        <li>{{ rule | safe }}</li>
+    {% endfor %}
+    </ul>
+  </td>
+  <td class="dr_example">
+    {{ exmp }}
+  </td>
+</tr>
+{% endmacro %}

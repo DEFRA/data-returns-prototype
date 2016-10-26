@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'Pollution Inventory' %}
+
+{% set pagetitle = 'Pollution Inventory (PI) data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  
+
+
+      <a class="link-back" href="/">Back</a>
+  
+        <h1 class="heading-large text">
+        {{ pagetitle }}
+        </h1>
+        
+        {% include "guidance-dep/inc/rules_intro_text.html" %}
+        
+        <p class="text">		
+          <a href="#">
+            Example data return for {{returntype}}
+          </a>
+        </p>	
+        
+        
+        <h2 class="heading-medium">
+          Data rules
+        </h2>
+        
+        <table class="datarules">
+          {% include "guidance-dep/inc/rules_table_head.html" %}
+        
+        {% import "guidance-dep/inc/macros.html" as macro %}
+        
+        {% from "guidance-dep/inc/rules_pi.html" import rules %}
+
+        {% for rule in rules %}
+            {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
+        {% else %}
+          <p>No data</p>
+        {% endfor %}
+        
+      </table>
+
+
+      <h2 class="heading-medium" id="param_units_allowed_values">
+        Monitoring point allowed values
+      </h2>
+
+      <table class="param_units">
+      <tr><th>Monitoring point</th></tr>
+      <tr><td>Air</td></tr>
+      <tr><td>Land</td></tr>
+      <tr><td>Controlled Water</td></tr>
+      <tr><td>Waste Water</td></tr>
+      <tr><td>Waste Transfer</td></tr>
+      <tr><td>Waste Overseas</td></tr>
+      <tr><td>General</td></tr>
+      </table>
+
+</main>
+
+{% endblock %}

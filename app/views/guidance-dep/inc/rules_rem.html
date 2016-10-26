@@ -1,0 +1,296 @@
+
+
+{% set rules = 
+  
+  [
+   {
+     "field": "EA_ID",
+     "desc": "A unique identifier for the reading. It's the permit or licence number that the reading relates to.",
+     "rules": [
+        "Required.",
+        "Must be the installation's 8 character permit reference.",
+        "Format is 2 letters, 4 numbers and 2 letters.",
+        "Do not include any other text from your permit number before and after, for example \"EPR/\" or \"/V002\".",
+        ""
+     ],
+     "exmp": "AB1234ZZ"
+  },
+   {
+     "field": "Site_Name",
+     "desc": "The site name. It's used to check that the correct permit number has been used. ",
+     "rules": [
+        "Required.",
+        "Must be the installation site name on your permit.",
+        "Can include any text.",
+        "",
+        ""
+     ],
+     "exmp": "Mycity Power Station"
+  },
+   {
+     "field": "Rtn_Period",
+     "desc": "The year in which the data was collected. This is the time period of the whole data return, not the individual monitoring item.",
+     "rules": [
+        "Give this information where possible.",
+        "Must be 4 numbers in the format YYYY.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": "2016"
+  },
+   {
+     "field": "Rtn_Type",
+     "desc": "The type of return the row of data relates to. ",
+     "rules": [
+        "Required.",
+        "For REM it must be the text 'REM Return'.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": "REM Return"
+  },
+   {
+     "field": "Mon_Point",
+     "desc": "The monitoring point reference where the sample was taken.",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Mon_Date",
+     "desc": "Date, and where necessary, the time the measurement was taken.",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Parameter",
+     "desc": "The chemical substance or parameter you're monitoring.",
+     "rules": [
+        "Required.",
+        "Must be taken from the <a href=\"#param_units_allowed_values\">REM allowed parameters and units list</a>.",
+        "The unit used should match the parameter.",
+        "",
+        ""
+     ],
+     "exmp": "Electricity Exported"
+  },
+   {
+     "field": "Qualifier",
+     "desc": "Used to give to make a chosen parameter more specific.",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Ref_Period",
+     "desc": "The reference period for the sample, as specified in your permit or licence. This explains how the sample was taken - eg, '24 hour total', 'Half hour average', 'Monthly mean'.",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Value",
+     "desc": "The numerical value of your measurement in the units you used.",
+     "rules": [
+        "Required.",
+        "Numerical values only but can include zeros or blanks (nulls).",
+        "Can also include &gt; or &lt; symbol. ",
+        "No other characters are allowed. ",
+        "Text values such as 'BRT' or 'waterlogged' should be in 'comments' field."
+     ],
+     "exmp": "4.5"
+  },
+   {
+     "field": "Txt_Value",
+     "desc": "Used for a text-based response, for example, ‘ Yes’, ‘No’, 'No result' and 'See comments'. ",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Unit",
+     "desc": "The unit in which the measurement was taken.",
+     "rules": [
+        "This field is an alphanumeric string.",
+        "Must be taken from the <a href=\"#param_units_allowed_values\">REM allowed parameters and units list</a>.",
+        "Must match the unit allowed for the parameter.",
+        "",
+        ""
+     ],
+     "exmp": "GWh"
+  },
+   {
+     "field": "Meth_Stand",
+     "desc": "The methodology used for the sampling.",
+     "rules": [
+        "Not required for REM.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "Comments",
+     "desc": "Use this for comments about the row of data, for example, if you were unable to take a reading. You can also use this field if you wish to give your own system references to store with the results.",
+     "rules": [
+        "Optional.",
+        "You can enter a maximum of 255 characters.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "",
+     "desc": "",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  },
+   {
+     "field": "CiC",
+     "desc": "Used to identify a row of data for which commercial in confidence status is claimed.",
+     "rules": [
+        "Not required for LCP.",
+        "Please leave blank.",
+        "",
+        "",
+        ""
+     ],
+     "exmp": ""
+  }
+  ]
+
+ -%}

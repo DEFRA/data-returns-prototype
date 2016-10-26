@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'Resource Efficiency Measure' %}
+
+{% set pagetitle = 'Resource Efficiency Measure (REM) data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+  
+
+
+      <a class="link-back" href="/">Back</a>
+  
+        <h1 class="heading-large text">
+        {{ pagetitle }}
+        </h1>
+        
+        {% include "guidance-dep/inc/rules_intro_text.html" %}
+        
+        <p class="text">		
+          <a href="#">
+            Example data return for {{returntype}}
+          </a>
+        </p>	
+        
+        
+        <h2 class="heading-medium">
+          Data rules
+        </h2>
+        
+        <table class="datarules">
+          {% include "guidance-dep/inc/rules_table_head.html" %}
+        
+        {% import "guidance-dep/inc/macros.html" as macro %}
+        
+        {% from "guidance-dep/inc/rules_rem.html" import rules %}
+
+        {% for rule in rules %}
+            {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
+        {% else %}
+          <p>No data</p>
+        {% endfor %}
+        
+      </table>
+
+
+      <h2 class="heading-medium" id="param_units_allowed_values">
+        Parameter and units allowed values
+      </h2>
+
+      <table class="param_units">
+      <tr><th>Parameter</th><th>Alternative or alias parameter</th><th>Unit</th></tr>
+      <tr><td>Electricity Exported</td><td></td><td>GWh</td></tr>
+      <tr><td>Heat Exported</td><td></td><td>GWh</td></tr>
+      <tr><td>Mechanical Power Provided</td><td></td><td>GWh</td></tr>
+      <tr><td>Fossil Fuel Energy Consumption</td><td></td><td>GWh</td></tr>
+      <tr><td>Non-Fossil Fuel Consumption</td><td></td><td>GWh</td></tr>
+      <tr><td>Annual Operating Hours</td><td></td><td>h</td></tr>
+      <tr><td>Water Abstracted from Fresh Water Source</td><td>Water abstraction Fresh Water Source</td><td>m3</td></tr>
+      <tr><td>Water Abstracted from Borehole Source</td><td>Water abstraction Borehole Source</td><td>m3</td></tr>
+      <tr><td>Water Abstracted from Estuarine Water Source</td><td>Water abstraction Estuarine Water Source</td><td>m3</td></tr>
+      <tr><td>Water Abstracted from Sea Water Source</td><td>Water abstraction Sea Water Source</td><td>m3</td></tr>
+      <tr><td>Water Abstracted from Mains Water Source</td><td>Water abstraction Mains Water Source</td><td>m3</td></tr>
+      <tr><td>Gross Total Water Used</td><td>Water use</td><td>m3</td></tr>
+      <tr><td>Net Water Used</td><td>Water use</td><td>m3</td></tr>
+      <tr><td>Haz Waste Transferred for Disposal at another Installation</td><td>Haz Waste For Disposal</td><td>t</td></tr>
+      <tr><td>Haz Waste Transferred for Recovery at another Installation</td><td>Haz Waste For Recovery</td><td>t</td></tr>
+      <tr><td>Non-Haz Waste Transferred for Disposal at another Installation</td><td>Non-haz Waste For Disposal</td><td>t</td></tr>
+      <tr><td>Non-Haz Waste Transferred for Recovery at another Installation</td><td>Non-haz Waste For Recovery</td><td>t</td></tr>
+      <tr><td>Waste Recovered to Quality Protocol and Transferred Off-Site</td><td>Waste Recovered to Quality Protocol</td><td>t</td></tr>
+      <tr><td>Waste Transferred Directly Off-Site for Use under an exemption</td><td>Waste For Use Off Site</td><td>t</td></tr>
+      </table>
+
+</main>
+
+{% endblock %}
