@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<div class="heading">
+		<p class="type">Send your EA data returns online</p>
+		<h1 class="heading-large">How to format pollution inventory compliance monitoring data returns</h1>
+	</div>
+	<aside class="meta metadata-list">
+		<dl>
+			<dt>From:</dt>
+			<dd class="js-hide-extra-metadata"> <a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> </dd> <dt>First published:</dt>
+			<dd>
+				<time class="date" datetime="2016-01-13T16:25:00+01:00"> September 2016</time>
+			</dd>
+		</dl>
+	</aside>
+
+	<p class="lede">Follow rules to format data that meets Environment Agency standards then send your data returns online.</p>
+
+	<nav id="page-navigation" class="contextual-info">
+		<h1>Contents</h1>
+		<ol class="dash-list">
+			<li>
+				<a href="#landfill-compliance-monitoring-data-rules">Pollution inventory compliance monitoring data rules</a>
+			</li>
+			<li>
+				<a href="#exceptions">Exceptions and special cases</a>
+			</li>
+			<li>
+				<a href="#controlled-lists">Pollution inventory data returns controlled lists</a>
+			</li>
+			<li>
+				<a href="#documents">Example pollution inventory data return</a>
+			</li>
+		</ol>
+	</nav>
+	<div class="grid-row">
+		<div class="column-full">
+			<section id="landfill-compliance-monitoring-data-rules">
+				<h2 class="heading-large">Pollution inventory compliance monitoring data rules</h2>
+				<table class="table-control datarules">
+		        {% include "guidance-dep/inc/rules_table_head.html" %}
+
+		        {% import "guidance-dep/inc/macros.html" as macro %}
+
+		        {% from "guidance-dep/inc/rules_lcp.html" import rules %}
+
+		        {% for rule in rules %}
+
+		        {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
+
+		        {% else %}
+		            <p>No data</p>
+		        {% endfor %}
+		        </table>
+				<p>Parameter 1 </p>
+				<table>
+				    <tbody>
+				        <tr>
+				            <td>For waste movements that have both a waste type and a D or R code, please put the D or R code in this field.</td>
+				        </tr>
+				        <tr>
+				            <td>R11</td>
+				        </tr>
+				    </tbody>
+				</table>
+			</section>
+
+			<section id="exceptions">
+				<h2 class="heading-large">Exceptions and special cases</h2>
+				<div class="text">
+					<p>There are some exceptions or special cases where you may not have to fill mandatory fields because of circumstances. The table below describes these exceptions and explains how you must format your data in these circumstances. It also gives example data.</p>
+				</div>
+			</section>
+
+			<section id="controlled-lists">
+				<h2 class="heading-large">Pollution inventory data returns controlled lists</h2>
+				<div class="text">
+					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
+					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
+				</div>
+				<ol class="document-list">
+					<li class="publication document-row">
+						<h3><a href="#1">Unit or measure</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#2">Parameter (substance name)</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#3">Reference period</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#4">Return period</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#5">Monitoring standard or method</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#6">Return type</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#7">Text value</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#8">Qualifier<a href="#8"></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#9">Waste codes</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#10">D or R codes</a></h3>
+					</li>
+				</ol>
+			</section>
+
+			<section id="documents" class="attachment embedded">
+				<h2 class="heading-large">Documents</h2>
+				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
+				<div class="attachment-details">
+					<h2 class="title">Example pollution inventory data return</h2>
+					<p class="metadata">
+						<span class="preview">
+						<strong>
+							<a href="/help/example-data-return">View online</a>
+						</strong>
+						</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
+</main>
+{% endblock %}

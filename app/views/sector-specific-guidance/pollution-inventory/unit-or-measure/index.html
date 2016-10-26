@@ -6,8 +6,7 @@
 
 {% block content %}
 <header class="page-header">
-	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
-	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
 </header>
 <main id="content" role="main" class="help">
 	<div class="phase-banner-beta">
@@ -15,6 +14,7 @@
 	</div>
 	<a href="#" class="link-back" onclick="window.history.back()">back</a>
 	<h1 class="heading-large">Units allowed for pollution inventory</h1>
+	<p class="text">Allowed units are dependent on the given parameter. See the <a href="parameter">controlled list of parameters for pollution inventory</a></p>
 	<table class="table-control">
 	    <thead>
 	        <tr>

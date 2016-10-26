@@ -6,8 +6,7 @@
 
 {% block content %}
 <header class="page-header">
-	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
-	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
 </header>
 <main id="content" role="main" class="help">
 	<div class="phase-banner-beta">
@@ -15,30 +14,18 @@
 	</div>
 	<a href="#" class="link-back" onclick="window.history.back()">back</a>
 	<h1 class="heading-large">Parameters allowed for pollution inventory</h1>
-    <p class="lede">You must use the correct unit for each parameter and release and transfer.</p>
-	<div class="filter">Filter list by:
-		<select class="mon_Point" style="width: 25%">
-		  <option selected="selected" value="all">All releases and transfers</option>
-		  <option value="air">Air</option>
-		  <option value="land">Land</option>
-		  <option value="controlled-water">Controlled Water</option>
-		  <option value="wate-water">Waste Water</option>
-		  <option value="waste-transfer">Waste Transfer</option>
-		  <option value="waste-overseas">Waste Overseas</option>
-		  <option value="general">General</option>
-		</select>
-	</div>
+    <p>You must use the correct unit for each parameter.</p>
 	<table class="table-control">
 	    <thead>
 	        <tr>
-	            <th class="cell-one-third th-parameter">Parameter</th>
+	            <th class="cell-two-thirds th-parameter">Parameter</th>
 	            <th class="cell-one-third th-units">Allowed units</th>
 	        </tr>
 	    </thead>
 	    <tbody>
 	        <tr>
 	            <td>Alachlor</td>
-	            <td><a href="alachlor">View allowed units</a></td>
+	            <td><a href="parameter/alachlor">View allowed units</a></td>
 	        </tr>
 	        <tr>
 	            <td>Aldrin</td>
