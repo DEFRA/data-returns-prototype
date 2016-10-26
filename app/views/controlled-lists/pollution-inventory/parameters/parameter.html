@@ -1,0 +1,658 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<a href="#" class="link-back" onclick="window.history.back()">back</a>
+	<h1 class="heading-large">Parameters allowed for pollution inventory</h1>
+    <p class="lede">You must use the correct unit for each parameter and release and transfer.</p>
+	<div class="filter">Filter list by:
+		<select class="mon_Point" style="width: 25%">
+		  <option selected="selected" value="all">All releases and transfers</option>
+		  <option value="air">Air</option>
+		  <option value="land">Land</option>
+		  <option value="controlled-water">Controlled Water</option>
+		  <option value="wate-water">Waste Water</option>
+		  <option value="waste-transfer">Waste Transfer</option>
+		  <option value="waste-overseas">Waste Overseas</option>
+		  <option value="general">General</option>
+		</select>
+	</div>
+	<table class="table-control">
+	    <thead>
+	        <tr>
+	            <th class="cell-one-third th-parameter">Parameter</th>
+	            <th class="cell-one-third th-units">Allowed units</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>Alachlor</td>
+	            <td><a href="alachlor">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Aldrin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Americium 241</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Ammonia</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Anthracene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Antimony 125</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Argon 41</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Arsenic</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Asbestos</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Atrazine</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Benzene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Benzo[a]pyrene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Benzo[b]fluoranthene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Benzo[ghi]perylene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>1,3-Butadiene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cadmium</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Caesium 134</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Caesium 137</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Carbon 14</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Carbon dioxide</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Carbon Dioxide From Qualifying Renewable Fuel Sources</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Carbon monoxide</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Tetrachloromethane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cerium 144</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlordane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlordecone</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlorfenvinphos</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chloride</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlorine and inorganic chlorine compounds - as HCl</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlorofluorocarbons (CFCs)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Trichloromethane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chlorpyrifos</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chromium</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chromium 51</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cobalt 57</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cobalt 58</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cobalt 60</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Copper</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Curium 242</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Cypermethrin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Di-n-octyl phthalate</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>DDT (Dichlorodiphenyltrichloroethane)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dichloromethane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dichlorvos</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dieldrin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dioxins and furans (PCDDs/PCDFs) - as ITEQ</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dioxins and furans (PCDDs/PCDFs) - as WHO TEQ</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Diuron</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Endosulfan</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Endrin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Erbium - 169</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Ethylbenzene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>1,2-Dichloroethane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Ethylene oxide (1,2 Epoxyethane)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Fluoranthene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Fluorine 18</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Fluorine and inorganic fluorine compounds - as HF</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Gallium 67</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Halogenated organic compounds (total)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Halons</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>hazardous waste</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Heptachlor</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hexabromobiphenyl</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hexabromocyclododecane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hexachlorobenzene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hexachloro - 1,3 - butadiene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hexachlorocyclohexane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hydrochlorofluorocarbons (HCFCs)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hydrofluorocarbons (HFCs)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Hydrogen cyanide</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Indeno[1,2,3-cd]pyrene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Indium 111</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Iodine 123</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Iodine 125</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Iodine 129</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Iodine 131</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Isodrin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Isoproturon</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Krypton 85</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Lead</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>HCH-gamma</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Mercury</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Methane</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Methyl chloroform (1,1,1-Trichloroethane)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Mirex</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Naphthalene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Neptunium 237</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Nickel</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Niobium 95</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Nitrogen - as total N</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Oxides Of Nitrogen (NOX)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Nitrous oxide</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>non-hazardous waste</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Non-methane VOCs</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Nonylphenol and nonylphenol ethoxylates</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Octylphenols and octylphenol ethoxylates</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Organotin compounds - as Sn</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Other Alpha Particulate</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Other Beta/Gamma</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Other Beta/Gamma Particulate</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Particulate matter - PM10</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Particulate matter - PM2.5</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Particulate matter</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Pentachlorobenzene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Pentachlorophenol</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Perfluoro octanyl sulphate (PFOS)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Perfluorocarbons (PFCs)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Phenols - total as C</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Phosphorus - as total P</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Phosphorus 32</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Phosphorus 33</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Plutonium 241</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Plutonium Alpha</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>PCBs (polychlorinated biphenyls)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Polychlorinated biphenyls (PCBs) - as WHO TEQ</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Radon 222</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Ruthenium 106</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Samarium 153</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Selenium</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Selenium 75</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Short chain (C10-13) chlorinated paraffins (SCCPs)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Simazine</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Sodium 22</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Strontium 89</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Strontium 90</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Sulphur 35</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Sulphur hexafluoride</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Sulphur oxides (SO2 and SO3) as SO2</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Technetium 99</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Technetium 99m</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Tetrachloroethane (1,1,2,2-Tetrachloroethane)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Tetrachloroethene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Thallium 201</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Thorium 230</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Thorium 232</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Toluene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Total Alpha</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Total Beta/Gamma (Excl Tritium)</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Total Organic Carbon</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Toxaphene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Tributyltin and compounds - as TBT</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Trichlorobenzene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Trichloroethene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Trifluralin</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Triphenyltin and compounds - as TPT</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Tritium</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Uranium Alpha</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Chloroethene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Waste transfer</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Xenon 133</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Xylene</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Yttrium 90</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Zinc</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	        <tr>
+	            <td>Zirconium 95</td>
+	            <td><a href="#">View allowed units</a></td>
+	        </tr>
+	    </tbody>
+	</table>
+</main>
+{% endblock %}

@@ -15,10 +15,231 @@
 	</div>
 	<div class="heading">
 		<p class="type">Send your EA data returns online</p>
-		<h1 class="heading-large">EA <cite></cite>ontrolled lists</h1>
+		<h1 class="heading-large">How to format pollution inventory compliance monitoring data returns</h1>
 	</div>
-	<p class="lede">Use this tool to download the controlled lists for your return type</p>
-	<h2 class="heading-large">Units for LCP for ::PARAMETER::</h2>
+	<aside class="meta metadata-list">
+		<dl>
+			<dt>From:</dt>
+			<dd class="js-hide-extra-metadata"> <a class="organisation-link" href="https://www.gov.uk/government/organisations/environment-agency">Environment Agency</a> </dd> <dt>First published:</dt>
+			<dd>
+				<time class="date" datetime="2016-01-13T16:25:00+01:00"> September 2016</time>
+			</dd>
+		</dl>
+	</aside>
 
+	<p class="lede">Follow rules to format data that meets Environment Agency standards then send your data returns online.</p>
+
+	<nav id="page-navigation" class="contextual-info">
+		<h1>Contents</h1>
+		<ol class="dash-list">
+			<li>
+				<a href="#landfill-compliance-monitoring-data-rules">Pollution inventory compliance monitoring data rules</a>
+			</li>
+			<li>
+				<a href="#exceptions">Exceptions and special cases</a>
+			</li>
+			<li>
+				<a href="#controlled-lists">Pollution inventory data returns controlled lists</a>
+			</li>
+			<li>
+				<a href="#documents">Example pollution inventory data return</a>
+			</li>
+		</ol>
+	</nav>
+	<div class="grid-row">
+		<div class="column-full">
+			<section id="landfill-compliance-monitoring-data-rules">
+				<h2 class="heading-large">Pollution inventory compliance monitoring data rules</h2>
+				<table class="table-control">
+					<thead>
+				        <tr>
+				            <th class="cell-one-sixth th-field-heading">Field short heading</th>
+				            <th class="cell-one-third th-description">Description</th>
+				            <th class="cell-one-third td-rules">Rules</th>
+				            <th class="cell-one-sixth th-example">Example</th>
+				        </tr>
+					</thead>
+					<tbody>
+				        <tr>
+				            <td>EA_ID</td>
+				            <td>The permit reference for your activity. See below for types.</td>
+				            <td>Required in all data returns.</td>
+				            <td>See below</td>
+				        </tr>
+				        <tr>
+				            <td>&nbsp;</td>
+				            <td>Installation permit<br />Use your 'original permit number' not any 'variation number'</td>
+				            <td>2 letters, 4 numbers and 2 letters<br /> No prefixes or suffixes, eg EPR/ or /V002.</td>
+				            <td>AB1234ZZ</td>
+				        </tr>
+				        <tr>
+				            <td>&nbsp;</td>
+				            <td>Radioactive substances (RSR) permit<br /> Your installation permit number as above or your RSR permit</td>
+				            <td>2 letters followed by 4 numbers</td>
+				            <td>AB1234</td>
+				        </tr>
+				        <tr>
+				            <td>&nbsp;</td>
+				            <td>Mine or Quarry<br />Your Mines &amp; Quarries reference. This will be on your letter.</td>
+				            <td>MQ followed by 4 numbers</td>
+				            <td>MQ0001</td>
+				        </tr>
+				        <tr>
+				            <td>Site_Name</td>
+				            <td>Enter the site name for your installation as given in your permit or letter.&nbsp;</td>
+				            <td>Required.<br /> Use only&nbsp;letters and numbers.<br />Maximum&nbsp;character length 255.</td>
+				            <td>Mycity Power Station&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Rtn_Period</td>
+				            <td>Enter the return year&nbsp;</td>
+				            <td>Required.4-digit format (YYYY)</td>
+				            <td>2016&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Rtn_Type</td>
+				            <td>Enter&nbsp;Pollution&nbsp;Inventory</td>
+				            <td>Required.Must be a term in the return type controlled list. [DEP1300]</td>
+				            <td>Pollution Inventory</td>
+				        </tr>
+				        <tr>
+				            <td>Mon_Point</td>
+				            <td>Monitoring point</td>
+				            <td>Required?The text ''PI - '' followed by the the route of emission taken from the controlled list.</td>
+				            <td>PI - air</td>
+				        </tr>
+				        <tr>
+				            <td>Mon_Date</td>
+				            <td>Was used for date&nbsp;</td>
+				            <td>Must be left blank</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Parameter</td>
+				            <td>Add description&nbsp;</td>
+				            <td>Required?Enter a parameter from the controlled list.If this is a waste data return use the European waste catalogue code.</td>
+				            <td>[appropriate example from new list needed to fit with all isomers etc]</td>
+				        </tr>
+				        <tr>
+				            <td>Qualifier</td>
+				            <td>You can use this field to give further definition to a chosen parameter to make it more specific.You might use this field to return data where 'all isomers' of a substance have been included or where emissions are 'notifiable'.</td>
+				            <td>Optional.Can only be from the qualifier controlled list. [DEP1500]</td>
+				            <td>All isomers</td>
+				        </tr>
+				        <tr>
+				            <td>Ref_Period</td>
+				            <td>Leave blank</td>
+				            <td>Must be left blank.</td>
+				            <td>&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Value</td>
+				            <td>Give values as total annual mass releases or transfers. This includes point source, fugitive and any notifiable releases.</td>
+				            <td>Required where there is a parameter.If you&rsquo;re reporting notifiable emissions, please use 'notifiable' in the qualifier field.</td>
+				            <td>0.2</td>
+				        </tr>
+				        <tr>
+				            <td>Txt_Value</td>
+				            <td>A field for a text-based response - eg, &lsquo;&nbsp;Yes&rsquo;, &lsquo;No&rsquo;, 'No result' and 'See comments'.This field can be used for reporting limits below regulatory threshold in the pollution inventory.</td>
+				            <td>Required where...You can only give an entry from the text value controlled list. [DEP1400]</td>
+				            <td>BRT</td>
+				        </tr>
+				        <tr>
+				            <td>Unit</td>
+				            <td>You must give the unit or measure used in your data return.</td>
+				            <td>Required.Must be from the&nbsp;unit or measure controlled list.&nbsp;[DEP1200]</td>
+				            <td>TJ</td>
+				        </tr>
+				        <tr>
+				            <td>Meth_Stand</td>
+				            <td>Method or standard used for monitoring.&nbsp;</td>
+				            <td>Optional but is important for some returns so you should provide an entry where possible.You can only give an entry from the monitoring standard or method controlled list. [DE0P600]</td>
+				            <td>??&nbsp;</td>
+				        </tr>
+				        <tr>
+				            <td>Comments</td>
+				            <td>Use this optional field for free-text comments about the row of data - eg, if you were unable to take a reading.You can also use this field if you wish to give your own system references to store with the results.</td>
+				            <td>Optional.Avoid unnecessary&nbsp;commas and symbols. Maximum length 255 characters.</td>
+				            <td>Borehole blocked</td>
+				        </tr>
+				    </tbody>
+				</table>
+				<p>Parameter 1 </p>
+				<table>
+				    <tbody>
+				        <tr>
+				            <td>For waste movements that have both a waste type and a D or R code, please put the D or R code in this field.</td>
+				        </tr>
+				        <tr>
+				            <td>R11</td>
+				        </tr>
+				    </tbody>
+				</table>
+
+			</section>
+
+			<section id="exceptions">
+				<h2 class="heading-large">Exceptions and special cases</h2>
+				<div class="text">
+					<p>There are some exceptions or special cases where you may not have to fill mandatory fields because of circumstances. The table below describes these exceptions and explains how you must format your data in these circumstances. It also gives example data.</p>
+				</div>
+			</section>
+
+			<section id="controlled-lists">
+				<h2 class="heading-large">Pollution inventory data returns controlled lists</h2>
+				<div class="text">
+					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
+					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
+				</div>
+				<ol class="document-list">
+					<li class="publication document-row">
+						<h3><a href="unit">Unit or measure</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="parameter">Parameter (substance name)</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#3">Reference period</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#4">Return period</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#5">Monitoring standard or method</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#6">Return type</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#7">Text value</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#8">Qualifier<a href="#8"></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#9">Waste codes</a></h3>
+					</li>
+					<li class="publication document-row">
+						<h3><a href="#10">D or R codes</a></h3>
+					</li>
+				</ol>
+			</section>
+
+			<section id="documents" class="attachment embedded">
+				<h2 class="heading-large">Documents</h2>
+				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
+				<div class="attachment-details">
+					<h2 class="title">Example pollution inventory data return</h2>
+					<p class="metadata">
+						<span class="preview">
+						<strong>
+							<a href="/help/example-data-return">View online</a>
+						</strong>
+						</span>
+					</p>
+				</div>
+			</section>
+		</div>
+	</div>
 </main>
 {% endblock %}
