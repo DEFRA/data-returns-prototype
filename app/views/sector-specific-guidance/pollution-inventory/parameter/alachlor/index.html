@@ -16,7 +16,7 @@
 	<h1 class="heading-large">Units allowed for alachlor for pollution inventory</h1>
     <p>You must use the correct unit for each release and transfer.</p>
 	<div class="filter form-group">Show units for:
-		<select class="mon_Point" style="width: 25%">
+		<select class="mon_Point" style="width:250px">
 		  <option selected="selected" value="all">All releases and transfers</option>
 		  <option value="air">Air</option>
 		  <option value="land">Land</option>
@@ -42,4 +42,8 @@
 	    </tbody>
 	</table>
 </main>
+
+<script type="text/javascript">
+  $('.mon_Point').select2();
+</script>
 {% endblock %}

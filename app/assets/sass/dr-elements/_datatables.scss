@@ -53,7 +53,7 @@ $jqueryui: false !default;
  */
 table.dataTable {
 	width: 100%;
-	margin: 0 auto;
+	margin: 0;
 	clear: both;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -560,37 +560,40 @@ table.dataTable th {
 		}
 	}
 }
-@media screen and (max-width: 640px) {
-	.dataTables_wrapper {
-		.dataTables_filter,
-		.dataTables_length {
-			float: none;
-			/* text-align: center; */
-		}
-		.dataTables_filter {
-			margin-top: 0.5em;
-		}
-		tbody,
-		td,
-		th,
-		thead{
-			display: block;
-			border-bottom: 0 !important;
-		}
-		tr {
-			display: block;
-			border-bottom: 1px solid $grey-2;
-		}
-		td {
-			@include core-16;
-		}
-		td + td {
-			padding-top:0;
-		}
-		td + td::before {
-			content: "Alternative:";
-			font-weight: bold;
-			display: block;
-		}
-	}
-}
+
+// Removed as it overrides .table-control
+//
+// @media screen and (max-width: 640px) {
+// 	.dataTables_wrapper {
+// 		.dataTables_filter,
+// 		.dataTables_length {
+// 			float: none;
+// 			/* text-align: center; */
+// 		}
+// 		.dataTables_filter {
+// 			margin-top: 0.5em;
+// 		}
+// 		tbody,
+// 		td,
+// 		th,
+// 		thead{
+// 			display: block;
+// 			border-bottom: 0 !important;
+// 		}
+// 		tr {
+// 			display: block;
+// 			border-bottom: 1px solid $grey-2;
+// 		}
+// 		td {
+// 			@include core-16;
+// 		}
+// 		td + td {
+// 			padding-top:0;
+// 		}
+// 		td + td::before {
+// 			content: "Alternative:";
+// 			font-weight: bold;
+// 			display: block;
+// 		}
+// 	}
+// }
