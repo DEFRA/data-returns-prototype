@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 45, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/govuk_modules/govuk_frontend_toolkit/stylesheets/_shims.scss */
 .grid-row, #content, .notice, .panel, fieldset, .form-group, .form-block, .breadcrumbs ol, .document-list .document-row ul {
   zoom: 1;
@@ -4258,6 +4259,59 @@ table.dataTable th {
   color: #6f777b;
 }
 
+/* line 2, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .correction {
+  border-bottom: 1px solid #bfc1c3;
+  padding: 0.75em 1.25em 0.5625em 0;
+  margin-bottom: 0;
+}
+
+/* line 6, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .correction .correction-error li {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  font-size: 16px;
+  line-height: 1.25;
+  border-bottom: 1px solid #bfc1c3;
+  padding: 0.75em 1.25em 0.5625em 0;
+  margin-bottom: 0;
+}
+
+/* line 12, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .correction .table-control {
+  margin-top: 15px;
+  border-top: 1px solid #bfc1c3;
+}
+
+/* line 15, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .correction .table-control th, .correction-list .correction .table-control td {
+  padding-left: 7.5px;
+  border-left: 1px solid #bfc1c3;
+  border-right: 1px solid #bfc1c3;
+}
+
+/* line 22, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .link {
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+/* line 25, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .link::before {
+  content: "►";
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+/* line 31, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/dr-elements/_correction-list.scss */
+.correction-list .arrow {
+  font-size: 12px;
+  color: #005ea5;
+}
+
 @-webkit-keyframes passing-through {
   0% {
     opacity: 0;
@@ -4642,12 +4696,12 @@ table.dataTable th {
   padding: 5px 0 3px 5px;
 }
 
-/* line 20, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/_dr-elements.scss */
+/* line 21, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/_dr-elements.scss */
 a[rel="external"]::after {
   background-position: right 4px;
 }
 
-/* line 24, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/_dr-elements.scss */
+/* line 25, /Users/jeremygillies/Projects/EnvironmentAgency/DataReturns/data-returns-sandbox/app/assets/sass/_dr-elements.scss */
 a:hover[rel="external"]::after {
   background-position: right 4px;
   color: #2b8cc4;
