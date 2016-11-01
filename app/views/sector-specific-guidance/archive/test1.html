@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  {{ name }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/">Back</a>
+
+        <h1 class="heading-large text">Test 1 form</h1>
+
+        <form action="/filtered-guidance/test1-result" method="get" class="form">
+
+          <div class="form-group">
+            <fieldset class="inline">
+
+              <legend class="visuallyhidden">xxxxxx</legend>
+
+              <label for="martin" class="block-label">
+                <input type="radio" name="hisname" value="Martin" id="martin">
+                Martin
+              </label>
+
+              <label for="paul" class="block-label">
+                <input type="radio" name="hisname" value="Paul" id="paul">
+                Paul
+              </label>
+
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+
+        </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
