@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'large combustion plant' %}
+
+{% set pagetitle = 'Large combustion plant data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<a href="#" class="link-back" onclick="window.history.back()">back</a>
+	<h1 class="heading-large">Parameters allowed for {{returntype}}</h1>
+    <p>You must use the correct unit for each parameter.</p>
+
+	<table id="parameter-list" class="table-control table-two-thirds mobile-format">	<table id="parameter-list" class="table-control table-two-thirds mobile-format">
+		<thead>
+			<tr>
+				<th class="cell-two-thirds parameter">Parameter</th>
+				<th class="cell-one-third th-units">Allowed units</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="td-parameter">Net Rated Thermal Input Capacity</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>MW</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Coal</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Lignite</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Peat</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Biomass</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Other solid fuels</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Liquid fuels</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Natural gas</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Net Energy Input Other gases</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Annual energy input</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>TJ</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Total Annual SO2 emission</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>t</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Total Annual NOx emission</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>t</td>
+			</tr>
+			<tr>
+				<td class="td-parameter">Total Annual Dust emission</td>
+				<td><span class="th-header" aria-hidden="true">Allowed units: </span>t</td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+
+<script>
+	$(document).ready( function () {
+		$('#parameter-list').dataTable( {
+			"paging": false,
+			"lengthChange": false,
+			"dom": '<"top"f>rt<"bottom"lp><"clear">',
+			"order": [[ 0, 'asc' ], [ 1, 'asc' ]],
+			"ordering": false,
+			"language": {
+				"info": "Showing _END_ parameters",
+				"infoFiltered": " from a total of _MAX_",
+				"search": "<span class=\"form-hint\">Start typing to filter the list</span>"
+			}
+		} );
+	} );
+</script>
+
+{% endblock %}

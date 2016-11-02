@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'landfill' %}
+
+{% set pagetitle = 'Landfill data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<a href="#" class="link-back" onclick="window.history.back()">back</a>
+	<h1 class="heading-large">Units allowed for {{returntype}}</h1>
+	<p class="text">Allowed units are dependent on the given parameter and monitor point</a></p>
+	<table class="table-control table-one-half">
+	    <thead>
+	        <tr>
+	            <th class="cell-one-third th-parameter">Allowed units</th>
+	            <th class="cell-two-thirds th-long-name">Long name</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>g</td>
+		        <td>Gram</td>
+	        </tr>
+	        <tr>
+	        	<td>kg</td>
+		        <td>Kilograms</td>
+		    </tr>
+	        <tr>
+				<td>kt</td>
+		        <td>Kilotonnes</td>
+	        </tr>
+	        <tr>
+				<td>mg</td>
+			    <td>Milligram</td>
+	        </tr>
+	        <tr>
+				<td>t</td>
+		        <td>Metric tonne</td>
+	        </tr>
+	    </tbody>
+	</table>
+</main>
+{% endblock %}

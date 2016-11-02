@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+	<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+	<script src="/public/javascripts/jquery-ui.min.js"></script>
+	<script src="/public/javascripts/jquery.select-to-autocomplete.js"></script>
+	<script src="/public/javascripts/details.polyfill.js"></script>
+</header>
+<main id="content" role="main">
+<div class="phase-banner-beta">
+	<p> <strong class="phase-tag">BETA</strong> <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span> </p>
+</div>
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">
+	<h1 id="make-corrections" class="heading-medium error-summary-heading">You can't send this file</h1>
+	<p>Before you can send invalid-controlled-list-values.csv you need to make these corrections:</p>
+</div>
+<form action="/02-send-your-data/01-upload-your-data" class="form" method="post">
+	<div class="form-group">
+		<input type="submit" value="Back to file list" class="button">
+	</div>
+</form>
+<h2 class="heading-medium">Errors found in CORY sample file_1 DW Data Returns.csv</h2>
+<p>Showing 635 errors - fix these and re-check to see more or <a href="#">download the whole list</a></p>
+
+<ul class="correction-list list">
+	<li class="correction">11 Parameters not in allowed list <a class="toggle-description link" data-toggle-text="Hide 168 rows">Show 168 rows</a>
+		<div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2-72</td>
+						<td>The Parameter 'Dip to leachate' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>73-143</td>
+						<td>The Parameter 'Leachate Head above surveyed base' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>152-155</td>
+						<td>The Parameter 'Redox' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>160-163</td>
+						<td>The Parameter 'Ammoniacal-N as N' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>168-171</td>
+						<td>The Parameter 'Chem Oxygen Demand' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>172-175</td>
+						<td>The Parameter 'Tot Organic Carbon' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>176-179</td>
+						<td>The Parameter 'Alkalinity tot as CACO3' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>180-183</td>
+						<td>The Parameter 'Bio Oxygen Demand' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>216-219</td>
+						<td>The Parameter 'Tot Oxidised Nitrogen' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>220-224</td>
+						<td>The Parameter 'Data Comments' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+					<tr>
+						<td>225-228</td>
+						<td>The Parameter 'Calcium, Dissolved' is not allowed.</td>
+						<td><a href="#">Landfill allowed Parameters</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</li>
+    <li class="correction">2 Return types are not in allowed list <a class="toggle-description link" data-toggle-text="Hide 228 rows">Show 228 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2-72, 144-232</td>
+						<td>The Return type 'EPR/IED Leachate quality return' is not allowed.</td>
+						<td><a href="#">Landfill allowed Return types</a></td>
+					</tr>
+					<tr>
+						<td>73-143</td>
+						<td>The Return type 'EPR/IED Leachate level return' is not allowed.</td>
+						<td><a href="#">Landfill allowed Return types</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+
+
+    <li class="correction">4 Units are missing <a class="toggle-description link" data-toggle-text="Hide 4 rows">Show 4 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>148-151</td>
+						<td>Unit is missing</td>
+						<td><a href="#">Landfill allowed Units</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+    <li class="correction">1 Unit is not in allowed list <a class="toggle-description link" data-toggle-text="Hide 4 rows">Show 4 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2-72, 144-232</td>
+						<td>The Unit 'Leachate Head above surveyed base' is not allowed.</td>
+						<td><a href="#">Landfill allowed Units</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+    <li class="correction">2 Units given with Txt_Value <a class="toggle-description link" data-toggle-text="Hide 158 rows">Show 158 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2-72, 144-232</td>
+						<td>You must leave the Unit field blank because you’ve submitted data in the Txt_Value field.</td>
+						<td><a href="#">Landfill allowed Return types</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+
+
+
+    <li class="correction">1 Value contains incorrect characters <a class="toggle-description link" data-toggle-text="Hide 5 rows">Show 3 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2-72, 144-232</td>
+						<td>You must give an allowable value for your data.</td>
+						<td><a href="#">Landfill allowed Values</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+
+
+
+    <li class="correction">2 Value and Txt_Values are given incorrectly <a class="toggle-description link" data-toggle-text="Hide 5 rows">Show 140 rows</a>
+        <div class="correction-error">
+			<table class="table-control" style="display: none;">
+				<thead>
+					<th class="cell-one-sixth">Line number</th>
+					<th class="cell-one-half">Errors</th>
+					<th class="cell-one-third">Correction</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>73-143</td>
+						<td>You’ve submitted data in both the Value and Txt_Value fields.</td>
+						<td><a href="#">Landfill special cases</a></td>
+					</tr>
+					<tr>
+						<td>73-143</td>
+						<td>For non-numerical results you must use the Txt_Value field, using a standard term from the controlled list, and leave the Value field blank.</td>
+						<td><a href="#">Landfill special cases</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </li>
+</ul>
+</main>
+
+<script>
+	function toggleText($el) {
+	  var toggleText = $el.data('toggle-text'),
+	      buttonText = $el.text();
+	  $el.text(toggleText);
+	  $el.data('toggle-text', buttonText);
+	}
+
+	$('.toggle-description').click(function () {
+	  toggleText($(this));
+	  $(this).toggleClass('active');
+	  var $correction = $(this).parent('.correction');
+	  $correction.find('.correction-error').children().toggle();
+	});
+</script>
+
+{% endblock %}

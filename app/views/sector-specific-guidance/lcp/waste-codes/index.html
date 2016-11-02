@@ -1,0 +1,5080 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'large combustion plant' %}
+
+{% set pagetitle = 'Large combustion plant data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+</header>
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+	<a href="#" class="link-back" onclick="window.history.back()">back</a>
+	<h1 class="heading-large">Waste codes allowed for {{returntype}}</h1>
+	<table id="waste-code-list" class="table-control mobile-format">
+	    <thead>
+	        <tr>
+	            <th class="cell-one-sixth th-waste-code">Waste_Code</th>
+	            <th class="cell-one-sixth th-low">LoW</th>
+	            <th class="cell-one-half th-description">Description</th>
+	            <th class="cell-one-sixth th-long-haz">HAZ</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+			<tr>
+			    <td>010101</td>
+			    <td>01 01 01</td>
+			    <td>Wastes from mineral metalliferous excavation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010102</td>
+			    <td>01 01 02</td>
+			    <td>Wastes from mineral non-metalliferous excavation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010304</td>
+			    <td>01 03 04*</td>
+			    <td>Acid-generating tailings from processing of sulphide ore</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010305</td>
+			    <td>01 03 05*</td>
+			    <td>Other tailings containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010306</td>
+			    <td>01 03 06</td>
+			    <td>Tailings other than those mentioned in 01 03 04 and 01 03 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010307</td>
+			    <td>01 03 07*</td>
+			    <td>Other wastes containing dangerous substances from physical and chemical processing of metalliferous minerals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010308</td>
+			    <td>01 03 08</td>
+			    <td>Dusty and powdery wastes other than those mentioned in 01 03 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010309</td>
+			    <td>01 03 09</td>
+			    <td>Red mud from alumina production other than the wastes mentioned in 01 03 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010399</td>
+			    <td>01 03 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010407</td>
+			    <td>01 04 07*</td>
+			    <td>Wastes containing dangerous substances from physical and chemical processing of non-metalliferous minerals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010408</td>
+			    <td>01 04 08</td>
+			    <td>Waste gravel and crushed rocks other than those mentioned in 01 04 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010409</td>
+			    <td>01 04 09</td>
+			    <td>Waste sand and clays</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010410</td>
+			    <td>01 04 10</td>
+			    <td>Dusty and powdery wastes other than those mentioned in 01 04 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010411</td>
+			    <td>01 04 11</td>
+			    <td>Wastes from potash and rock salt processing other than those mentioned in 01 04 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010412</td>
+			    <td>01 04 12</td>
+			    <td>Tailings and other wastes from washing and cleaning of minerals other than those mentioned in 01 04 07 and 01 04 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010413</td>
+			    <td>01 04 13</td>
+			    <td>Wastes from stone cutting and sawing other than those mentioned in 01 04 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010499</td>
+			    <td>01 04 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010504</td>
+			    <td>01 05 04</td>
+			    <td>Freshwater drilling muds and wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010505</td>
+			    <td>01 05 05*</td>
+			    <td>Oil-containing drilling muds and wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010506</td>
+			    <td>01 05 06*</td>
+			    <td>Drilling muds and other drilling wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>010507</td>
+			    <td>01 05 07</td>
+			    <td>Barite-containing drilling muds and wastes other than those mentioned in 01 05 05 and 01 05 06</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010508</td>
+			    <td>01 05 08</td>
+			    <td>Chloride-containing drilling muds and wastes other than those mentioned in 01 05 05 and 01 05 06</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>010599</td>
+			    <td>01 05 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020101</td>
+			    <td>02 01 01</td>
+			    <td>Sludges from washing and cleaning</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020102</td>
+			    <td>02 01 02</td>
+			    <td>Animal-tissue waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020103</td>
+			    <td>02 01 03</td>
+			    <td>Plant-tissue waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020104</td>
+			    <td>02 01 04</td>
+			    <td>Waste plastics (except packaging)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020106</td>
+			    <td>02 01 06</td>
+			    <td>Animal faeces, urine and manure (including spoiled straw), effluent, collected separately and treated off-site</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020107</td>
+			    <td>02 01 07</td>
+			    <td>Wastes from forestry</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020108</td>
+			    <td>02 01 08*</td>
+			    <td>Agrochemical waste containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>020109</td>
+			    <td>02 01 09</td>
+			    <td>Agrochemical waste other than those mentioned in 02 01 08</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020110</td>
+			    <td>02 01 10</td>
+			    <td>Waste metal</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020199</td>
+			    <td>02 01 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020201</td>
+			    <td>02 02 01</td>
+			    <td>Sludges from washing and cleaning</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020202</td>
+			    <td>02 02 02</td>
+			    <td>Animal-tissue waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020203</td>
+			    <td>02 02 03</td>
+			    <td>Materials unsuitable for consumption or processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020204</td>
+			    <td>02 02 04</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020299</td>
+			    <td>02 02 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020301</td>
+			    <td>02 03 01</td>
+			    <td>Sludges from washing, cleaning, peeling, centrifuging and separation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020302</td>
+			    <td>02 03 02</td>
+			    <td>Wastes from preserving agents</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020303</td>
+			    <td>02 03 03</td>
+			    <td>Wastes from solvent extraction</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020304</td>
+			    <td>02 03 04</td>
+			    <td>Materials unsuitable for consumption or processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020305</td>
+			    <td>02 03 05</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020399</td>
+			    <td>02 03 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020401</td>
+			    <td>02 04 01</td>
+			    <td>Soil from cleaning and washing beet</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020402</td>
+			    <td>02 04 02</td>
+			    <td>Off-specification calcium carbonate</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020403</td>
+			    <td>02 04 03</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020499</td>
+			    <td>02 04 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020501</td>
+			    <td>02 05 01</td>
+			    <td>Materials unsuitable for consumption or processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020502</td>
+			    <td>02 05 02</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020599</td>
+			    <td>02 05 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020601</td>
+			    <td>02 06 01</td>
+			    <td>Materials unsuitable for consumption or processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020602</td>
+			    <td>02 06 02</td>
+			    <td>Wastes from preserving agents</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020603</td>
+			    <td>02 06 03</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020699</td>
+			    <td>02 06 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020701</td>
+			    <td>02 07 01</td>
+			    <td>Wastes from washing, cleaning and mechanical reduction of raw materials</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020702</td>
+			    <td>02 07 02</td>
+			    <td>Wastes from spirits distillation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020703</td>
+			    <td>02 07 03</td>
+			    <td>Wastes from chemical treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020704</td>
+			    <td>02 07 04</td>
+			    <td>Materials unsuitable for consumption or processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020705</td>
+			    <td>02 07 05</td>
+			    <td>Sludges from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>020799</td>
+			    <td>02 07 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030101</td>
+			    <td>03 01 01</td>
+			    <td>Waste bark and cork</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030104</td>
+			    <td>03 01 04*</td>
+			    <td>Sawdust, shavings, cuttings, wood, particle board and veneer containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030105</td>
+			    <td>03 01 05</td>
+			    <td>Sawdust, shavings, cuttings, wood, particle board and veneer other than those mentioned in 03 01 04</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030199</td>
+			    <td>03 01 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030201</td>
+			    <td>03 02 01*</td>
+			    <td>Non-halogenated organic wood preservatives</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030202</td>
+			    <td>03 02 02*</td>
+			    <td>Organochlorinated wood preservatives</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030203</td>
+			    <td>03 02 03*</td>
+			    <td>Organometallic wood preservatives</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030204</td>
+			    <td>03 02 04*</td>
+			    <td>Inorganic wood preservatives</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030205</td>
+			    <td>03 02 05*</td>
+			    <td>Other wood preservatives containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>030299</td>
+			    <td>03 02 99</td>
+			    <td>Wood preservatives not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030301</td>
+			    <td>03 03 01</td>
+			    <td>Waste bark and wood</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030302</td>
+			    <td>03 03 02</td>
+			    <td>Green liquor sludge (from recovery of cooking liquor)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030305</td>
+			    <td>03 03 05</td>
+			    <td>De-inking sludges from paper recycling</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030307</td>
+			    <td>03 03 07</td>
+			    <td>Mechanically separated rejects from pulping of waste paper and cardboard</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030308</td>
+			    <td>03 03 08</td>
+			    <td>Wastes from sorting of paper and cardboard destined for recycling</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030309</td>
+			    <td>03 03 09</td>
+			    <td>Lime mud waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030310</td>
+			    <td>03 03 10</td>
+			    <td>Fibre rejects, fibre-, filler- and coating-sludges from mechanical separation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030311</td>
+			    <td>03 03 11</td>
+			    <td>Sludges from on-site effluent treatment other than those mentioned in 03 03 10</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>030399</td>
+			    <td>03 03 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040101</td>
+			    <td>04 01 01</td>
+			    <td>Fleshings and lime split wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040102</td>
+			    <td>04 01 02</td>
+			    <td>Liming waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040103</td>
+			    <td>04 01 03*</td>
+			    <td>Degreasing wastes containing solvents without a liquid phase</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>040104</td>
+			    <td>04 01 04</td>
+			    <td>Tanning liquor containing chromium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040105</td>
+			    <td>04 01 05</td>
+			    <td>Tanning liquor free of chromium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040106</td>
+			    <td>04 01 06</td>
+			    <td>Sludges, in particular from on-site effluent treatment containing chromium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040107</td>
+			    <td>04 01 07</td>
+			    <td>Sludges, in particular from on-site effluent treatment free of chromium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040108</td>
+			    <td>04 01 08</td>
+			    <td>Waste tanned leather (blue sheetings, shavings, cuttings, buffing dust) containing chromium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040109</td>
+			    <td>04 01 09</td>
+			    <td>Wastes from dressing and finishing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040199</td>
+			    <td>04 01 99</td>
+			    <td>Wastes not otherwise specified.</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040209</td>
+			    <td>04 02 09</td>
+			    <td>Wastes from composite materials (impregnated textile, elastomer, plastomer)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040210</td>
+			    <td>04 02 10</td>
+			    <td>Organic matter from natural products (for example grease, wax)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040214</td>
+			    <td>04 02 14*</td>
+			    <td>Wastes from finishing containing organic solvents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>040215</td>
+			    <td>04 02 15</td>
+			    <td>Wastes from finishing other than those mentioned in 04 02 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040216</td>
+			    <td>04 02 16*</td>
+			    <td>Dyestuffs and pigments containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>040217</td>
+			    <td>04 02 17</td>
+			    <td>Dyestuffs and pigments other than those mentioned in 04 02 16</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040219</td>
+			    <td>04 02 19*</td>
+			    <td>Sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>040220</td>
+			    <td>04 02 20</td>
+			    <td>Sludges from on-site effluent treatment other than those mentioned in 04 02 19</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040221</td>
+			    <td>04 02 21</td>
+			    <td>Wastes from unprocessed textile fibres</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040222</td>
+			    <td>04 02 22</td>
+			    <td>Wastes from processed textile fibres</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>040299</td>
+			    <td>04 02 99</td>
+			    <td>Wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050102</td>
+			    <td>05 01 02*</td>
+			    <td>Desalter sludges</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050103</td>
+			    <td>05 01 03*</td>
+			    <td>Tank bottom sludges</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050104</td>
+			    <td>05 01 04*</td>
+			    <td>Acid alkyl sludges</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050105</td>
+			    <td>05 01 05*</td>
+			    <td>Oil spills</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050106</td>
+			    <td>05 01 06*</td>
+			    <td>Oily sludges from maintenance operations of the plant or equipment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050107</td>
+			    <td>05 01 07*</td>
+			    <td>Acid tars</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050108</td>
+			    <td>05 01 08*</td>
+			    <td>Other tars</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050109</td>
+			    <td>05 01 09*</td>
+			    <td>Sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050110</td>
+			    <td>05 01 10</td>
+			    <td>Sludges from on-site effluent treatment other than those mentioned in 05 01 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050111</td>
+			    <td>05 01 11*</td>
+			    <td>Wastes from cleaning of fuels with bases</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050112</td>
+			    <td>05 01 12*</td>
+			    <td>Oil containing acids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050113</td>
+			    <td>05 01 13</td>
+			    <td>Boiler feedwater sludges</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050114</td>
+			    <td>05 01 14</td>
+			    <td>Wastes from cooling columns</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050115</td>
+			    <td>05 01 15*</td>
+			    <td>spent filter clays</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050116</td>
+			    <td>05 01 16</td>
+			    <td>sulphur-containing wastes from petroleum desulphurisation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050117</td>
+			    <td>05 01 17</td>
+			    <td>bitumen</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050199</td>
+			    <td>05 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050601</td>
+			    <td>05 06 01*</td>
+			    <td>acid tars</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050603</td>
+			    <td>05 06 03*</td>
+			    <td>other tars</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050604</td>
+			    <td>05 06 04</td>
+			    <td>waste from cooling columns</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050699</td>
+			    <td>05 06 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050701</td>
+			    <td>05 07 01*</td>
+			    <td>wastes containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>050702</td>
+			    <td>05 07 02</td>
+			    <td>wastes containing sulphur</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>050799</td>
+			    <td>05 07 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060101</td>
+			    <td>06 01 01*</td>
+			    <td>sulphuric acid and sulphurous acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060102</td>
+			    <td>06 01 02*</td>
+			    <td>hydrochloric acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060103</td>
+			    <td>06 01 03*</td>
+			    <td>hydrofluoric acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060104</td>
+			    <td>06 01 04*</td>
+			    <td>phosphoric and phosphorous acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060105</td>
+			    <td>06 01 05*</td>
+			    <td>nitric acid and nitrous acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060106</td>
+			    <td>06 01 06*</td>
+			    <td>other acids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060199</td>
+			    <td>06 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060201</td>
+			    <td>06 02 01*</td>
+			    <td>calcium hydroxide</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060203</td>
+			    <td>06 02 03*</td>
+			    <td>ammonium hydroxide</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060204</td>
+			    <td>06 02 04*</td>
+			    <td>sodium and potassium hydroxide</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060205</td>
+			    <td>06 02 05*</td>
+			    <td>other bases</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060299</td>
+			    <td>06 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060311</td>
+			    <td>06 03 11*</td>
+			    <td>solid salts and solutions containing cyanides</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060313</td>
+			    <td>06 03 13*</td>
+			    <td>solid salts and solutions containing heavy metals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060314</td>
+			    <td>06 03 14</td>
+			    <td>solid salts and solutions other than those mentioned in 06 03 11 and 06 03 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060315</td>
+			    <td>06 03 15*</td>
+			    <td>metallic oxides containing heavy metals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060316</td>
+			    <td>06 03 16</td>
+			    <td>metallic oxides other than those mentioned in 06 03 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060399</td>
+			    <td>06 03 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060403</td>
+			    <td>06 04 03*</td>
+			    <td>wastes containing arsenic</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060404</td>
+			    <td>06 04 04*</td>
+			    <td>wastes containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060405</td>
+			    <td>06 04 05*</td>
+			    <td>wastes containing other heavy metals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060499</td>
+			    <td>06 04 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060502</td>
+			    <td>06 05 02*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060503</td>
+			    <td>06 05 03</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 06 05 02</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060602</td>
+			    <td>06 06 02*</td>
+			    <td>wastes containing dangerous sulphides</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060603</td>
+			    <td>06 06 03</td>
+			    <td>wastes containing sulphides other than those mentioned in 06 06 02</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060699</td>
+			    <td>06 06 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060701</td>
+			    <td>06 07 01*</td>
+			    <td>wastes containing asbestos from electrolysis</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060702</td>
+			    <td>06 07 02*</td>
+			    <td>activated carbon from chlorine production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060703</td>
+			    <td>06 07 03*</td>
+			    <td>barium sulphate sludge containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060704</td>
+			    <td>06 07 04*</td>
+			    <td>solutions and acids, for example contact acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060799</td>
+			    <td>06 07 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060802</td>
+			    <td>06 08 02*</td>
+			    <td>wastes containing chlorosilanes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060899</td>
+			    <td>06 08 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060902</td>
+			    <td>06 09 02</td>
+			    <td>phosphorous slag</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060903</td>
+			    <td>06 09 03*</td>
+			    <td>calcium-based reaction wastes containing or contaminated with dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>060904</td>
+			    <td>06 09 04</td>
+			    <td>calcium-based reaction wastes other than those mentioned in 06 09 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>060999</td>
+			    <td>06 09 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>061002</td>
+			    <td>06 10 02*</td>
+			    <td>wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>061099</td>
+			    <td>06 10 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>061101</td>
+			    <td>06 11 01</td>
+			    <td>calcium-based reaction wastes from titanium dioxide production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>061199</td>
+			    <td>06 11 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>061301</td>
+			    <td>06 13 01*</td>
+			    <td>inorganic plant protection products, wood-preserving agents and other biocides.</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>061302</td>
+			    <td>06 13 02*</td>
+			    <td>spent activated carbon (except 06 07 02)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>061303</td>
+			    <td>06 13 03</td>
+			    <td>carbon black</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>061304</td>
+			    <td>06 13 04*</td>
+			    <td>wastes from asbestos processing</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>061305</td>
+			    <td>06 13 05*</td>
+			    <td>soot</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>061399</td>
+			    <td>06 13 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070101</td>
+			    <td>07 01 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070103</td>
+			    <td>07 01 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070104</td>
+			    <td>07 01 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070107</td>
+			    <td>07 01 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070108</td>
+			    <td>07 01 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070109</td>
+			    <td>07 01 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070110</td>
+			    <td>07 01 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070111</td>
+			    <td>07 01 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070112</td>
+			    <td>07 01 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070199</td>
+			    <td>07 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070201</td>
+			    <td>07 02 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070203</td>
+			    <td>07 02 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070204</td>
+			    <td>07 02 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070207</td>
+			    <td>07 02 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070208</td>
+			    <td>07 02 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070209</td>
+			    <td>07 02 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070210</td>
+			    <td>07 02 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070211</td>
+			    <td>07 02 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070212</td>
+			    <td>07 02 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 02 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070213</td>
+			    <td>07 02 13</td>
+			    <td>waste plastic</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070214</td>
+			    <td>07 02 14*</td>
+			    <td>wastes from additives containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070215</td>
+			    <td>07 02 15</td>
+			    <td>wastes from additives other than those mentioned in 07 02 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070216</td>
+			    <td>07 02 16*</td>
+			    <td>wastes containing silicones</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070217</td>
+			    <td>07 02 17</td>
+			    <td>wastes containing silicones other than those mentioned in 07 02 16</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070299</td>
+			    <td>07 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070301</td>
+			    <td>07 03 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070303</td>
+			    <td>07 03 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070304</td>
+			    <td>07 03 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070307</td>
+			    <td>07 03 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070308</td>
+			    <td>07 03 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070309</td>
+			    <td>07 03 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070310</td>
+			    <td>07 03 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070311</td>
+			    <td>07 03 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070312</td>
+			    <td>07 03 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 03 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070399</td>
+			    <td>07 03 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070401</td>
+			    <td>07 04 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070403</td>
+			    <td>07 04 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070404</td>
+			    <td>07 04 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070407</td>
+			    <td>07 04 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070408</td>
+			    <td>07 04 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070409</td>
+			    <td>07 04 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070410</td>
+			    <td>07 04 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070411</td>
+			    <td>07 04 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070412</td>
+			    <td>07 04 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 04 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070413</td>
+			    <td>07 04 13*</td>
+			    <td>solid wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070499</td>
+			    <td>07 04 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070501</td>
+			    <td>07 05 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070503</td>
+			    <td>07 05 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070504</td>
+			    <td>07 05 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070507</td>
+			    <td>07 05 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070508</td>
+			    <td>07 05 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070509</td>
+			    <td>07 05 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070510</td>
+			    <td>07 05 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070511</td>
+			    <td>07 05 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070512</td>
+			    <td>07 05 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 05 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070513</td>
+			    <td>07 05 13*</td>
+			    <td>solid wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070514</td>
+			    <td>07 05 14</td>
+			    <td>solid wastes other than those mentioned in 07 05 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070599</td>
+			    <td>07 05 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070601</td>
+			    <td>07 06 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070603</td>
+			    <td>07 06 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070604</td>
+			    <td>07 06 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070607</td>
+			    <td>07 06 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070608</td>
+			    <td>07 06 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070609</td>
+			    <td>07 06 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070610</td>
+			    <td>07 06 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070611</td>
+			    <td>07 06 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070612</td>
+			    <td>07 06 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 06 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070699</td>
+			    <td>07 06 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070701</td>
+			    <td>07 07 01*</td>
+			    <td>aqueous washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070703</td>
+			    <td>07 07 03*</td>
+			    <td>organic halogenated solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070704</td>
+			    <td>07 07 04*</td>
+			    <td>other organic solvents, washing liquids and mother liquors</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070707</td>
+			    <td>07 07 07*</td>
+			    <td>halogenated still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070708</td>
+			    <td>07 07 08*</td>
+			    <td>other still bottoms and reaction residues</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070709</td>
+			    <td>07 07 09*</td>
+			    <td>halogenated filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070710</td>
+			    <td>07 07 10*</td>
+			    <td>other filter cakes and spent absorbents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070711</td>
+			    <td>07 07 11*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>070712</td>
+			    <td>07 07 12</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 07 07 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>070799</td>
+			    <td>07 07 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080111</td>
+			    <td>08 01 11*</td>
+			    <td>waste paint and varnish containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080112</td>
+			    <td>08 01 12</td>
+			    <td>waste paint and varnish other than those mentioned in 08 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080113</td>
+			    <td>08 01 13*</td>
+			    <td>sludges from paint or varnish containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080114</td>
+			    <td>08 01 14</td>
+			    <td>sludges from paint or varnish other than those mentioned in 08 01 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080115</td>
+			    <td>08 01 15*</td>
+			    <td>aqueous sludges containing paint or varnish containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080116</td>
+			    <td>08 01 16</td>
+			    <td>aqueous sludges containing paint or varnish other than those mentioned in 08 01 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080117</td>
+			    <td>08 01 17*</td>
+			    <td>wastes from paint or varnish removal containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080118</td>
+			    <td>08 01 18</td>
+			    <td>wastes from paint or varnish removal other than those mentioned in 08 01 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080119</td>
+			    <td>08 01 19*</td>
+			    <td>aqueous suspensions containing paint or varnish containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080120</td>
+			    <td>08 01 20</td>
+			    <td>aqueous suspensions containing paint or varnish other than those mentioned in 08 01 19</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080121</td>
+			    <td>08 01 21*</td>
+			    <td>waste paint or varnish remover</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080199</td>
+			    <td>08 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080201</td>
+			    <td>08 02 01</td>
+			    <td>waste coating powders</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080202</td>
+			    <td>08 02 02</td>
+			    <td>aqueous sludges containing ceramic materials</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080203</td>
+			    <td>08 02 03</td>
+			    <td>aqueous suspensions containing ceramic materials</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080299</td>
+			    <td>08 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080307</td>
+			    <td>08 03 07</td>
+			    <td>aqueous sludges containing ink</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080308</td>
+			    <td>08 03 08</td>
+			    <td>aqueous liquid waste containing ink</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080312</td>
+			    <td>08 03 12*</td>
+			    <td>waste ink containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080313</td>
+			    <td>08 03 13</td>
+			    <td>waste ink other than those mentioned in 08 03 12</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080314</td>
+			    <td>08 03 14*</td>
+			    <td>ink sludges containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080315</td>
+			    <td>08 03 15</td>
+			    <td>ink sludges other than those mentioned in 08 03 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080316</td>
+			    <td>08 03 16*</td>
+			    <td>waste etching solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080317</td>
+			    <td>08 03 17*</td>
+			    <td>waste printing toner containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080318</td>
+			    <td>08 03 18</td>
+			    <td>waste printing toner other than those mentioned in 08 03 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080319</td>
+			    <td>08 03 19*</td>
+			    <td>disperse oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080399</td>
+			    <td>08 03 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080409</td>
+			    <td>08 04 09*</td>
+			    <td>waste adhesives and sealants containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080410</td>
+			    <td>08 04 10</td>
+			    <td>waste adhesives and sealants other than those mentioned in 08 04 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080411</td>
+			    <td>08 04 11*</td>
+			    <td>adhesive and sealant sludges containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080412</td>
+			    <td>08 04 12</td>
+			    <td>adhesive and sealant sludges other than those mentioned in 08 04 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080413</td>
+			    <td>08 04 13*</td>
+			    <td>aqueous sludges containing adhesives or sealants containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080414</td>
+			    <td>08 04 14</td>
+			    <td>aqueous sludges containing adhesives or sealants other than those mentioned in 08 04 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080415</td>
+			    <td>08 04 15*</td>
+			    <td>aqueous liquid waste containing adhesives or sealants containing organic solvents or other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080416</td>
+			    <td>08 04 16</td>
+			    <td>aqueous liquid waste containing adhesives or sealants other than those mentioned in 08 04 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080417</td>
+			    <td>08 04 17*</td>
+			    <td>rosin oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>080499</td>
+			    <td>08 04 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>080501</td>
+			    <td>08 05 01*</td>
+			    <td>waste isocyanates</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090101</td>
+			    <td>09 01 01*</td>
+			    <td>water-based developer and activator solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090102</td>
+			    <td>09 01 02*</td>
+			    <td>water-based offset plate developer solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090103</td>
+			    <td>09 01 03*</td>
+			    <td>solvent-based developer solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090104</td>
+			    <td>09 01 04*</td>
+			    <td>fixer solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090105</td>
+			    <td>09 01 05*</td>
+			    <td>bleach solutions and bleach fixer solutions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090106</td>
+			    <td>09 01 06*</td>
+			    <td>wastes containing silver from on-site treatment of photographic wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090107</td>
+			    <td>09 01 07</td>
+			    <td>photographic film and paper containing silver or silver compounds</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>090108</td>
+			    <td>09 01 08</td>
+			    <td>photographic film and paper free of silver or silver compounds</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>090110</td>
+			    <td>09 01 10</td>
+			    <td>single-use cameras without batteries</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>090111</td>
+			    <td>09 01 11*</td>
+			    <td>single-use cameras containing batteries included in 16 06 01, 16 06 02 or 16 06 03</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090112</td>
+			    <td>09 01 12</td>
+			    <td>single-use cameras containing batteries other than those mentioned in 09 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>090113</td>
+			    <td>09 01 13*</td>
+			    <td>aqueous liquid waste from on-site reclamation of silver other than those mentioned in 09 01 06</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>090199</td>
+			    <td>09 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100101</td>
+			    <td>10 01 01</td>
+			    <td>bottom ash, slag and boiler dust (excluding boiler dust mentioned in 10 01 04)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100102</td>
+			    <td>10 01 02</td>
+			    <td>coal fly ash</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100103</td>
+			    <td>10 01 03</td>
+			    <td>fly ash from peat and untreated wood</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100104</td>
+			    <td>10 01 04*</td>
+			    <td>oil fly ash and boiler dust</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100105</td>
+			    <td>10 01 05</td>
+			    <td>calcium-based reaction wastes from flue-gas desulphurisation in solid form</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100107</td>
+			    <td>10 01 07</td>
+			    <td>calcium-based reaction wastes from flue-gas desulphurisation in sludge form</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100109</td>
+			    <td>10 01 09*</td>
+			    <td>sulphuric acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100113</td>
+			    <td>10 01 13*</td>
+			    <td>fly ash from emulsified hydrocarbons used as fuel</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100114</td>
+			    <td>10 01 14*</td>
+			    <td>bottom ash, slag and boiler dust from co-incineration containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100115</td>
+			    <td>10 01 15</td>
+			    <td>bottom ash, slag and boiler dust from co-incineration other than those mentioned in 10 01 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100116</td>
+			    <td>10 01 16*</td>
+			    <td>fly ash from co-incineration containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100117</td>
+			    <td>10 01 17</td>
+			    <td>fly ash from co-incineration other than those mentioned in 10 01 16</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100118</td>
+			    <td>10 01 18*</td>
+			    <td>wastes from gas cleaning containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100119</td>
+			    <td>10 01 19</td>
+			    <td>wastes from gas cleaning other than those mentioned in 10 01 05, 10 01 07 and 10 01 18</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100120</td>
+			    <td>10 01 20*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100121</td>
+			    <td>10 01 21</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 10 01 20</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100122</td>
+			    <td>10 01 22*</td>
+			    <td>aqueous sludges from boiler cleansing containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100123</td>
+			    <td>10 01 23</td>
+			    <td>aqueous sludges from boiler cleansing other than those mentioned in 10 01 22</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100124</td>
+			    <td>10 01 24</td>
+			    <td>sands from fluidised beds</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100125</td>
+			    <td>10 01 25</td>
+			    <td>wastes from fuel storage and preparation of coal-fired power plants</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100126</td>
+			    <td>10 01 26</td>
+			    <td>wastes from cooling-water treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100199</td>
+			    <td>10 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100201</td>
+			    <td>10 02 01</td>
+			    <td>wastes from the processing of slag</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100202</td>
+			    <td>10 02 02</td>
+			    <td>unprocessed slag</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100207</td>
+			    <td>10 02 07*</td>
+			    <td>solid wastes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100208</td>
+			    <td>10 02 08</td>
+			    <td>solid wastes from gas treatment other than those mentioned in 10 02 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100210</td>
+			    <td>10 02 10</td>
+			    <td>mill scales</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100211</td>
+			    <td>10 02 11*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100212</td>
+			    <td>10 02 12</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 02 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100213</td>
+			    <td>10 02 13*</td>
+			    <td>sludges and filter cakes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100214</td>
+			    <td>10 02 14</td>
+			    <td>sludges and filter cakes from gas treatment other than those mentioned in 10 02 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100215</td>
+			    <td>10 02 15</td>
+			    <td>other sludges and filter cakes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100299</td>
+			    <td>10 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100302</td>
+			    <td>10 03 02</td>
+			    <td>anode scraps</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100304</td>
+			    <td>10 03 04*</td>
+			    <td>primary production slags</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100305</td>
+			    <td>10 03 05</td>
+			    <td>waste alumina</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100308</td>
+			    <td>10 03 08*</td>
+			    <td>salt slags from secondary production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100309</td>
+			    <td>10 03 09*</td>
+			    <td>black drosses from secondary production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100315</td>
+			    <td>10 03 15*</td>
+			    <td>skimmings that are flammable or emit, upon contact with water, flammable gases in dangerous quantities</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100316</td>
+			    <td>10 03 16</td>
+			    <td>skimmings other than those mentioned in 10 03 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100317</td>
+			    <td>10 03 17*</td>
+			    <td>tar-containing wastes from anode manufacture</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100318</td>
+			    <td>10 03 18</td>
+			    <td>carbon-containing wastes from anode manufacture other than those mentioned in 10 03 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100319</td>
+			    <td>10 03 19*</td>
+			    <td>flue-gas dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100320</td>
+			    <td>10 03 20</td>
+			    <td>flue-gas dust other than those mentioned in 10 03 19</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100321</td>
+			    <td>10 03 21*</td>
+			    <td>other particulates and dust (including ball-mill dust) containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100322</td>
+			    <td>10 03 22</td>
+			    <td>other particulates and dust (including ball-mill dust) other than those mentioned in 10 03 21</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100323</td>
+			    <td>10 03 23*</td>
+			    <td>solid wastes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100324</td>
+			    <td>10 03 24</td>
+			    <td>solid wastes from gas treatment other than those mentioned in 10 03 23</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100325</td>
+			    <td>10 03 25*</td>
+			    <td>sludges and filter cakes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100326</td>
+			    <td>10 03 26</td>
+			    <td>sludges and filter cakes from gas treatment other than those mentioned in 10 03 25</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100327</td>
+			    <td>10 03 27*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100328</td>
+			    <td>10 03 28</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 03 27</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100329</td>
+			    <td>10 03 29*</td>
+			    <td>wastes from treatment of salt slags and black drosses containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100330</td>
+			    <td>10 03 30</td>
+			    <td>wastes from treatment of salt slags and black drosses other than those mentioned in 10 03 29</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100399</td>
+			    <td>10 03 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100401</td>
+			    <td>10 04 01*</td>
+			    <td>slags from primary and secondary production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100402</td>
+			    <td>10 04 02*</td>
+			    <td>dross and skimmings from primary and secondary production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100403</td>
+			    <td>10 04 03*</td>
+			    <td>calcium arsenate</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100404</td>
+			    <td>10 04 04*</td>
+			    <td>flue-gas dust</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100405</td>
+			    <td>10 04 05*</td>
+			    <td>other particulates and dust</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100406</td>
+			    <td>10 04 06*</td>
+			    <td>solid wastes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100407</td>
+			    <td>10 04 07*</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100409</td>
+			    <td>10 04 09*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100410</td>
+			    <td>10 04 10</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 04 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100499</td>
+			    <td>10 04 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100501</td>
+			    <td>10 05 01</td>
+			    <td>slags from primary and secondary production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100503</td>
+			    <td>10 05 03*</td>
+			    <td>flue-gas dust</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100504</td>
+			    <td>10 05 04</td>
+			    <td>other particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100505</td>
+			    <td>10 05 05*</td>
+			    <td>solid waste from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100506</td>
+			    <td>10 05 06*</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100508</td>
+			    <td>10 05 08*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100509</td>
+			    <td>10 05 09</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 05 08</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100510</td>
+			    <td>10 05 10*</td>
+			    <td>dross and skimmings that are flammable or emit, upon contact with water, flammable gases in dangerous quantities</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100511</td>
+			    <td>10 05 11</td>
+			    <td>dross and skimmings other than those mentioned in 10 05 10</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100599</td>
+			    <td>10 05 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100601</td>
+			    <td>10 06 01</td>
+			    <td>slags from primary and secondary production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100602</td>
+			    <td>10 06 02</td>
+			    <td>dross and skimmings from primary and secondary production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100603</td>
+			    <td>10 06 03*</td>
+			    <td>flue-gas dust</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100604</td>
+			    <td>10 06 04</td>
+			    <td>other particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100606</td>
+			    <td>10 06 06*</td>
+			    <td>solid wastes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100607</td>
+			    <td>10 06 07*</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100609</td>
+			    <td>10 06 09*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100610</td>
+			    <td>10 06 10</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 06 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100699</td>
+			    <td>10 06 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100701</td>
+			    <td>10 07 01</td>
+			    <td>slags from primary and secondary production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100702</td>
+			    <td>10 07 02</td>
+			    <td>dross and skimmings from primary and secondary production</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100703</td>
+			    <td>10 07 03</td>
+			    <td>solid wastes from gas treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100704</td>
+			    <td>10 07 04</td>
+			    <td>other particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100705</td>
+			    <td>10 07 05</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100707</td>
+			    <td>10 07 07*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100708</td>
+			    <td>10 07 08</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 07 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100799</td>
+			    <td>10 07 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100804</td>
+			    <td>10 08 04</td>
+			    <td>particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100808</td>
+			    <td>10 08 08*</td>
+			    <td>salt slag from primary and secondary production</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100809</td>
+			    <td>10 08 09</td>
+			    <td>other slags</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100810</td>
+			    <td>10 08 10*</td>
+			    <td>dross and skimmings that are flammable or emit, upon contact with water, flammable gases in dangerous quantities</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100811</td>
+			    <td>10 08 11</td>
+			    <td>dross and skimmings other than those mentioned in 10 08 10</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100812</td>
+			    <td>10 08 12*</td>
+			    <td>tar-containing wastes from anode manufacture</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100813</td>
+			    <td>10 08 13</td>
+			    <td>carbon-containing wastes from anode manufacture other than those mentioned in 10 08 12</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100814</td>
+			    <td>10 08 14</td>
+			    <td>anode scrap</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100815</td>
+			    <td>10 08 15*</td>
+			    <td>flue-gas dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100816</td>
+			    <td>10 08 16</td>
+			    <td>flue-gas dust other than those mentioned in 10 08 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100817</td>
+			    <td>10 08 17*</td>
+			    <td>sludges and filter cakes from flue-gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100818</td>
+			    <td>10 08 18</td>
+			    <td>sludges and filter cakes from flue-gas treatment other than those mentioned in 10 08 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100819</td>
+			    <td>10 08 19*</td>
+			    <td>wastes from cooling-water treatment containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100820</td>
+			    <td>10 08 20</td>
+			    <td>wastes from cooling-water treatment other than those mentioned in 10 08 19</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100899</td>
+			    <td>10 08 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100903</td>
+			    <td>10 09 03</td>
+			    <td>furnace slag</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100905</td>
+			    <td>10 09 05*</td>
+			    <td>casting cores and moulds which have not undergone pouring containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100906</td>
+			    <td>10 09 06</td>
+			    <td>casting cores and moulds which have not undergone pouring other than those mentioned in 10 09 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100907</td>
+			    <td>10 09 07*</td>
+			    <td>casting cores and moulds which have undergone pouring containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100908</td>
+			    <td>10 09 08</td>
+			    <td>casting cores and moulds which have undergone pouring other than those mentioned in 10 09 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100909</td>
+			    <td>10 09 09*</td>
+			    <td>flue-gas dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100910</td>
+			    <td>10 09 10</td>
+			    <td>flue-gas dust other than those mentioned in 10 09 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100911</td>
+			    <td>10 09 11*</td>
+			    <td>other particulates containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100912</td>
+			    <td>10 09 12</td>
+			    <td>other particulates other than those mentioned in 10 09 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100913</td>
+			    <td>10 09 13*</td>
+			    <td>waste binders containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100914</td>
+			    <td>10 09 14</td>
+			    <td>waste binders other than those mentioned in 10 09 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100915</td>
+			    <td>10 09 15*</td>
+			    <td>waste crack-indicating agent containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>100916</td>
+			    <td>10 09 16</td>
+			    <td>waste crack-indicating agent other than those mentioned in 10 09 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>100999</td>
+			    <td>10 09 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101003</td>
+			    <td>10 10 03</td>
+			    <td>furnace slag</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101005</td>
+			    <td>10 10 05*</td>
+			    <td>casting cores and moulds which have not undergone pouring, containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101006</td>
+			    <td>10 10 06</td>
+			    <td>casting cores and moulds which have not undergone pouring, other than those mentioned in 10 10 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101007</td>
+			    <td>10 10 07*</td>
+			    <td>casting cores and moulds which have undergone pouring, containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101008</td>
+			    <td>10 10 08</td>
+			    <td>casting cores and moulds which have undergone pouring, other than those mentioned in 10 10 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101009</td>
+			    <td>10 10 09*</td>
+			    <td>flue-gas dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101010</td>
+			    <td>10 10 10</td>
+			    <td>flue-gas dust other than those mentioned in 10 10 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101011</td>
+			    <td>10 10 11*</td>
+			    <td>other particulates containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101012</td>
+			    <td>10 10 12</td>
+			    <td>other particulates other than those mentioned in 10 10 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101013</td>
+			    <td>10 10 13*</td>
+			    <td>waste binders containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101014</td>
+			    <td>10 10 14</td>
+			    <td>waste binders other than those mentioned in 10 10 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101015</td>
+			    <td>10 10 15*</td>
+			    <td>waste crack-indicating agent containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101016</td>
+			    <td>10 10 16</td>
+			    <td>waste crack-indicating agent other than those mentioned in 10 10 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101099</td>
+			    <td>10 10 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101103</td>
+			    <td>10 11 03</td>
+			    <td>waste glass-based fibrous materials</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101105</td>
+			    <td>10 11 05</td>
+			    <td>particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101109</td>
+			    <td>10 11 09*</td>
+			    <td>waste preparation mixture before thermal processing, containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101110</td>
+			    <td>10 11 10</td>
+			    <td>waste preparation mixture before thermal processing, other than those mentioned in 10 11 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101111</td>
+			    <td>10 11 11*</td>
+			    <td>waste glass in small particles and glass powder containing heavy metals (for example from cathode ray tubes)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101112</td>
+			    <td>10 11 12</td>
+			    <td>waste glass other than those mentioned in 10 11 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101113</td>
+			    <td>10 11 13*</td>
+			    <td>glass-polishing and -grinding sludge containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101114</td>
+			    <td>10 11 14</td>
+			    <td>glass-polishing and -grinding sludge other than those mentioned in 10 11 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101115</td>
+			    <td>10 11 15*</td>
+			    <td>solid wastes from flue-gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101116</td>
+			    <td>10 11 16</td>
+			    <td>solid wastes from flue-gas treatment other than those mentioned in 10 11 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101117</td>
+			    <td>10 11 17*</td>
+			    <td>sludges and filter cakes from flue-gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101118</td>
+			    <td>10 11 18</td>
+			    <td>sludges and filter cakes from flue-gas treatment other than those mentioned in 10 11 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101119</td>
+			    <td>10 11 19*</td>
+			    <td>solid wastes from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101120</td>
+			    <td>10 11 20</td>
+			    <td>solid wastes from on-site effluent treatment other than those mentioned in 10 11 19</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101199</td>
+			    <td>10 11 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101201</td>
+			    <td>10 12 01</td>
+			    <td>waste preparation mixture before thermal processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101203</td>
+			    <td>10 12 03</td>
+			    <td>particulates and dust</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101205</td>
+			    <td>10 12 05</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101206</td>
+			    <td>10 12 06</td>
+			    <td>discarded moulds</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101208</td>
+			    <td>10 12 08</td>
+			    <td>waste ceramics, bricks, tiles and construction products (after thermal processing)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101209</td>
+			    <td>10 12 09*</td>
+			    <td>solid wastes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101210</td>
+			    <td>10 12 10</td>
+			    <td>solid wastes from gas treatment other than those mentioned in 10 12 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101211</td>
+			    <td>10 12 11*</td>
+			    <td>wastes from glazing containing heavy metals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101212</td>
+			    <td>10 12 12</td>
+			    <td>wastes from glazing other than those mentioned in 10 12 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101213</td>
+			    <td>10 12 13</td>
+			    <td>sludge from on-site effluent treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101299</td>
+			    <td>10 12 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101301</td>
+			    <td>10 13 01</td>
+			    <td>waste preparation mixture before thermal processing</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101304</td>
+			    <td>10 13 04</td>
+			    <td>wastes from calcination and hydration of lime</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101306</td>
+			    <td>10 13 06</td>
+			    <td>particulates and dust (except 10 13 12 and 10 13 13)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101307</td>
+			    <td>10 13 07</td>
+			    <td>sludges and filter cakes from gas treatment</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101309</td>
+			    <td>10 13 09*</td>
+			    <td>wastes from asbestos-cement manufacture containing asbestos</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101310</td>
+			    <td>10 13 10</td>
+			    <td>wastes from asbestos-cement manufacture other than those mentioned in 10 13 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101311</td>
+			    <td>10 13 11</td>
+			    <td>wastes from cement-based composite materials other than those mentioned in 10 13 09 and 10 13 10</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101312</td>
+			    <td>10 13 12*</td>
+			    <td>solid wastes from gas treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>101313</td>
+			    <td>10 13 13</td>
+			    <td>solid wastes from gas treatment other than those mentioned in 10 13 12</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101314</td>
+			    <td>10 13 14</td>
+			    <td>waste concrete and concrete sludge</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101399</td>
+			    <td>10 13 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>101401</td>
+			    <td>10 14 01*</td>
+			    <td>waste from gas cleaning containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110105</td>
+			    <td>11 01 05*</td>
+			    <td>pickling acids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110106</td>
+			    <td>11 01 06*</td>
+			    <td>acids not otherwise specified</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110107</td>
+			    <td>11 01 07*</td>
+			    <td>pickling bases</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110108</td>
+			    <td>11 01 08*</td>
+			    <td>phosphatising sludges</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110109</td>
+			    <td>11 01 09*</td>
+			    <td>sludges and filter cakes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110110</td>
+			    <td>11 01 10</td>
+			    <td>sludges and filter cakes other than those mentioned in 11 01 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110111</td>
+			    <td>11 01 11*</td>
+			    <td>aqueous rinsing liquids containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110112</td>
+			    <td>11 01 12</td>
+			    <td>aqueous rinsing liquids other than those mentioned in 11 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110113</td>
+			    <td>11 01 13*</td>
+			    <td>degreasing wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110114</td>
+			    <td>11 01 14</td>
+			    <td>degreasing wastes other than those mentioned in 11 01 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110115</td>
+			    <td>11 01 15*</td>
+			    <td>eluate and sludges from membrane systems or ion exchange systems containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110116</td>
+			    <td>11 01 16*</td>
+			    <td>saturated or spent ion exchange resins</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110198</td>
+			    <td>11 01 98*</td>
+			    <td>other wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110199</td>
+			    <td>11 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110202</td>
+			    <td>11 02 02*</td>
+			    <td>sludges from zinc hydrometallurgy (including jarosite, goethite)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110203</td>
+			    <td>11 02 03</td>
+			    <td>wastes from the production of anodes for aqueous electrolytical processes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110205</td>
+			    <td>11 02 05*</td>
+			    <td>wastes from copper hydrometallurgical processes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110206</td>
+			    <td>11 02 06</td>
+			    <td>wastes from copper hydrometallurgical processes other than those mentioned in 11 02 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110207</td>
+			    <td>11 02 07*</td>
+			    <td>other wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110299</td>
+			    <td>11 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110301</td>
+			    <td>11 03 01*</td>
+			    <td>wastes containing cyanide</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110302</td>
+			    <td>11 03 02*</td>
+			    <td>other wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110501</td>
+			    <td>11 05 01</td>
+			    <td>hard zinc</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110502</td>
+			    <td>11 05 02</td>
+			    <td>zinc ash</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>110503</td>
+			    <td>11 05 03*</td>
+			    <td>solid wastes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110504</td>
+			    <td>11 05 04*</td>
+			    <td>spent flux</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>110599</td>
+			    <td>11 05 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120101</td>
+			    <td>12 01 01</td>
+			    <td>ferrous metal filings and turnings</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120102</td>
+			    <td>12 01 02</td>
+			    <td>ferrous metal dust and particles</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120103</td>
+			    <td>12 01 03</td>
+			    <td>non-ferrous metal filings and turnings</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120104</td>
+			    <td>12 01 04</td>
+			    <td>non-ferrous metal dust and particles</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120105</td>
+			    <td>12 01 05</td>
+			    <td>plastics shavings and turnings</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120106</td>
+			    <td>12 01 06*</td>
+			    <td>mineral-based machining oils containing halogens (except emulsions and solutions)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120107</td>
+			    <td>12 01 07*</td>
+			    <td>mineral-based machining oils free of halogens (except emulsions and solutions)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120108</td>
+			    <td>12 01 08*</td>
+			    <td>machining emulsions and solutions containing halogens</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120109</td>
+			    <td>12 01 09*</td>
+			    <td>machining emulsions and solutions free of halogens</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120110</td>
+			    <td>12 01 10*</td>
+			    <td>synthetic machining oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120112</td>
+			    <td>12 01 12*</td>
+			    <td>spent waxes and fats</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120113</td>
+			    <td>12 01 13</td>
+			    <td>welding wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120114</td>
+			    <td>12 01 14*</td>
+			    <td>machining sludges containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120115</td>
+			    <td>12 01 15</td>
+			    <td>machining sludges other than those mentioned in 12 01 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120116</td>
+			    <td>12 01 16*</td>
+			    <td>waste blasting material containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120117</td>
+			    <td>12 01 17</td>
+			    <td>waste blasting material other than those mentioned in 12 01 16</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120118</td>
+			    <td>12 01 18*</td>
+			    <td>metal sludge (grinding, honing and lapping sludge) containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120119</td>
+			    <td>12 01 19*</td>
+			    <td>readily biodegradable machining oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120120</td>
+			    <td>12 01 20*</td>
+			    <td>spent grinding bodies and grinding materials containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120121</td>
+			    <td>12 01 21</td>
+			    <td>spent grinding bodies and grinding materials other than those mentioned in 12 01 20</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120199</td>
+			    <td>12 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>120301</td>
+			    <td>12 03 01*</td>
+			    <td>aqueous washing liquids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>120302</td>
+			    <td>12 03 02*</td>
+			    <td>steam degreasing wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130101</td>
+			    <td>13 01 01*</td>
+			    <td>hydraulic oils, containing PCBs </td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130104</td>
+			    <td>13 01 04*</td>
+			    <td>chlorinated emulsions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130105</td>
+			    <td>13 01 05*</td>
+			    <td>non-chlorinated emulsions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130109</td>
+			    <td>13 01 09*</td>
+			    <td>mineral-based chlorinated hydraulic oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130110</td>
+			    <td>13 01 10*</td>
+			    <td>mineral based non-chlorinated hydraulic oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130111</td>
+			    <td>13 01 11*</td>
+			    <td>synthetic hydraulic oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130112</td>
+			    <td>13 01 12*</td>
+			    <td>readily biodegradable hydraulic oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130113</td>
+			    <td>13 01 13*</td>
+			    <td>other hydraulic oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130204</td>
+			    <td>13 02 04*</td>
+			    <td>mineral-based chlorinated engine, gear and lubricating oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130205</td>
+			    <td>13 02 05*</td>
+			    <td>mineral-based non-chlorinated engine, gear and lubricating oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130206</td>
+			    <td>13 02 06*</td>
+			    <td>synthetic engine, gear and lubricating oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130207</td>
+			    <td>13 02 07*</td>
+			    <td>readily biodegradable engine, gear and lubricating oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130208</td>
+			    <td>13 02 08*</td>
+			    <td>other engine, gear and lubricating oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130301</td>
+			    <td>13 03 01*</td>
+			    <td>insulating or heat transmission oils containing PCBs</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130306</td>
+			    <td>13 03 06*</td>
+			    <td>mineral-based chlorinated insulating and heat transmission oils other than those mentioned in 13 03 01</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130307</td>
+			    <td>13 03 07*</td>
+			    <td>mineral-based non-chlorinated insulating and heat transmission oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130308</td>
+			    <td>13 03 08*</td>
+			    <td>synthetic insulating and heat transmission oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130309</td>
+			    <td>13 03 09*</td>
+			    <td>readily biodegradable insulating and heat transmission oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130310</td>
+			    <td>13 03 10*</td>
+			    <td>other insulating and heat transmission oils</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130401</td>
+			    <td>13 04 01*</td>
+			    <td>bilge oils from inland navigation</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130402</td>
+			    <td>13 04 02*</td>
+			    <td>bilge oils from jetty sewers</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130403</td>
+			    <td>13 04 03*</td>
+			    <td>bilge oils from other navigation</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130501</td>
+			    <td>13 05 01*</td>
+			    <td>solids from grit chambers and oil/water separators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130502</td>
+			    <td>13 05 02*</td>
+			    <td>sludges from oil/water separators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130503</td>
+			    <td>13 05 03*</td>
+			    <td>interceptor sludges</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130506</td>
+			    <td>13 05 06*</td>
+			    <td>oil from oil/water separators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130507</td>
+			    <td>13 05 07*</td>
+			    <td>oily water from oil/water separators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130508</td>
+			    <td>13 05 08*</td>
+			    <td>mixtures of wastes from grit chambers and oil/water separators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130701</td>
+			    <td>13 07 01*</td>
+			    <td>fuel oil and diesel</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130702</td>
+			    <td>13 07 02*</td>
+			    <td>petrol</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130703</td>
+			    <td>13 07 03*</td>
+			    <td>other fuels (including mixtures)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130801</td>
+			    <td>13 08 01*</td>
+			    <td>desalter sludges or emulsions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130802</td>
+			    <td>13 08 02*</td>
+			    <td>other emulsions</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>130899</td>
+			    <td>13 08 99*</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>140601</td>
+			    <td>14 06 01*</td>
+			    <td>chlorofluorocarbons, HCFC, HFC</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>140602</td>
+			    <td>14 06 02*</td>
+			    <td>other halogenated solvents and solvent mixtures</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>140603</td>
+			    <td>14 06 03*</td>
+			    <td>other solvents and solvent mixtures</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>140604</td>
+			    <td>14 06 04*</td>
+			    <td>sludges or solid wastes containing halogenated solvents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>140605</td>
+			    <td>14 06 05*</td>
+			    <td>sludges or solid wastes containing other solvents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>150101</td>
+			    <td>15 01 01</td>
+			    <td>paper and cardboard packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150102</td>
+			    <td>15 01 02</td>
+			    <td>plastic packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150103</td>
+			    <td>15 01 03</td>
+			    <td>wooden packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150104</td>
+			    <td>15 01 04</td>
+			    <td>metallic packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150105</td>
+			    <td>15 01 05</td>
+			    <td>composite packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150106</td>
+			    <td>15 01 06</td>
+			    <td>mixed packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150107</td>
+			    <td>15 01 07</td>
+			    <td>glass packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150109</td>
+			    <td>15 01 09</td>
+			    <td>textile packaging</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>150110</td>
+			    <td>15 01 10*</td>
+			    <td>packaging containing residues of or contaminated by dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>150111</td>
+			    <td>15 01 11*</td>
+			    <td>metallic packaging containing a dangerous solid porous matrix (for example asbestos), including empty pressure containers</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>150202</td>
+			    <td>15 02 02*</td>
+			    <td>absorbents, filter materials (including oil filters not otherwise specified), wiping cloths, protective clothing contaminated by dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>150203</td>
+			    <td>15 02 03</td>
+			    <td>absorbents, filter materials, wiping cloths and protective clothing other than those mentioned in 15 02 02</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160103</td>
+			    <td>16 01 03</td>
+			    <td>end-of-life tyres</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160104</td>
+			    <td>16 01 04*</td>
+			    <td>end-of-life vehicles</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160106</td>
+			    <td>16 01 06</td>
+			    <td>end-of-life vehicles, containing neither liquids nor other hazardous components</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160107</td>
+			    <td>16 01 07*</td>
+			    <td>oil filters</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160108</td>
+			    <td>16 01 08*</td>
+			    <td>components containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160109</td>
+			    <td>16 01 09*</td>
+			    <td>components containing PCBs</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160110</td>
+			    <td>16 01 10*</td>
+			    <td>explosive components (for example air bags)</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160111</td>
+			    <td>16 01 11*</td>
+			    <td>brake pads containing asbestos</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160112</td>
+			    <td>16 01 12</td>
+			    <td>brake pads other than those mentioned in 16 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160113</td>
+			    <td>16 01 13*</td>
+			    <td>brake fluids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160114</td>
+			    <td>16 01 14*</td>
+			    <td>antifreeze fluids containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160115</td>
+			    <td>16 01 15</td>
+			    <td>antifreeze fluids other than those mentioned in 16 01 14</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160116</td>
+			    <td>16 01 16</td>
+			    <td>tanks for liquefied gas</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160117</td>
+			    <td>16 01 17</td>
+			    <td>ferrous metal</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160118</td>
+			    <td>16 01 18</td>
+			    <td>non-ferrous metal</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160119</td>
+			    <td>16 01 19</td>
+			    <td>plastic</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160120</td>
+			    <td>16 01 20</td>
+			    <td>glass</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160121</td>
+			    <td>16 01 21*</td>
+			    <td>hazardous components other than those mentioned in 16 01 07 to 16 01 11 and 16 01 13 and 16 01 14</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160122</td>
+			    <td>16 01 22</td>
+			    <td>components not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160199</td>
+			    <td>16 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160209</td>
+			    <td>16 02 09*</td>
+			    <td>transformers and capacitors containing PCBs</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160210</td>
+			    <td>16 02 10*</td>
+			    <td>discarded equipment containing or contaminated by PCBs other than those mentioned in 16 02 09</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160211</td>
+			    <td>16 02 11*</td>
+			    <td>discarded equipment containing chlorofluorocarbons, HCFC, HFC</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160212</td>
+			    <td>16 02 12*</td>
+			    <td>discarded equipment containing free asbestos</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160213</td>
+			    <td>16 02 13*</td>
+			    <td>discarded equipment containing hazardous components other than those mentioned in 16 02 09 to 16 02 12</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160214</td>
+			    <td>16 02 14</td>
+			    <td>discarded equipment other than those mentioned in 16 02 09 to 16 02 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160215</td>
+			    <td>16 02 15*</td>
+			    <td>hazardous components removed from discarded equipment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160216</td>
+			    <td>16 02 16</td>
+			    <td>components removed from discarded equipment other than those mentioned in 16 02 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160303</td>
+			    <td>16 03 03*</td>
+			    <td>inorganic wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160304</td>
+			    <td>16 03 04</td>
+			    <td>inorganic wastes other than those mentioned in 16 03 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160305</td>
+			    <td>16 03 05*</td>
+			    <td>organic wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160306</td>
+			    <td>16 03 06</td>
+			    <td>organic wastes other than those mentioned in 16 03 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160401</td>
+			    <td>16 04 01*</td>
+			    <td>waste ammunition</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160402</td>
+			    <td>16 04 02*</td>
+			    <td>fireworks wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160403</td>
+			    <td>16 04 03*</td>
+			    <td>other waste explosives</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160504</td>
+			    <td>16 05 04*</td>
+			    <td>gases in pressure containers (including halons) containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160505</td>
+			    <td>16 05 05</td>
+			    <td>gases in pressure containers other than those mentioned in 16 05 04</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160506</td>
+			    <td>16 05 06*</td>
+			    <td>laboratory chemicals, consisting of or containing dangerous substances, including mixtures of laboratory chemicals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160507</td>
+			    <td>16 05 07*</td>
+			    <td>discarded inorganic chemicals consisting of or containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160508</td>
+			    <td>16 05 08*</td>
+			    <td>discarded organic chemicals consisting of or containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160509</td>
+			    <td>16 05 09</td>
+			    <td>discarded chemicals other than those mentioned in 16 05 06, 16 05 07 or 16 05 08</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160601</td>
+			    <td>16 06 01*</td>
+			    <td>lead batteries</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160602</td>
+			    <td>16 06 02*</td>
+			    <td>Ni-Cd batteries</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160603</td>
+			    <td>16 06 03*</td>
+			    <td>mercury-containing batteries</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160604</td>
+			    <td>16 06 04</td>
+			    <td>alkaline batteries (except 16 06 03)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160605</td>
+			    <td>16 06 05</td>
+			    <td>other batteries and accumulators</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160606</td>
+			    <td>16 06 06*</td>
+			    <td>separately collected electrolyte from batteries and accumulators</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160708</td>
+			    <td>16 07 08*</td>
+			    <td>wastes containing oil</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160709</td>
+			    <td>16 07 09*</td>
+			    <td>wastes containing other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160799</td>
+			    <td>16 07 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160801</td>
+			    <td>16 08 01</td>
+			    <td>spent catalysts containing gold, silver, rhenium, rhodium, palladium, iridium or platinum (except 16 08 07)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160802</td>
+			    <td>16 08 02*</td>
+			    <td>spent catalysts containing dangerous transition metals or dangerous transition metal compounds</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160803</td>
+			    <td>16 08 03</td>
+			    <td>spent catalysts containing transition metals or transition metal compounds not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160804</td>
+			    <td>16 08 04</td>
+			    <td>spent fluid catalytic cracking catalysts (except 16 08 07)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>160805</td>
+			    <td>16 08 05*</td>
+			    <td>spent catalysts containing phosphoric acid</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160806</td>
+			    <td>16 08 06*</td>
+			    <td>spent liquids used as catalysts</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160807</td>
+			    <td>16 08 07*</td>
+			    <td>spent catalysts contaminated with dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160901</td>
+			    <td>16 09 01*</td>
+			    <td>permanganates, for example potassium permanganate</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160902</td>
+			    <td>16 09 02*</td>
+			    <td>chromates, for example potassium chromate, potassium or sodium dichromate</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160903</td>
+			    <td>16 09 03*</td>
+			    <td>peroxides, for example hydrogen peroxide</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>160904</td>
+			    <td>16 09 04*</td>
+			    <td>oxidising substances, not otherwise specified</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161001</td>
+			    <td>16 10 01*</td>
+			    <td>aqueous liquid wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161002</td>
+			    <td>16 10 02</td>
+			    <td>aqueous liquid wastes other than those mentioned in 16 10 01</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>161003</td>
+			    <td>16 10 03*</td>
+			    <td>aqueous concentrates containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161004</td>
+			    <td>16 10 04</td>
+			    <td>aqueous concentrates other than those mentioned in 16 10 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>161101</td>
+			    <td>16 11 01*</td>
+			    <td>carbon-based linings and refractories from metallurgical processes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161102</td>
+			    <td>16 11 02</td>
+			    <td>carbon-based linings and refractories from metallurgical processes others than those mentioned in 16 11 01</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>161103</td>
+			    <td>16 11 03*</td>
+			    <td>other linings and refractories from metallurgical processes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161104</td>
+			    <td>16 11 04</td>
+			    <td>other linings and refractories from metallurgical processes other than those mentioned in 16 11 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>161105</td>
+			    <td>16 11 05*</td>
+			    <td>linings and refractories from non-metallurgical processes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>161106</td>
+			    <td>16 11 06</td>
+			    <td>linings and refractories from non-metallurgical processes others than those mentioned in 16 11 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170101</td>
+			    <td>17 01 01</td>
+			    <td>concrete</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170102</td>
+			    <td>17 01 02</td>
+			    <td>bricks</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170103</td>
+			    <td>17 01 03</td>
+			    <td>tiles and ceramics</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170106</td>
+			    <td>17 01 06*</td>
+			    <td>mixtures of, or separate fractions of concrete, bricks, tiles and ceramics containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170107</td>
+			    <td>17 01 07</td>
+			    <td>mixtures of concrete, bricks, tiles and ceramics other than those mentioned in 17 01 06 </td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170201</td>
+			    <td>17 02 01</td>
+			    <td>wood</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170202</td>
+			    <td>17 02 02</td>
+			    <td>glass</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170203</td>
+			    <td>17 02 03</td>
+			    <td>plastic</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170204</td>
+			    <td>17 02 04*</td>
+			    <td>glass, plastic and wood containing or contaminated with dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170301</td>
+			    <td>17 03 01*</td>
+			    <td>bituminous mixtures containing coal tar</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170302</td>
+			    <td>17 03 02</td>
+			    <td>bituminous mixtures other than those mentioned in 17 03 01</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170303</td>
+			    <td>17 03 03*</td>
+			    <td>coal tar and tarred products</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170401</td>
+			    <td>17 04 01</td>
+			    <td>copper, bronze, brass</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170402</td>
+			    <td>17 04 02</td>
+			    <td>aluminium</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170403</td>
+			    <td>17 04 03</td>
+			    <td>lead</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170404</td>
+			    <td>17 04 04</td>
+			    <td>zinc</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170405</td>
+			    <td>17 04 05</td>
+			    <td>iron and steel</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170406</td>
+			    <td>17 04 06</td>
+			    <td>tin</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170407</td>
+			    <td>17 04 07</td>
+			    <td>mixed metals</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170409</td>
+			    <td>17 04 09*</td>
+			    <td>metal waste contaminated with dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170410</td>
+			    <td>17 04 10*</td>
+			    <td>cables containing oil, coal tar and other dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170411</td>
+			    <td>17 04 11</td>
+			    <td>cables other than those mentioned in 17 04 10</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170503</td>
+			    <td>17 05 03*</td>
+			    <td>soil and stones containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170504</td>
+			    <td>17 05 04</td>
+			    <td>soil and stones other than those mentioned in 17 05 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170505</td>
+			    <td>17 05 05*</td>
+			    <td>dredging spoil containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170506</td>
+			    <td>17 05 06</td>
+			    <td>dredging spoil other than those mentioned in 17 05 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170507</td>
+			    <td>17 05 07*</td>
+			    <td>track ballast containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170508</td>
+			    <td>17 05 08</td>
+			    <td>track ballast other than those mentioned in 17 05 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170601</td>
+			    <td>17 06 01*</td>
+			    <td>insulation materials containing asbestos</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170603</td>
+			    <td>17 06 03*</td>
+			    <td>other insulation materials consisting of or containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170604</td>
+			    <td>17 06 04</td>
+			    <td>insulation materials other than those mentioned in 17 06 01 and 17 06 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170605</td>
+			    <td>17 06 05*</td>
+			    <td>construction materials containing asbestos</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170801</td>
+			    <td>17 08 01*</td>
+			    <td>gypsum-based construction materials contaminated with dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170802</td>
+			    <td>17 08 02</td>
+			    <td>gypsum-based construction materials other than those mentioned in 17 08 01</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>170901</td>
+			    <td>17 09 01*</td>
+			    <td>construction and demolition wastes containing mercury</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170902</td>
+			    <td>17 09 02*</td>
+			    <td>construction and demolition wastes containing PCB (for example PCB-containing sealants, PCB-containing resin-based floorings, PCB-containing sealed glazing units, PCB-containing capacitors) </td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170903</td>
+			    <td>17 09 03*</td>
+			    <td>other construction and demolition wastes (including mixed wastes) containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>170904</td>
+			    <td>17 09 04</td>
+			    <td>mixed construction and demolition wastes other than those mentioned in 17 09 01, 17 09 02 and 17 09 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180101</td>
+			    <td>18 01 01</td>
+			    <td>sharps (except 18 01 03)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180102</td>
+			    <td>18 01 02</td>
+			    <td>Body parts and organs including blood bags and blood preserves (except 18 01 03)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180103</td>
+			    <td>18 01 03*</td>
+			    <td>wastes whose collection and disposal is subject to special requirements in order to prevent infection</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180104</td>
+			    <td>18 01 04</td>
+			    <td>wastes whose collection and disposal is not subject to special requirements in order to prevent infection(for example dressings, plaster casts, linen, disposable clothing, diapers)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180106</td>
+			    <td>18 01 06*</td>
+			    <td>chemicals consisting of or containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180107</td>
+			    <td>18 01 07</td>
+			    <td>chemicals other than those mentioned in 18 01 06</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180108</td>
+			    <td>18 01 08*</td>
+			    <td>cytotoxic and cytostatic medicines</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180109</td>
+			    <td>18 01 09</td>
+			    <td>medicines other than those mentioned in 18 01 08</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180110</td>
+			    <td>18 01 10*</td>
+			    <td>amalgam waste from dental care</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180201</td>
+			    <td>18 02 01</td>
+			    <td>sharps (except 18 02 02)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180202</td>
+			    <td>18 02 02*</td>
+			    <td>wastes whose collection and disposal is subject to special requirements in order to prevent infection</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180203</td>
+			    <td>18 02 03</td>
+			    <td>wastes whose collection and disposal is not subject to special requirements in order to prevent infection</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180205</td>
+			    <td>18 02 05*</td>
+			    <td>chemicals consisting of or containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180206</td>
+			    <td>18 02 06</td>
+			    <td>chemicals other than those mentioned in 18 02 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>180207</td>
+			    <td>18 02 07*</td>
+			    <td>cytotoxic and cytostatic medicines</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>180208</td>
+			    <td>18 02 08</td>
+			    <td>medicines other than those mentioned in 18 02 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190102</td>
+			    <td>19 01 02</td>
+			    <td>ferrous materials removed from bottom ash</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190105</td>
+			    <td>19 01 05*</td>
+			    <td>filter cake from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190106</td>
+			    <td>19 01 06*</td>
+			    <td>aqueous liquid wastes from gas treatment and other aqueous liquid wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190107</td>
+			    <td>19 01 07*</td>
+			    <td>solid wastes from gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190110</td>
+			    <td>19 01 10*</td>
+			    <td>spent activated carbon from flue-gas treatment</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190111</td>
+			    <td>19 01 11*</td>
+			    <td>bottom ash and slag containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190112</td>
+			    <td>19 01 12</td>
+			    <td>bottom ash and slag other than those mentioned in 19 01 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190113</td>
+			    <td>19 01 13*</td>
+			    <td>fly ash containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190114</td>
+			    <td>19 01 14</td>
+			    <td>fly ash other than those mentioned in 19 01 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190115</td>
+			    <td>19 01 15*</td>
+			    <td>boiler dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190116</td>
+			    <td>19 01 16</td>
+			    <td>boiler dust other than those mentioned in 19 01 15</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190117</td>
+			    <td>19 01 17*</td>
+			    <td>pyrolysis wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190118</td>
+			    <td>19 01 18</td>
+			    <td>pyrolysis wastes other than those mentioned in 19 01 17</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190119</td>
+			    <td>19 01 19</td>
+			    <td>sands from fluidised beds</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190199</td>
+			    <td>19 01 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190203</td>
+			    <td>19 02 03</td>
+			    <td>premixed wastes composed only of non-hazardous wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190204</td>
+			    <td>19 02 04*</td>
+			    <td>premixed wastes composed of at least one hazardous waste</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190205</td>
+			    <td>19 02 05*</td>
+			    <td>sludges from physico/chemical treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190206</td>
+			    <td>19 02 06</td>
+			    <td>sludges from physico/chemical treatment other than those mentioned in 19 02 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190207</td>
+			    <td>19 02 07*</td>
+			    <td>oil and concentrates from separation</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190208</td>
+			    <td>19 02 08*</td>
+			    <td>liquid combustible wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190209</td>
+			    <td>19 02 09*</td>
+			    <td>solid combustible wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190210</td>
+			    <td>19 02 10</td>
+			    <td>combustible wastes other than those mentioned in 19 02 08 and 19 02 09</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190211</td>
+			    <td>19 02 11*</td>
+			    <td>other wastes containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190299</td>
+			    <td>19 02 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190304</td>
+			    <td>19 03 04*</td>
+			    <td>wastes marked as hazardous, partly stabilised</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190305</td>
+			    <td>19 03 05</td>
+			    <td>stabilised wastes other than those mentioned in 19 03 04</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190306</td>
+			    <td>19 03 06*</td>
+			    <td>wastes marked as hazardous, solidified</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190307</td>
+			    <td>19 03 07</td>
+			    <td>solidified wastes other than those mentioned in 19 03 06</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190401</td>
+			    <td>19 04 01</td>
+			    <td>vitrified waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190402</td>
+			    <td>19 04 02*</td>
+			    <td>fly ash and other flue-gas treatment wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190403</td>
+			    <td>19 04 03*</td>
+			    <td>non-vitrified solid phase</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190404</td>
+			    <td>19 04 04</td>
+			    <td>aqueous liquid wastes from vitrified waste tempering</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190501</td>
+			    <td>19 05 01</td>
+			    <td>non-composted fraction of municipal and similar wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190502</td>
+			    <td>19 05 02</td>
+			    <td>non-composted fraction of animal and vegetable waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190503</td>
+			    <td>19 05 03</td>
+			    <td>off-specification compost</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190599</td>
+			    <td>19 05 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190603</td>
+			    <td>19 06 03</td>
+			    <td>liquor from anaerobic treatment of municipal waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190604</td>
+			    <td>19 06 04</td>
+			    <td>digestate from anaerobic treatment of municipal waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190605</td>
+			    <td>19 06 05</td>
+			    <td>liquor from anaerobic treatment of animal and vegetable waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190606</td>
+			    <td>19 06 06</td>
+			    <td>digestate from anaerobic treatment of animal and vegetable waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190699</td>
+			    <td>19 06 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190702</td>
+			    <td>19 07 02*</td>
+			    <td>landfill leachate containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190703</td>
+			    <td>19 07 03</td>
+			    <td>landfill leachate other than those mentioned in 19 07 02</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190801</td>
+			    <td>19 08 01</td>
+			    <td>screenings</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190802</td>
+			    <td>19 08 02</td>
+			    <td>waste from desanding</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190805</td>
+			    <td>19 08 05</td>
+			    <td>sludges from treatment of urban waste water</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190806</td>
+			    <td>19 08 06*</td>
+			    <td>saturated or spent ion exchange resins</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190807</td>
+			    <td>19 08 07*</td>
+			    <td>solutions and sludges from regeneration of ion exchangers</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190808</td>
+			    <td>19 08 08*</td>
+			    <td>membrane system waste containing heavy metals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190809</td>
+			    <td>19 08 09</td>
+			    <td>grease and oil mixture from oil/water separation containing edible oil and fats</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190810</td>
+			    <td>19 08 10*</td>
+			    <td>grease and oil mixture from oil/water separation other than those mentioned in 19 08 09</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190811</td>
+			    <td>19 08 11*</td>
+			    <td>sludges containing dangerous substances from biological treatment of industrial waste water</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190812</td>
+			    <td>19 08 12</td>
+			    <td>sludges from biological treatment of industrial waste water other than those mentioned in 19 08 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190813</td>
+			    <td>19 08 13*</td>
+			    <td>sludges containing dangerous substances from other treatment of industrial waste water</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>190814</td>
+			    <td>19 08 14</td>
+			    <td>sludges from other treatment of industrial waste water other than those mentioned in 19 08 13</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190899</td>
+			    <td>19 08 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190901</td>
+			    <td>19 09 01</td>
+			    <td>solid waste from primary filtration and screenings</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190902</td>
+			    <td>19 09 02</td>
+			    <td>sludges from water clarification</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190903</td>
+			    <td>19 09 03</td>
+			    <td>sludges from decarbonation</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190904</td>
+			    <td>19 09 04</td>
+			    <td>spent activated carbon</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190905</td>
+			    <td>19 09 05</td>
+			    <td>saturated or spent ion exchange resins</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190906</td>
+			    <td>19 09 06</td>
+			    <td>solutions and sludges from regeneration of ion exchangers</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>190999</td>
+			    <td>19 09 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191001</td>
+			    <td>19 10 01</td>
+			    <td>iron and steel waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191002</td>
+			    <td>19 10 02</td>
+			    <td>non-ferrous waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191003</td>
+			    <td>19 10 03*</td>
+			    <td>fluff-light fraction and dust containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191004</td>
+			    <td>19 10 04</td>
+			    <td>fluff-light fraction and dust other than those mentioned in 19 10 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191005</td>
+			    <td>19 10 05*</td>
+			    <td>other fractions containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191006</td>
+			    <td>19 10 06</td>
+			    <td>other fractions other than those mentioned in 19 10 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191101</td>
+			    <td>19 11 01*</td>
+			    <td>spent filter clays</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191102</td>
+			    <td>19 11 02*</td>
+			    <td>acid tars</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191103</td>
+			    <td>19 11 03*</td>
+			    <td>aqueous liquid wastes</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191104</td>
+			    <td>19 11 04*</td>
+			    <td>wastes from cleaning of fuel with bases</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191105</td>
+			    <td>19 11 05*</td>
+			    <td>sludges from on-site effluent treatment containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191106</td>
+			    <td>19 11 06</td>
+			    <td>sludges from on-site effluent treatment other than those mentioned in 19 11 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191107</td>
+			    <td>19 11 07*</td>
+			    <td>wastes from flue-gas cleaning</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191199</td>
+			    <td>19 11 99</td>
+			    <td>wastes not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191201</td>
+			    <td>19 12 01</td>
+			    <td>paper and cardboard</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191202</td>
+			    <td>19 12 02</td>
+			    <td>ferrous metal</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191203</td>
+			    <td>19 12 03</td>
+			    <td>non-ferrous metal</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191204</td>
+			    <td>19 12 04</td>
+			    <td>plastic and rubber</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191205</td>
+			    <td>19 12 05</td>
+			    <td>glass</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191206</td>
+			    <td>19 12 06*</td>
+			    <td>wood containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191207</td>
+			    <td>19 12 07</td>
+			    <td>wood other than that mentioned in 19 12 06</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191208</td>
+			    <td>19 12 08</td>
+			    <td>textiles</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191209</td>
+			    <td>19 12 09</td>
+			    <td>minerals (for example sand, stones)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191210</td>
+			    <td>19 12 10</td>
+			    <td>combustible waste (refuse derived fuel)</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191211</td>
+			    <td>19 12 11*</td>
+			    <td>other wastes (including mixtures of materials) from mechanical treatment of waste containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191212</td>
+			    <td>19 12 12</td>
+			    <td>other wastes (including mixtures of materials) from mechanical treatment of wastes other than those mentioned in 19 12 11</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191301</td>
+			    <td>19 13 01*</td>
+			    <td>solid wastes from soil remediation containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191302</td>
+			    <td>19 13 02</td>
+			    <td>solid wastes from soil remediation other than those mentioned in 19 13 01</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191303</td>
+			    <td>19 13 03*</td>
+			    <td>sludges from soil remediation containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191304</td>
+			    <td>19 13 04</td>
+			    <td>sludges from soil remediation other than those mentioned in 19 13 03</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191305</td>
+			    <td>19 13 05*</td>
+			    <td>sludges from groundwater remediation containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191306</td>
+			    <td>19 13 06</td>
+			    <td>sludges from groundwater remediation other than those mentioned in 19 13 05</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>191307</td>
+			    <td>19 13 07*</td>
+			    <td>aqueous liquid wastes and aqueous concentrates from groundwater remediation containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>191308</td>
+			    <td>19 13 08</td>
+			    <td>aqueous liquid wastes and aqueous concentrates from groundwater remediation other than those mentioned in 19 13 07</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200101</td>
+			    <td>20 01 01</td>
+			    <td>paper and cardboard</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200102</td>
+			    <td>20 01 02</td>
+			    <td>glass</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200108</td>
+			    <td>20 01 08</td>
+			    <td>biodegradable kitchen and canteen waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200110</td>
+			    <td>20 01 10</td>
+			    <td>clothes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200111</td>
+			    <td>20 01 11</td>
+			    <td>textiles</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200113</td>
+			    <td>20 01 13*</td>
+			    <td>solvents</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200114</td>
+			    <td>20 01 14*</td>
+			    <td>acids</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200115</td>
+			    <td>20 01 15*</td>
+			    <td>alkalines</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200117</td>
+			    <td>20 01 17*</td>
+			    <td>photochemicals</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200119</td>
+			    <td>20 01 19*</td>
+			    <td>pesticides</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200121</td>
+			    <td>20 01 21*</td>
+			    <td>fluorescent tubes and other mercury-containing waste</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200123</td>
+			    <td>20 01 23*</td>
+			    <td>discarded equipment containing chlorofluorocarbons</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200125</td>
+			    <td>20 01 25</td>
+			    <td>edible oil and fat</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200126</td>
+			    <td>20 01 26*</td>
+			    <td>oil and fat other than those mentioned in 20 01 25</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200127</td>
+			    <td>20 01 27*</td>
+			    <td>paint, inks, adhesives and resins containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200128</td>
+			    <td>20 01 28</td>
+			    <td>paint, inks, adhesives and resins other than those mentioned in 20 01 27</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200129</td>
+			    <td>20 01 29*</td>
+			    <td>detergents containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200130</td>
+			    <td>20 01 30</td>
+			    <td>detergents other than those mentioned in 20 01 29</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200131</td>
+			    <td>20 01 31*</td>
+			    <td>cytotoxic and cytostatic medicines</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200132</td>
+			    <td>20 01 32</td>
+			    <td>medicines other than those mentioned in 20 01 31</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200133</td>
+			    <td>20 01 33*</td>
+			    <td>batteries and accumulators included in 16 06 01, 16 06 02 or 16 06 03 and unsorted batteries and accumulators containing these batteries</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200134</td>
+			    <td>20 01 34</td>
+			    <td>batteries and accumulators other than those mentioned in 20 01 33</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200135</td>
+			    <td>20 01 35*</td>
+			    <td>discarded electrical and electronic equipment other than those mentioned in 20 01 21 and 20 01 23 containing hazardous components ( 6 )</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200136</td>
+			    <td>20 01 36</td>
+			    <td>discarded electrical and electronic equipment other than those mentioned in 20 01 21, 20 01 23 and 20 01 35</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200137</td>
+			    <td>20 01 37*</td>
+			    <td>wood containing dangerous substances</td>
+			    <td>-1</td>
+			</tr>
+			<tr>
+			    <td>200138</td>
+			    <td>20 01 38</td>
+			    <td>wood other than that mentioned in 20 01 37</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200139</td>
+			    <td>20 01 39</td>
+			    <td>plastics</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200140</td>
+			    <td>20 01 40</td>
+			    <td>metals</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200141</td>
+			    <td>20 01 41</td>
+			    <td>wastes from chimney sweeping</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200199</td>
+			    <td>20 01 99</td>
+			    <td>other fractions not otherwise specified</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200201</td>
+			    <td>20 02 01</td>
+			    <td>biodegradable waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200202</td>
+			    <td>20 02 02</td>
+			    <td>soil and stones</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200203</td>
+			    <td>20 02 03</td>
+			    <td>other non-biodegradable wastes</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200301</td>
+			    <td>20 03 01</td>
+			    <td>mixed municipal waste</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200302</td>
+			    <td>20 03 02</td>
+			    <td>waste from markets</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200303</td>
+			    <td>20 03 03</td>
+			    <td>street-cleaning residues</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200304</td>
+			    <td>20 03 04</td>
+			    <td>septic tank sludge</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200306</td>
+			    <td>20 03 06</td>
+			    <td>waste from sewage cleaning</td>
+			    <td>0</td>
+			</tr>
+			<tr>
+			    <td>200307</td>
+			    <td>20 03 07</td>
+			    <td>bulky waste</td>
+			    <td>0</td>
+			</tr>
+	    </tbody>
+	</table>
+</main>
+
+<script>
+	$(document).ready( function () {
+		$('#waste-code-list').dataTable( {
+			"paging": false,
+			"lengthChange": false,
+			"dom": '<"top"f>rt<"bottom"lp><"clear">',
+			"order": [[ 0, 'asc' ], [ 1, 'asc' ]],
+			"ordering": false,
+			"language": {
+				"info": "Showing _END_ waste codes",
+				"infoFiltered": " from a total of _MAX_",
+				"search": "<span class=\"form-hint\">Start typing to filter the list</span>"
+			}
+		} );
+	} );
+</script>
+{% endblock %}
