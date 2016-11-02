@@ -1,10 +1,15 @@
 {% extends "layout.html" %}
 
+{% set returntype = 'large combustion plant' %}
+
+{% set pagetitle = 'Large combustion plant data return rules' %}
+
 {% block page_title %}
-	Parameters allowed for pollution inventory
+  {{ pagetitle }}
 {% endblock %}
 
 {% block content %}
+
 <header class="page-header">
 	{% include "sector-specific-guidance/inc/header-scripts.html" %}
 </header>
@@ -13,7 +18,7 @@
 		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
 	</div>
 	<a href="#" class="link-back" onclick="window.history.back()">back</a>
-	<h1 class="heading-large">Parameters allowed for pollution inventory</h1>
+	<h1 class="heading-large">Parameters allowed for {{returntype}}</h1>
     <p>You must use the correct unit for each parameter.</p>
 
 	<table id="parameter-list" class="table-control table-two-thirds mobile-format">	<table id="parameter-list" class="table-control table-two-thirds mobile-format">

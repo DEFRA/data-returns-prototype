@@ -1,10 +1,15 @@
 {% extends "layout.html" %}
 
+{% set returntype = 'Resource Efficiency Measure' %}
+
+{% set pagetitle = 'Resource Efficiency Measure (REM) data return rules' %}
+
 {% block page_title %}
-	Parameters allowed for pollution inventory
+  {{ pagetitle }}
 {% endblock %}
 
 {% block content %}
+
 <header class="page-header">
 	{% include "sector-specific-guidance/inc/header-scripts.html" %}
 </header>
@@ -13,631 +18,111 @@
 		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
 	</div>
 	<a href="#" class="link-back" onclick="window.history.back()">back</a>
-	<h1 class="heading-large">Parameters allowed for pollution inventory</h1>
+	<h1 class="heading-large">Parameters allowed for {{returntype}}</h1>
     <p>You must use the correct unit for each parameter.</p>
-	<table id="parameter-list" class="table-control table-two-thirds mobile-format">
+	<table class="table-control mobile-format">
 	    <thead>
 	        <tr>
-	            <th class="cell-two-thirds parameter">Parameter</th>
-	            <th class="cell-one-third th-units">Allowed units</th>
+	            <th class="">Parameter</th>
+	            <th class="">Alternatives</th>
+	            <th class="">Unit</th>
 	        </tr>
 	    </thead>
 	    <tbody>
 	        <tr>
-	            <td class="td-parameter">Alachlor</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Electricity Exported</td>
+	            <td> </td>
+	            <td>GWh</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Aldrin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Heat Exported</td>
+	            <td> </td>
+	            <td>GWh</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Americium 241</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Mechanical Power Provided</td>
+	            <td></td>
+	            <td>GWh</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Ammonia</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Fossil Fuel Energy Consumption</td>
+	            <td> </td>
+	            <td>GWh</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Anthracene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Non-Fossil Fuel Consumption</td>
+	            <td></td>
+	            <td>GWh</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Antimony 125</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Annual Operating Hours</td>
+	            <td></td>
+	            <td>h</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Argon 41</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Water Abstracted from Fresh Water Source</td>
+	            <td>Water abstraction Fresh Water Source</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Arsenic</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Water Abstracted from Borehole Source</td>
+	            <td>Water abstraction Borehole Source</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Asbestos</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Water Abstracted from Estuarine Water Source</td>
+	            <td>Water abstraction Estuarine Water Source</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Atrazine</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Water Abstracted from Sea Water Source</td>
+	            <td>Water abstraction Sea Water Source</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Benzene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Water Abstracted from Mains Water Source</td>
+	            <td>Water abstraction Mains Water Source</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Benzo[a]pyrene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Gross Total Water Used</td>
+	            <td>Water use</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Benzo[b]fluoranthene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Net Water Used</td>
+	            <td>Water use</td>
+	            <td>m3</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Benzo[ghi]perylene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Haz Waste Transferred for Disposal at another Installation</td>
+	            <td>Haz Waste For Disposal</td>
+	            <td>t</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">1,3-Butadiene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Haz Waste Transferred for Recovery at another Installation</td>
+	            <td>Haz Waste For Recovery</td>
+	            <td>t</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Cadmium</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Non-Haz Waste Transferred for Disposal at another Installation</td>
+	            <td>Non-haz Waste For Disposal</td>
+	            <td>t</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Caesium 134</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Non-Haz Waste Transferred for Recovery at another Installation</td>
+	            <td>Non-haz Waste For Recovery</td>
+	            <td>t</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Caesium 137</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Waste Recovered to Quality Protocol and Transferred Off-Site</td>
+	            <td>Waste Recovered to Quality Protocol</td>
+	            <td>t</td>
 	        </tr>
 	        <tr>
-	            <td class="td-parameter">Carbon 14</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Carbon dioxide</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Carbon Dioxide From Qualifying Renewable Fuel Sources</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Carbon monoxide</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Tetrachloromethane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Cerium 144</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlordane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlordecone</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlorfenvinphos</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chloride</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlorine and inorganic chlorine compounds - as HCl</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlorofluorocarbons (CFCs)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Trichloromethane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chlorpyrifos</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chromium</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chromium 51</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Cobalt 57</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Cobalt 58</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Cobalt 60</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Copper</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Curium 242</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Cypermethrin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Di-n-octyl phthalate</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">DDT (Dichlorodiphenyltrichloroethane)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Dichloromethane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Dichlorvos</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Dieldrin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Dioxins and furans (PCDDs/PCDFs) - as ITEQ</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Dioxins and furans (PCDDs/PCDFs) - as WHO TEQ</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Diuron</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Endosulfan</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Endrin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Erbium - 169</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Ethylbenzene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">1,2-Dichloroethane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Ethylene oxide (1,2 Epoxyethane)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Fluoranthene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Fluorine 18</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Fluorine and inorganic fluorine compounds - as HF</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Gallium 67</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Halogenated organic compounds (total)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Halons</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">hazardous waste</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Heptachlor</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hexabromobiphenyl</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hexabromocyclododecane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hexachlorobenzene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hexachloro - 1,3 - butadiene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hexachlorocyclohexane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hydrochlorofluorocarbons (HCFCs)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hydrofluorocarbons (HFCs)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Hydrogen cyanide</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Indeno[1,2,3-cd]pyrene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Indium 111</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Iodine 123</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Iodine 125</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Iodine 129</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Iodine 131</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Isodrin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Isoproturon</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Krypton 85</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Lead</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">HCH-gamma</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Mercury</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Methane</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Methyl chloroform (1,1,1-Trichloroethane)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Mirex</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Naphthalene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Neptunium 237</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Nickel</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Niobium 95</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Nitrogen - as total N</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Oxides Of Nitrogen (NOX)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Nitrous oxide</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">non-hazardous waste</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Non-methane VOCs</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Nonylphenol and nonylphenol ethoxylates</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Octylphenols and octylphenol ethoxylates</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Organotin compounds - as Sn</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Other Alpha Particulate</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Other Beta/Gamma</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Other Beta/Gamma Particulate</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Particulate matter - PM10</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Particulate matter - PM2.5</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Particulate matter</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Pentachlorobenzene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Pentachlorophenol</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Perfluoro octanyl sulphate (PFOS)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Perfluorocarbons (PFCs)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Phenols - total as C</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Phosphorus - as total P</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Phosphorus 32</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Phosphorus 33</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Plutonium 241</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Plutonium Alpha</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">PCBs (polychlorinated biphenyls)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Polychlorinated biphenyls (PCBs) - as WHO TEQ</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Radon 222</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Ruthenium 106</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Samarium 153</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Selenium</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Selenium 75</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Short chain (C10-13) chlorinated paraffins (SCCPs)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Simazine</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Sodium 22</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Strontium 89</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Strontium 90</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Sulphur 35</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Sulphur hexafluoride</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Sulphur oxides (SO2 and SO3) as SO2</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Technetium 99</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Technetium 99m</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Tetrachloroethane (1,1,2,2-Tetrachloroethane)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Tetrachloroethene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Thallium 201</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Thorium 230</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Thorium 232</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Toluene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Total Alpha</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Total Beta/Gamma (Excl Tritium)</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Total Organic Carbon</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Toxaphene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Tributyltin and compounds - as TBT</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Trichlorobenzene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Trichloroethene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Trifluralin</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Triphenyltin and compounds - as TPT</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Tritium</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Uranium Alpha</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Chloroethene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Waste transfer</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Xenon 133</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Xylene</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Yttrium 90</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Zinc</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
-	        </tr>
-	        <tr>
-	            <td class="td-parameter">Zirconium 95</td>
-	            <td><span class="th-header" aria-hidden="true">Allowed units: </span>g, kg, kt, mg, t, Bq</td>
+	            <td>Waste Transferred Directly Off-Site for Use under an exemption</td>
+	            <td>Waste For Use Off Site</td>
+	            <td>t</td>
 	        </tr>
 	    </tbody>
 	</table>
