@@ -70,7 +70,7 @@
     		<section id="data-rules">
 		          <h2 class="heading-large">Data rules</h2>
 
-                  <table class="table-control datarules">
+                  <table class="table-control mobile-format datarules">
                   {% include "guidance-dep/inc/rules_table_head.html" %}
 
                   {% import "guidance-dep/inc/macros.html" as macro %}
@@ -85,7 +85,7 @@
                       <p>No data</p>
                   {% endfor %}
                   </table>
-                  
+
               </section>
               <section id="monitoring-point-allowed-values">
 		        <h2 class="heading-large" id="param_units_allowed_values">
@@ -105,32 +105,32 @@
 			</section>
 
 			<section id="controlled-lists">
-				<h2 class="heading-large">Pollution inventory data returns controlled lists</h2>
+				<h2 class="heading-large" style="">{{returntype}} data returns controlled lists</h2>
 				<div class="text">
 					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
 					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
 				</div>
 				<ol class="document-list">
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/unit-or-measure">Unit or measure</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/unit-or-measure">Unit or measure</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/parameter">Parameter (substance name)</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/parameter">Parameter (substance name)</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/monitoring-standard-or-method">Monitoring standard or method</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/monitoring-standard-or-method">Monitoring standard or method</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/text-value">Text value</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/text-value">Text value</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/qualifier">Qualifier</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/qualifier">Qualifier</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/waste-codes">Waste codes</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/waste-codes">Waste codes</a></h3>
 					</li>
 					<li class="publication document-row">
-						<h3><a href="/sector-specific-guidance/pollution-inventory/d-or-r-codes">D or R codes</a></h3>
+						<h3><a href="/sector-specific-guidance/landfill/d-or-r-codes">D or R codes</a></h3>
 					</li>
 				</ol>
 			</section>
@@ -139,7 +139,7 @@
 				<h2 class="heading-large">Documents</h2>
 				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
 				<div class="attachment-details">
-					<h2 class="title">Example pollution inventory data return</h2>
+					<h2 class="title">Example {{returntype}} data return</h2>
 					<p class="metadata">
 						<span class="preview">
 						<strong>
