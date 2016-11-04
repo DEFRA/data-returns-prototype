@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 
-{% set returntype = 'Pollution Inventory' %}
+{% set returntype = 'Pollution inventory' %}
 
-{% set pagetitle = 'Pollution Inventory (PI) data return rules' %}
+{% set pagetitle = 'Pollution inventory (PI) data return rules' %}
 
 {% block page_title %}
   {{ pagetitle }}
@@ -38,19 +38,13 @@
 		<h1>Contents</h1>
 		<ol class="dash-list">
 			<li>
-				<a href="#preparing-your-csv-file">Preparing your CSV file</a>
+				<a href="#preparing-your-csv-file">How to prepare your data file</a>
 			</li>
 			<li>
 				<a href="#data-rules">Data rules</a>
 			</li>
 			<li>
-				<a href="#monitoring-point-allowed-values">Monitoring point allowed values</a>
-			</li>
-			<li>
-				<a href="#controlled-lists">Controlled lists</a>
-			</li>
-			<li>
-				<a href="#documents">Documents</a>
+				<a href="#allowed-values">Allowed value lists for PI</a>
 			</li>
 		</ol>
 	</nav>
@@ -68,7 +62,7 @@
 	          </p>
             </section>
     		<section id="data-rules">
-		          <h2 class="heading-large">Data rules</h2>
+		          <h2 class="heading-medium">Data rules</h2>
 
 		          <table class="table-control mobile-format datarules">
 		          {% include "guidance-dep/inc/rules_table_head.html" %}
@@ -85,25 +79,10 @@
 		          </table>
 
               </section>
-              <section id="monitoring-point-allowed-values">
-		        <h2 class="heading-large" id="param_units_allowed_values">
-		          Monitoring point allowed values
-		        </h2>
 
-		        <table class="param_units">
-			        <tr><th>Monitoring point</th></tr>
-			        <tr><td>Air</td></tr>
-			        <tr><td>Land</td></tr>
-			        <tr><td>Controlled Water</td></tr>
-			        <tr><td>Waste Water</td></tr>
-			        <tr><td>Waste Transfer</td></tr>
-			        <tr><td>Waste Overseas</td></tr>
-			        <tr><td>General</td></tr>
-		        </table>
-			</section>
 
-			<section id="controlled-lists">
-				<h2 class="heading-large">Pollution inventory data returns controlled lists</h2>
+			<section id="allowed-values">
+				<h2 class="heading-medium">Allowed value lists for PI</h2>
 				<div class="text">
 					<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
 					<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
@@ -133,20 +112,7 @@
 				</ol>
 			</section>
 
-			<section id="documents" class="attachment embedded">
-				<h2 class="heading-large">Documents</h2>
-				<div class="attachment-thumb"> <img src="/public/images/pub-cover-spreadsheet.png" alt=""> </div>
-				<div class="attachment-details">
-					<h2 class="title">Example pollution inventory data return</h2>
-					<p class="metadata">
-						<span class="preview">
-						<strong>
-							<a href="/help/example-data-return">View online</a>
-						</strong>
-						</span>
-					</p>
-				</div>
-			</section>
+
 		</div>
 	</div>
 </main>
