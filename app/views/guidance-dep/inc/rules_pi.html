@@ -2,74 +2,18 @@
 
   [
    {
-     "field": "EA_ID",
-     "desc": "A unique identifier for the reading. It's the permit or licence number that the reading relates to. See below for types.",
-     "rules": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "EA_ID",
-     "desc": "Installation permit number",
+     "field": "Return_ID",
+     "desc": "This is the number that we have stored for your permit or licence. It will usually be one of the numbers below but we may store a different number, so you must check this using the <a href=\"#\">Return ID permit and licence list</a>.<br> <br>\nOriginal installation permit number, not any variation number.<br>\nRadioactive substances or RSR permit number.<br>\nDischarge consent reference number.<br>\nMines and quarries reference number from your letter.",
      "rules": [
         "Required.",
-        "Your 'original permit number' not any 'variation number'.",
-        "Format is 2 letters, 4 numbers and 2 letters.",
-        "Do not include any other text from your permit number before and after, for example \"EPR/\" or \"/V002\".",
-        "",
-        "",
-        ""
+        "Must be taken from the <a href=\"#\">Return ID permit and licence list</a>.",
+        null,
+        null,
+        null,
+        null,
+        null
      ],
-     "exmp": "AB1234ZZ"
-  },
-   {
-     "field": "EA_ID",
-     "desc": "Radioactive substances or RSR permit number",
-     "rules": [
-        "Required.",
-        "Use your 'original permit number' or RSR number not any 'variation number'.",
-        "2 letters followed by 4 numbers.\n",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": "AB1234ZZ"
-  },
-   {
-     "field": "EA_ID",
-     "desc": "Discharge consent reference number",
-     "rules": [
-        "Required.",
-        "Your discharge consent reference number.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "EA_ID",
-     "desc": "Mines and quarries reference number",
-     "rules": [
-        "Required.",
-        "Your mines and quarries reference. This will be on your letter.",
-        "MQ followed by 4 numbers.",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": "MQ0001"
+     "exmp": "AB1234ZZ or MQ0001"
   },
    {
      "field": "Site_Name",
@@ -78,10 +22,10 @@
         "Required.",
         "Must be the installation site name on your permit.",
         "Can include any text.",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "Mycity Power Station"
   },
@@ -91,11 +35,11 @@
      "rules": [
         "Give this information where possible.",
         "Must be 4 numbers in the format YYYY.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "2016"
   },
@@ -105,13 +49,27 @@
      "rules": [
         "Required.",
         "For PI it must be the text 'Pollution Inventory'.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "Pollution Inventory "
+  },
+   {
+     "field": "Rel_Trans",
+     "desc": "The route of emission for any releases and transfers.",
+     "rules": [
+        "Required.",
+        "Must be taken from the <a href=\"#param_units_allowed_values\">PI releases and transfers allowed values list</a>.",
+        null,
+        null,
+        null,
+        null,
+        null
+     ],
+     "exmp": "Air"
   },
    {
      "field": "Mon_Point",
@@ -119,11 +77,11 @@
      "rules": [
         "Required.",
         "Enter the text 'PI - ' followed by the the route of emisson from the <a href=\"#param_units_allowed_values\">PI monitoring point list</a>.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "PI - Air"
   },
@@ -133,39 +91,37 @@
      "rules": [
         "Not required for PI.",
         "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
+        null,
+        null,
+        null,
+        null,
+        null
+     ]
   },
    {
      "field": "Parameter",
      "desc": "The chemical substance or parameter you're monitoring.",
      "rules": [
         "Required.",
-        "Must be taken from the <a href=\"#\">PI allowed parameters and units list</a>.",
+        "Must be taken from the <a href=\"/sector-specific-guidance/pollution-inventory/parameter\">PI allowed parameters and units list</a>.",
         "For waste data please use the <a href=\"https://www.gov.uk/government/publications/waste-classification-technical-guidance\">European waste catalogue code</a>.",
         "The unit used should match the parameter.",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
+        null,
+        null,
+        null
+     ]
   },
    {
      "field": "Qualifier",
      "desc": "Used to give to make a chosen parameter more specific.",
      "rules": [
-        "Optional",
+        "Optional.",
         "This can be used to indicate where 'all isomers' of a substance have been included or where emissions are 'notifiable'.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "all isomers"
   },
@@ -175,13 +131,12 @@
      "rules": [
         "Not required for PI.",
         "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
+        null,
+        null,
+        null,
+        null,
+        null
+     ]
   },
    {
      "field": "Value",
@@ -203,11 +158,11 @@
      "rules": [
         "Optional",
         "Can be used for reporting limits Below Regulatory Threshold.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "BRT"
   },
@@ -215,13 +170,13 @@
      "field": "Unit",
      "desc": "The unit in which the measurement was taken.",
      "rules": [
-        "Must be taken from the <a href=\"#\">PI units allowed values list</a>.",
+        "Must be taken from the <a href=\"/sector-specific-guidance/pollution-inventory/unit-or-measure\">PI units allowed values list</a>.",
         "Must match the unit allowed for the parameter.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
      ],
      "exmp": "TJ"
   },
@@ -229,15 +184,28 @@
      "field": "Meth_Stand",
      "desc": "The method or standard used for sampling.",
      "rules": [
-        "Optional",
+        "Optional.",
         "Use the comments field to give extra information about the methodology or monitoring standard.",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        null,
+        null,
+        null,
+        null
+     ]
+  },
+   {
+     "field": "RD_Code",
+     "desc": "The waste movements D or R code.",
+     "rules": [
+        "Must be taken from the <a href=\"/sector-specific-guidance/pollution-inventory/d-or-r-codes\">PI D and R code allowed values list</a>.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
      ],
-     "exmp": ""
+     "exmp": "R11"
   },
    {
      "field": "Comments",
@@ -245,139 +213,12 @@
      "rules": [
         "Optional.",
         "You can enter a maximum of 255 characters.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_1",
-     "desc": "",
-     "rules": [
-        "For waste movements that have a D or R code, please put the D or R code.",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": "R11"
-  },
-   {
-     "field": "Parameter_2",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_3",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_4",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_5",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_6",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_7",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_8",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
-  },
-   {
-     "field": "Parameter_9",
-     "desc": "",
-     "rules": [
-        "Not required for PI.",
-        "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
+        null,
+        null,
+        null,
+        null,
+        null
+     ]
   },
    {
      "field": "CiC",
@@ -385,13 +226,12 @@
      "rules": [
         "Not required for PI.",
         "Please leave blank.",
-        "",
-        "",
-        "",
-        "",
-        ""
-     ],
-     "exmp": ""
+        null,
+        null,
+        null,
+        null,
+        null
+     ]
   }
   ]
 
