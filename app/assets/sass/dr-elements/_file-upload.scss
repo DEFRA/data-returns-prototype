@@ -132,16 +132,23 @@
 	.status {
 		.file-error, .file-ready {
 			display: inline-block;
-			font-weight: bold;
-			text-transform: uppercase;
 			padding: 2px 4px 0;
 			@include border-radius(2px);
 		}
 		.file-ready {
+			font-weight: bold;
+			text-transform: uppercase;
 			color: $green;
 			border: 1px solid $green;
+			.notice {
+				font-weight: normal;
+				text-transform: none;
+				margin-top: $gutter-half
+			}
 		}
 		.file-error {
+			text-transform: uppercase;
+			font-weight: bold;
 			color: $red;
 			border: 1px solid $red;
 		}

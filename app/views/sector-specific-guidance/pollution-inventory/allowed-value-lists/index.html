@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'Pollution inventory' %}
+
+{% set pagetitle = 'Pollution inventory (PI) data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+</header>
+
+<main id="content" role="main" class="help">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p>
+	</div>
+
+    <div class="breadcrumbs">
+      <ol>
+        <li>
+            <a href="/sector-specific-guidance">Data returns guidance</a>
+        </li>
+        <li>
+            <a href="/sector-specific-guidance/pollution-inventory/">Pollution Inventory</a>
+        </li>
+        <li>
+            <a href="/sector-specific-guidance/pollution-inventory/allowed-value-lists/">Allowed value lists</a>
+        </li>
+      </ol>
+    </div>
+
+	<div class="grid-row">
+		<div class="column-full">
+        	<section id="allowed-values">
+        		<h2 class="heading-large">Allowed value lists for PI</h2>
+        		<div class="text">
+        			<p>You need to select the correct name from these controlled lists under certain field headings, such as parameter, when you complete your data returns. These lists support Environment Agency data standards and help reduce errors in your compliance monitoring.</p>
+        			<p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
+        		</div>
+
+                {% include "sector-specific-guidance/pollution-inventory/allowed-value-lists/allowed-value-lists.html" %}
+
+            </section>
+		</div>
+	</div>
+</main>
+{% endblock %}

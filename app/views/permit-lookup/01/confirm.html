@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Send environmental data returns
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="phase-banner-beta"><p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p></div>
+    <h1 class="heading-large">Confirm details</h1>
+
+    <p class="lede">The data return you’re going to send is about:</p>
+
+    <table class="table-control table-one-half mobile-format">
+        <caption>missmatched-site-name.csv</caption>
+        <thead>
+            <th class="">EA_ID</th>
+            <th class="">Site name</th>
+        </thead>
+        <tbody>
+            <td>EP3136GK</td>
+            <td>Test site A</td>
+        </tbody>
+    </table>
+
+    <p>Do you need to choose different files? <a href="/file/choose" id="details-wrong-link">Start again</a> so you can send the right files and details.</p>
+
+    <!-- Primary button -->
+    <a id="continue.btn" href="/email" class="button" accesskey="C">Continue</a>
+</main>
+{% endblock %}

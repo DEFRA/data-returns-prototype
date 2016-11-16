@@ -1,2 +1,0 @@
-<h2>HTML from the include</h2>
-<p>Is here</p>

@@ -1,2 +1,0 @@
-<h2>Combustion</h2>
-<p>Here is the combustion guidance</p>

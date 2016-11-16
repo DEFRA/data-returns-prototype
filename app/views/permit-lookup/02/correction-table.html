@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Send environmental data returns
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="phase-banner-beta"><p><strong class="phase-tag">BETA</strong><span>This is a new service – your <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">feedback</a> will help us to improve it.</span></p></div>
+
+    <div class="error-summary" role="group" aria-labelledby="make-corrections" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="make-corrections">Make corrections</h1>
+<p>Before you can send missmatched-ea-id.csv you need to make these corrections:</p>
+
+    </div>
+
+    <p class="back">
+      <a id="back.btn" onclick="history.back(); return false;" href="/file/choose" class="button">Back to file list</a>
+    </p>
+
+    <table id="errorTableHeader" class="table-control corrections-table">
+        <thead>
+        <tr>
+            <th class="th-field-heading">Field heading</th>
+            <th class="th-errors">Errors</th>
+            <th class="th-correction">Correction</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="ERR_DR9000">
+            <td class="td-field-heading">
+                Site name
+                <hidden id="EA_ID_error_code" value="DR9000"></hidden§      §>
+            </td>
+            <td class="td-errors">
+                <a href="/correction/detail?uuid=6b552ac5-4f7e-463b-bf20-2c9645d9add1&amp;id=9000">View 1 error</a>
+            </td>
+            <td class="td-correction">
+                <p>Enter a valid EA_ID.</p>
+                <p><a href="permit-lookup">Find the correct EA ID to use</a>.</p>
+                <p>You may get this error even if you have entered a valid permit number. This is because we hold a different number in our returns database.</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+{% endblock %}

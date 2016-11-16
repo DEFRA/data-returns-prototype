@@ -1,2 +1,0 @@
-<h2>Pollution inventory</h2>
-<p>Here is the pollution inventory guidance</p>
