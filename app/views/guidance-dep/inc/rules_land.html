@@ -2,13 +2,15 @@
 
   [
    {
-     "field": "EA_ID",
+     "field": "Return_ID",
      "desc": "A unique identifier for the reading. It's the permit or licence number that the reading relates to.",
      "rules": [
         "Required.",
         "For permits: 2 capital letters, 4 numbers and 2 capital letters",
         "For waste management licences: 5 or 6 numbers.",
         "Do not include any other text from your permit number before and after, for example \"EPR/\" or \"/V002\".",
+        "",
+        "",
         ""
      ],
      "exmp": "AB1234ZZ or 654321"
@@ -19,11 +21,13 @@
      "rules": [
         "Required.",
         "Must be the installation site name on your permit.",
-        "Should only include letetrs and numbers.",
+        "Should only include letters and numbers.",
         "Enter a maximum of 255 characters.",
+        "",
+        "",
         ""
      ],
-     "exmp": "NJG Ltd\nLeeds Landfill Site"
+     "exmp": "Leeds Landfill Site"
   },
    {
      "field": "Rtn_Period",
@@ -32,6 +36,8 @@
         "Give this information where possible.",
         "Text must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=rtn_period\">return period allowed values list</a>. ",
         "To give details of date and time for the individual monitoring item use Mon_Date.",
+        "You can only submit data covering up to 18 months in the past.",
+        "",
         "",
         ""
      ],
@@ -43,6 +49,8 @@
      "rules": [
         "Required.",
         "Text must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=rtn_type\">return type allowed value list</a>.",
+        "",
+        "",
         "",
         "",
         ""
@@ -57,19 +65,23 @@
         "This should only contain letters, numbers and spaces.",
         "",
         "",
+        "",
+        "",
         ""
      ],
      "exmp": "Borehole 1"
   },
    {
      "field": "Mon_Date",
-     "desc": "Date and, where necessary, the time the measurement was taken. If you're monitoring for a period of time (for example, a week), give the date at the end of the monitoring period.",
+     "desc": "Date and, where your permit asks for it or if you want to submit it, the time the measurement was taken. If you're monitoring for a period of time (for example, a week), give the date at the end of the monitoring period.",
      "rules": [
-        "Date is required. Time is optional.",
+        "Date is required. Time is optional unless your permit requires it.",
         "Format the date as YYYY-MM-DD, DD-MM-YYYY or DD/MM/YYYY.",
         "Format time as hh:mm:ss using the 24-hour clock.",
         "If you're giving time put a 'T' or a space between date and time.",
-        "You cannot submit a Mon_Date in the future."
+        "You cannot submit a Mon_Date in the future. You can only submit data covering up to 18 months in the past.",
+        "",
+        ""
      ],
      "exmp": "2016-08-31 15:28:02\n2016-08-31T15:28:04\n31-08-2016\n31/08/2016"
   },
@@ -79,6 +91,8 @@
      "rules": [
         "Required.",
         "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=parameters\">parameters allowed values list</a>.",
+        "",
+        "",
         "",
         "",
         ""
@@ -91,8 +105,10 @@
      "rules": [
         "Optional",
         "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=qualifier\">qualifier allowed values list</a>.",
-        "Where possible give qualifiers rather than as a suffix in the parameter field.",
-        "More than 1 qualifier can be applied to a parameter.",
+        "",
+        "",
+        "",
+        "",
         ""
      ],
      "exmp": "Filtered"
@@ -103,6 +119,8 @@
      "rules": [
         "You can leave this field blank if there are no reference period requirements in your permit or licence. You can also leave it blank for instantaneous or spot sample readings. Or you can enter these options from the allowed value list.",
         "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=ref_period\">reference period allowed value list</a>.",
+        "",
+        "",
         "",
         "",
         ""
@@ -117,7 +135,9 @@
         "Numerical values only but can include zeros or blanks (nulls).",
         "Can also include &gt; or &lt; symbol. ",
         "No other characters are allowed. ",
-        "Text values such as 'BRT' or 'waterlogged' should be in 'comments' field."
+        "Text values such as 'BRT' or 'waterlogged' should be in 'comments' field.",
+        "",
+        ""
      ],
      "exmp": "0.2"
   },
@@ -129,6 +149,8 @@
         "Only use ‘See comments’ when the result is descriptive text. For example, appearance or site weather conditions.",
         "Do not use this to simply add comments about your result. (For more information see exceptions and special cases below.)",
         "",
+        "",
+        "",
         ""
      ],
      "exmp": "No result"
@@ -139,6 +161,8 @@
      "rules": [
         "Required.",
         "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=units\">unit or measure allowed value list</a>.",
+        "",
+        "",
         "",
         "",
         ""
@@ -153,6 +177,8 @@
         "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=method\">monitoring standard or method allowed value list</a>.",
         "",
         "",
+        "",
+        "",
         ""
      ],
      "exmp": "BS EN 14791"
@@ -163,6 +189,8 @@
      "rules": [
         "Optional.",
         "You can enter a maximum of 255 characters.",
+        "",
+        "",
         "",
         "",
         ""
