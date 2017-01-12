@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'landfill' %}
+
+{% set pagetitle = 'Landfill data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+      <a class="link-back" href="/">Back</a>
+
+        <h1 class="heading-large text">
+        {{ pagetitle }}
+        </h1>
+
+        {% include "guidance-dep/inc/rules_intro_text.html" %}
+
+        <p class="text">
+          <a href="#">
+            Example data return for {{returntype}}
+          </a>
+        </p>
+
+
+        <h2 class="heading-medium">
+          Data rules
+        </h2>
+
+        <table class="table-control datarules">
+        {% include "guidance-dep/inc/rules_table_head.html" %}
+
+        {% import "guidance-dep/inc/macros.html" as macro %}
+
+        {% from "guidance-dep/inc/rules_land.html" import rules %}
+
+        {% for rule in rules %}
+
+        {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
+
+        {% else %}
+            <p>No data</p>
+        {% endfor %}
+        </table>
+
+
+
+</main>
+
+{% endblock %}

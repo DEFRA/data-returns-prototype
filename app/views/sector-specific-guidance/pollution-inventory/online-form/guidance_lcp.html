@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% set returntype = 'large combustion plant' %}
+
+{% set pagetitle = 'Large combustion plant data return rules' %}
+
+{% block page_title %}
+  {{ pagetitle }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+      <a class="link-back" href="/">Back</a>
+
+        <h1 class="heading-large text">
+        {{ pagetitle }}
+        </h1>
+
+        {% include "guidance-dep/inc/rules_intro_text.html" %}
+
+        <p class="text">
+          <a href="#">
+            Example data return for {{returntype}}
+          </a>
+        </p>
+
+
+        <h2 class="heading-medium">
+          Data rules
+        </h2>
+
+        <table class="table-control datarules">
+        {% include "guidance-dep/inc/rules_table_head.html" %}
+
+        {% import "guidance-dep/inc/macros.html" as macro %}
+
+        {% from "guidance-dep/inc/rules_lcp.html" import rules %}
+
+        {% for rule in rules %}
+
+        {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
+
+        {% else %}
+            <p>No data</p>
+        {% endfor %}
+        </table>
+
+<h2 class="heading-medium" id="param_units_allowed_values">
+  Parameter and units allowed values
+</h2>
+
+<table class="param_units">
+<tr><th>Parameter</th><th>Unit</th></tr>
+<tr><td>Net Rated Thermal Input Capacity</td><td>MW</td></tr>
+<tr><td>Net Energy Input Coal</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Lignite</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Peat</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Biomass</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Other solid fuels</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Liquid fuels</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Natural gas</td><td>TJ</td></tr>
+<tr><td>Net Energy Input Other gases</td><td>TJ</td></tr>
+<tr><td>Annual energy input</td><td>TJ</td></tr>
+<tr><td>Total Annual SO2 emission</td><td>t</td></tr>
+<tr><td>Total Annual NOx emission</td><td>t</td></tr>
+<tr><td>Total Annual Dust emission</td><td>t</td></tr>
+</table>
+
+</main>
+
+{% endblock %}
