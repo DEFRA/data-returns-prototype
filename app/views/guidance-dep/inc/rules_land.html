@@ -2,13 +2,13 @@
 
   [
    {
-     "field": "Return_ID",
-     "desc": "A unique identifier for the reading. It's the permit or licence number that the reading relates to.",
+     "field": "EA_ID",
+     "desc": "This is the permit or licence number that we have in our records.",
      "rules": [
+        "You must use the EA_ID given by finding your permit number or site name in our records.",
+        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
         "Required.",
-        "For permits: 2 capital letters, 4 numbers and 2 capital letters",
-        "For waste management licences: 5 or 6 numbers.",
-        "Do not include any other text from your permit number before and after, for example \"EPR/\" or \"/V002\".",
+        "",
         "",
         "",
         ""
@@ -17,12 +17,12 @@
   },
    {
      "field": "Site_Name",
-     "desc": "The site name. It's used to check that the correct permit number has been used. ",
+     "desc": "The site name in our records. It's used to check that you used the correct EA_ID. ",
      "rules": [
+        "Check that the site name in your data file matches our records. You must use the site name that you find in our records even if it’s different the site name on your permit.",
+        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
         "Required.",
-        "Must be the installation site name on your permit.",
-        "Should only include letters and numbers.",
-        "Enter a maximum of 255 characters.",
+        "",
         "",
         "",
         ""
@@ -31,12 +31,12 @@
   },
    {
      "field": "Rtn_Period",
-     "desc": "The date range covering the entire return.\n",
+     "desc": "The week, month, quarter or year when you took the measurement.",
      "rules": [
         "Give this information where possible.",
-        "Text must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=rtn_period\">return period allowed values list</a>. ",
+        "You must use one of the values in the <a href=\"{{links.fields.Rtn_Period}}\">return period allowed values list</a>. ",
         "To give details of date and time for the individual monitoring item use Mon_Date.",
-        "You can only submit data covering up to 18 months in the past.",
+        "You can only report data covering up to 18 months in the past.",
         "",
         "",
         ""
@@ -45,10 +45,10 @@
   },
    {
      "field": "Rtn_Type",
-     "desc": "The type of return the row of data relates to. ",
+     "desc": "The type of data that you're reporting.",
      "rules": [
         "Required.",
-        "Text must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=rtn_type\">return type allowed value list</a>.",
+        "You must use one of the values in the <a href=\"{{links.fields.Rtn_Type}}\">return type allowed value list</a>.",
         "",
         "",
         "",
@@ -59,12 +59,12 @@
   },
    {
      "field": "Mon_Point",
-     "desc": "The monitoring point reference where the sample was taken. The sampling or emission point is described in your permit or licence. For certain return types monitoring point is the same as site name.",
+     "desc": "The sampling or emission point where the sample was taken.",
      "rules": [
         "Required.",
-        "This should only contain letters, numbers and spaces.",
-        "",
-        "",
+        "Enter the monitoring point specified on your permit or licence.",
+        "For certain return types the monitoring point on your permit may be 'site'.",
+        "Maximum 50 characters.",
         "",
         "",
         ""
@@ -73,26 +73,26 @@
   },
    {
      "field": "Mon_Date",
-     "desc": "Date and, where your permit asks for it or if you want to submit it, the time the measurement was taken. If you're monitoring for a period of time (for example, a week), give the date at the end of the monitoring period.",
+     "desc": "The date and, where your permit asks for it or if you want to submit it, the time you took the measurement. If you're monitoring for a period of time (for example, a week), give the date at the end of the monitoring period.",
      "rules": [
         "Date is required. Time is optional unless your permit requires it.",
         "Format the date as YYYY-MM-DD, DD-MM-YYYY or DD/MM/YYYY.",
         "Format time as hh:mm:ss using the 24-hour clock.",
         "If you're giving time put a 'T' or a space between date and time.",
         "You cannot submit a Mon_Date in the future. You can only submit data covering up to 18 months in the past.",
-        "",
+        "If you're using spreadsheet software it may change dates so they are in the wrong format. Fix this by setting the spreadsheet cell format to 'text'.",
         ""
      ],
-     "exmp": "2016-08-31 15:28:02\n2016-08-31T15:28:04\n31-08-2016\n31/08/2016"
+     "exmp": "2016-08-31 15:28:02 or\n2016-08-31T15:28:04 or\n31-08-2016 or\n31/08/2016"
   },
    {
      "field": "Parameter",
      "desc": "The chemical substance or parameter you're monitoring.",
      "rules": [
         "Required.",
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=parameters\">parameters allowed values list</a>.",
-        "",
-        "",
+        "You must use one of the values in the <a href=\"{{links.fields.Parameter}}\">parameters allowed values list</a>.",
+        "If the parameter is pH, use the unit pH.",
+        "Special case: <a href=\"{{links.Help_SpecialCases}}\">when you need to report a descriptive measurement</a>.",
         "",
         "",
         ""
@@ -101,10 +101,10 @@
   },
    {
      "field": "Qualifier",
-     "desc": "Use this field where there’s a basic parameter that can have different values (and different limits) depending on the specifics, for example, 'Dry weight' or 'Wet weight'.",
+     "desc": "Gives more information about the measurement, such as sample or operating condition, or the calculation used.",
      "rules": [
-        "Optional",
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=qualifier\">qualifier allowed values list</a>.",
+        "Use this where there’s a basic parameter that can have different values (and different limits) depending on how you measured it. For example, 'Dry weight' or 'Wet weight'.",
+        "You must use one of the values in the <a href=\"{{links.fields.Qualifier}}\">qualifier allowed values list</a>.",
         "",
         "",
         "",
@@ -115,11 +115,11 @@
   },
    {
      "field": "Ref_Period",
-     "desc": "The reference period for the sample, as specified in your permit or licence. This explains how the sample was taken - eg, '24 hour total', 'Half hour average', 'Monthly mean'.",
+     "desc": "The reference period for the sample, as specified in your permit or licence. This explains how you took the measurement, for example, '24 hour total', 'Half hour average' or 'Monthly mean'.",
      "rules": [
-        "You can leave this field blank if there are no reference period requirements in your permit or licence. You can also leave it blank for instantaneous or spot sample readings. Or you can enter these options from the allowed value list.",
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=ref_period\">reference period allowed value list</a>.",
-        "",
+        "You can leave this blank if there are no reference period requirements in your permit or licence. You can also leave it blank for instantaneous or spot sample readings.",
+        "You must use one of the values in the <a href=\"{{links.fields.Ref_Period}}\">reference period allowed value list</a>.",
+        "Special case: <a href=\"{{links.Help_SpecialCases}}\">when Ref_Period covers multiple measurements in a single calculation</a>.",
         "",
         "",
         "",
@@ -132,10 +132,10 @@
      "desc": "The numerical value of your measurement in the units you used.",
      "rules": [
         "Required.",
-        "Numerical values only but can include zeros or blanks (nulls).",
-        "Can also include &gt; or &lt; symbol. ",
-        "No other characters are allowed. ",
-        "Text values such as 'BRT' or 'waterlogged' should be in 'comments' field.",
+        "Numerical values only but can include zeros, blanks (nulls) &gt; and &lt;.",
+        "You can enter negative values.",
+        "Values such as 'waterlogged' should be in 'comments' field.",
+        "Special case: <a href=\"{{links.Help_SpecialCases}}\">when you need to give a ‘No result’ measurement</a>.",
         "",
         ""
      ],
@@ -145,10 +145,10 @@
      "field": "Txt_Value",
      "desc": "Used for a text-based response, for example, ‘ Yes’, ‘No’, 'No result' and 'See comments'. ",
      "rules": [
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=txt_value\">text value allowed value list</a>.",
+        "You must use one of the values in the <a href=\"{{links.fields.Txt_Value}}\">text value allowed value list</a>.",
         "Only use ‘See comments’ when the result is descriptive text. For example, appearance or site weather conditions.",
-        "Do not use this to simply add comments about your result. (For more information see exceptions and special cases below.)",
-        "",
+        "Do not use this to simply add comments about your result. For more information see  <a href=\"{{links.Help_SpecialCases}}\">exceptions and special cases</a> below.",
+        "You cannot enter both a (numerical) value and a text value. ",
         "",
         "",
         ""
@@ -157,12 +157,12 @@
   },
    {
      "field": "Unit",
-     "desc": "The unit in which the measurement was taken.",
+     "desc": "The unit for the measurement.",
      "rules": [
         "Required.",
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=units\">unit or measure allowed value list</a>.",
-        "",
-        "",
+        "You must use one of the values in the <a href=\"{{links.fields.Unit}}\">unit or measure allowed value list</a>.",
+        "If the parameter is pH, use the unit pH.",
+        "Units are case sensitive.",
         "",
         "",
         ""
@@ -173,8 +173,8 @@
      "field": "Meth_Stand",
      "desc": "The method or standard used for sampling.",
      "rules": [
-        "Optional but give an entry where possible.",
-        "Must be taken from the <a href=\"https://data-returns-preprod.envage.co.uk/display-list?list=method\">monitoring standard or method allowed value list</a>.",
+        "You must report this if your permit requires it. If it does not, then leave it blank.",
+        "If you need to report this you must use one of the values in the <a href=\"{{links.fields.Meth_Stand}}\">monitoring standard or method allowed value list</a>.",
         "",
         "",
         "",
@@ -185,18 +185,17 @@
   },
    {
      "field": "Comments",
-     "desc": "Use this for comments about the row of data, for example, if you were unable to take a reading. You can also use this field if you wish to give your own system references to store with the results.",
+     "desc": "Use this for comments about the row of data. For example, if you were unable to take a reading. You can also use this field if you wish to give your own system references to store with the results.",
      "rules": [
-        "Optional.",
-        "You can enter a maximum of 255 characters.",
-        "",
-        "",
-        "",
+        "You must provide this if Text_Value is 'See comments'. ",
+        "Desirable if Text_Value is 'No result'.",
+        "You can also use this to provide extra information.",
+        "Maximum 255 characters.",
+        "Don't include any personal information such as names or contact details.",
         "",
         ""
      ],
      "exmp": "Borehole blocked"
   }
   ]
-
  -%}
