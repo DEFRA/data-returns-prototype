@@ -1,7 +1,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block page_title %}
-	Landfill: report landfill data (England only)
+	GOV.UK prototyping kit
 {% endblock %}
 
 {% block content %}
@@ -201,102 +201,121 @@ body.search #global-header .search-toggle {
 		<p class="type font-medium">Guidance</p>
 		<h1 class="bold-large">Landfill: report landfill data (England only)</h1>
 	</div>
-	<p class="lede">How to send landfill compliance monitoring data to the Environment Agency.</p>
+	<p class="lede">Send landfill compliance monitoring data to the Environment Agency.</p>
 	<div class="grid-row">
 		<div class="column-third">
 			<nav class="contextual-info" id="page-navigation">
 				<h1>Contents</h1>
 				<ol class="dash-list">
-					<li><a href="#Report_landfill_data_by_uploading_data_files_18">Report landfill data by uploading data files</a></li>
-					<li><a href="#Report_schedule_5_and_6_events_61">Report schedule 5 and 6 events</a></li>
-					<li><a href="#Send_annual_or_interpretive_reports_68">Send annual or interpretive reports</a></li>
-					<li><a href="#Send_waste_returns_73">Send waste returns</a></li>
+					<li> <a href="#how-to-report">How to report using the upload system</a> </li>
+					<li> <a href="#schedule-5-and-6">Reporting schedule 5 and 6 events</a></li>
+					<li> <a href="#formatting-rules">Data formatting rules</a> </li>
+          <li> <a href="#allowed-value-lists">Landfill data allowed value lists</a> </li>
 				</ol>
 			</nav>
 		</div>
 		<div class="column-two-thirds">
-            
-						
+            <p>Some landfill operators can now send environmental monitoring reports by data file upload. You should only use this service if you've been told that your company has been set up on the system.</p>
+            <p>If your company has not been set up, please contact your area office. If you already use the data portal you should continue to use that.</p>
+            <section id="how-to-report">
+                <article>
+                    <h2 class="heading-medium">How to report using the upload system</h2>
+                    <p>To report you should:</p>
+                    <ul class="list list-bullet">
+                        <li>follow the <a href="https://data-returns-preprod.envage.co.uk/guidance/landfill-data-rules">data formatting rules</a> to prepare a CSV data file</li>
+                        <li>use the reporting service to check the format of your data files</li>
+                    </ul>
+                    <p class="call-to-action"><a href="https://data-returns-preprod.envage.co.uk">Report, or check the format of, environmental monitoring data</a></p>
+                </article>
+            <section>
+            <section id="schedule-5-and-6">
+                <article>
+                    <h2 class="heading-medium">Reporting schedule 5 and 6 events</h2>
+                    <p>Report schedule 5 and 6 events directly to your local regulatory team or allocated Site Inspector.</p>
+                </article>
+            <section>
+            <section id="formatting-rules">
+                <article>
+                    <h2 class="heading-medium">Data formatting rules</h2>
+                    <p><a href="https://data-returns-preprod.envage.co.uk/guidance/landfill-data-rules">Data formatting rules for landfill</a></p>
+                </article>
+            <section>
+            <section id="allowed-value-lists">
+                <article>
+                    <h2 class="heading-medium">Landfill data allowed value lists</h2>
+                    <p>You must to select the correct name from these allowed value lists under certain column headings, such as parameter, when you prepare your data file.</p>
+                    <section class="csv">
+                        <h2>Unit or measure</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=units">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/units">Download CSV 19KB</a></span>
+                        </p>
+					</section>
 
-<section id="schedule-5-and-6">
-		<article>
-			<h2><a id="How_to_send_your_data_4"></a>How to send your data</h2>
-			<p>Your landfill permit or licence will list the data you must report and when you have to send it.</p>
-			<p>How to:</p>
-			<ul class="list list-bullet">
-				<li><a href="#Report_landfill_data_by_uploading_data_files_18">report landfill data by uploading data files</a></li>
-				<li><a href="#Report_schedule_5_and_6_events_61">report schedule 5 and 6 events</a></li>
-				<li><a href="#Send_annual_or_interpretive_reports_68">send annual or interpretive reports</a></li>
-				<li><a href="#Send_waste_returns_73">send water returns</a></li>
-			</ul>
-			<p>See also the <a href="https://www.gov.uk/government/collections/environmental-permitting-landfill-sector-technical-guidance">landfill sector technical guidance</a>.</p>
-		</article>
-<section>
-	
-<section id="Report_landfill_data_by_uploading_data_files_18">
-		<article>
-			<h2 class="heading-medium">Report landfill data by uploading data files</h2>
-			<p>You should only use this service if you’ve been told that your company has been set up on the report landfill data service.</p>
-			<p>To report you should:</p>
-			<ul class="list list-bullet">
-				<li>follow the <a href="#Data_formatting_rules_35">data formatting rules</a> to prepare a CSV data file</li>
-				<li>use the service to check the format of your data files</li>
-			</ul>
+					<section class="csv">
+                        <h2>Parameter (substance name)</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=parameters">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/parameters">Download CSV 79KB</a>
+							</span>
+                        </p>
+					</section>
 
-			<p class="call-to-action">
-				<a href="https://data-returns-preprod.envage.co.uk">Report landfill data</a>
-			</p>
+					<section class="csv">
+                        <h2>Reference period</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=ref_period">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/ref_period">Download CSV 2KB</a>
+							</span>
+                        </p>
+					</section>
 
-			<p>If your company has not been set up, please continue to use your usual method to report data. If you already use the data portal you should continue to use that.</p>
-			
-			<h3 class="heading-small" id="Data_formatting_rules_35">Data formatting rules</h3>
-			<p><a href="https://report-landfill-data.service.gov.uk/guidance/landfill-data-rules">Landfill data formatting rules</a></p>
-			
-			<h3 class="heading-small" id="Landfill_data_allowed_value_lists_40">Landfill data allowed value lists</h3>
-			<p>{:#allowed-values}</p>
-			<p>You must use the values in these lists when you report your data.</p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=units">Unit or measure allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=parameters">Parameter (substance name) allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=ref_period">Reference period allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=rtn_period">Return period allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=method">Monitoring standard or method allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=rtn_type">Return type allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=txt_value">Text value allowed value list</a></p>
-			<p><a href="https://report-landfill-data.service.gov.uk/display-list?list=qualifier">Qualifier allowed value list</a></p>
-		</article>
-<section>
-	
-<section id="Report_schedule_5_and_6_events_61">
-		<article>
-			<h2 class="heading-medium">Report schedule 5 and 6 events</h2>
-			<p>The Environment Agency may issue a Schedule 5 or 6 notice if emissions from your landfill site exceed those allowed by your permit. This often happens after an event such as flooding or a fire. In this case, you will have to report emissions.</p>
-			<p>You should report these directly to your local regulatory team or allocated Site Inspector.</p>
-		</article>
-<section>
-	
-<section id="Send_annual_or_interpretive_reports_68">
-		<article>
-			<h2 class="heading-medium">Send annual or interpretive reports</h2>
-			<p>Send these to your local regulatory team or allocated Site Inspector.</p>
-		</article>
-<section>
-	
-<section id="Send_waste_returns_73">
-		<article>
-			<h2 class="heading-medium">Send waste returns</h2>
-			<p>Operators with an environmental permit must complete waste returns to tell the Environment Agency about the waste they have received or removed from their site.</p>
-			<p>How to complete <a href="https://www.gov.uk/government/collections/national-operator-waste-returns">national operator waste returns</a></p>
-		</article>
-<section>
-	
-<sectionid="Scotland_and_Wales_80">
-		<article>
-			<h2 class="heading-medium">Scotland and Wales</h2>
-			<p>For landfill reporting arrangements for Scotland, contact the <a href="http://www.sepa.org.uk/">Scottish Environment Protection Agency (SEPA)</a>.</p>
-			<p>In Wales, contact <a href="https://naturalresources.wales/">Natural Resources Wales (NRW)</a>.</p>
-		</article>
-<section>
+					<section class="csv">
+                        <h2>Return period</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=rtn_period">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/rtn_period">Download CSV 2KB</a>
+							</span>
+                        </p>
+					</section>
 
+					<section class="csv">
+                        <h2>Monitoring standard or method</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=method">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/method">Download CSV 4KB</a>
+							</span>
+                        </p>
+					</section>
+
+					<section class="csv">
+                        <h2>Return type</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=rtn_type">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/rtn_type">Download CSV 323Bytes</a>
+							</span>
+                        </p>
+					</section>
+
+					<section class="csv">
+                        <h2>Text value</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=txt_value">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/txt_value">Download CSV 219Bytes</a>
+							</span>
+						</p>
+					</section>
+
+					<section class="csv">
+                        <h2>Qualifier</h2>
+						<p>
+                            <span class="preview"><a href="https://data-returns-preprod.envage.co.uk/display-list?list=qualifier">View online</a></span> or
+                            <span class="download"> <a href="https://data-returns-preprod.envage.co.uk/csv/qualifier">Download CSV 11KB</a>
+							</span>
+                        </p>
+					</section>
+				</article>
+            <section>
 		</div>
 	</div>
 </main>
