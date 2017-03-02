@@ -5,9 +5,9 @@
      "field": "EA_ID",
      "desc": "This is the permit or licence number that we have in our records.",
      "rules": [
-        "You must use the EA_ID given by finding your permit number or site name in our records.",
-        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
         "Required.",
+        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
+        "",
         "",
         "",
         "",
@@ -19,9 +19,9 @@
      "field": "Site_Name",
      "desc": "The site name in our records. It's used to check that you used the correct EA_ID. ",
      "rules": [
-        "Check that the site name in your data file matches our records. You must use the site name that you find in our records even if it’s different the site name on your permit.",
-        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
         "Required.",
+        "Check that the site name in your data file matches our records. You must use the site name that you find in our records even if it’s different to the site name on your permit.",
+        "<a href=\"{{links.Help_Operator_Lookup}}\">Find the correct EA_ID and Site_Name</a> using our search tool.\n",
         "",
         "",
         "",
@@ -31,12 +31,12 @@
   },
    {
      "field": "Rtn_Period",
-     "desc": "The week, month, quarter or year when you took the measurement.",
+     "desc": "The week, month, quarter or year that your return covers.",
      "rules": [
         "Give this information where possible.",
         "You must use one of the values in the <a href=\"{{links.fields.Rtn_Period}}\">return period allowed values list</a>. ",
         "To give details of date and time for the individual monitoring item use Mon_Date.",
-        "You can only report data covering up to 18 months in the past.",
+        "",
         "",
         "",
         ""
@@ -79,15 +79,15 @@
         "Format the date as YYYY-MM-DD, DD-MM-YYYY or DD/MM/YYYY.",
         "Format time as hh:mm:ss using the 24-hour clock.",
         "If you're giving time put a 'T' or a space between date and time.",
-        "You cannot submit a Mon_Date in the future. You can only submit data covering up to 18 months in the past.",
         "If you're using spreadsheet software it may change dates so they are in the wrong format. Fix this by setting the spreadsheet cell format to 'text'.",
+        "",
         ""
      ],
-     "exmp": "2016-08-31 15:28:02 or\n2016-08-31T15:28:04 or\n31-08-2016 or\n31/08/2016"
+     "exmp": "<p style=\"white-space: nowrap\">2016-08-31 15:28:02 or</p><p style=\"white-space: nowrap\">2016-08-31T15:28:04 or</p><p style=\"white-space: nowrap\">31-08-2016 or</p><p style=\"white-space: nowrap\">31/08/2016</p>"
   },
    {
      "field": "Parameter",
-     "desc": "The chemical substance or parameter you're monitoring.",
+     "desc": "The chemical substance, biological or physical parameter you're monitoring.",
      "rules": [
         "Required.",
         "You must use one of the values in the <a href=\"{{links.fields.Parameter}}\">parameters allowed values list</a>.",
@@ -104,7 +104,7 @@
      "desc": "Gives more information about the measurement, such as sample or operating condition, or the calculation used.",
      "rules": [
         "Use this where there’s a basic parameter that can have different values (and different limits) depending on how you measured it. For example, 'Dry weight' or 'Wet weight'.",
-        "You must use one of the values in the <a href=\"{{links.fields.Qualifier}}\">qualifier allowed values list</a>.",
+        "If you enter a qualifier, you must use one of the values in the <a href=\"{{links.fields.Qualifier}}\">qualifier allowed values list</a>.",
         "",
         "",
         "",
@@ -118,7 +118,7 @@
      "desc": "The reference period for the sample, as specified in your permit or licence. This explains how you took the measurement, for example, '24 hour total', 'Half hour average' or 'Monthly mean'.",
      "rules": [
         "You can leave this blank if there are no reference period requirements in your permit or licence. You can also leave it blank for instantaneous or spot sample readings.",
-        "You must use one of the values in the <a href=\"{{links.fields.Ref_Period}}\">reference period allowed value list</a>.",
+        "If you enter a period, you must use one of the values in the <a href=\"{{links.fields.Ref_Period}}\">reference period allowed value list</a>.",
         "Special case: <a href=\"{{links.Help_SpecialCases}}\">when Ref_Period covers multiple measurements in a single calculation</a>.",
         "",
         "",
@@ -129,9 +129,9 @@
   },
    {
      "field": "Value",
-     "desc": "The numerical value of your measurement in the units you used.",
+     "desc": "The numerical value of your measurement.",
      "rules": [
-        "Required.",
+        "You must enter either a Value or Text_Value. You cannot enter both,",
         "Numerical values only but can include zeros, blanks (nulls) &gt; and &lt;.",
         "You can enter negative values.",
         "Values such as 'waterlogged' should be in 'comments' field.",
@@ -143,12 +143,12 @@
   },
    {
      "field": "Txt_Value",
-     "desc": "Used for a text-based response, for example, ‘ Yes’, ‘No’, 'No result' and 'See comments'. ",
+     "desc": "Used to enter text for a measurement, for example, ‘ Yes’, ‘No’, 'No result' and 'See comments'. ",
      "rules": [
-        "You must use one of the values in the <a href=\"{{links.fields.Txt_Value}}\">text value allowed value list</a>.",
+        "You must enter either a Value or Text_Value. You cannot enter both,",
+        "If you enter a text value, you must use one of the values in the <a href=\"{{links.fields.Txt_Value}}\">text value allowed value list</a>.",
         "Only use ‘See comments’ when the result is descriptive text. For example, appearance or site weather conditions.",
         "Do not use this to simply add comments about your result. For more information see  <a href=\"{{links.Help_SpecialCases}}\">exceptions and special cases</a> below.",
-        "You cannot enter both a (numerical) value and a text value. ",
         "",
         "",
         ""
@@ -188,7 +188,7 @@
      "desc": "Use this for comments about the row of data. For example, if you were unable to take a reading. You can also use this field if you wish to give your own system references to store with the results.",
      "rules": [
         "You must provide this if Text_Value is 'See comments'. ",
-        "Desirable if Text_Value is 'No result'.",
+        "If Text_Value is 'No result' you should explain why in the comments.",
         "You can also use this to provide extra information.",
         "Maximum 255 characters.",
         "Don't include any personal information such as names or contact details.",
