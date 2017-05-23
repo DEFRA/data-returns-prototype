@@ -1,3 +1,47 @@
+# 5.1.2
+
+- Update show-hide-content.js to work with new `.multiple-choice` custom radio buttons and checkboxes, released in GOV.UK elements 3.0.0 ([PR #390](https://github.com/alphagov/govuk_frontend_toolkit/pull/390))
+- Fix buttons not having an outer edge when colours are changed via browser settings - add an outline so they look like buttons. ([PR #377](https://github.com/alphagov/govuk_frontend_toolkit/pull/377))
+
+# 5.1.1
+
+- Update the alpha, beta and discovery colours to $govuk-blue to match the updated phase banner ([PR #370](https://github.com/alphagov/govuk_frontend_toolkit/pull/370))
+- Fix radio button show/hide behaviour when used outside a form ([PR #375](https://github.com/alphagov/govuk_frontend_toolkit/pull/375))
+- Fix a "Stick at top when scrolling" component bug related to scroll anchoring in Chrome 56+ ([PR #376](https://github.com/alphagov/govuk_frontend_toolkit/pull/376))
+- Minor travis fixes ([PR #373](https://github.com/alphagov/govuk_frontend_toolkit/pull/373))
+
+# 5.1.0
+
+- Allow custom options when tracking events ([PR #365](https://github.com/alphagov/govuk_frontend_toolkit/pull/365))
+
+# 5.0.3
+
+- Change HMRC and DEFRA text colours for improved contrast ([PR #368](https://github.com/alphagov/govuk_frontend_toolkit/pull/368))
+
+# 5.0.2
+
+- Change colour used in phase tags to govuk-blue ([PR #353](https://github.com/alphagov/govuk_frontend_toolkit/pull/353))
+
+# 5.0.1
+
+- Fix role="button" click shim ([PR #347](https://github.com/alphagov/govuk_frontend_toolkit/pull/347))
+- Make font variables lowercase ([PR #348](https://github.com/alphagov/govuk_frontend_toolkit/pull/348))
+- Update selection button documentation ([PR #350](https://github.com/alphagov/govuk_frontend_toolkit/pull/350))
+
+# 5.0.0
+
+This release includes two breaking changes:
+- Removal of external link styles and icons, if you are using the external-link-* mixins you will need to remove them from your codebase ([PR #293](https://github.com/alphagov/govuk_frontend_toolkit/pull/293))
+- Correct spelling of the 'accordion' icon, you will need to check for the incorrect spelling 'accordian' and update if you are using this icon ([PR #345](https://github.com/alphagov/govuk_frontend_toolkit/pull/345))
+And two minor changes:
+- Amend GOVUK.StickAtTopWhenScrolling to resize the sticky element and shim when the .js-sticky-resize class is set ([PR #343](https://github.com/alphagov/govuk_frontend_toolkit/pull/343))
+- Allow custom options in GOVUK.analytics.trackPageview ([#332](https://github.com/alphagov/govuk_frontend_toolkit/pull/332))
+
+# 4.18.4
+
+- Lint codebase using standard ([PR #334](https://github.com/alphagov/govuk_frontend_toolkit/pull/334))
+- Add semicolons at the start of IIFE's ([PR #339](https://github.com/alphagov/govuk_frontend_toolkit/pull/339))
+
 # 4.18.3
 
 - For smaller screens (<768px) ensure that the GOVUK.StickAtTopWhenScrolling JS "unsticks" the element which was previously "stuck" (by removing both the class which sets fixed positioning and the shim). ([PR #329](https://github.com/alphagov/govuk_frontend_toolkit/pull/329))
