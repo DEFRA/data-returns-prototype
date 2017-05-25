@@ -1,238 +1,44 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-	GOV.UK prototyping kit
+  GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Data returns sandbox</h1>
+        	<p>A place to build patterns relating to the EA data returns service and to get them tested and capture feedback.</p>
+            <p>For patterns and prototypes relating to data returns pre-beta live <a href="/ARCHIVE/">see the archive</a></p>
 
-	<h1 class="heading-xlarge">Data Returns sandbox</h1>
-	<!-- feel free to change this page to suit your needs -->
-	<p>A place to build patterns relating to the EA data returns service and to get them tested and capture feedback.</p>
+            <h2 class="heading-large">Patterns</h2>
 
-	<h3 class="heading-medium">Draft GOV.UK guidance</h3>
-	<ul>
-		<li>
-			<a href="/help/guidance">Report landfill data draft GOV.UK detailed guide</a>
-		</li>
-	</ul>
-
-	<h2 class="heading-large">Page patterns</h2>
-
-	<h3 class="heading-small">Privacy and cookies</h3>
-	<ul>
-		<li>
-			 <a href="/help/cookies.html">Cookies</a>
-		</li>
-		<li>
-			<a href="/help/privacy.html">Privacy</a>
-		</li>
-	</ul>
-
-	<h3 class="heading-small">Corrections table</h3>
-	<ul>
-		<li>
-			 <a href="/corrections/01/corrections-table">Corrections table and corrections detail</a>
- 		</li>
-	</ul>
-
-	<h3 class="heading-small">Multiple file upload</h3>
-	<ul>
-		<li>
-			<a href="/multiple-file-upload/ARCHIVE/dropzone-full-page">Drop zone - full page</a>
-		</li>
-	</ul>
-
-	<h3 class="heading-small">Permit lookup</h3>
-	<ul>
-		<li>
-			<a href="/permit-lookup/permit-lookup">Permit Lookup tool</a>
-		</li>
-	</ul>
-
-	<h3 class="heading-small">Email</h2>
-	<ul>
-		<li>
-			<a href="/email/pin-code">Pin code</a>
-		</li>
-		<li>
-			<a href="/email/confirmation">Confirmation</a>
-		</li>
-	</ul>
+        	<h3 class="heading-medium">Draft GOV.UK guidance</h3>
+        	<ul>
+        		<li>
+        			<a href="/ARCHIVE/help/guidance">Report landfill data draft GOV.UK detailed guide</a>
+        		</li>
+        	</ul>
 
 
+            <h2 class="heading-large">Prototypes</h2>
+
+        	<h3 class="heading-small">Managing lists</h3>
+        	<ul>
+        		<li>
+        			 <a href="/managing-lists/index">Index</a>
+        		</li>
+        	</ul>
 
 
-	<h3 class="heading-medium">Guidance</h3>
-	<ul>
-		<li>
-			<a href="/help/guidance">Landfill: how to report environmental monitoring data by file upload (England only)</a>
-		</li>
-		<li>
-			<a href="http://data-returns-help.herokuapp.com" rel="external">Guidance on Heroku (archive)</a>
-		</li>
-		<li>
-			<a href="/sector-specific-guidance">Sector specific guidance</a>
-		</li>
-	</ul>
-
-	<h3 class="heading-small">DEP and start page drafts (MG)</h3>
-	<ul>
-		<li>
-			<a href="/startpage">Alternative start page (in draft)</a>
-		</li>
-		<li>
-			<a href="/guidance-dep/guidance_land">Landfill guidance</a>
-		</li>
-		<li>
-			<a href="/guidance-dep/guidance_lcp">LCP guidance</a>
-		</li>
-		<li>
-			<a href="/guidance-dep/guidance_pi">PI guidance</a>
-		</li>
-		<li>
-			<a href="/guidance-dep/guidance_rem">REM guidance</a>
-		</li>
-	</ul>
-
-
-	<h2 class="heading-large">Pattern tests</h2>
-
-
-	<h3 class="heading-small">Managing lists</h3>
-	<ul>
-		<li>
-			 <a href="/managing-lists/index">Index</a>
-		</li>
-	</ul>
-
-
-	<h3 class="heading-small">Example file</h3>
-	<ul>
-		<li>
-			 <a href="/example-file/index">In-page</a>
-		</li>
-		<li>
-			<a href="/example-file/index-2">Standalone</a>
-		</li>
-	</ul>
-
-	<h3 class="heading-small">Multiple EA_IDs</h3>
-	<ul>
-		<li>
-			<a href="/multiple-EA_IDs/tabular">Tabular</a>
-		</li>
-		<li>
-			<a href="/multiple-EA_IDs/index">Listed</a>
-		</li>
-	</ul>
-
-
-	<h3 class="heading-small">Corrections table</h3>
-	<ul>
-		<li>
-			 <a href="/corrections/01/corrections-table">Corrections table and corrections detail</a>
- 		</li>
-		<li>
-			 <a href="/corrections/02/corrections-table">Corrections table - one page</a>
- 		</li>
-		<li>
-			 <a href="/corrections/Archive/corrections-old/multiple-corrections-beta-live">(Archive) Corrections table Beta - Inline help</a>
- 		</li>
-		<li>
-			 <a href="/corrections/Archive/corrections-old/multiple-corrections-private-beta-01">(Archive) Corrections table private beta 01</a>
- 		</li>
-		<li>
-			 <a href="/corrections/Archive/corrections-old/multiple-corrections-private-beta-02">(Archive) Corrections table private beta 02</a>
- 		</li>
-	</ul>
-
-
-
-	<h3 class="heading-small">Multiple file upload</h3>
-	<ul>
-		<li>
-			<a href="/multiple-file-upload/spreadsheet">Upload spreadsheets</a>
-		</li>
-		<li>
-			<a href="/multiple-file-upload/ARCHIVE/dropzone-hotspot">Drop zone - hotspot</a>
-		</li>
-		<li>
-			<a href="/multiple-file-upload/ARCHIVE/dropzone-full-page">Drop zone - full page</a>
-		</li>
-	</ul>
-
-
-
-	<h3 class="heading-small">Permit lookup</h3>
-	<ul>
-		<li>
-			<a href="/permit-lookup/permit-lookup">Permit Lookup tool</a>
-		</li>
-		<li>
-			<a href="/permit-lookup/permit-lookup-search">Permit lookup tool (MG edit)</a>
-		</li>
-		<li>
-			<a href="/permit-lookup/01/correction-summary-error">Permit Lookup: Mismatched site name</a>
-		</li>
-		<li>
-			<a href="/permit-lookup/02/correction-summary-error">Permit Lookup: Mismatched EA ID</a>
-		</li>
-	</ul>
-
-
-	<h3 class="heading-small">Miscellaneous</h3>
-	<ul>
-		<li>
-			<a href="/copy-to-clipboard/return-type">Copy to clipboard (Return type)</a>
-		</li>
-		<li>
-			<a href="/filter-parameter/parameter">Filter (Parameter)</a>
-		</li>
-		<li>
-			<a href="/filter/units">Filter (units)</a>
-		</li>
-	</ul>
-
-
-
-	<h3 class="heading-small">Obsolete</h3>
-	<ul>
-		<li>
-			<a href="/formatting-rules/formatting-rules" style="text-decoration: line-through;">Formatting rules</a>
-		</li>
-	</ul>
-
-
-
-	<div class="hidden">
-	<h3 class="heading-small">Resources</h3>
-
-	<ul class="list-bullet">
-		<li>
-			<a href="https://github.com/alphagov/govuk_prototype_kit/docs">
-				GOV.UK kit documentation
-			</a>
-		</li>
-		<li>
-			<a href="http://govuk-elements.herokuapp.com/snippets/">
-				Guide to GOV.UK elements HTML
-			</a>
-		</li>
-		<li>
-			<a href="https://www.gov.uk/service-manual">
-				Service design manual
-			</a>
-		</li>
-		<li>
-			<a href="https://www.gov.uk/design-principles">
-				Government Digital Service Design Principles
-			</a>
-		</li>
-	</ul>
-	</div>
+            <h3 class="heading-medium">Prototype kit examples and documentation</h3>
+            <ul class="list list-bullet">
+                <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
+            </ul>
+        </div>
+    </div>
 </main>
 
 {% endblock %}
