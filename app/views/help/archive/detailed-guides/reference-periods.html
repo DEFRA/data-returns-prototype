@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main" class="data-exchange-protocol">
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+<div class="heading">
+	<p class="type font-medium">Data Returns – Data standards</p>
+	<h1 class="bold-large">Reference Periods (how it has been monitored - actual sampling)</h1>
+</div>
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<aside class="meta metadata-list">
+			<dl>
+				<dt>From:</dt>
+				<dd class="js-hide-extra-metadata">
+					<a class="organisation-link" href="/government/organisations/department-for-environment-food-rural-affairs">Environment Agency</a>
+				</dd>
+				<dt>First published:</dt>
+				<dd>
+					<time class="date" datetime="2012-09-18T16:25:00+01:00">12 December 2015</time>
+				</dd>
+				<dt>Last updated:</dt>
+				<dd>
+					<time class="date" datetime="2013-06-13T15:17:43+01:00">13 January 2016</time>,
+					<a class="see-all-updates" href="#history">see all updates</a>
+				</dd>
+        <dt>Part of:</dt>
+        <dd class="js-hide-extra-metadata">
+					<a href="" class="collection-link">Data Exchange Protocol</a>
+				</dd>
+			</dl>
+		</aside>
+	</div>
+</div>
+
+<div class="reference-periods">
+	<p class="lede">*please note - these are under development and need standardising / consolidating</p>
+	<div class="grid-row">
+		<div class="column-three-quarters">
+			<table>
+	<tr style="mso-yfti-irow:0;">
+		<td>Reference Period</td>
+	</tr>
+	<tr style="mso-yfti-irow:1;">
+		<td>Continuous</td>
+	</tr>
+	<tr style="mso-yfti-irow:2;">
+		<td>Continuous - as appropriate to reference</td>
+	</tr>
+	<tr style="mso-yfti-irow:3;">
+		<td>½-hr average</td>
+	</tr>
+	<tr style="mso-yfti-irow:4;">
+		<td>Daily average</td>
+	</tr>
+	<tr style="mso-yfti-irow:5;">
+		<td>Daily Mean</td>
+	</tr>
+	<tr style="mso-yfti-irow:6;">
+		<td>Daily mean of validated hourly averages</td>
+	</tr>
+	<tr style="mso-yfti-irow:7;">
+		<td>Calendar monthly mean</td>
+	</tr>
+	<tr style="mso-yfti-irow:8;">
+		<td>Monthly mean of validated hourly averages</td>
+	</tr>
+	<tr style="mso-yfti-irow:9;">
+		<td>Periodic - as appropriate to reference</td>
+	</tr>
+	<tr style="mso-yfti-irow:10;">
+		<td>periodic over minimum 30 minute, maximum 8 hour period</td>
+	</tr>
+	<tr style="mso-yfti-irow:11;">
+		<td>periodic over minimum 1 hour period</td>
+	</tr>
+	<tr style="mso-yfti-irow:12;">
+		<td>95% of all 10-minute averages in any 24-hour period</td>
+	</tr>
+	<tr style="mso-yfti-irow:13;">
+		<td>95% of validated hourly averages within a calendar year</td>
+	</tr>
+	<tr style="mso-yfti-irow:14;">
+		<td>95% of validated daily means within a calendar year</td>
+	</tr>
+	<tr style="mso-yfti-irow:15;">
+		<td>Bi-annual periodic measurement average value over sample period of between 6 and 8 hours.</td>
+	</tr>
+	<tr style="mso-yfti-irow:16;">
+		<td>Instantaneous</td>
+	</tr>
+	<tr style="mso-yfti-irow:17;">
+		<td>Spot sample</td>
+	</tr>
+	<tr style="mso-yfti-irow:18;">
+		<td>MEPP</td>
+	</tr>
+	<tr style="mso-yfti-irow:19;">
+		<td>MEPP - Up gradient</td>
+	</tr>
+	<tr style="mso-yfti-irow:20;">
+		<td>MEPP - Down or Cross gradient</td>
+	</tr>
+	<tr style="mso-yfti-irow:21;">
+		<td>m&gt;AOD</td>
+	</tr>
+	<tr style="mso-yfti-irow:22;">
+		<td>m&gt;cell base</td>
+	</tr>
+	<tr style="mso-yfti-irow:23;">
+		<td>Hourly mean</td>
+	</tr>
+	<tr style="mso-yfti-irow:24;">
+		<td>2 Hours</td>
+	</tr>
+</table>
+		</div><!-- column-two-thirds -->
+	</div><!-- grid-row -->
+</div><!-- reference-periods -->
+</main>
+
+{% endblock %}
+
+

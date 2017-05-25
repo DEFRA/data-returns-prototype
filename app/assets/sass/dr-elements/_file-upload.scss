@@ -1,0 +1,183 @@
+.drag-drop-indicator {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	.drag-drop-message {
+		border: 10px solid $yellow;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		@include core-48;
+		font-weight: bold;
+	}
+}
+
+.file-drop-active .drag-drop-indicator {
+	display: table;
+	background: rgba(255,255,255,0.8)
+}
+
+.file-upload {
+	.uploader-container {
+		.form-control {
+			width: 75%;
+		}
+		p.choose-file {
+			display: inline-block;
+			margin-left: 10px;
+			margin-top: 8px;
+			vertical-align: top;
+		}
+		@include media(mobile) {
+			p.choose-file {
+				display: none;
+			}
+		}
+	}
+
+	.upload-list {
+		clear: both;
+		table-layout: fixed;
+		.file-pending {
+			display:inline-block;
+			padding-right:24px;
+			background-image: url(/public/images/icons/loading.gif);
+			background-repeat: no-repeat;
+			background-position: center right;
+		}
+		/* Mobile formatting */
+		@include media(mobile) {
+			display: block;
+			.statusbar.statusbar-header::after {
+				content: "Your files";
+				font-weight: bold;
+			}
+			.statusbar.statusbar-header {
+				.data-source {
+					display: none;
+				}
+			}
+			thead, tr, tbody {
+				display: block;
+			}
+			.statusbar-header {
+				.data-source, .status, .details, .remove {
+					display: none;
+				}
+			}
+			.data-source, .status, .details, .remove {
+				display: block;
+				width: 100%;
+				padding-right: 0;
+				border-bottom: 0;
+			}
+			.data-source {
+				border-top: 1px solid $grey-2;
+			}
+			.details, .remove {
+				width: 50%;
+				display: inline-block;
+			}
+		}
+	}
+
+	.statusbar {
+		border-top: none;
+		position: relative;
+		.data-source, .status, .details, .remove {
+			position: relative;
+		}
+		.data-source {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: 16px;
+			.filename {
+				white-space: nowrap;
+			}
+			.sheet {
+				display: block;
+			    padding: 0.3em 0;
+			    white-space: nowrap;
+			}
+			/*
+			.sheet::before {
+				content:": ";
+			}
+			*/
+		}
+		.remove {
+			text-align: right;
+			padding-right: 0;
+		}
+		@include media(tablet) {
+			.data-source, .status, .details, .remove {
+			}
+			.data-source {
+				width: 45%;
+			}
+			.status {
+				width: 25%;
+			}
+			.details {
+				width: 20%;
+			}
+			.remove {
+				width: 10%;
+			}
+		}
+	}
+	.status {
+		.file-error, .file-ready {
+			display: inline-block;
+			padding: 2px 4px 0;
+			@include border-radius(2px);
+		}
+		.file-ready {
+			font-weight: bold;
+			text-transform: uppercase;
+			color: $green;
+			border: 1px solid $green;
+			.notice {
+				font-weight: normal;
+				text-transform: none;
+				margin-top: $gutter-half
+			}
+		}
+		.file-error {
+			text-transform: uppercase;
+			font-weight: bold;
+			color: $red;
+			border: 1px solid $red;
+		}
+	}
+	@include media(mobile) {
+		.statusbar {
+			padding: 10px 0;
+		}
+	}
+	.action {
+		width: 60%;
+		display: inline-block;
+	}
+	.remove {
+		text-align: right;
+		.link {
+			background: transparent none repeat scroll 0 0;
+			border: 0;
+			margin-left: -4px;
+		    padding-left: 0;
+		    padding-right: 0;
+		}
+		.link:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+/* Don't display the drag drop message in IE8 where it isn't supported */
+.lte-ie8 p.drag-drop-files-message {
+	display: none !important;
+}

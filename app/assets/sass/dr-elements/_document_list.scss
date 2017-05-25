@@ -1,0 +1,36 @@
+.document-list {
+  clear: both;
+
+  .document-row {
+    display: block;
+    list-style: none;
+    border-bottom: 1px solid $border-colour;
+    padding: 5px 0 10px;
+
+    h2, h3,
+    .title {
+      display: block;
+      @include core-19;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    ul {
+      @extend %contain-floats;
+
+      li {
+        @include core-14;
+        float: left;
+        display: block;
+        list-style: none;
+        padding: 0 15px 0 0;
+      }
+    }
+
+    p.historic {
+      @include core-14;
+      padding: 0 0 3px;
+      color: $secondary-text-colour;
+    }
+  }
+}

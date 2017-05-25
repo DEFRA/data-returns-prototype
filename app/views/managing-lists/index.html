@@ -1,31 +1,23 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-	GOV.UK prototyping kit
+  Managing lists
 {% endblock %}
 
 {% block content %}
-
-<main id='content' role='main'>
-    <div class='phase-banner'>
-        <p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
-    </div>
-    <h1 class='heading-xlarge'>Sign in</h1>
-    <form action="choose-a-list" method="post" class="form">
-        <div class='form-group'>
-            <label class="form-label" for="email">Email</label>
-            <input class="form-control" type="email" value="{{data['email-address']}}" name="email" id="email" />
-        </div>
-        <div class='form-group'>
-            <label class="form-label" for="user_password">Password</label>
-            <input class="form-control" type="password" name="password" id="user_password" />
-        </div>
-        <div class='form-group'>
-            <input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue" />
-        </div>
-    </form>
-    <a href="#">Reset password</a>
-    <br>
+<main id="content" role="main">
+	<h1 class='heading-xlarge'>Sign in</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/managing-lists/choose-a-list" method="post" class="form">
+				<fieldset>
+					<div class="form-group"> <label class="form-label" for="email">Email</label> <input class="form-control" id="email-address" name="email-address" type="text" value="{{data['email-address']}}"> </div>
+					<div class="form-group"> <label class="form-label" for="user_password">Password</label> <input class="form-control" value="{{data['user-password']}}" type="password" name="password" id="user_password" /> </div>
+				</fieldset>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+			<a href="#">Reset password</a> <br>
+		</div>
+	</div>
 </main>
-
 {% endblock %}

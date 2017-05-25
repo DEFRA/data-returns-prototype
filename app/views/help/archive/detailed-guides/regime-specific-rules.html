@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<header class="page-header">
+
+<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+<script src="/public/javascripts/jquery-ui.min.js"></script>
+<script src="/public/javascripts/clipboard.min.js"></script>
+
+</header>
+
+<main id="content" role="main" class="data-exchange-protocol">
+
+
+	<div class="phase-banner-beta">
+	  <p>
+	    <strong class="phase-tag">BETA</strong>
+	    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+	  </p>
+	</div>
+<div class="heading">
+	<p class="type font-medium">Data Returns – guidance</p>
+	<h1 class="bold-large">Data rules for EPR compliance monitoring</h1>
+</div>
+<div class="grid-row">
+	<div class="column-two-thirds">
+		<aside class="meta metadata-list">
+			<dl>
+				<dt>From:</dt>
+				<dd class="js-hide-extra-metadata">
+					<a class="organisation-link" href="/government/organisations/department-for-environment-food-rural-affairs">Environment Agency</a>
+				</dd>
+				<dt>First published:</dt>
+				<dd>
+					<time class="date" datetime="2012-09-18T16:25:00+01:00">12 December 2015</time>
+				</dd>
+				<dt>Last updated:</dt>
+				<dd>
+					<time class="date" datetime="2013-06-13T15:17:43+01:00">13 January 2016</time>,
+					<a class="see-all-updates" href="#history">see all updates</a>
+				</dd>
+        <dt>Part of:</dt>
+        <dd class="js-hide-extra-metadata">
+					<a href="" class="collection-link">Data Exchange Protocol</a>
+				</dd>
+			</dl>
+		</aside>
+	</div>
+</div>
+
+<div class="regime-specific-rules">
+		<p>These are the rules what data should be provided under each field heading, and how it should be presented.</p>
+<!--	<div class="grid-row">
+		<div class="column-three-quarters"> -->
+			<table>
+				<tr>
+					<th>Field</th>
+					<th>Long name</th>
+					<th>Rules</th>
+				</tr>
+				<tr>
+					<td>EA_ID</td>
+					<td>Core Permit reference without any separators, slashes or variation numbers. For EPR permits this should be 2 letters four numbers and 2 letters and for older Waste Management Licences it should be a 5 or 6 figure number</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Return Type</td>
+					<td>This must be off the controlled list of Return Types.</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Monitoring Date/Time (Start)</td>
+					<td>The date and time (seconds are optional) of the spot sample. If monitoring is for a period of time, it is normal practice to provide the date at the end of the monitoring period, however, please see Regime specific rules.</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Substance</td>
+					<td>Chemical substance or other parameter from the substances list</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Numerical Value</td>
+					<td>The measurement</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Unit</td>
+					<td>Emissions readings should be provided in %v/v or mg/m3. Temperature in DegC and Pressure in KPa or mBar</td>
+					<td>Yes</td>
+				</tr>
+				<tr>
+					<td>Monitoring Period Name</td>
+					<td>The monitoring period covered by the submission e.g. Q1&nbsp;2014</td>
+					<td>Only for returns that cover more than one point in time i.e. are not spot samples</td>
+				</tr>
+				<tr>
+					<td>Reference Period</td>
+					<td>State the reference period required by your permit e.g. 15 min average</td>
+					<td>Must be provided where available</td>
+				</tr>
+				<tr>
+					<td>Test Methodology/Standard</td>
+					<td>e.g. BS EN1111 where relevant</td>
+					<td>Must be provided where available</td>
+				</tr>
+				<tr>
+					<td>Sample Ref</td>
+					<td>The company may provide its own reference in this box or leave blank</td>
+					<td>Optional</td>
+				</tr>
+				<tr>
+					<td>Sampled By</td>
+					<td>Leave blank unless there is a specific requirement to provide details e.g. make and model, of the monitoring equipment</td>
+					<td>Optional</td>
+				</tr>
+				<tr>
+					<td>Comments</td>
+					<td>Free text</td>
+					<td>Optional</td>
+				</tr>
+				<tr>
+					<td>Site Name</td>
+					<td>Optional crosscheck on permit number</td>
+					<td>Optional</td>
+				</tr>
+				<tr>
+					<td>CiC</td>
+					<td>In nearly all cases this should be set to 'No' or left blank as these emissions measurements are public register information under EU and UK legislation.</td>
+					<td>Optional</td>
+				</tr>
+			</table>
+<!-- column-two-thirds </div> -->
+<!-- grid-row	</div> -->
+</div><!-- date and time -->
+</main>
+
+{% endblock %}
+
+

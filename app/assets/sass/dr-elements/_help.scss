@@ -1,0 +1,139 @@
+
+// QUICK FIX FOR LOWER CASE RETURNTYPE
+
+.heading-large::first-letter {
+    text-transform: capitalize;
+}
+
+// How to format Environment Agency data
+
+.help {
+	.column-full {
+		padding: 0 15px;
+	}
+	.heading {
+		padding: 45px 0;
+		.heading-large {
+			margin-top: 0.2em;
+			margin-bottom: 0.2em;
+		}
+		.type {
+			color:$grey-1;
+			margin-bottom: 0.2em;
+			@include core-24;
+		}
+	}
+	.list {
+		li {
+			margin-bottom:10px;
+		}
+		li:last-child {
+			margin-bottom:0;
+		}
+	}
+	.example-file-wrapper {
+		overflow: auto;
+		margin-bottom:30px;
+		table, .example-file {
+			margin-bottom:0;
+		}
+	}
+
+	.metadata-list {
+		display: block;
+		clear:both;
+		margin-bottom: 30px;
+		overflow: hidden;
+		a {
+			text-decoration: none;
+		}
+		dl {
+			font-size: 14px;
+	    font-weight: 400;
+	    line-height: 1.42857;
+	    text-transform: none;
+			dt {
+			  min-width: 120px;
+			  padding-right: 10px;
+			  width: auto;
+			  clear: left;
+			  float: left;
+			}
+			dd {
+				width: 70%;
+				float: left;
+			}
+		}
+	}
+	.contextual-info {
+	    padding-top: 5px;
+	    font-size: 16px;
+	    h1 {
+        	margin: 0;
+        	padding: 0;
+	    }
+	    ol {
+	        font-size: 16px;
+	        font-weight: 400;
+	        line-height: 1.25;
+	        margin: 0;
+	        padding: 0;
+	        text-transform: none;
+	    }
+	    li {
+	        a {
+	            text-decoration: none;
+	        }
+	    }
+	    .dash-list {
+	        margin-bottom: 20px;
+	        h1 {
+	        }
+	        li {
+	            list-style-position: inside;
+	            padding: 0 15px 0 0;
+	        }
+	    }
+	    @media (min-width: 1px) {
+		   	.dash-list {
+		   		li {
+		   	    list-style: outside none none;
+		   	    margin-left: 15px;
+		   		}
+		   		li::before {
+		   		    content: "-";
+		   		    float: left;
+		   		    margin-left: -15px;
+		   		    position: relative;
+		   		    width: 15px;
+		   		}
+		   	}
+		  }
+	    @media (min-width: 769px) {
+		    .dash-list li {
+		        padding-top: 5px;
+		    }
+	    }
+    }
+    .summary {
+    	padding-bottom: 45px;
+    	padding-top: 15px;
+    }
+  	.back {
+			background: #2b8cc4 none repeat scroll 0 0;
+			display: block;
+			margin-left: 0;
+			margin-top: 30px;
+			padding: 5px;
+  	}
+  	.date-and-time {
+  		th {
+  			width:25%;
+  		}
+  		td {
+  			th {
+  				width:inherit;
+  			}
+  		}
+	}
+}
