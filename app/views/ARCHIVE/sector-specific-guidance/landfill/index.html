@@ -11,7 +11,7 @@
 {% block content %}
 
 <header class="page-header">
-	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+	{% include "../inc/header-scripts.html" %}
 </header>
 
 <main id="content" role="main" class="help">
@@ -59,7 +59,7 @@
 		<div class="column-full">
 			<section id="preparing-your-csv-file">
 
-	          {% include "guidance-dep/inc/rules_intro_text.html" %}
+	          {% include "../../guidance-dep/inc/rules_intro_text.html" %}
 
 	          <p class="text">
 	            <a href="#">
@@ -71,11 +71,11 @@
 		          <h2 class="heading-large">Data rules</h2>
 
                   <table class="table-control mobile-format datarules">
-                  {% include "guidance-dep/inc/rules_table_head.html" %}
+                  {% include "../../guidance-dep/inc/rules_table_head.html" %}
 
-                  {% import "guidance-dep/inc/macros.html" as macro %}
+                  {% import "../../guidance-dep/inc/macros.html" as macro %}
 
-                  {% from "guidance-dep/inc/rules_land.html" import rules %}
+                  {% from "../../guidance-dep/inc/rules_land.html" import rules %}
 
                   {% for rule in rules %}
 

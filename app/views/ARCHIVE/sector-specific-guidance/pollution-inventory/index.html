@@ -11,7 +11,7 @@
 {% block content %}
 
 <header class="page-header">
-	{% include "sector-specific-guidance/inc/header-scripts.html" %}
+	{% include "../inc/header-scripts.html" %}
 </header>
 
 <main id="content" role="main" class="help">
@@ -53,7 +53,7 @@
 		<div class="column-full">
 			<section id="preparing-your-csv-file">
 
-	          {% include "guidance-dep/inc/rules_intro_text.html" %}
+	          {% include "../../guidance-dep/inc/rules_intro_text.html" %}
 
 	          <p class="text">
 	            <a href="#">
@@ -65,11 +65,11 @@
 		          <h2 class="heading-medium">Data rules</h2>
 
 		          <table class="table-control mobile-format datarules">
-		          {% include "guidance-dep/inc/rules_table_head.html" %}
+		          {% include "../../guidance-dep/inc/rules_table_head.html" %}
 
-		          {% import "guidance-dep/inc/macros.html" as macro %}
+		          {% import "../../guidance-dep/inc/macros.html" as macro %}
 
-		          {% from "guidance-dep/inc/rules_pi.html" import rules %}
+		          {% from "../../guidance-dep/inc/rules_pi.html" import rules %}
 
 		          {% for rule in rules %}
 		          {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}
@@ -86,7 +86,7 @@
                       <p>You can download all standard data terms from the Environment Agency controlled lists for these field headings:</p>
                   </div>
 
-                  {% include "sector-specific-guidance/pollution-inventory/allowed-value-lists/allowed-value-lists.html" %}
+                  {% include "../pollution-inventory/allowed-value-lists/allowed-value-lists.html" %}
 
               </section>
 		</div>
