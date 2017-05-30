@@ -1,0 +1,41 @@
+{% extends "layout_signed-in.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id='content' role='main'>
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class='heading-large'>Choose sector</h1>
+	<form action="/managing-lists/editor/choose-a-list" method="post" class="form">
+		<div class='form-group'>
+			<fieldset>
+				<legend class='visually-hidden'>Choose sector</legend>
+
+	            <div class="multiple-choice">
+	              <input id="sector-landfill" name="sector" type="radio" value="Landfill">
+	              <label for="sector-landfill">Landfill</label>
+	            </div>
+
+	            <div class="multiple-choice">
+	              <input id="sector-paper-and-pulp" name="sector" type="radio" value="Paperandpulp">
+	              <label for="sector-paper-and-pulp">Paper and pulp</label>
+	            </div>
+
+	            <div class="multiple-choice">
+	              <input id="sector-rsr-nuclear" name="sector" type="radio" value="RSRNuclear">
+	              <label for="sector-rsr-nuclear">RSR (Nuclear)</label>
+	            </div>
+
+			</fieldset>
+		</div>
+		<div class='form-group'>
+			<input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue" />
+		</div>
+	</form>
+</main>
+{% endblock %}

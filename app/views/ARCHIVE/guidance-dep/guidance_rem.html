@@ -21,7 +21,7 @@
         {{ pagetitle }}
         </h1>
 
-        {% include "guidance-dep/inc/rules_intro_text.html" %}
+        {% include "../guidance-dep/inc/rules_intro_text.html" %}
 
         <p class="text">
           <a href="#">
@@ -35,11 +35,11 @@
         </h2>
 
         <table class="table-control datarules">
-          {% include "guidance-dep/inc/rules_table_head.html" %}
+          {% include "../guidance-dep/inc/rules_table_head.html" %}
 
-        {% import "guidance-dep/inc/macros.html" as macro %}
+        {% import "../guidance-dep/inc/macros.html" as macro %}
 
-        {% from "guidance-dep/inc/rules_rem.html" import rules %}
+        {% from "../guidance-dep/inc/rules_rem.html" import rules %}
 
         {% for rule in rules %}
             {{ macro.tablerow( rule.field, rule.desc, rule.rules, rule.exmp ) }}

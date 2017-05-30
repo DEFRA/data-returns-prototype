@@ -1,0 +1,43 @@
+.page-header {
+    margin-bottom: 1.25em;
+    .heading-large {
+        margin-top: 13px;
+    }
+}
+
+.table-control {
+    td {
+        font-size: 16px;
+    }
+}
+.align-with-heading {
+    float: right;
+    margin-top: 13px;
+}
+
+.form-control.disabled {
+    border-color: #bfc1c3;
+    color: #bfc1c3;
+}
+
+.notice {
+    margin: 30px 0;
+}
+
+
+.flash {
+    font-size: 19px;
+    line-height: 1.31579;
+}
+
+.flash--notice {
+    background-color: #28a197;
+}
+
+.flash {
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 15px 0;
+    padding: 15px;
+}

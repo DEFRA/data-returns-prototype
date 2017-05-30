@@ -1,0 +1,41 @@
+{% extends "layout_signed-in.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+	<div class="phase-banner">
+		<p>
+			<strong class="phase-tag">ALPHA</strong> <span>This is a new service – your <a target="blank" href="https://registers.cloudapps.digital/support">feedback</a> will help us to improve it.</span>
+		</p>
+	</div>
+	<a class="link-back" href="/">Back</a>
+	<form class="" id="" action="/managing-lists/editor/confirm" method="post">
+
+		<h1 class="heading-large">Update the details</h1>
+		<div class="form-group">
+			<label class="form-label form-label-bold" for="rtn_period">Rtn_Period</label>
+			<span class="form-hint">The return period</span>
+			<input readonly="readonly" class="form-control disabled" type="text" value="Week XX YYYY" name="" id="rtn_period">
+		</div>
+
+		<div class="form-group">
+			<label class="form-label form-label-bold" for="definition">Definition</label>
+			<span class="form-hint">This field is optional</span>
+			<textarea id="definition" class="form-control" type="text" name="" id="">A week number for a calendar week starting with a Monday. Use a leading 0 for the first 9 weeks. This is defined in ISO 8601.</textarea>
+		</div>
+
+		<div class="form-group">
+			<label class="form-label form-label-bold" for="territory_start_date">Example</label>
+			<input class="form-control" type="text" value="Week 01 2016" name="" id="">
+		</div>
+
+		<div class="form-group">
+			<input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue">
+		</div>
+	</form>
+</main>
+{% endblock %}

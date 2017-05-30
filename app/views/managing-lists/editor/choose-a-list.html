@@ -1,0 +1,58 @@
+{% extends "layout_signed-in.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id='content' role='main'>
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class='heading-xlarge'>Landfill</h1>
+	<h2 class='heading-medium'>Choose a list</h2>
+	<form action="/managing-lists/editor/landfill-return-period" method="post" class="form">
+		<div class='form-group'>
+			<fieldset>
+				<legend class='visually-hidden'>Choose a list</legend>
+			    <div class="multiple-choice">
+	              <input id="list-return-period" name="list-type" type="radio" value="return-period">
+	              <label for="list-return-period">Return period</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-return-type" name="list-type" type="radio" value="return-type">
+	              <label for="list-return-type">Return type</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-parameter" name="list-type" type="radio" value="parameter">
+	              <label for="list-parameter">Parameter (substance name)</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-qualifier" name="list-type" type="radio" value="qualifier">
+	              <label for="list-qualifier">Qualifier</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-reference-period" name="list-type" type="radio" value="reference-period">
+	              <label for="list-reference-period">Reference period</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-text-value" name="list-type" type="radio" value="text-value">
+	              <label for="list-text-value">Text value</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-unit-or-measure" name="list-type" type="radio" value="unit-or-measure">
+	              <label for="list-unit-or-measure">Unit or measure</label>
+	            </div>
+	            <div class="multiple-choice">
+	              <input id="list-monitoring-standard-or-method" name="list-type" type="radio" value="monitoring-standard-or-method">
+	              <label for="list-monitoring-standard-or-method">Monitoring standard or method</label>
+	            </div>
+			</fieldset>
+		</div>
+		<div class='form-group'>
+			<input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue" />
+		</div>
+	</form>
+</main>
+{% endblock %}
