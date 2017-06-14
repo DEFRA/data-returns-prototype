@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="/public/javascripts/datatables.min.js"></script>
+<main id="content" role="main">
+	<h1 class="heading-xlarge">Data Returns parameter list</h2>
+	<!-- feel free to change this page to suit your needs -->
+	<div class="form-group">
+		<table id="choose-parameter" class="display table-control add-values">
+			<thead>
+		      <tr>
+		        <th class="substance">Substance</th>
+		        <th class="reporting-threshold">Reporting threshold (kg)</th>
+		        <th class="value">Value</th>
+		        <th class="unit">Unit</th>
+		        <th class="method">Method</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+				  <td class="substance">Asbestos</td>
+				  <td>1</td>
+				  <td><input class="form-control" id="value" type="text" name="value"></td>
+				  <td><input class="form-control" id="unit" type="text" name="unit"></td>
+				  <td>
+					<select class="form-control" id="select-box" name="select-box">
+						<option>Measurement</option>
+						<option>Calculation</option>
+						<option>Estimation</option>
+					</select>
+				</td>
+			  </tr>
+		      <tr>
+				  <td class="substance">Carbon dioxide</td>
+				  <td>10,000,000</td>
+				  <td><input class="form-control" id="value" type="text" name="value"></td>
+				  <td><input class="form-control" id="unit" type="text" name="unit"></td>
+				  <td>
+					<select class="form-control" id="select-box" name="select-box">
+						<option>Measurement</option>
+						<option>Calculation</option>
+						<option>Estimation</option>
+					</select>
+				</td>
+			  </tr>
+		    </tbody>
+		</table>
+	</div>
+</main>
+
+
+<script>
+	$(document).ready( function () {
+		$('#choose-parameter').dataTable( {
+			"paging": false,
+			"lengthChange": false,
+			"dom": 'firt<"bottom"lp><"clear">',
+			"order": [[ 0, 'asc' ], [ 1, 'asc' ]],
+			"ordering": false,
+			"language": {
+				"info": "Showing _END_ parameters",
+				"infoFiltered": " from a total of _MAX_",
+				"search": "<span class=\"form-hint\">Start typing to filter the list</span>"
+			},
+			"columns": [
+				null,
+				null,
+				null,
+				null,
+				null
+			]
+
+		} );
+		$('.dataTables_filter label input').addClass('form-control');
+	} );
+</script>
+
+{% endblock %}

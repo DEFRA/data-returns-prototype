@@ -232,3 +232,18 @@
 		}
 	}
 }
+
+/* PI reporting UI */
+.choose-parameter {
+	td:first-child + td { white-space: nowrap; }
+	td:first-child + td + td,
+	th:first-child + th + th { text-align:right; }
+}
+.add-values {
+	select.form-control {
+		width:100%
+	}
+	td {vertical-align: middle;}
+
+	td.substance {white-space: nowrap;}
+}

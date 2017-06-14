@@ -11,23 +11,23 @@
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
 	<h1 class='heading-large'>Choose sector</h1>
-	<form action="/managing-lists/choose-a-list" method="post" class="form">
+	<form action="/managing-lists/editor/choose-a-list" method="post" class="form">
 		<div class='form-group'>
 			<fieldset>
 				<legend class='visually-hidden'>Choose sector</legend>
 
 	            <div class="multiple-choice">
-	              <input id="sector-landfill" name="sector" type="radio" value="Landfill" {{ checked("sector", "Landfill") }}>
+	              <input id="sector-landfill" name="sector" type="radio" value="Landfill">
 	              <label for="sector-landfill">Landfill</label>
 	            </div>
 
 	            <div class="multiple-choice">
-	              <input id="sector-paper-and-pulp" name="sector" type="radio" value="Paperandpulp" {{ checked("sector", "Paperandpulp") }}>
+	              <input id="sector-paper-and-pulp" name="sector" type="radio" value="Paperandpulp">
 	              <label for="sector-paper-and-pulp">Paper and pulp</label>
 	            </div>
 
 	            <div class="multiple-choice">
-	              <input id="sector-rsr-nuclear" name="sector" type="radio" value="RSRNuclear" {{ checked("sector", "RSRNuclear") }}>
+	              <input id="sector-rsr-nuclear" name="sector" type="radio" value="RSRNuclear">
 	              <label for="sector-rsr-nuclear">RSR (Nuclear)</label>
 	            </div>
 

@@ -1,0 +1,166 @@
+{% extends "layout_signed-in.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="phase-banner-beta">
+		<p><strong class="phase-tag">BETA</strong><span>This is a new service – <a href="http://www.smartsurvey.co.uk/s/DRFeedback/">give feedback<span class="visually-hidden"> on this service</span></a> to help us to improve it.</span>
+		</p>
+	</div>
+	<a id="back.btn" href="javascript:history.back()" class="link-back">Back</a>
+	<header class="page-header">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-large"><span id="title">Return period allowed values</span></h1>
+			</div>
+			<div class="column-one-third">
+				<a class="button align-with-heading" href="/managing-lists/editor/add-new">Add a new return type</a>
+			</div>
+		</div>
+	</header>
+	<form class="js-filter-form">
+		<fieldset>
+			<div class="form-group">
+				<label class="form-label" for="search">Search this list</label>
+				<input class="form-control" id="search" name="search">
+			</div>
+		</fieldset>
+	</form>
+	<table id="controlled-list-table" class="Rtn_Period table-control mobile-format">
+		<thead>
+			<tr>
+				<th scope="col">Rtn_Period</th>
+				<th scope="col">Definition</th>
+				<th scope="col">Example</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody class="controlled-list-table-body">
+			<tr>
+				<td class="name">Week XX YYYY</td>
+				<td class="definition">A week number for a calendar week starting with a Monday. Use a leading 0 for the first 9 weeks. This is defined in ISO 8601.</td>
+				<td class="example">Week 01 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Jan YYYY</td>
+				<td class="definition">Month of January</td>
+				<td class="example">Jan 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Feb YYYY</td>
+				<td class="definition">Month of February</td>
+				<td class="example">Feb 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Mar YYYY</td>
+				<td class="definition">Month of March</td>
+				<td class="example">Mar 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Apr YYYY</td>
+				<td class="definition">Month of April</td>
+				<td class="example">Apr 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">May YYYY</td>
+				<td class="definition">Month of May</td>
+				<td class="example">May 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Jun YYYY</td>
+				<td class="definition">Month of June</td>
+				<td class="example">Jun 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Jul YYYY</td>
+				<td class="definition">Month of July</td>
+				<td class="example">Jul 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Aug YYYY</td>
+				<td class="definition">Month of August</td>
+				<td class="example">Aug 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Sep YYYY</td>
+				<td class="definition">Month of September</td>
+				<td class="example">Sep 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Oct YYYY</td>
+				<td class="definition">Month of October</td>
+				<td class="example">Oct 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Nov YYYY</td>
+				<td class="definition">Month of November</td>
+				<td class="example">Nov 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Dec YYYY</td>
+				<td class="definition">Month of December</td>
+				<td class="example">Dec 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Qtr 1 YYYY</td>
+				<td class="definition">Financial quarter 1 - April to June YYYY</td>
+				<td class="example">Qtr 1 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Qtr 2 YYYY</td>
+				<td class="definition">Financial quarter 2 - July to September YYYY</td>
+				<td class="example">Qtr 2 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Qtr 3 YYYY</td>
+				<td class="definition">Financial quarter 3 - October to December YYYY</td>
+				<td class="example">Qtr 3 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Qtr 4 YYYY</td>
+				<td class="definition">Financial quarter 4 - January to March YYYY</td>
+				<td class="example">Qtr 4 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">YYYY</td>
+				<td class="definition">A calendar year - as defined in ISO 8601</td>
+				<td class="example">2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">YYYY/YY</td>
+				<td class="definition">The financial year - 1 April to 31 March. You can also use the format YY/YY.</td>
+				<td class="example">2016/17 or 16/17</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+			<tr>
+				<td class="name">Water year YYYY</td>
+				<td class="definition">The hydrological water year - 1 October to 30 September</td>
+				<td class="example">Water year 2016</td>
+				<td><a href="/managing-lists/editor/update">Update</a></td>
+			</tr>
+		</tbody>
+	</table>
+</main>
+{% endblock %}
