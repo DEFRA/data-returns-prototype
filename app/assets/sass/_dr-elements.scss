@@ -20,6 +20,8 @@
 @import "dr-elements/dep";
 @import "dr-elements/allowed-values";
 
+@import "dr-elements/accessible-autocomplete";
+
 
 a[rel="external"]::after {
     background-position: right 4px;
