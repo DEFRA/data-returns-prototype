@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Releases to air</h1>
+
+	<table class="releases table-control mobile-format">
+		<thead>
+			<tr>
+				<th>Substance</th>
+				<th>Reporting threshold</th>
+				<th>2016 value</th>
+				<th>Releases</th>
+				<th>Unit</th>
+				<th>Method</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Aldrin</td>
+				<td>0.0005 kg</td>
+				<td>0.0005 kg</td>
+				<td>
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td>
+					<label class="form-label visually-hidden" for="select-box">This is the label text</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option selected>kg</option>
+				    <option>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td>Calc.</td>
+				<td></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+
+	<div class="form-group"> <a href="confirmation-page" class="button">Save and continue</a> </div>
+</main> {% endblock %}

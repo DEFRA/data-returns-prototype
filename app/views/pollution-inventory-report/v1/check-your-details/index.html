@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Check your details</h1>
+	<table class="check-your-answers" class="table-control">
+		<thead>
+			<tr>
+				<th> </th>
+				<th> </th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Authorisation, licence or permit number</td>
+				<td>AA1234ZX</td>
+				<td class="change-answer"><a href="/pollution-inventory-report/">Change <span class="visuallyhidden">Authorisation, licence or permit number</span></a></td>
+			</tr>
+			<tr>
+				<td>Calendar year this report covers</td>
+				<td>2017</td>
+				<td class="change-answer"><a href="calendar-year">Change <span class="visuallyhidden">Calendar year this report covers</span></a></td>
+			</tr>
+			<tr>
+				<td>Operator name</td>
+				<td>Gibblet paper and pulp</td>
+				<td class="change-answer"><a href="operator-name">Change <span class="visuallyhidden">Operator and site details</span></a></td>
+			</tr>
+			<tr>
+				<td>Site address</td>
+				<td>Lower Hill Mill<br>
+					Gibblet Lane<br>
+					Dranbridge<br>
+					DB7 7FH</td>
+				<td class="change-answer"><a href="site-address">Change <span class="visuallyhidden">Operator and site details</span></a></td>
+			</tr>
+			<tr>
+				<td>Your contact details</td>
+				<td>James Brown<br>
+					Technical director<br>
+					Office building 3A<br>
+					Gibblet Lane<br>
+					Dranbridge<br>
+					DB7 7FH</td>
+				<td class="change-answer"><a href="#">Change <span class="visuallyhidden">Your contact details</span></a></td>
+			</tr>
+			<tr>
+				<td>NACE code</td>
+				<td>17.12 Manufacture of paper and paperboard</td>
+				<td class="change-answer"><a href="nace-code">Change <span class="visuallyhidden">NACE code</span></a></td>
+			</tr>
+			<tr>
+				<td>NOSE-P codes</td>
+				<td>105.04  Manufacturer of pulp, paper and paper products</td>
+				<td class="change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">NOSE-P codes</span></a></td>
+			</tr>
+			<tr>
+				<td>E-PRTR code</td>
+				<td>6. (b) Industrial plants for the production of paper and board and other primary wood products (such as chipboard, fibreboard and plywood)</td>
+				<td class="change-answer"><a href="eprtr-code">Change <span class="visuallyhidden">E-PRTR code</span></a></td>
+			</tr>
+			<tr>
+				<td>Staff as of December 2017</td>
+				<td>49</td>
+				<td class="change-answer"><a href="staff">Change <span class="visuallyhidden">Staff as of December 2017</span></a></td>
+			</tr>
+			<tr>
+				<td>Site operation</td>
+				<td>2,080 hours</td>
+				<td class="change-answer"><a href="site-operation">Change <span class="visuallyhidden">Site operation</span></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<h2 class="heading-medium">Now send your data</h2>
+	<p class="text"> By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct. </p>
+	<div class="form-group"> <a href="confirmation-page" class="button">Save and continue</a> </div>
+</main> {% endblock %}
