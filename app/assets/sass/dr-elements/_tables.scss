@@ -261,17 +261,21 @@ table.check-data {
 	}
 	select {
 		@include core-16();
-		width:50px;
+		width: 50px;
 	}
-	.substance {
-		width:33%;
-	}
-	.reporting-threshold, .release-history {
-		text-align: right;
-	}
-	.release {
-		input {
-		 width:100%;
-	 }
+	@media (min-width: 641px) {
+		.substance {
+			width: 33%;
+		}
+		.release-history,
+		.reporting-threshold {
+			text-align: right;
+		}
+		.release {
+			width: 10%;
+			input {
+				width: 100px;
+			}
+		}
 	}
 }
