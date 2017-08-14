@@ -249,3 +249,29 @@
 
 	td.substance {white-space: nowrap;}
 }
+
+table.check-data {
+	th {
+		@include bold-16();
+		white-space: nowrap;
+	}
+	td {
+		@include core-16();
+		white-space: nowrap;
+	}
+	select {
+		@include core-16();
+		width:50px;
+	}
+	.substance {
+		width:33%;
+	}
+	.reporting-threshold, .release-history {
+		text-align: right;
+	}
+	.release {
+		input {
+		 width:100%;
+	 }
+	}
+}
