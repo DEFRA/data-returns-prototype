@@ -1,0 +1,132 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototyping kit {% endblock %} {% block content %}
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<div class="grid-row">
+		<div class="column-three-quarters"> <br> <br>
+			<table id="table-of-tasks">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">1.</span> Check before you start </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"><span type="hidden" class="visually-hidden">task status</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Check before you start -->
+					<tr id="check_before_you_start">
+						<td class="task" style="padding-right:10px"> <a href="/examples/task-list/check-eligibility-cost-time/check-your-answers?">
+	                <span class="task-name">
+	                  Check eligibility, cost and time
+	                </span>
+	                <!--
+	                  <br>
+	                  <span class="task-description">
+	                    Check your eligibility, time and cost to apply
+	                  </span>
+	                -->
+	              </a> </td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+					<!-- Check rules -->
+					<tr id="read_rules">
+						<td class="task"> <a href="/examples/task-list/read-rules/check-your-answers">
+	                <span class="task-name"> Read rules</span>
+	              </a> </td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+				</tbody>
+			</table> <br> <br>
+			<table id="table-of-tasks">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">2.</span> Prepare to apply </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Your contact details -->
+					<tr id="contact_details">
+						<td class="task"> <a href="/examples/task-list/contact-details/check-your-answers">
+	            <span class="task-name"> Your contact details</span>
+	          </a> </td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+					<tr id="transport_manager">
+						<td class="task"> <a href="#">
+	            <span class="task-name"> Do training</span>
+	          </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<tr id="transport_manager">
+						<td class="task"> <a href="#">
+	            <span class="task-name"> Check criminal history</span>
+	          </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<tr id="transport_manager">
+						<td class="task"> <a href="#">
+	            <span class="task-name"> Give medical information</span>
+	          </a> </td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+					<tr id="transport_manager">
+						<td class="task"> <a href="#">
+	            <span class="task-name"> Get references</span>
+	          </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<tr id="transport_manager">
+						<td class="task"> <a href="#">
+	            <span class="task-name"> Provide photograph</span>
+	          </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+				</tbody>
+			</table> <br> <br>
+			<table id="table-of-tasks">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">3.</span> Apply </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="check_and_send">
+						<td class="task"> <a href="/examples/task-list/check-your-answers-page">
+	                <span class="task-name"> Submit and pay</span>
+	              </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<tr id="wait_for_decision">
+						<td class="task"> <a href="/examples/task-list/wait-for-decision">
+	                <span class="task-name"> Wait for a decision</span>
+	              </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<tr id="get_licence">
+						<td class="task"> <a href="#">
+	                <span class="task-name"> Get licence</span>
+	              </a> </td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+</main> {% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.nace { width:45px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Change NOSE-P code</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/pollution-inventory-report/v1/check-your-details/nose-p-code-2" method="post" class="form">
+			<h1 class="heading-medium">Select industry</h1>
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-1" type="radio" name="radio-group" checked="checked" value="Paper, pulp and board manufacturing "> <label for="radio-1">Paper, pulp and board manufacturing </label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-2" type="radio" name="radio-group" value="Carbon activities"> <label for="radio-2">Carbon activities</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-3" type="radio" name="radio-group" value="Tar and bitumen activities"> <label for="radio-3">Tar and bitumen activities</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-4" type="radio" name="radio-group" value="Applying coatings containing tributyltin or triphenyltin compounds in certain boatyards"> <label for="radio-4">Applying coatings containing tributyltin or triphenyltin compounds in certain boatyards</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-5" type="radio" name="radio-group" value="Pre-treatment or dyeing fibres or textiles"> <label for="radio-5">Pre-treatment or dyeing fibres or textiles</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-6" type="radio" name="radio-group" value="Treating textiles"> <label for="radio-6">Treating textiles</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-7" type="radio" name="radio-group" checked="checked" value="Timber activities "> <label for="radio-7">Timber activities </label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-8" type="radio" name="radio-group" value="Tanning of hides and skins "> <label for="radio-8">Tanning of hides and skins </label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-9" type="radio" name="radio-group" value="Slaughterhouses and treating and processing materials intended for food production including milk"> <label for="radio-9">Slaughterhouses and treating and processing materials intended for food production including milk</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-10" type="radio" name="radio-group" value="Disposal or recycling of animal carcasses and animal waste"> <label for="radio-10">Disposal or recycling of animal carcasses and animal waste</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-11" type="radio" name="radio-group" value="Other processing of animal or vegetable material"> <label for="radio-11">Other processing of animal or vegetable material</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-12" type="radio" name="radio-group" value="Intensive farming"> <label for="radio-12">Intensive farming</label>
+						</div>
+					</fieldset>
+				</div>
+			<div class="form-group"> <input class="button" type="submit" value="Continue"> </div>
+		</div>
+	</div>
+</main>
+{% endblock %}

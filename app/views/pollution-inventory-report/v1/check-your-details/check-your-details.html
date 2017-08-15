@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<form action="/pollution-inventory-report/v1/report-data/" method="post" class="form">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Check your details</h1>
+	<div class="form-group">
+		<table class="check-your-answers table-control">
+			<thead>
+				<tr>
+					<th> </th>
+					<th> </th>
+					<th> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Your contact details</td>
+					<td>James Brown<br>
+						Technical director<br>
+						Office building 3A<br>
+						Gibblet Lane<br>
+						Dranbridge<br>
+						DB7 7FH</td>
+					<td class="change-answer"><a href="contact-details">Change <span class="visuallyhidden">Operator and site details</span></a></td>
+				</tr>
+				<tr>
+					<td>NOSE-P code</td>
+					<td>105.04  Manufacturer of pulp, paper and paper products</td>
+					<td class="change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">NOSE-P codes</span></a></td>
+				</tr>
+				<tr>
+					<td>NACE codes</td>
+					<td>17.12 Manufacture of paper and paperboard</td>
+					<td class="change-answer"><a href="nace-code">Change <span class="visuallyhidden">NACE code</span></a></td>
+				</tr>
+				<tr>
+					<td>E-PRTR code</td>
+					<td>6. (b) Industrial plants for the production of paper and board and other primary wood products (such as chipboard, fibreboard and plywood)</td>
+					<td class="change-answer"><a href="eprtr-code">Change <span class="visuallyhidden">E-PRTR code</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="form-group">
+		<input type="submit" class="button" value="Continue">
+	</div>
+</form>
+</main> {% endblock %}
