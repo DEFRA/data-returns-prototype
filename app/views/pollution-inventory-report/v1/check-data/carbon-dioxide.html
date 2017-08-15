@@ -6,6 +6,27 @@
 
 {% block content %}
 
+<style>
+.hide {
+  display: none;
+}
+</style>
+
+<script>
+function show1(){
+  document.getElementById('notifiable-release').style.display ='none';
+}
+function show2(){
+  document.getElementById('notifiable-release').style.display = 'block';
+}
+function show3(){
+  document.getElementById('confidential').style.display ='none';
+}
+function show4(){
+  document.getElementById('confidential').style.display = 'block';
+}
+</script>
+
 <main id="content" role="main">
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
@@ -54,22 +75,23 @@
 			</table>
 
 
+
 			<div class="form-group">
 				<fieldset class="inline">
 					<h1 class="heading-medium">
-		           Notifiable release?
-		         </h1>
+			           Notifiable release?
+			        </h1>
 					<div class="multiple-choice">
-						<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+						<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes" onclick="show2();">
 						<label for="radio-inline-1">Yes</label>
 					</div>
 					<div class="multiple-choice">
-						<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+						<input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No" onclick="show1();">
 						<label for="radio-inline-2">No</label>
 					</div>
 				</fieldset>
 			</div>
-			<div class="panel panel-border-narrow">
+			<div class="panel panel-border-narrow hide" id="notifiable-release">
 				<table class="more-detail table-control mobile-format">
 					<thead>
 					</thead>
@@ -105,14 +127,14 @@
 			<div class="form-group">
 				<fieldset class="inline">
 					<h1 class="heading-medium">
-	           Do you think this substance report is confidential?
-	        </h1>
+			           Do you think this substance report is confidential?
+			        </h1>
 					<div class="multiple-choice">
-						<input id="radio-inline-3" checked type="radio" name="radio-inline-group-2" value="Yes">
+						<input id="radio-inline-3" type="radio" name="radio-inline-group-2" value="Yes" onclick="show4();">
 						<label for="radio-inline-3">Yes</label>
 					</div>
 					<div class="multiple-choice">
-						<input id="radio-inline-4" type="radio" name="radio-inline-group-2" value="No">
+						<input id="radio-inline-4" checked type="radio" name="radio-inline-group-2" value="No" onclick="show3();">
 						<label for="radio-inline-4">No</label>
 					</div>
 				</fieldset>
@@ -120,7 +142,7 @@
 
 
 			<div class="form-group">
-				<div class="panel panel-border-narrow">
+				<div class="panel panel-border-narrow hide" id="confidential">
 					<textarea style="height:150px; width:100%">
 					</textarea>
 				</div>
