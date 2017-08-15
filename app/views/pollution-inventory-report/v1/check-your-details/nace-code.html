@@ -13,19 +13,25 @@
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">NACE code</h1>
+	<h1 class="heading-large">Your NACE code</h1>
 	<div class="grid-row">
 		<div class="column-two-thirds">
-			<p>NACE codes refer to your main economic activity. NOSE-P codes refer to release sources.</p>
-			<p><a href="#">See the associated guidance notes for specific codes.</a></p>
+			<p>Select the code for your site’s main activity:</p>
 			<form action="/pollution-inventory-report/check-your-details/" method="post" class="form">
 				<div class="form-group">
-				  	<label class="form-label visually-hidden" for="calendar-year">Four-figure NACE code for your main economic activity</label>
-					<input class="form-control nace" id="calendar-year" type="text" name="calendar-year" value="105"> .
-					<input class="form-control nace" id="calendar-year" type="text" name="calendar-year" value="04">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-1">17.11 Manufacture of pulp</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+							<label for="radio-inline-2">17.12 Manufacture of paper and paperboard</label>
+						</div>
+					</fieldset>
 				</div>
 	            <div class="form-group">
-					<input class="button" type="submit" value="Save and continue">
+					<input class="button" type="submit" value="Continue">
 				</div>
 			</form>
 		</div>

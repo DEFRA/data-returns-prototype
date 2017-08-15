@@ -15,28 +15,30 @@
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">Your contact details</h1>
+	<h1 class="heading-large">Are your contact details correct?</h1>
 	<div class="grid-row">
 		<div class="column-two-thirds">
-			<form action="/pollution-inventory-report/v1/check-your-details/check-your-details" method="post" class="form">
+			<form action="/pollution-inventory-report/v1/check-your-details/check-site-codes" method="post" class="form">
 				<div class="form-group">
-				  	<label class="form-label" for="contact-name">Contact name</label>
-					<input class="form-control" id="contact-name" type="text" name="contact-name" value="James Brown">
+					James Brown<br>
+					Technical director<br>
+					01211 123456<br>
+					james.brown@gibson.co.uk
 				</div>
 				<div class="form-group">
-				  	<label class="form-label" for="job-title">Job title</label>
-					<input class="form-control" id="job-title" type="text" name="job-title" value="Technical Director">
+					<fieldset class="inline">
+						<div class="multiple-choice">
+							<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes" onclick="show2();">
+							<label for="radio-inline-1">Yes</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No" onclick="show1();">
+							<label for="radio-inline-2">No</label>
+						</div>
+					</fieldset>
 				</div>
 				<div class="form-group">
-				  	<label class="form-label" for="contact-address">Address</label>
-					<textarea class="form-control contact-address" id="contact-address" type="text">Office building 3A
-Gibblet Lane
-Dranbridge
-DB7 7FH
-					</textarea>
-				</div>
-	            <div class="form-group">
-					<input class="button" type="submit" value="Save and continue">
+					<input type="submit" class="button" value="Continue">
 				</div>
 			</form>
 		</div>

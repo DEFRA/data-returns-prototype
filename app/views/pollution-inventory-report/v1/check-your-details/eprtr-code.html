@@ -19,12 +19,23 @@
 			<p>E-PRTR codes refer to your main activity. <a href="#">See the associated guidance notes for specific codes</a>. If none of the codes apply to your installations, please enter ‘not applicable’.</p>
 			<form action="/pollution-inventory-report/check-your-details/" method="post" class="form">
 				<div class="form-group">
-				  	<label class="form-label visually-hidden" for="calendar-year">Main E-PRTR code</label>
-					<input class="form-control nace" id="calendar-year" type="text" name="calendar-year" value="105">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-1">6. (a) Industrial plants for the production of pulp from timber or similar fibrous materials</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="No">
+							<label for="radio-inline-2">6. (b) Industrial plants for the production of paper and board and other primary wood products (such as chipboard, fibreboard and plywood) </label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-3" value="No">
+							<label for="radio-inline-3">6. (c) Industrial plants for the preservation of wood and wood products with chemicals </label>
+						</div>
+					</fieldset>
 				</div>
-				<p><a href="#">Add another relevant E-PRTR code</a></p>
 	            <div class="form-group">
-					<input class="button" type="submit" value="Save and continue">
+					<input class="button" type="submit" value="Continue">
 				</div>
 			</form>
 		</div>
