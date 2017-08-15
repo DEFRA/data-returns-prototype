@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">More detail about ammonia</h1>
+
+	<table class="check-data table-control mobile-format">
+		<thead>
+			<tr>
+				<th class="substance">Substance</th>
+				<th class="reporting-threshold">Reporting threshold</th>
+				<th class="release-history">2016 value</th>
+				<th class="release">Releases</th>
+				<th class="unit">Unit</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="reporting-threshold">1.0E+7 kg</td>
+				<td class="release-history">9236 t</td>
+				<td class="release">
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td class="unit">
+					<label class="form-label visually-hidden" for="select-box">Unit</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option>--</option>
+				    <option>kg</option>
+				    <option selected>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td class="substance">Carbon monoxide</td>
+				<td class="reporting-threshold">100,000 kg</td>
+				<td class="release-history">BRT</td>
+				<td class="release">
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td class="unit">
+					<label class="form-label visually-hidden" for="select-box">Unit</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option selected>--</option>
+				    <option>kg</option>
+				    <option>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td class="substance">Nitrogen oxides (NO and NO2) as NO2</td>
+				<td class="reporting-threshold"> 100,000 kg</td>
+				<td class="release-history"> BRT</td>
+				<td class="release">
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td class="unit">
+					<label class="form-label visually-hidden" for="select-box">Unit</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option selected>--</option>
+				    <option>kg</option>
+				    <option>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td class="substance">Particulate matter - PM10</td>
+				<td class="reporting-threshold">1,000 kg</td>
+				<td class="release-history">BRT</td>
+				<td class="release">
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td class="unit">
+					<label class="form-label visually-hidden" for="select-box">Unit</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option selected>--</option>
+				    <option>kg</option>
+				    <option>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td class="substance">Sulphur oxides (SO2 and SO3) as SO2</td>
+				<td class="reporting-threshold">100,000 kg</td>
+				<td class="release-history">BRT</td>
+				<td class="release">
+					<label class="form-label visually-hidden" for="releases">Releases</label>
+				  <input class="form-control" id="releases" name="releases" type="text">
+				</td>
+				<td class="unit">
+					<label class="form-label visually-hidden" for="select-box">Unit</label>
+				  <select class="form-control" id="select-box" name="select-box">
+				    <option selected>--</option>
+				    <option>kg</option>
+				    <option>t</option>
+				    <option>mg</option>
+				  </select>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+
+	</table>
+
+
+	<div class="form-group"> <a href="confirmation-page" class="button">Save and continue</a> </div>
+</main> {% endblock %}
