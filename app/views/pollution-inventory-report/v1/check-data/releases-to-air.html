@@ -6,11 +6,12 @@
 
 {% block content %}
 
+
 <main id="content" role="main">
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">More detail about ammonia</h1>
+	<h1 class="heading-large">Your releases to air</h1>
 
 	<table class="check-data table-control mobile-format">
 		<thead>
@@ -20,11 +21,12 @@
 				<th class="release-history">2016 value</th>
 				<th class="release">Releases</th>
 				<th class="unit">Unit</th>
-				<th></th>
+				<th class="more-detail"><span class="visually-hidden">More detail</span></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
+				<td class="substance">Carbon dioxide</td>
 				<td class="reporting-threshold">1.0E+7 kg</td>
 				<td class="release-history">9236 t</td>
 				<td class="release">
@@ -33,14 +35,15 @@
 				</td>
 				<td class="unit">
 					<label class="form-label visually-hidden" for="select-box">Unit</label>
-				  <select class="form-control" id="select-box" name="select-box">
+				  <select class="form-control unit" id="select-box" name="select-box">
 				    <option>--</option>
-				    <option>kg</option>
 				    <option selected>t</option>
+				    <option>kg</option>
+				    <option>g</option>
 				    <option>mg</option>
 				  </select>
 				</td>
-				<td></td>
+				<td class="more-detail"><a href="/carbon-dioxide">More detail</a></td>
 			</tr>
 
 			<tr>
@@ -53,14 +56,15 @@
 				</td>
 				<td class="unit">
 					<label class="form-label visually-hidden" for="select-box">Unit</label>
-				  <select class="form-control" id="select-box" name="select-box">
+				  <select class="form-control unit" id="select-box" name="select-box">
 				    <option selected>--</option>
-				    <option>kg</option>
 				    <option>t</option>
+				    <option>kg</option>
+				    <option>g</option>
 				    <option>mg</option>
 				  </select>
 				</td>
-				<td></td>
+				<td class="more-detail"><a href="/">More detail</a></td>
 			</tr>
 
 			<tr>
@@ -73,14 +77,15 @@
 				</td>
 				<td class="unit">
 					<label class="form-label visually-hidden" for="select-box">Unit</label>
-				  <select class="form-control" id="select-box" name="select-box">
+				  <select class="form-control unit" id="select-box" name="select-box">
 				    <option selected>--</option>
-				    <option>kg</option>
 				    <option>t</option>
+				    <option>kg</option>
+				    <option>g</option>
 				    <option>mg</option>
 				  </select>
 				</td>
-				<td></td>
+				<td class="more-detail"><a href="/">More detail</a></td>
 			</tr>
 
 			<tr>
@@ -93,14 +98,15 @@
 				</td>
 				<td class="unit">
 					<label class="form-label visually-hidden" for="select-box">Unit</label>
-				  <select class="form-control" id="select-box" name="select-box">
+				  <select class="form-control unit" id="select-box" name="select-box">
 				    <option selected>--</option>
-				    <option>kg</option>
 				    <option>t</option>
+				    <option>kg</option>
+				    <option>g</option>
 				    <option>mg</option>
 				  </select>
 				</td>
-				<td></td>
+				<td class="more-detail"><a href="/">More detail</a></td>
 			</tr>
 
 			<tr>
@@ -113,19 +119,24 @@
 				</td>
 				<td class="unit">
 					<label class="form-label visually-hidden" for="select-box">Unit</label>
-				  <select class="form-control" id="select-box" name="select-box">
+				  <select class="form-control unit" id="select-box" name="select-box">
 				    <option selected>--</option>
-				    <option>kg</option>
 				    <option>t</option>
+				    <option>kg</option>
+				    <option>g</option>
 				    <option>mg</option>
 				  </select>
 				</td>
-				<td></td>
+				<td class="more-detail"><a href="/">More detail</a></td>
 			</tr>
 		</tbody>
-
 	</table>
 
+	<div class="form-group">
+		<a href="#">Add a new release to air</a>
+	</div>
 
-	<div class="form-group"> <a href="confirmation-page" class="button">Save and continue</a> </div>
+	<div class="form-group">
+		<input type="submit" class="button" value="Continue">
+	</div>
 </main> {% endblock %}
