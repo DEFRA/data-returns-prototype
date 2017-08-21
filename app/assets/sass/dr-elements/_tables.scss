@@ -252,24 +252,21 @@
 
 table.check-data {
 	th {
-		@include bold-16();
 		white-space: nowrap;
 	}
 	td {
-		@include core-16();
 		white-space: nowrap;
 	}
 	select {
-		@include core-16();
 		width: 50px;
+	}
+	.more-detail {
+		text-align:right;
+		padding-right:0;
 	}
 	@media (min-width: 641px) {
 		.substance {
 			width: 33%;
-		}
-		.release-history,
-		.reporting-threshold {
-			text-align: right;
 		}
 		.release {
 			width: 10%;
