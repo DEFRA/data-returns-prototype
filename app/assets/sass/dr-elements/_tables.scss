@@ -246,8 +246,12 @@
 		width:100%
 	}
 	td {vertical-align: middle;}
-
 	td.substance {white-space: nowrap;}
+}
+
+table td.action {
+	text-align:right;
+	padding-right:0;
 }
 
 table.check-data {
@@ -259,10 +263,6 @@ table.check-data {
 	}
 	select {
 		width: 50px;
-	}
-	.more-detail {
-		text-align:right;
-		padding-right:0;
 	}
 	@media (min-width: 641px) {
 		.substance {
