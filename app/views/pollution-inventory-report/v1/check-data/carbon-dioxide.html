@@ -32,9 +32,8 @@ function show4(){
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<a class="link-back">Back to releases to air</a>
+		<a class="link-back" href="/pollution-inventory-report/v1/check-data/releases-to-air">Back to releases to air</a>
 		<h1 class="heading-large">More detail about carbon dioxide</h1>
-
 
 		<div class="grid-row">
 			<div class="column-two-thirds">
@@ -75,8 +74,6 @@ function show4(){
 					</tbody>
 				</table>
 
-
-
 				<div class="form-group">
 					<fieldset class="inline">
 						<h1 class="heading-medium">
@@ -99,17 +96,22 @@ function show4(){
 						<tbody>
 							<tr>
 								<th class="release-amount">Release amount</th>
-								<td class="release-amount-value">480 kg</td>
+								<td class="release-amount-value">
+									<label class="form-label visually-hidden" for="notifiable-release-total">Notifiable release total</label>
+									<input class="form-control" id="notifiable-release-total" name="notifiable-release-total" type="text">
+								</td>
 							</tr>
 							<tr>
 								<th class="unit">Unit of measurement</th>
 								<td class="unit-value">
 									<label class="form-label visually-hidden" for="select-box">Unit</label>
 									<select class="form-control" id="select-box" name="select-box">
-							    <option selected>--</option>
-							    <option>kg</option>
-							    <option>t</option>
-							    <option>mg</option>
+								    <option>--</option>
+								    <option>kt</option>
+								    <option>t</option>
+								    <option selected>kg</option>
+								    <option>g</option>
+								    <option>mg</option>
 							  </select>
 								</td>
 							</tr>
@@ -123,7 +125,6 @@ function show4(){
 						</tbody>
 					</table>
 				</div>
-
 
 				<div class="form-group">
 					<fieldset class="inline">
@@ -141,15 +142,12 @@ function show4(){
 					</fieldset>
 				</div>
 
-
 				<div class="form-group">
 					<div class="panel panel-border-narrow hide" id="confidential">
 						<p>Why do you think it’s confidential?</p>
 						<textarea style="height:150px; width:100%"></textarea>
 					</div>
 				</div>
-
-
 			</div>
 		</div>
 
