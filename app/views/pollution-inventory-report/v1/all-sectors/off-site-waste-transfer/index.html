@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/check-data/releases-to-air-checked" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Off site waste transfers</h1>
+		<table class="check-data table-control mobile-format">
+			<thead>
+				<tr>
+					<th class="th-WDF-code"><abbr title="Waste Framework Directive">WDF</abbr> code</th>
+					<th class="th-EWC-code numeric"><abbr title="European Waste Catalogue">EWC</abbr> code</th>
+					<th class="th-release-history numeric">2016 total</th>
+					<th class="th-release">2017 total</th>
+					<th class="th-unit">Unit</th>
+					<th class="th-action"><span class="visually-hidden">More detail</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-WDF-code">D10</td>
+					<td class="td-EWC-code numeric">02 01 99</td>
+					<td class="td-release-history numeric">BRT</td>
+					<td class="td-release numeric"> <label class="form-label visually-hidden" for="releases">BRT</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
+					    <option>--</option>
+					    <option>kt</option>
+					    <option>t</option>
+					    <option selected>kg</option>
+					    <option>g</option>
+					    <option>mg</option>
+					  </select> </td>
+					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/check-data/020102">More detail</a></td>
+				</tr>
+				<tr>
+					<td class="td-WDF-code">D1</td>
+					<td class="td-EWC-code numeric">15 01 01</td>
+					<td class="td-release-history numeric">BRT</td>
+					<td class="td-release numeric"> <label class="form-label visually-hidden" for="releases">BRT</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
+					    <option>--</option>
+					    <option>kt</option>
+					    <option>t</option>
+					    <option selected>kg</option>
+					    <option>g</option>
+					    <option>mg</option>
+					  </select> </td>
+					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/check-data/020102">More detail</a></td>
+				</tr>
+				<tr>
+					<td class="td-WDF-code">D1</td>
+					<td class="td-EWC-code numeric">15 01 02</td>
+					<td class="td-release-history numeric">BRT</td>
+					<td class="td-release numeric"> <label class="form-label visually-hidden" for="releases">BRT</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
+					    <option>--</option>
+					    <option>kt</option>
+					    <option>t</option>
+					    <option selected>kg</option>
+					    <option>g</option>
+					    <option>mg</option>
+					  </select> </td>
+					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/check-data/020102">More detail</a></td>
+				</tr>
+				<tr>
+					<td class="td-WDF-code">D1</td>
+					<td class="td-EWC-code numeric">15 01 07</td>
+					<td class="td-release-history numeric">BRT</td>
+					<td class="td-release numeric"> <label class="form-label visually-hidden" for="releases">BRT</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
+					    <option>--</option>
+					    <option>kt</option>
+					    <option>t</option>
+					    <option selected>kg</option>
+					    <option>g</option>
+					    <option>mg</option>
+					  </select> </td>
+					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/check-data/020102">More detail</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="form-group"> <a href="/pollution-inventory-report/v1/all-sectors/off-site-waste-transfer/new-transfer">Add a new off site waste transfer</a> </div>
+		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+	</form>
+</main>
+
+{% endblock %}

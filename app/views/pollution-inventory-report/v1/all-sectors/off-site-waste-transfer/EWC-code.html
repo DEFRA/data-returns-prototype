@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.hide {
+  display: none;
+}
+.td-code select {
+	width:75px;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">What waste are you disposing?</h1>
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/pollution-inventory-report/v1/all-sectors/check-data/task-list-off-site-waste-water" method="post" class="form">
+			<div class="form-group">
+				<fieldset>
+					<div class="multiple-choice">
+						<input id="checkbox-1" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-1">Waste bark and wood </label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-2" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-2">Green liquor sludge</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-3" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-3">De-inking sludges from paper re-cycling</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-4" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-4">Mechanically separated rejects from pulping of waste paper and cardboard</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-5" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-5">Wastes from sorting of paper and cardboard destined for recycling (pre-pulping)</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-6" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-6">Lime mud waste</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-7" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-7">Fibre rejects, fibre, filler and coating sludges from mechanical separation</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-8" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-8">Sludges from on site effluent treatment, other than those mentioned in 03 03 10</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-9" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-9">Wastes not otherwise specified</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-10" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-10">Waste paper and cardboard from mechanical treatment of waste</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-11" type="checkbox" name="checkbox-group-1" value="No">
+						<label for="checkbox-11">Bottom ash, slag and boiler dust from co-incineration of paper sludge (PSA)</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-12" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-12">Fly ash from co-incineration of paper sludge containing dangerous substances (PSA)</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-13" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-13">Bottom ash and slag from incineration of paper sludge (PSA)</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-14" type="checkbox" name="checkbox-group-1" value="Yes">
+						<label for="checkbox-14">Fly ash from incineration of paper sludge containing dangerous substances (PSA)</label>
+					</div>
+				</fieldset>
+			</div>
+		    <div class="form-group">
+				<input class="button" type="submit" value="Continue">
+			</div>
+		</form>
+	</div>
+</main>
+
+{% endblock %}

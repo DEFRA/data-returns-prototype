@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.hide {
+  display: none;
+}
+.td-code select {
+	width:75px;
+}
+</style>
+
+<script>
+function show3(){
+  document.getElementById('confidential').style.display ='none';
+}
+function show4(){
+  document.getElementById('confidential').style.display = 'block';
+}
+</script>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/off-site-waste-transfer/disposal" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Recovery or disposal?</h1>
+		<form action="/pollution-inventory-report/v1/all-sectors/check-data/task-list-off-site-waste-water" method="post" class="form">
+			<div class="form-group">
+				<fieldset class="inline">
+					<div class="multiple-choice">
+						<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+						<label for="radio-inline-1">Recovery</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+						<label for="radio-inline-2">Disposal</label>
+					</div>
+				</fieldset>
+			</div>
+		    <div class="form-group">
+				<input class="button" type="submit" value="Continue">
+			</div>
+		</form>
+	</form>
+</main>
+
+{% endblock %}

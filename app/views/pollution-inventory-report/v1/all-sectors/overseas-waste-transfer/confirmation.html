@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+input.quantity {
+	width:120px;
+}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/task-list" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-large">Your overseas waste transfers</h1>
+				<p>Please check and confirm these details.</p>
+				<h2 class="heading-medium">Transfer to Vanheed</h2>
+				<div class="form-group">
+					<table class="codes table-control">
+						<tbody>
+							<tr>
+								<td class="name">Quantity</td>
+								<td>25 tonnes</td>
+								<td class="action"><a href="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/quantity">Change <span class="visuallyhidden">quantity</span></a></td>
+							</tr>
+							<tr>
+								<td class="name">Operation</td>
+								<td>Recovery</td>
+								<td class="action"><a href="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/operation">Change <span class="visuallyhidden">operation</span></a></td>
+							</tr>
+							<tr>
+								<td class="name">Method</td>
+								<td>Weighing</td>
+								<td class="action"><a href="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/method">Change <span class="visuallyhidden">method</span></a></td>
+							</tr>
+							<tr>
+								<td class="name">Business address</td>
+								<td>
+									Vanheede<br>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td class="action"><a href="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/business-address">Change <span class="visuallyhidden">business address</span></a></td>
+							</tr>
+							<tr>
+								<td class="name">Site address</td>
+								<td>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td class="action"><a href="/pollution-inventory-report/v1/all-sectors/overseas-waste-transfer/site-address">Change <span class="visuallyhidden">site address</span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<a href="#">Add another overseas waste transfer</a>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="button" value="Continue">
+		</div>
+	</form>
+</main> {% endblock %}
