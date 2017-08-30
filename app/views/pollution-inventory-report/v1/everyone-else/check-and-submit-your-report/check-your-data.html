@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.td-substance {
+}
+.td-release {
+
+}
+.td-method {
+	width:10%;
+}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/everyone-else/check-and-submit-your-report/task-list-check-data" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Your releases to air</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<table class="check-data table-control mobile-format">
+					<thead>
+						<tr>
+							<th class="th-substance">Substance</th>
+							<th class="th-release">2017 total</th>
+							<th class="th-action">Method</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td-substance">Carbon dioxide</td>
+							<td class="td-release">
+								<div class="form-group-error" id="carbon-dioxide-unit">
+									4883
+									<span class="error-message">Checked</span>
+								</div>
+							</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Carbon monoxide</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Nitrogen oxides (NO and NO2) as NO2</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Particulate matter - PM10</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Sulphur oxides (SO2 and SO3) as SO2</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+					</tbody>
+				</table>
+				<h1 class="heading-large">Your releases to controlled waters</h1>
+				<table class="check-data table-control mobile-format">
+					<thead>
+						<tr>
+							<th class="th-substance">Substance</th>
+							<th class="th-release">2017 total</th>
+							<th class="th-action">Method</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td-substance">Aldrin</td>
+							<td class="td-release">0.0005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Atrazine</td>
+							<td class="td-release">0.05 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Chlorpyrifos</td>
+							<td class="td-release"> 0.1 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Cypermethrin</td>
+							<td class="td-release">0.005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Dichlorvos</td>
+							<td class="td-release">0.0005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Dieldrin</td>
+							<td class="td-release">0.0005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Endosulfan</td>
+							<td class="td-release">0.0005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Endrin</td>
+							<td class="td-release">0.0005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Hexachlorobenzene (HCB)</td>
+							<td class="td-release">0.01 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Simazine</td>
+							<td class="td-release">0.01 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Trifluralin</td>
+							<td class="td-release">0.001 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Cadmium</td>
+							<td class="td-release">1 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Nitrogen - as total N</td>
+							<td class="td-release">50000 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Phosphorus - as total P</td>
+							<td class="td-release">5000 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+						<tr>
+							<td class="td-substance">Tributyltin and compounds - as TBT</td>
+							<td class="td-release">0.005 kg</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+		<div class="form-group"> <a href="#">Add a new release to air</a> </div>
+		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+	</form>
+</main>
+
+{% endblock %}

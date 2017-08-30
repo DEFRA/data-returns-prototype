@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototyping kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/everyone-else/check-and-submit-your-report/task-list-submit-report" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Check and submit your report</h1>
+		<div class="form-group">
+
+			<h2 class="heading-medium">Check your details</h2>
+			<table class="submit-report table-control">
+				<tbody>
+					<tr>
+						<td class="td-name">Permit/reference number</td>
+						<td class="td-description">AA1234ZX</td>
+						<td class="td-change-answer"><a href="permit-number">Change <span class="visuallyhidden">permit/reference number</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Operator and site details</td>
+						<td class="td-description">
+							Brown Paper and Pulp<br>
+							Lower Hill Mill<br>
+							Bramwell Lane<br>
+							Dranbridge<br>
+							DB7 7FH
+						</td>
+						<td class="td-change-answer"><a href="site-address">Change <span class="visuallyhidden">operator and site details</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Person submitting this report</td>
+						<td class="td-description">
+							James Brown<br>
+							Technical director<br>
+							01211 123456<br>
+							james.brown@gibson.co.uk
+						</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">person submitting this report</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">NACE</td>
+						<td class="td-description">105.04 Manufacturer of pulp, paper and paper products</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">NOSE-P codes</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">NOSE-P</td>
+						<td class="td-description">17.12 Manufacture of paper and paperboard</td>
+						<td class="td-change-answer"><a href="nace-code">Change <span class="visuallyhidden">NACE code</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">E-PRTR</td>
+						<td class="td-description">6. (b) Industrial plants for the production of paper and board and other primary wood products (such as chipboard, fibreboard and plywood)
+						<td class="td-change-answer"><a href="eprtr-code">Change <span class="visuallyhidden">E-PRTR code</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">E-PRTR</td>
+						<td class="td-description">5. (g) Independently operated industrial waste-water treatment plants which serve one or more activities of this annex</td>
+						<td class="td-change-answer"><a href="eprtr-code">Change <span class="visuallyhidden">E-PRTR code</span></a></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+			<h2 class="heading-medium">Release and transfer data</h2>
+			<table class="submit-report table-control">
+					<tr>
+						<td class="td-name">Releases to air</td>
+						<td class="td-description">
+							Carbon dioxide, 9236t by calculation<br>
+							Carbon monoxide, BRT<br>
+							Nitrogen oxides (NO and NO2) as NO2, BRT<br>
+							Particulate matter - PM10, BRT<br>
+							Sulphur oxides (SO2 and SO3) as SO2, BRT
+						</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">XXXX</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Releases to land</td>
+						<td class="td-description">N/A</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">releases to land</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Releases to controlled waters</td>
+						<td class="td-description">
+							Aldrin, 0.0005kg by calculation<br>
+							Atrazine, 0.05kg by calculation<br>
+							Chlorpyrifos, 0.1kg by calculation<br>
+							Cypermethrin, 0.005kg by calculation<br>
+							Dichlorvos, , 0.0005kg by calculation<br>
+							Dieldrin, 0.0005kg by calculation<br>
+							Endosulfan, 0.0005kg by calculation<br>
+							Endrin, 0.0005kg by calculation<br>
+							Hexachlorobenzene (HCB), 0.01kg by calculation<br>
+							Simazine, 0.01kg by calculation<br>
+							Trifluralin, 0.001kg by calculation<br>
+							Cadmium, 1kg by calculation<br>
+							Nitrogen - as total N, 50000kg by calculation<br>
+							Phosphorus - as total P, 5000kg by calculation<br>
+							Tributyltin and compounds - as TBT, 0.005kg by calculation
+					</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">releases to controlled waters</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Off-site transfers in wastewater</td>
+						<td class="td-description">N/A</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">off-site-transfers-in-wastewater</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Off-site waste transfers</td>
+						<td class="td-description">N/A</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">off-site-waste-transfers</span></a></td>
+					</tr>
+					<tr>
+						<td class="td-name">Overseas waste transfers </td>
+						<td class="td-description">Description</td>
+						<td class="td-change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">overseas-waste-transfers</span></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="button" value="Continue">
+		</div>
+	</form>
+</main>
+
+{% endblock %}
