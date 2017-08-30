@@ -254,11 +254,11 @@ table.check-data {
 	th {
 		vertical-align: bottom;
 	}
-	.td-substance {
-		width:(100%/3);
-	}
 
 	  @include media($min-width: 500px){
+	  	.td-substance {
+	  		width:(100%/3);
+	  	}
 		.td-action, .td-release-history, .td-reporting-threshold {
 			white-space: nowrap;
 		}
@@ -276,6 +276,9 @@ table.check-data {
 	select {
 		width: 60px;
 	}
+	.numeric {
+		font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+	}
 }
 
 table.submit-report {
@@ -290,7 +293,7 @@ table.submit-report {
 /* Mobile formatting */
 @include media(mobile) {
 	table.check-data {
-		.td-reporting-threshold, .td-release-history, .td-release, .td-unit {
+		.td-reporting-threshold, .td-release-history, .td-release, .td-unit, .td-method {
 			margin-left:percentage(1/3);
 			width:percentage(2/3);
 			display: inline-block;
@@ -327,6 +330,11 @@ table.submit-report {
 		.td-unit {
 			&:before {
 				content:"Unit: ";
+			}
+		}
+		.td-method {
+			&:before {
+				content:"Method: ";
 			}
 		}
 		.td-action {
