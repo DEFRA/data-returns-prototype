@@ -29,16 +29,19 @@ function show4(){
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<h1 class="heading-large">Recovery or disposal?</h1>
+		<h1 class="heading-large">
+			<span class="heading-secondary">Add new off-site waste transfer</span>
+			How was the waste transfered off-site?
+		</h1>
 		<form action="/pollution-inventory-report/v1/all-sectors/check-data/task-list-off-site-waste-water" method="post" class="form">
 			<div class="form-group">
 				<fieldset class="inline">
 					<div class="multiple-choice">
-						<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+						<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="recovery">
 						<label for="radio-inline-1">Recovery</label>
 					</div>
 					<div class="multiple-choice">
-						<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+						<input id="radio-inline-2" type="radio" checked name="radio-inline-group-1" value="disposal">
 						<label for="radio-inline-2">Disposal</label>
 					</div>
 				</fieldset>

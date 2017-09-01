@@ -6,6 +6,7 @@
 
 {% block content %}
 
+
 <style>
 .hide {
   display: none;
@@ -20,17 +21,24 @@
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">What waste are you disposing?</h1>
+	<h1 class="heading-large">
+		<span class="heading-secondary">Add new off-site waste transfer</span>
+		What waste have you disposed?</h1>
 
 	<div class="grid-row">
 		<div class="column-two-thirds">
-			<form action="/pollution-inventory-report/v1/all-sectors/check-data/task-list-off-site-waste-water" method="post" class="form">
+			<form action="/pollution-inventory-report/v1/all-sectors/off-site-waste-transfer/" method="post" class="form">
 			<div class="form-group">
 				<fieldset>
 					<div class="multiple-choice">
-						<input id="checkbox-1" type="checkbox" name="checkbox-group-1" value="Yes">
+						<input id="waste-bark-and-wood-checkbox" type="checkbox" name="checkbox-group-1" value="Yes">
 						<label for="checkbox-1">Waste bark and wood </label>
 					</div>
+						<div class="panel panel-border-narrow hide" id="waste-bark-and-wood-div">
+							<label class="form-label" for="notifiable-release-total">Total amount transfered in tonnes</label>
+							<input class="form-control" id="notifiable-release-total" name="notifiable-release-total" type="text">
+						</div>
+
 					<div class="multiple-choice">
 						<input id="checkbox-2" type="checkbox" name="checkbox-group-1" value="No">
 						<label for="checkbox-2">Green liquor sludge</label>
@@ -91,5 +99,12 @@
 		</form>
 	</div>
 </main>
+
+<script>
+	document.getElementById('waste-bark-and-wood-checkbox').onchange = function() {
+    	document.getElementById('waste-bark-and-wood-div').style.display = this.checked ? 'block' : 'none';
+	};
+</script>
+
 
 {% endblock %}
