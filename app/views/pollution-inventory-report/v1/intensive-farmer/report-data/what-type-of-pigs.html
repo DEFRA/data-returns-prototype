@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.noce-p { width:120px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">What livestock did you keep on this site in 2017?</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p>Select all that apply</p>
+			<form action="/pollution-inventory-report/v1/intensive-farmer/report-data/task-list" method="post" class="form">
+				<div class="form-group">
+					<div class="multiple-choice">
+						<input id="checkbox-1" type="checkbox" name="checkbox-group-1" value="Sows">
+						<label for="checkbox-1">Sows</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-2" type="checkbox" name="checkbox-group-1" value="Piglets">
+						<label for="checkbox-2">Piglets</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-3" type="checkbox" name="checkbox-group-1" value="Weaners">
+						<label for="checkbox-3">Weaners</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-4" type="checkbox" name="checkbox-group-1" value="Growers">
+						<label for="checkbox-4">Growers</label>
+					</div>
+					<div class="multiple-choice">
+						<input id="checkbox-5" type="checkbox" name="checkbox-group-1" value="Finishers">
+						<label for="checkbox-5">Finishers</label>
+					</div>
+				</div>
+	            <div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
