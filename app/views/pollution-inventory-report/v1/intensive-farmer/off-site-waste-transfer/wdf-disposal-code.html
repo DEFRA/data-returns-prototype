@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+.hide {
+  display: none;
+}
+.td-wdc-code select {
+	width:75px;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Add WDF disposal code and amount</h1>
+
+	<form action="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/" method="post" class="form">
+
+		<table class="table-control">
+			<thead>
+				<tr>
+					<th class="th-ewc-code">EWC code</th>
+					<th class="th-description">Description</th>
+					<th class="th-wdc-code">WDC code</th>
+					<th class="th-2016-total numeric">2016 total</th>
+					<th class="th-2017-total numeric">2017 total</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-ewc-code">02 01 04</td>
+					<td class="td-description">Waste plastics (except packaging)</td>
+					<td class="td-wdc-code">
+						<label class="form-label visually-hidden" for="select-box">WDC code</label>
+						<select class="form-control unit" id="select-box" name="select-box">
+						    <option>--</option>
+						    <option selected>D1</option>
+						    <option>D10</option>
+						    <option>R1</option>
+						    <option>R3</option>
+						    <option>R4</option>
+						    <option>R5</option>
+						    <option>R9</option>
+						    <option>R10</option>
+						  </select>
+					  </td>
+  					<td class="td-2016-total numeric">BRT</td>
+					<td class="td-2017-total numeric">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="td-ewc-code">02 01 10</td>
+					<td class="td-description">Waste metal</td>
+					<td class="td-wdc-code">
+						<label class="form-label visually-hidden" for="select-box">WDC code</label>
+						<select class="form-control unit" id="select-box" name="select-box">
+						    <option>--</option>
+						    <option>D1</option>
+						    <option>D10</option>
+						    <option>R1</option>
+						    <option>R3</option>
+						    <option selected>R4</option>
+						    <option>R5</option>
+						    <option>R9</option>
+						    <option>R10</option>
+						  </select>
+					  </td>
+  					<td class="td-2016-total numeric">BRT</td>
+					<td class="td-2017-total numeric">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				</tr>
+				<tr>
+					<td class="td-ewc-code">13 02 08</td>
+					<td class="td-description">Readily biodegradable engine, gear and lubricating oils</td>
+					<td class="td-wdc-code">
+						<label class="form-label visually-hidden" for="select-box">WDC code</label>
+						<select class="form-control unit" id="select-box" name="select-box">
+						    <option>--</option>
+						    <option>D1</option>
+						    <option>D10</option>
+						    <option>R1</option>
+						    <option>R3</option>
+						    <option>R4</option>
+						    <option>R5</option>
+						    <option selected>R9</option>
+						    <option>R10</option>
+						  </select>
+					  </td>
+  					<td class="td-2016-total numeric">0.1</td>
+					<td class="td-2017-total numeric">
+						<label class="form-label visually-hidden" for="quantity">2017 total</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	    <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+<script>
+	document.getElementById('waste-bark-and-wood-checkbox').onchange = function() {
+    	document.getElementById('waste-bark-and-wood-div').style.display = this.checked ? 'block' : 'none';
+	};
+</script>
+
+
+{% endblock %}
