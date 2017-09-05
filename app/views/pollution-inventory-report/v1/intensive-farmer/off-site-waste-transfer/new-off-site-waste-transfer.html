@@ -27,23 +27,24 @@
 </style>
 
 <main id="content" role="main">
-	<div class="grid-row">
-		<div class="column-two-thirds">
-			<form action="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
-				<div class='phase-banner'>
-					<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
-				</div>
-				<h1 class="heading-large">What other waste type did you transfer?</h1>
-				<h2 class="heading-small">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing, food preparation and processing</h2>
-
+	<form action="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What other waste type did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
 				<div class="form-group">
-					<div class="multiple-choice">
-						<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
-						<label for="radio-inline-1">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing</label>
-					</div>
-
+					<h2 class="heading-medium">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing, food preparation and processing</h2>
 					<fieldset>
-						<h2 class="heading-small">Oil wastes and wastes of liquid fuels (except edible oils and those in chapters 05, 12 and 19)</h2>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-1">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing</label>
+						</div>
+					</fieldset>
+
+					<h2 class="heading-medium">Oil wastes and wastes of liquid fuels (except edible oils and those in chapters 05, 12 and 19)</h2>
+					<fieldset>
 						<div class="multiple-choice">
 							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="Yes">
 							<label for="radio-inline-2">Waste engine, gear and lubricating oils</label>
@@ -62,8 +63,7 @@
 						</div>
 					</fieldset>
 
-					<h2 class="heading-small">Waste packaging; absorbents, wiping cloths, filter materials and protective clothing not otherwise specified</h2>
-
+					<h2 class="heading-medium">Waste packaging; absorbents, wiping cloths, filter materials and protective clothing not otherwise specified</h2>
 					<fieldset>
 						<div class="multiple-choice">
 							<input id="radio-inline-6" type="radio" name="radio-inline-group-1" value="Yes">
@@ -75,8 +75,8 @@
 						</div>
 					</fieldset>
 
+					<h2 class="heading-medium">Wastes not otherwise specified in the list</h2>
 					<fieldset>
-					<h2 class="heading-small">Wastes not otherwise specified in the list</h2>
 						<div class="multiple-choice">
 							<input id="radio-inline-8" type="radio" name="radio-inline-group-1" value="Yes">
 							<label for="radio-inline-8">End-of-life vehicles from different means of transport (including off-road machinery) and wastes from dismantling of end-of-life vehicles and vehicle maintenance (except 13, 14, 16 06 and 16 08)</label>
