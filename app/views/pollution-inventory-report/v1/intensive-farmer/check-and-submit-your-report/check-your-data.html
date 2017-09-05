@@ -7,24 +7,90 @@
 {% block content %}
 
 <style>
-.td-substance {
-}
-.td-release {
-
-}
-.td-method {
-	width:10%;
-}
+	.td-substance {
+	}
+	th {
+		vertical-align: top;
+	}
+	.td-method {
+		width:10%;
+	}
 </style>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/v1/intensive-farmer/check-and-submit-your-report/task-list-check-your-data" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
+		<form action="/pollution-inventory-report/v1/intensive-farmer/check-and-submit-your-report/task-list-check-your-data" method="post" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
+				<h1 class="heading-large">Your details</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/check-your-details/permit-number">Change your details</a></p>
+				<table class="check-data table-control mobile-format">
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="td-permit">Permit or reference number</th>
+							<td class="td-permit-value">RP3137MU</td>
+						</tr>
+						<tr>
+							<th class="td-site-address">Site address</th>
+							<td class="td-site-address-value">
+								West Farm<br>
+								Vicarage Road<br>
+								Great Hockham<br>
+								Norfolk<br>
+								IP24 1PE
+							</td>
+						</tr>
+						<tr>
+							<th class="td-contact-details">Contact details</th>
+							<td class="td-contact-details-value">Michael Beard<br>
+								Partner<br>
+								077171 824 132<br>
+								michael@beardfarms.co.uk
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<h1 class="heading-large">Your site codes</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/check-your-details/check-site-codes">Change your site codes</a></p>
+				<table class="codes table-control">
+					<thead>
+						<tr>
+							<th class="name">Name</th>
+							<th class="code-name">Code</th>
+							<th class="description">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">NACE</td>
+							<td>01.46</td>
+							<td>Raising of swine/pigs</td>
+						</tr>
+						<tr>
+							<td class="name">NOSE-P</td>
+							<td>110.04<br>
+							110.05</td>
+							<td>Enteric fermentation<br>
+							Manure management</td>
+						</tr>
+						<tr>
+							<td class="name">E-PRTR</td>
+							<td>0</td>
+							<td>Not applicable</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
 				<h1 class="heading-large">Your releases to air</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/report-data/what-livestock">Change your livestock report</a></p>
 				<table class="check-data table-control mobile-format">
 					<thead>
 						<tr>
@@ -35,7 +101,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="td-substance">Ammonia</td>
+							<td class="td-substance">Ammonia <br></td>
 							<td class="td-release">177724.16 kg</td>
 							<td class="td-method">Est.</td>
 						</tr>
@@ -52,7 +118,9 @@
 					</tbody>
 				</table>
 
+
 				<h1 class="heading-large">Your off site waste transfers</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/">Change your off-site waste transfers</a></p>
 				<table class="check-data table-control mobile-format">
 					<thead>
 						<tr>
@@ -84,8 +152,34 @@
 						</tr>
 					</tbody>
 				</table>
+
+				<h1 class="heading-large">Sharing your data</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/sharing-your-data/">Change how you share your data</a></p>
+				<table class="codes table-control">
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Public contact information</td>
+							<td>michael@beardfarms.co.uk</td>
+						</tr>
+						<tr>
+							<td>Number of staff</td>
+							<td>47</td>
+						</tr>
+						<tr>
+							<td>Annual operating hours</td>
+							<td>Not provided</td>
+						</tr>
+					</tbody>
+				</table>
+
+
 			</div>
 		</div>
+
+
+
 		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
 	</form>
 </main>
