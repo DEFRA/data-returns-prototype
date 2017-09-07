@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns sandbox
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">Data returns sandbox</h1>
+      <p>A place to build patterns relating to the EA data returns service and to get them tested and capture feedback.</p>
+      <p>For patterns and prototypes relating to data returns pre-beta live <a href="/ARCHIVE/">see the archive</a></p>
+
+      <h2 class="heading-large">Report your pollution inventory</h2>
+
+      <ul class="list list-bullet">
+        <li><a href="/pollution-inventory-report/v1/all-sectors/">Version 1: All sectors</a>
+		    <ul class="list list-bullet">
+				<li><a href="/pollution-inventory-report/v1/all-sectors/1-paper-and-pulp">Version 1.1: Paper and pulp</a></li>
+				<li><a href="/pollution-inventory-report/v1/all-sectors/2-waste">Version 1.2: Waste</a></li>
+			</ul>
+		</li>
+	    <li><a href="/pollution-inventory-report/v1/intensive-farmer/">Version 1: Intensive farmer</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

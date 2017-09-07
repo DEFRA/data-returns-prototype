@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.nace { width:75px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<a class="link-back" href="/pollution-inventory-report/v1/all-sectors/check-your-details/check-site-codes">Back to site codes</a>
+	<h1 class="heading-large">Your E-PRTR code(s)</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p>Select all codes that apply to your site:</p>
+			<form action="/pollution-inventory-report/v1/all-sectors/check-your-details/check-site-codes" method="post" class="form">
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-1">6. (a) Industrial plants for the production of pulp from timber or similar fibrous materials</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-2" value="No">
+							<label for="radio-inline-2">6. (b) Industrial plants for the production of paper and board and other primary wood products (such as chipboard, fibreboard and plywood) </label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-3" value="No">
+							<label for="radio-inline-3">6. (c) Industrial plants for the preservation of wood and wood products with chemicals </label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group">
+					<a href="#">Add another E-PRTR code</a>
+				</div>
+	      		<div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,222 @@
+{% extends "layout.html" %}
+
+{% block page_title %} GOV.UK prototyping kit {% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<br>
+			<br>
+			<table id="check-your-details">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+				            <span class="group-number" id="task-number">1.</span> Check before you start </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"><span type="hidden" class="visually-hidden">task status</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Your contact details -->
+					<tr id="check_before_you_start">
+						<td class="task">
+							<a href="/">
+				                <span class="task-name"> Your contact details</span>
+							</a>
+						</td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner">
+								<strong class="task-finished">Completed</strong>
+							</div>
+						</td>
+					</tr>
+					<!-- NACE code -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> NACE code</span>
+	              			</a>
+						</td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+					<!-- NOSE-P code(s) -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> NOSE-P code(s)</span>
+	              			</a>
+						</td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+					<!-- E-PRTR code(s) -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> E-PRTR code(s)</span>
+	              			</a>
+						</td>
+						<td class="numeric" id="task-status">
+							<div class="task-status-banner"> <strong class="task-finished">Completed</strong> </div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<br>
+
+			<table id="release-and-data-transfer">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">2.</span> Release and transfer data </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Releases to air -->
+					<tr id="check_before_you_start">
+						<td class="task">
+							<a href="/">
+				                <span class="task-name"> Releases to air</span>
+							</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Releases to land -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Releases to land</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Releases to controlled waters -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Releases to controlled waters</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Off-site transfers in wastewater -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Off-site transfers in wastewater</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Off-site waste transfers -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Off-site waste transfers</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Overseas waste transfers -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Overseas waste transfers</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<br>
+
+			<table id="sharing-your-data">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">3.</span> Sharing your data </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Public contact information -->
+					<tr id="check_before_you_start">
+						<td class="task">
+							<a href="/">
+				                <span class="task-name"> Public contact information</span>
+							</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Number of staff -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Number of staff</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Annual operating hours -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+	                			<span class="task-name"> Annual operating hours</span>
+	              			</a>
+						</td>
+	  					<td class="numeric" id="task-status"> </td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br>
+			<br>
+
+			<table id="check-and-submit-your-report">
+				<thead>
+					<tr>
+						<th scope="col" id="col-task"> <span class="task-group">
+	            <span class="group-number" id="task-number">4.</span> Check and submit your report </span>
+						</th>
+						<th class="numeric" id="task-status" scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Check your data -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+								<span class="task-name"> Check your data</span>
+							</a>
+						</td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+					<!-- Submit your report -->
+					<tr id="read_rules">
+						<td class="task">
+							<a href="/">
+								<span class="task-name"> Submit your report</span>
+							</a>
+						</td>
+						<td class="numeric" id="task-status"> </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</main>
+{% endblock %}
