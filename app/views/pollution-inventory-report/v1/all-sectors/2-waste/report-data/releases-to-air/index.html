@@ -7,107 +7,25 @@
 {% block content %}
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/index-checked" method="post" class="form">
-		<div class='phase-banner'>
-			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Did you release any substances to air?</h1>
+	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/task-list" method="post" class="form">
+		<div class="form-group">
+			<fieldset class="inline">
+				<div class="multiple-choice">
+					<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+					<label for="radio-inline-1">Yes</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No">
+					<label for="radio-inline-2">No</label>
+				</div>
+			</fieldset>
 		</div>
-		<h1 class="heading-large">Your releases to air</h1>
-		<table class="check-data table-control mobile-format">
-			<thead>
-				<tr>
-					<th class="th-substance">Substance</th>
-					<th class="th-reporting-threshold numeric">2017 threshold</th>
-					<th class="th-release-history numeric">2016 value</th>
-					<th class="th-release">2017 total</th>
-					<th class="th-unit">Unit</th>
-					<th class="th-action"><span class="visually-hidden">More detail</span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="td-substance">Carbon dioxide</td>
-					<td class="td-reporting-threshold numeric">1.0E+7 kg</td>
-					<td class="td-release-history numeric">4480</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
-					<td class="td-unit">
-						<label class="form-label visually-hidden" for="select-box">Unit</label>
-						<select class="form-control unit" id="select-box" name="select-box">
-						    <option>--</option>
-						    <option>kt</option>
-						    <option>t</option>
-						    <option selected>kg</option>
-						    <option>g</option>
-						    <option>mg</option>
-						  </select>
-					  </td>
-					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/carbon-dioxide">More detail</a></td>
-				</tr>
-				<tr>
-					<td class="td-substance">Carbon monoxide</td>
-					<td class="td-reporting-threshold numeric">100,000 kg</td>
-					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
-					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
-					    <option selected>--</option>
-						  <option>kt</option>
-						  <option>t</option>
-						  <option>kg</option>
-						  <option>g</option>
-						  <option>mg</option>
-					  </select>
-				  	</td>
-					<td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/carbon-dioxide">More detail</a></td>
-				</tr>
-				<tr>
-					<td class="td-substance">Nitrogen oxides (NO and NO2) as NO2</td>
-					<td class="td-reporting-threshold numeric"> 100,000 kg</td>
-					<td class="td-release-history numeric"> BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
-					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
-					    <option selected>--</option>
-					    <option>kt</option>
-					  <option>t</option>
-					  <option>kg</option>
-					  <option>g</option>
-					  <option>mg</option>
-					  </select> </td>
-					  <td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/carbon-dioxide">More detail</a></td>
-				</tr>
-				<tr>
-					<td class="td-substance">Particulate matter - PM10</td>
-					<td class="td-reporting-threshold numeric">1,000 kg</td>
-					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
-					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
-					    <option selected>--</option>
-					  <option>kt</option>
-					  <option>t</option>
-					  <option>kg</option>
-					  <option>g</option>
-					  <option>mg</option>
-					  </select> </td>
-					  <td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/carbon-dioxide">More detail</a></td>
-				</tr>
-				<tr>
-					<td class="td-substance">Sulphur oxides (SO2 and SO3) as SO2</td>
-					<td class="td-reporting-threshold numeric">100,000 kg</td>
-					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
-					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
-					    <option selected>--</option>
-						  <option>kt</option>
-						  <option>t</option>
-						  <option>kg</option>
-						  <option>g</option>
-						  <option>mg</option>
-					  </select> </td>
-					  <td class="td-action"><a href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/carbon-dioxide">More detail</a></td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="form-group"> <a href="#">Add a new release to air</a> </div>
-		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+        <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
 	</form>
-</main>
-
-{% endblock %}
+</main> {% endblock %}

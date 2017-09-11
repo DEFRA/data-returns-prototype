@@ -5,15 +5,20 @@
 {% endblock %}
 
 {% block content %}
-<style>
 
+<style>
 	.unit select {
 		width:75px;
 	}
 
-.hide {
-  display: none;
-}
+	.hide {
+	  display: none;
+	}
+
+	.total {
+		width:75px;
+	}
+
 </style>
 
 <script>
@@ -32,13 +37,13 @@ function show4(){
 </script>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air/task-list" method="post" class="form">
+	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/off-site-transfers-in-waste-water/task-list" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<a class="link-back" href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/releases-to-air-checked">Back to releases to air</a>
+		<a class="link-back" href="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/off-site-transfers-in-waste-water/">Back to off-site transfers in waste water</a>
 		<div class="error-summary" role="group" aria-labelledby="data-error-table" tabindex="-1">
-			<h1 id="make-corrections" class="heading-large error-summary-heading">Check your carbon dioxide report</h1>
+			<h1 id="make-corrections" class="heading-large error-summary-heading">Check your chromium report</h1>
 			<p>The number you’ve reported is significantly larger than last year.</p>
 		</div>
 
@@ -48,11 +53,11 @@ function show4(){
 			<tbody>
 				<tr>
 					<th class="2016-total">2016 total</th>
-					<td class="2016-total-value">4,480 kg</td>
+					<td class="2016-total-value">BRT</td>
 				</tr>
 				<tr>
 					<th class="2017-reporting-threshold">2017 reporting threshold</th>
-					<td class="2017-reporting-threshold-value">1,000 kg</td>
+					<td class="2017-reporting-threshold-value">20 kg</td>
 				</tr>
 				<tr>
 					<th class="2017-total-or-BRT"></th>
@@ -60,7 +65,7 @@ function show4(){
 						<div class="unit form-group form-group-error">
 							<fieldset class="inline">
 								<label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
-								<input class="form-control form-control-error" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="4883">
+								<input class="form-control total form-control-error" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="21">
 								<label class="form-label visually-hidden" for="select-box">Unit</label>
 								<select class="form-control form-control-error" id="select-box" name="select-box">
 								    <option>--</option>
