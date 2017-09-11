@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.ewc-code {
+		white-space: nowrap;
+	}
+	.hazardous {
+		white-space: nowrap;
+		text-align: right;
+	}
+	.hide {
+		display:none;
+	}
+	.list {
+		margin:0 0 40px 0;
+	}
+	.list li {
+		padding: 0.63158em 1.05263em 0.47368em 0;
+		border-bottom:1px solid #bfc1c3;
+	}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/off-site-waste-transfer/index-new" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large"><span class="heading-secondary">End-of-life vehicles from different means of transport (including off-road machinery) and wastes from dismantling of end-of-life vehicles and vehicle maintenance (except 13 - 14 - 16 06 and 16 08)</span> Choose the WDF code for this waste transfer</h1>
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<div class="multiple-choice">
+					    <input id="radio-inline-16" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-16">D1 Deposit into or onto land, e.g. landfill</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-17" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-17">D2 Land treatment, e.g. biodegradation of liquid or sludgy discards in soils</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-18" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-18">D3 Deep injection, e.g. injection of pumpable discards into wells, salt domes or naturally occurring repositories</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-19" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-19">D4 Surface impoundment, e.g. placement of liquid or sludgy discards into pits, ponds or lagoons</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-20" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-20">D5 Specially engineered landfill, e.g. placement into lined discrete cells which are capped and isolated from one another and the environment</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-21" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-21">D6 Release into a water body, except seas/oceans</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-22" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-22">D7 Release into seas/oceans, including sea-bed insertion</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-23" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-23">D8 Biological treatment resulting in final compounds or mixtures which are discarded by any of the operations numbered D1 to D12</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-24" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-24">D9 Physico-chemical treatment resulting in final compounds or mixtures which are discarded by any of the operations numbered D1 to D12, e.g. evaporation, drying, calcination</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-25" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-25">D10 Incineration on land</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-26" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-26">D11 Incineration at sea</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-27" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-27">D12 Permanent storage, e.g. emplacement of containers in a mine</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-28" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-28">D13 Blending or mixing prior to submission to any of the operations numbered D1 to D12</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-29" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-29">D14 Repackaging prior to submission to any of the operations numbered D1 to D13</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-30" type="radio" checked name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-30">D15 Storage pending any of the operations numbered D1 to D14 (excluding temporary storage, pending collection, on the site where it is produced)</label>
+					</div>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
