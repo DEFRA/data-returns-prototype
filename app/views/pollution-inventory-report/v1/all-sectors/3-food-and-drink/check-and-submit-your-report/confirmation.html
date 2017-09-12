@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Report submitted</h1>
+        <p>
+          Your reference number is <br>
+          <strong class="heading-medium">AB987654321</strong>
+        </p>
+      </div>
+      <p>We’ve just sent you a confirmation email.</p>
+
+      <h2 class="heading-medium">What happens next?</h2>
+      <p>Your report will be checked by the Environment Agency. Your site officer may contact you with queries.</p>
+      <p>Your data will be published on GOV.UK after 31 May 2018.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+  </div>
+
+</main>
+
+
+
+	<div class="form-group">
+		<input type="submit" class="button" value="Continue">
+	</div>
+</main> {% endblock %}

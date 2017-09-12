@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.noce-p { width:120px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<a class="link-back" href="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/check-your-details/check-site-codes">Back to site codes</a>
+	<h1 class="heading-large">Your NOSE-P code</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p>Enter the code for your site's main activity:</p>
+			<form action="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/check-your-details/nace-code" method="post" class="form">
+				<div class="form-group">
+				  	<label class="form-label visually-hidden" for="nose-p-code">NOSE-P code</label>
+					<input class="form-control noce-p" id="nose-p-code" type="text" name="nose-p-code" value="">
+				</div>
+				<div class="form-group">
+					<a href="#">Add another NOSE-P code</a>
+				</div>
+	            <div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

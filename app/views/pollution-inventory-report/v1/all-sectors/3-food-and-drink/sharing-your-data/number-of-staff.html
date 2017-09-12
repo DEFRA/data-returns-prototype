@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<h1 class="heading-large">
+		<span class="heading-secondary">Sharing your data</span>
+		How many staff were employed on this site on 31 December 2017?
+	</h1>
+	<p>You don’t have to answer this question. It’s to help us understand more about operators who submit pollution inventory data.</p>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/sharing-your-data/share-your-data" method="post" class="form">
+	            <div class="form-group">
+	                <label class="form-label visually-hidden" for="q">Staff numbers
+	                </label>
+	                <input id="q" name="q" type="text" class="form-control" aria-controls="search-results" value="">
+	                <input type="hidden"  class="form-control" name="src" value="">
+	            </div>
+	            <div class="form-group">
+	                <input type="submit" class="button" value="Continue">
+	            </div>
+				<p><a href="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/sharing-your-data/share-your-data">Skip this question</a></p>
+			</form>
+		</div>
+	</div>
+</main> {% endblock %}

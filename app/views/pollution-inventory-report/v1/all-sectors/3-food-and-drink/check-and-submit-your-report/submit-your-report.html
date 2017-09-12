@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+	.notice .icon {
+		top: 5px;
+		margin-top:0;
+	}
+</style>
+
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/check-and-submit-your-report/confirmation" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Submit your report</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="notice">
+					<i class="icon icon-important">
+				    	<span class="visually-hidden">Warning</span>
+					</i>
+					<strong class="bold-small">
+					     If you make a statement that’s false or misleading you may be committing an offence under Environmental Permitting (England and Wales) Regulations 2010, Regulation 60 (1).
+					</strong>
+				</div>
+				<h2 class="heading-medium">Declaration</h2>
+				<p>By submitting this report, I declare that as far as I know the information in it is true.</p>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</div>
+		</div>
+	</form>
+</main>
+
+{% endblock %}
