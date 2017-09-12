@@ -6,14 +6,21 @@
 
 {% block content %}
 
+<style>
 
+ @media (min-width: 641px) {
+	.form-control.total {
+	    width: 100px !important;
+	}
+}
+</style>
 
 <main id="content" role="main">
 	<form action="/pollution-inventory-report/v1/all-sectors/2-waste/report-data/off-site-transfers-in-waste-water/task-list" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<h1 class="heading-large">Your off-site transfers in waste water</h1>
+		<h1 class="heading-large">Report your off-site transfers in waste water</h1>
 		<table class="check-data table-control mobile-format">
 			<thead>
 				<tr>
@@ -30,7 +37,7 @@
 					<td class="td-substance">Chromium</td>
 					<td class="td-reporting-threshold numeric">20 kg</td>
 					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text" value="21"> </td>
+					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control total" id="releases" name="releases" type="text" value="21"> </td>
 					<td class="td-unit">
 						<label class="form-label visually-hidden" for="select-box">Unit</label>
 						<select class="form-control unit" id="select-box" name="select-box">
@@ -48,7 +55,7 @@
 					<td class="td-substance">Copper</td>
 					<td class="td-reporting-threshold numeric">20 kg</td>
 					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control total" id="releases" name="releases" type="text"> </td>
 					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
 					    <option selected>--</option>
 						  <option>kt</option>
@@ -64,7 +71,7 @@
 					<td class="td-substance">Lead</td>
 					<td class="td-reporting-threshold numeric">20 kg</td>
 					<td class="td-release-history numeric"> BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control total" id="releases" name="releases" type="text"> </td>
 					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
 					    <option selected>--</option>
 					    <option>kt</option>
@@ -79,7 +86,7 @@
 					<td class="td-substance">Nickel</td>
 					<td class="td-reporting-threshold numeric">20 kg</td>
 					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control total" id="releases" name="releases" type="text"> </td>
 					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
 					  <option selected>--</option>
 					  <option>kt</option>
@@ -94,7 +101,7 @@
 					<td class="td-substance">Zinc</td>
 					<td class="td-reporting-threshold numeric">100 kg</td>
 					<td class="td-release-history numeric">BRT</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control total" id="releases" name="releases" type="text"> </td>
 					<td class="td-unit"> <label class="form-label visually-hidden" for="select-box">Unit</label> <select class="form-control unit" id="select-box" name="select-box">
 					    <option selected>--</option>
 						  <option>kt</option>
