@@ -95,6 +95,10 @@ function show4(){
 									<input id="radio-inline-8" type="radio" name="why-increased" value="No" onclick="show8();">
 									<label for="radio-inline-8">Other</label>
 								</div>
+								<div class="panel panel-border-narrow hide" id="radio-inline-8-div">
+									<p>Explain what other reason caused this increase</p>
+									<textarea style="height:150px; width:100%"></textarea>
+								</div>
 							</fieldset>
 						</div>
 					</td>
@@ -198,5 +202,22 @@ function show4(){
 		</div>
 	</form>
 </main>
+
+
+<script>
+	document.getElementById('radio-inline-5').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-6').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-7').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-8').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'block';
+	};
+</script>
+
 {% endblock %}
 {% extends "layout.html" %}
