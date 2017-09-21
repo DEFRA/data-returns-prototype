@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.noce-p { width:120px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<a class="link-back" href="/pollution-inventory-report/v1/all-sectorstotal numericcheck-your-details/nose-p-code/">Back to NOSE-P code(s)</a>
+	<h1 class="heading-large">Select your site's activity</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/pollution-inventory-report/v1/all-sectorstotal numericcheck-your-details/nose-p-code/choose-process" method="post" class="form">
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="1">
+							<label for="radio-inline-1">Energy</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="2">
+							<label for="radio-inline-2">Production and processing of metals</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-1" value="3">
+							<label for="radio-inline-3">Minerals</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-4" type="radio" name="radio-inline-group-1" value="4">
+							<label for="radio-inline-4">Chemicals</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-5" type="radio" checked name="radio-inline-group-1" value="5">
+							<label for="radio-inline-5">Waste management</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-5" type="radio" name="radio-inline-group-1" value="5">
+							<label for="radio-inline-5">Other industries</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
