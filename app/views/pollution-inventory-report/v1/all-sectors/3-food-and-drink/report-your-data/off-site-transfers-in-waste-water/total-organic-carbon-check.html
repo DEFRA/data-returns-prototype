@@ -16,7 +16,7 @@
 	}
 
 	.total {
-		width:75px;
+		width:120px;
 	}
 
 </style>
@@ -43,7 +43,7 @@ function show4(){
 		</div>
 		<a class="link-back" href="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/report-your-data/off-site-transfers-in-waste-water/">Back to off-site transfers in waste water</a>
 		<div class="error-summary" role="group" aria-labelledby="data-error-table" tabindex="-1">
-			<h1 id="make-corrections" class="heading-large error-summary-heading">Check your chromium report</h1>
+			<h1 id="make-corrections" class="heading-large error-summary-heading">Check your total organic carbon (TOC) report</h1>
 			<p>The number you’ve reported is significantly larger than last year.</p>
 		</div>
 
@@ -57,7 +57,7 @@ function show4(){
 				</tr>
 				<tr>
 					<th class="2017-reporting-threshold">2017 reporting threshold</th>
-					<td class="2017-reporting-threshold-value">20 kg</td>
+					<td class="2017-reporting-threshold-value">50,000 kg</td>
 				</tr>
 				<tr>
 					<th class="2017-total-or-BRT"></th>
@@ -65,7 +65,7 @@ function show4(){
 						<div class="unit form-group form-group-error">
 							<fieldset class="inline">
 								<label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
-								<input class="form-control total form-control-error" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="21">
+								<input class="form-control total form-control-error" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="230,715">
 								<label class="form-label visually-hidden" for="select-box">Unit</label>
 								<select class="form-control form-control-error" id="select-box" name="select-box">
 								    <option>--</option>
@@ -94,6 +94,10 @@ function show4(){
 								<div class="multiple-choice">
 									<input id="radio-inline-8" type="radio" name="why-increased" value="No" onclick="show8();">
 									<label for="radio-inline-8">Other</label>
+								</div>
+								<div class="panel panel-border-narrow hide" id="radio-inline-8-div">
+									<p>Explain what other reason caused this increase</p>
+									<textarea style="height:150px; width:100%"></textarea>
 								</div>
 							</fieldset>
 						</div>
@@ -198,5 +202,23 @@ function show4(){
 		</div>
 	</form>
 </main>
+
+
+<script>
+	document.getElementById('radio-inline-5').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-6').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-7').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'none';
+	};
+	document.getElementById('radio-inline-8').onchange = function() {
+    	document.getElementById('radio-inline-8-div').style.display = 'block';
+	};
+</script>
+
+
 {% endblock %}
 {% extends "layout.html" %}
