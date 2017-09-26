@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.ewc-code {
+		white-space: nowrap;
+	}
+	.hazardous {
+		white-space: nowrap;
+		text-align: right;
+	}
+	.hide {
+		display:none;
+	}
+	.list {
+		margin:0 0 40px 0;
+	}
+	.list li {
+		padding: 0.63158em 1.05263em 0.47368em 0;
+		border-bottom:1px solid #bfc1c3;
+	}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v1/all-sectors/3-food-and-drink/report-your-data/off-site-waste-transfer/baking-and-confectionery-industry" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">Agriculture/Hunting/Fishing/Food Processing</h1>
+		<h2 class="heading-medium">Select a sub-chapter</h2>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" type="radio" checked name="radio-inline-group-1" value="1">
+							<label for="radio-inline-1">02 01 - Agriculture - horticulture - aquaculture - forestry - hunting and fishing</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="2">
+							<label for="radio-inline-2">02 02 - Preparation and processing of meat - fish and other foods of animal origin</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-1" value="3">
+							<label for="radio-inline-3">02 03 - Fruit - vegetables - cereals - edible oils - cocoa - coffee - tea and tobacco preparation and processing; conserve production; yeast and yeast extract production - molasses preparation and fermentation</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-4" type="radio" name="radio-inline-group-1" value="4">
+							<label for="radio-inline-4">02 04 - Sugar processing</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-5" type="radio" name="radio-inline-group-1" value="5">
+							<label for="radio-inline-5">02 05 - Dairy products industry</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-6" type="radio" checked name="radio-inline-group-1" value="6">
+							<label for="radio-inline-6">02 06 - Baking and confectionery industry</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-7" type="radio" name="radio-inline-group-1" value="7">
+							<label for="radio-inline-7">02 07 - Production of alcoholic and non-alcoholic beverages (except coffee - tea and cocoa)</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
