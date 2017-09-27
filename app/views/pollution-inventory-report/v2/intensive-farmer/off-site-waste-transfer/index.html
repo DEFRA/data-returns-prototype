@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+.hide {
+  display: none;
+}
+.td-wfd-code select {
+	width:75px;
+}
+th {
+	white-space: nowrap;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Off site waste transfers</h1>
+
+	<form action="/pollution-inventory-report/v1/intensive-farmer/report-data/task-list-off-site-waste-transfer" method="post" class="form">
+
+		<table class="check-data table-control mobile-format">
+			<thead>
+				<tr>
+					<th class="th-ewc-code">EWC code</th>
+					<th class="th-description">Description</th>
+					<th class="th-wfd-code numeric">WFD code</th>
+					<th class="th-2016-total numeric">2016 total</th>
+					<th class="th-2017-total">2017 total</th>
+					<th class="th-action"><span class="visually-hidden">More detail</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-ewc-code">02 01 04</td>
+					<td class="td-description">Waste plastics (except packaging)</td>
+					<td class="td-wfd-code numeric">D1</td>
+  					<td class="td-2016-total numeric">BRT</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				  	<td class="td-action"><a href="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/waste-plastics-except-packaging">More detail</a></td>
+				</tr>
+				<tr>
+					<td class="td-ewc-code">02 01 10</td>
+					<td class="td-description">Waste metal</td>
+					<td class="td-wfd-code numeric">R4</td>
+  					<td class="td-2016-total numeric">BRT</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				  	<td class="td-action"><a href="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/waste-plastics-except-packaging">More detail</a></td>
+				</tr>
+				<tr>
+					<td class="td-ewc-code">13 02 08</td>
+					<td class="td-description">Readily biodegradable engine, gear and lubricating oils</td>
+					<td class="td-wfd-code numeric">R9</td>
+  					<td class="td-2016-total numeric">0.1</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">2017 total</label>
+						<input class="form-control" id="quantity" name="quantity" type="text">
+					</td>
+				  	<td class="td-action"><a href="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/waste-plastics-except-packaging">More detail</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	    <div class="form-group">
+			<a href="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/new-off-site-waste-transfer">Add a new off site waste transfer</a>
+		</div>
+
+	    <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+<script>
+	document.getElementById('waste-bark-and-wood-checkbox').onchange = function() {
+    	document.getElementById('waste-bark-and-wood-div').style.display = this.checked ? 'block' : 'none';
+	};
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<script>
+function show1(){
+  document.getElementById('other').style.display ='none';
+}
+function show2(){
+  document.getElementById('other').style.display = 'block';
+}
+</script>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+		<h2 class="heading-large error-summary-heading" id="error-summary-heading-example-2">
+		  Check your data
+	    </h2>
+		<p>You’ve told us that your emissions increased significantly last year.</p>
+		<ul class="error-summary-list">
+			<li><a href="#carbon-dioxide">Check answers</a></li>
+		</ul>
+	</div>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p>What caused this increase?</p>
+			<form action="/pollution-inventory-report/v1/intensive-farmer/check-your-details/nace-code" method="post" class="form">
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="operation"  onclick="show1();">
+							<label for="radio-inline-1">We’ve increased our operational activities</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="incident"  onclick="show1();">
+							<label for="radio-inline-2">We had a pollution incident</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-1" value="other"  onclick="show2();">
+							<label for="radio-inline-3">Other</label>
+						</div>
+						<div class="form-group">
+							<div class="panel panel-border-narrow hide" id="other">
+								<p>Explain the other reason for the increase</p>
+								<textarea style="height:150px; width:100%"></textarea>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+	            <div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

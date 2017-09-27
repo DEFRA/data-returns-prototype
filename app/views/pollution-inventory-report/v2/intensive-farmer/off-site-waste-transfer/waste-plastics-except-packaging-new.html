@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<style>
+.total {
+	width:8rem;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">More detail about waste plastics (except packaging)</h1>
+
+	<form action="/pollution-inventory-report/v1/intensive-farmer/off-site-waste-transfer/index-new" method="post" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<table class="more-detail table-control mobile-format">
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="ewc-code">EWC code</th>
+							<td class="ewc-code-value">02 01 04 Waste plastics (except packaging)</td>
+						</tr>
+						<tr>
+							<th class="wfd-code">WFD code</th>
+							<td class="wfd-code-value">D1 Deposit into or onto land (for example landfill, etc.)</td>
+						</tr>
+						<tr>
+							<th class="2016-total-or-BRT">2016 total</th>
+							<td class="2016-total-or-BRT-value">BRT</td>
+						</td>
+						<tr>
+							<th class="2017-total-or-BRT">2017 total</th>
+							<td class="2017-total-or-BRT-value">
+								<label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
+								<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
+							</td>
+						</tr>
+						<tr>
+							<th class="detailed-method">Detailed method</th>
+							<td class="detailed-method">EN ISO 15682 (2001)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	    <div class="form-group">
+			<a href="">Remove this off-site waste transfer</a>
+		</div>
+
+	    <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+<script>
+	document.getElementById('waste-bark-and-wood-checkbox').onchange = function() {
+    	document.getElementById('waste-bark-and-wood-div').style.display = this.checked ? 'block' : 'none';
+	};
+</script>
+
+
+{% endblock %}
