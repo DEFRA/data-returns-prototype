@@ -7,99 +7,49 @@
 {% block content %}
 
 <style>
-	.ewc-code {
-		white-space: nowrap;
-	}
-	.hazardous {
-		white-space: nowrap;
-		text-align: right;
-	}
-	.hide {
-		display:none;
-	}
-	.list {
-		margin:0 0 40px 0;
-	}
-	.list li {
-		padding: 0.63158em 1.05263em 0.47368em 0;
-		border-bottom:1px solid #bfc1c3;
-	}
 </style>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+	<form method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<h1 class="heading-large">What other type of waste did you transfer?</h1>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<div class="form-group">
-					<h2 class="heading-medium">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing, food preparation and processing</h2>
 					<fieldset>
 						<div class="multiple-choice">
-							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-1">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing</label>
-						</div>
-					</fieldset>
-
-					<h2 class="heading-medium">Oil wastes and wastes of liquid fuels (except edible oils and those in chapters 05, 12 and 19)</h2>
-					<fieldset>
-						<div class="multiple-choice">
-							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-2">Waste engine, gear and lubricating oils</label>
+							<input id="wastes-from-agriculture" type="radio" name="radio-inline-group-1" value="wastes-from-agriculture">
+							<label for="wastes-from-agriculture">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-3" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-3">Oil/water separator contents</label>
+							<input id="oil-and-liquid" type="radio" name="radio-inline-group-1" value="oil-and-liquid">
+							<label for="oil-and-liquid">Oil and Liquid Fuel Waste</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-4" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-4">Wastes of liquid fuels</label>
+							<input id="radio-inline-15" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-15">Waste packaging; absorbents, wiping cloths, filter materials and protective clothing not otherwise specified</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-5" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-5">Oil wastes not otherwise specified</label>
-						</div>
-					</fieldset>
-
-					<h2 class="heading-medium">Waste packaging; absorbents, wiping cloths, filter materials and protective clothing not otherwise specified</h2>
-					<fieldset>
-						<div class="multiple-choice">
-							<input id="radio-inline-6" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-6">Packaging (including separately collected municipal packaging waste)</label>
+							<input id="radio-inline-17" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-17">Construction and Demolition Waste</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-7" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-7">Absorbents, filter materials, wiping cloths and protective clothing</label>
-						</div>
-					</fieldset>
-
-					<h2 class="heading-medium">Wastes not otherwise specified in the list</h2>
-					<fieldset>
-						<div class="multiple-choice">
-							<input id="radio-inline-8" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-8">End-of-life vehicles from different means of transport (including off-road machinery) and wastes from dismantling of end-of-life vehicles and vehicle maintenance (except 13, 14, 16 06 and 16 08)</label>
+							<input id="radio-inline-18" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-18">Healthcare Waste</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-9" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-9">Batteries and accumulators</label>
+							<input id="radio-inline-19" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-19">Materials from Waste and Water Treatment</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-10" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-10">Insulation materials and asbestos-containing construction materials</label>
+							<input id="radio-inline-20" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-20">Municipal Waste and Similar Materials From Commerce and Industry</label>
 						</div>
 						<div class="multiple-choice">
-							<input id="radio-inline-11" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-11">Wastes from research, diagnosis, treatment or prevention of disease involving animals</label>
-						</div>
-						<div class="multiple-choice">
-							<input id="radio-inline-12" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-12">Wastes from incineration or pyrolysis of waste</label>
-						</div>
-						<div class="multiple-choice">
-							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
-							<label for="radio-inline-1">Municipal wastes including separately collected fractions</label>
+							<input id="radio-inline-16" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-16">Wastes not otherwise specified in the list</label>
 						</div>
 					</fieldset>
 				</div>

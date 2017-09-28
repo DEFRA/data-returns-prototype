@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">Materials from Waste and Water Treatment</h2>
+						<div class="multiple-choice">
+							<input id="radio-inline-01" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-01">01</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-02" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-02">02</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-03" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-03">03</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-04" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-04">04</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-05" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-05">05</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-06" type="radio" name="radio-inline-group-1" value="Yes">
+							<label for="radio-inline-06">06</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

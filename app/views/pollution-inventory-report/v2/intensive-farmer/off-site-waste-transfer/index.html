@@ -6,37 +6,28 @@
 
 {% block content %}
 
-
-<style>
-.hide {
-  display: none;
-}
-.td-wfd-code select {
-	width:75px;
-}
-th {
-	white-space: nowrap;
-}
-</style>
-
-
 <main id="content" role="main">
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">Off site waste transfers</h1>
-
-	<form action="/pollution-inventory-report/v2/intensive-farmer/report-data/task-list-off-site-waste-transfer" method="post" class="form">
-		<p>You have yet to report an off-site waste transfer</p>
-
-	    <div class="form-group">
-			<a href="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/new-off-site-waste-transfer">Add a new off-site waste transfer</a>
+	<h1 class="heading-large">
+		Did you transfer any waste overseas?
+	</h1>
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/new-off-site-waste-transfer" method="post" class="form">
+		<div class="form-group">
+			<fieldset class="inline">
+				<div class="multiple-choice">
+					<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+					<label for="radio-inline-1">Yes</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+					<label for="radio-inline-2">No</label>
+				</div>
+			</fieldset>
 		</div>
-
-	    <div class="form-group">
+        <div class="form-group">
 			<input class="button" type="submit" value="Continue">
 		</div>
 	</form>
-</main>
-
-{% endblock %}
+</main> {% endblock %}
