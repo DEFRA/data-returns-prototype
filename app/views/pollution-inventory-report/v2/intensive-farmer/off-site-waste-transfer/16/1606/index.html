@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">Batteries and accumulators</h2>
+						<div class="multiple-choice">
+							<input id="160601" type="radio" name="radio-inline-group-1" value="160601">
+							<label for="160601">lead batteries</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160602" type="radio" name="radio-inline-group-1" value="160602">
+							<label for="160602">Ni-Cd batteries</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160603" type="radio" name="radio-inline-group-1" value="160603">
+							<label for="160603">mercury-containing batteries</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160604" type="radio" name="radio-inline-group-1" value="160604">
+							<label for="160604">alkaline batteries (except 16 06 03)</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160605" type="radio" name="radio-inline-group-1" value="160605">
+							<label for="160605">other batteries and accumulators</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160606" type="radio" name="radio-inline-group-1" value="160606">
+							<label for="160606">separately collected electrolyte from batteries and accumulators</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

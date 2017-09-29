@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">Wastes from research, diagnosis, treatment or prevention of disease involving animals</h2>
+						<div class="multiple-choice">
+							<input id="180201" type="radio" name="radio-inline-group-1" value="180201">
+							<label for="180201">Sharps (except 18 02 02)</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180202" type="radio" name="radio-inline-group-1" value="180202">
+							<label for="180202">Wastes whose collection and disposal is subject to special requirements in order to prevent infection</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180203" type="radio" name="radio-inline-group-1" value="180203">
+							<label for="180203">Wastes whose collection and disposal is not subject to special requirements in order to prevent infection</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180205" type="radio" name="radio-inline-group-1" value="180205">
+							<label for="180205">Chemicals consisting of or containing dangerous substances</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180206" type="radio" name="radio-inline-group-1" value="180206">
+							<label for="180206">Chemicals other than those mentioned in 18 02 05</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180207" type="radio" name="radio-inline-group-1" value="180207">
+							<label for="180207">Cytotoxic and cytostatic medicines</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="180208" type="radio" name="radio-inline-group-1" value="180208">
+							<label for="180208">Medicines other than those mentioned in 18 02 07</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

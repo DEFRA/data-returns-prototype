@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">Waste engine, gear and lubricating oils</h2>
+						<div class="multiple-choice">
+							<input id="130204" type="radio" name="radio-inline-group-1" value="130204">
+							<label for="130204">Mineral-based chlorinated engine, gear and lubricating oils</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130205" type="radio" name="radio-inline-group-1" value="130205">
+							<label for="130205">Mineral-based non-chlorinated engine, gear and lubricating oils</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130206" type="radio" name="radio-inline-group-1" value="130206">
+							<label for="130206">Synthetic engine, gear and lubricating oils</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130207" type="radio" name="radio-inline-group-1" value="130207">
+							<label for="130207">Readily biodegradable engine, gear and lubricating oils</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130208" type="radio" name="radio-inline-group-1" value="130208">
+							<label for="130208">Other engine, gear and lubricating oils</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

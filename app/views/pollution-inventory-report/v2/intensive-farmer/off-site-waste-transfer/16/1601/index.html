@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">End-of-life vehicles from different means of transport (including off-road machinery) and wastes from dismantling of end-of-life vehicles and vehicle maintenance (except 13, 14, 16 06 and 16 08)</h2>
+						<div class="multiple-choice">
+							<input id="160103" type="radio" name="radio-inline-group-1" value="160103">
+							<label for="160103">End-of-life tyres</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160104" type="radio" name="radio-inline-group-1" value="160104">
+							<label for="160104">End-of-life vehicles</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160106" type="radio" name="radio-inline-group-1" value="160106">
+							<label for="160106">End-of-life vehicles, containing neither liquids nor other hazardous components</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160107" type="radio" name="radio-inline-group-1" value="160107">
+							<label for="160107">Oil filters</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160108" type="radio" name="radio-inline-group-1" value="160108">
+							<label for="160108">Components containing mercury</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160109" type="radio" name="radio-inline-group-1" value="160109">
+							<label for="160109">Components containing PCBs</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160110" type="radio" name="radio-inline-group-1" value="160110">
+							<label for="160110">Explosive components (for example air bags)</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160111" type="radio" name="radio-inline-group-1" value="160111">
+							<label for="160111">Brake pads containing asbestos</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160112" type="radio" name="radio-inline-group-1" value="160112">
+							<label for="160112">Brake pads other than those mentioned in 16 01 11</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160113" type="radio" name="radio-inline-group-1" value="160113">
+							<label for="160113">Brake fluids</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160114" type="radio" name="radio-inline-group-1" value="160114">
+							<label for="160114">Antifreeze fluids containing dangerous substances</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160115" type="radio" name="radio-inline-group-1" value="160115">
+							<label for="160115">Antifreeze fluids other than those mentioned in 16 01 14</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160116" type="radio" name="radio-inline-group-1" value="160116">
+							<label for="160116">Tanks for liquefied gas</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160117" type="radio" name="radio-inline-group-1" value="160117">
+							<label for="160117">Ferrous metal</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160118" type="radio" name="radio-inline-group-1" value="160118">
+							<label for="160118">Waste metal</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160119" type="radio" name="radio-inline-group-1" value="160119">
+							<label for="160119">Non-ferrous metal</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160120" type="radio" name="radio-inline-group-1" value="160120">
+							<label for="160120">Plastic</label>
+						</div>"
+						<div class="multiple-choice">
+							<input id="160121" type="radio" name="radio-inline-group-1" value="160121">
+							<label for="160121">Hazardous components other than those mentioned in 16 01 07 to 16 01 11 and 16 01 13 and 16 01 14</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160122" type="radio" name="radio-inline-group-1" value="160122">
+							<label for="160122">Components not otherwise specified</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="160199" type="radio" name="radio-inline-group-1" value="160199">
+							<label for="160199">Eastes not otherwise specified</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/intensive-farmer/off-site-waste-transfer/wastes-from-agriculture" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large">What type of waste did you transfer?</h1>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<h2 class="heading-medium">Oil/water separator contents</h2>
+						<div class="multiple-choice">
+							<input id="130501" type="radio" name="radio-inline-group-1" value="130501">
+							<label for="130501">Solids from grit chambers and oil/water separators</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130502" type="radio" name="radio-inline-group-1" value="130502">
+							<label for="130502">Sludges from oil/water separators</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130503" type="radio" name="radio-inline-group-1" value="130503">
+							<label for="130503">Interceptor sludges</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130506" type="radio" name="radio-inline-group-1" value="130506">
+							<label for="130506">Oil from oil/water separators</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130507" type="radio" name="radio-inline-group-1" value="130507">
+							<label for="130507">Oily water from oil/water separators</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="130508" type="radio" name="radio-inline-group-1" value="130508">
+							<label for="130508">Mixtures of wastes from grit chambers and oil/water separators</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
