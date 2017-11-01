@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %} GOV.UK prototyping kit {% endblock %}
+
+{% block content %}
+
+<style>
+</style>
+
+<main id="content" role="main"> <a href="#" class="link-back" id="back">Back</a>
+	<h1 class="heading-large"><span class="heading-secondary">Sludges from washing and cleaning</span><span class="question-heading">How was the waste disposed of?</span></h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/examples/off-site-waste-transfer/pages/waste-code-and-d-and-r-code" method="post" class="form">
+				<div class="form-group">
+					<fieldset id="choices">
+						<div class="multiple-choice">
+							<input id="q05" type="radio" name="data-choice" value="q05">
+							<label class="selection-button-radio" for="q05"><span>deposit into or onto land, e.g. landfill</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q06" type="radio" name="data-choice" value="q06"><label class="selection-button-radio" for="q06"><span>incineration on land</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q07" type="radio" name="data-choice" value="q07">
+							<label class="selection-button-radio" for="q07"><span>use principally as a fuel or other means to generate energy</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q08" type="radio" name="data-choice" value="q08">
+							<label class="selection-button-radio" for="q08"><span>other disposal method</span></label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input id="submit" class="button" type="submit" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

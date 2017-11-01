@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+
+</style>
+<main id="content" role="main"> <a href="#" class="link-back" id="back">Back</a>
+	<h1 class="heading-large"><span class="heading-secondary">Off site waste transfers</span>What general type of waste did you transfer?</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/examples/off-site-waste-transfer/pages/sub-chapter" method="post" class="form">
+				<div class="form-group">
+					<fieldset id="choices">
+						<div class="multiple-choice">
+							<input id="q01" type="radio" name="data-choice" value="q01">
+							<label class="selection-button-radio" for="q01"><span>Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing, food preparation and processing</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q89" type="radio" name="data-choice" value="q89"><label class="selection-button-radio" for="q89"><span>Oil wastes and wastes of liquid fuels (except edible oils and those in chapters 05, 12 and 19)</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q131" type="radio" name="data-choice" value="q131">
+							<label class="selection-button-radio" for="q131"><span>Waste packaging; absorbents, wiping cloths, filter materials and protective clothing not otherwise specified</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q223" type="radio" name="data-choice" value="q223">
+							<label class="selection-button-radio" for="q223"><span>Wastes from industrial processes</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q298" type="radio" name="data-choice" value="q298"><label class="selection-button-radio" for="q298"><span>Construction and demolition waste</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q322" type="radio" name="data-choice" value="q322">
+							<label class="selection-button-radio" for="q322"><span>Healthcare waste</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q356" type="radio" name="data-choice" value="q356">
+							<label class="selection-button-radio" for="q356"><span>Minerals from waste and water treatment</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q379" type="radio" name="data-choice" value="q379">
+							<label class="selection-button-radio" for="q379"><span>Municipal waste and similar materials from commerce and industry</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q403" type="radio" name="data-choice" value="q403">
+							<label class="selection-button-radio" for="q403"><span>Another type of waste</span></label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group">
+					<input id="submit" class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

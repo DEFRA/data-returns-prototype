@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %} GOV.UK prototyping kit {% endblock %}
+
+{% block content %}
+
+<style>
+.numeral {
+	margin:20px 0;
+	font-size: 72px;
+}
+</style>
+
+<main id="content" role="main"> <a href="#" class="link-back" id="back">Back</a>
+
+	<p class="heading-small">Category</p>
+	<p>Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing</p>
+	<p class="heading-small">Activity</p>
+	<p>Sludges from washing and cleaning</p>
+	<div class="grid-row">
+		<div class="column-half">
+			<h1 class="heading-small">The <abbr="European Waste Catalogue">EWC</abbr> code for this waste is:<h1>
+			<h1 class="heading-large numeral">02 01 01<h1>
+		</div>
+		<div class="column-half">
+			<h1 class="heading-small">The <abbr="European Waste Catalogue">WFD</abbr> disposal &amp; recovery code for this waste is:<h1>
+			<h1 class="heading-large numeral">D1<h1>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

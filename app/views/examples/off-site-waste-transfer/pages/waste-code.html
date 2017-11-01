@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototyping kit {% endblock %} {% block content %}
+<style>
+</style>
+<main id="content" role="main"> <a href="#" class="link-back" id="back">Back</a>
+	<h1 class="heading-large"><span class="heading-secondary">Wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing, food preparation and processing</span><span class="question-heading">What type of wastes from agriculture, horticulture, aquaculture, forestry, hunting and fishing did you transfer?</span></h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<form action="/examples/off-site-waste-transfer/pages/method-of-transfer" method="post" class="form">
+				<div class="form-group">
+					<fieldset id="choices">
+						<div class="multiple-choice">
+							<input id="q03" type="radio" name="data-choice" value="q03">
+							<label class="selection-button-radio" for="q03"><span>Sludges from washing and cleaning</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q13" type="radio" name="data-choice" value="q13">
+							<label class="selection-button-radio" for="q13"><span>Animal-tissue waste</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q24" type="radio" name="data-choice" value="q24">
+							<label class="selection-button-radio" for="q24"><span>Plant-tissue waste</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q33" type="radio" name="data-choice" value="q33">
+							<label class="selection-button-radio" for="q33"><span>Waste plastics (except packaging)</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q44" type="radio" name="data-choice" value="q44">
+							<label class="selection-button-radio" for="q44"><span>Animal faeces, urine and manure (including spoiled straw), effluent, collected separately and treated off-site</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q54" type="radio" name="data-choice" value="q54">
+							<label class="selection-button-radio" for="q54"><span>Agrochemical waste other than those mentioned in 02 01 08</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q63" type="radio" name="data-choice" value="q63">
+							<label class="selection-button-radio" for="q63"><span>Waste metal</span></label>
+						</div>
+						<div class="multiple-choice">
+							<input id="q73" type="radio" name="data-choice" value="q73">
+							<label class="selection-button-radio" for="q73"><span>Wastes not otherwise specified</span></label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input id="submit" class="button" type="submit" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main> {% endblock %}
