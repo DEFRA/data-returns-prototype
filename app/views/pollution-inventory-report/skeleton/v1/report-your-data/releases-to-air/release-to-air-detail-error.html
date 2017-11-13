@@ -10,7 +10,8 @@
 	      </h2>
 	      <p>There are issues with the data</p>
 	      <ul class="error-summary-list">
-	        <li><a href="#releases">Your 2017 total must be a number or BRT</a></li>
+	        <li><a href="#releases-check">Your 2017 total must be a number or BRT</a></li>
+  	        <li><a href="#releases-check">You must select a method</a></li>
 	      </ul>
 	  </div>
 		<div class="grid-row">
@@ -25,7 +26,7 @@
 						<tr>
 							<th class="2017-total-or-BRT">2017 total</th>
 							<td class="2017-total-or-BRT-value">
-								<div class="form-group-error" id="carbon-dioxide-check">
+								<div class="form-group-error" id="releases-check">
 									<label class="form-label visually-hidden" for="releases">Releases</label>
 								  	<input class="form-control form-control-error" id="releases" name="releases" type="text" value="foobar">
 									<span class="error-message">Must be a number or BRT</span>
@@ -35,12 +36,15 @@
 						<tr>
 							<th class="method">Method</th>
 							<td class="method">
-								<label class="form-label visually-hidden" for="select-box">Method</label> <select class="form-control" id="select-box" name="select-box">
-							    <option selected>Select method</option>
-							    <option>Calculation</option>
-							    <option>Measurement</option>
-							    <option>Estimation</option>
-							  </select>
+								<div class="form-group-error" id="releases-check">
+									<label class="form-label visually-hidden" for="select-box">Method</label> <select class="form-control form-control-error" id="select-box" name="select-box">
+										<option selected>Select method</option>
+										<option>Calculation</option>
+										<option>Measurement</option>
+										<option>Estimation</option>
+									</select>
+									<span class="error-message">You must select a method</span>
+  								</div>
 						  	</td>
 						</tr>
 					</tbody>
