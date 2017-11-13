@@ -11,7 +11,16 @@
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<h1 class="heading-large">Your releases to air</h1>
+		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	      <h2 class="heading-large error-summary-heading" id="error-summary-heading-example-2">
+	        Check your releases to air
+	      </h2>
+	      <p>There are issues with the data</p>
+	      <ul class="error-summary-list">
+	        <li><a href="#carbon-dioxide-check">Check your carbon dioxide report</a></li>
+	      </ul>
+
+	    </div>
 		<table class="check-data table-control mobile-format">
 			<thead>
 				<tr>
@@ -26,7 +35,13 @@
 				<tr>
 					<td class="td-substance">Carbon dioxide</td>
 					<td class="td-reporting-threshold numeric">1.0E+7 kg</td>
-					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+					<td class="td-release">
+						<div class="form-group-error" id="carbon-dioxide-check">
+							<label class="form-label visually-hidden" for="releases">Releases</label>
+						  	<input class="form-control form-control-error" id="releases" name="releases" type="text" value="foobar">
+							<span class="error-message">Data error</span>
+						</div>
+					</td>
 					<td class="td-unit">
 						<label class="form-label visually-hidden" for="select-box">Unit</label>
 						<select class="form-control unit" id="select-box" name="select-box">
