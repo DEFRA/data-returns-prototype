@@ -4,16 +4,11 @@
 	.category {
 		display: none;
 	}
-
-	.multiple-choice {
-		margin-bottom: 10px !important;
-		width: 100%
-	}
 </style>
 <script src="/public/javascripts/list.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/releases-table" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/release-to-air-detail" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -24,215 +19,284 @@
 			<div class="column-two-thirds">
 				<div class="form-group list">
 					<div class="multiple-choice">
-						<input id="substance-type-1 name=substance-types" type="checkbox">
-						<label for="substance-type-1"><span class="category">Inorganics</span> <span class="name">Ammonia</span></label>
+						<input id="substance-type-1" type="checkbox">
+						<label for="substance-type-1">Ammonia</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-2 name=substance-types" type="checkbox"><label for="substance-type-2"><span class="category">Inorganics</span> <span class="name">Asbestos</span></label>
+					  <input id="substance-type-2" type="checkbox">
+						<label for="substance-type-2">Asbestos</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-3 name=substance-types" type="checkbox"><label for="substance-type-3"><span class="category">Inorganics</span> <span class="name">Carbon dioxide</span></label>
+					  <input id="substance-type-3" type="checkbox">
+					  <label for="substance-type-3">Carbon dioxide</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-4 name=substance-types" type="checkbox"><label for="substance-type-4"><span class="category">Inorganics</span> <span class="name">Carbon dioxide from qualifying renewable fuel source (reportable)</span></label>
+					  <input id="substance-type-4" type="checkbox">
+						<label for="substance-type-4">Carbon dioxide from qualifying renewable fuel source (reportable)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-5 name=substance-types" type="checkbox"><label for="substance-type-5"><span class="category">Inorganics</span> <span class="name">Carbon monoxide</span></label>
+					  <input id="substance-type-5" type="checkbox">
+						<label for="substance-type-5">Carbon monoxide</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-6 name=substance-types" type="checkbox"><label for="substance-type-6"><span class="category">Inorganics</span> <span class="name">Hydrogen cyanide</span></label>
+					  <input id="substance-type-6" type="checkbox">
+						<label for="substance-type-6">Hydrogen cyanide</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-7 name=substance-types" type="checkbox"><label for="substance-type-7"><span class="category">Inorganics</span> <span class="name">Nitrous oxide</span></label>
+					  <input id="substance-type-7" type="checkbox">
+						<label for="substance-type-7">Nitrous oxide</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-8 name=substance-types" type="checkbox"><label for="substance-type-8"><span class="category">Inorganics</span> <span class="name">Sulphur hexafluoride</span></label>
+					  <input id="substance-type-8" type="checkbox">
+						<label for="substance-type-8">Sulphur hexafluoride</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-9 name=substance-types" type="checkbox"><label for="substance-type-9"><span class="category">Organics</span> <span class="name">Aldrin</span></label>
+					  <input id="substance-type-9" type="checkbox">
+						<label for="substance-type-9">Aldrin</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-10 name=substance-types" type="checkbox"><label for="substance-type-10"><span class="category">Organics</span> <span class="name">Anthracene</span></label>
+					  <input id="substance-type-10" type="checkbox">
+						<label for="substance-type-10">Anthracene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-11 name=substance-types" type="checkbox"><label for="substance-type-11"><span class="category">Organics</span> <span class="name">Benzene</span></label>
+					  <input id="substance-type-11" type="checkbox">
+						<label for="substance-type-11">Benzene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-12 name=substance-types" type="checkbox"><label for="substance-type-12"><span class="category">Organics</span> <span class="name">Benzo(a)pyrene</span></label>
+					  <input id="substance-type-12" type="checkbox">
+						<label for="substance-type-12">Benzo(a)pyrene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-13 name=substance-types" type="checkbox"><label for="substance-type-13"><span class="category">Organics</span> <span class="name">Benzo(b)fluoranthene</span></label>
+					  <input id="substance-type-13" type="checkbox">
+						<label for="substance-type-13">Benzo(b)fluoranthene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-14 name=substance-types" type="checkbox"><label for="substance-type-14"><span class="category">Organics</span> <span class="name">Benzo(k)fluoranthene</span></label>
+					  <input id="substance-type-14" type="checkbox">
+						<label for="substance-type-14">Benzo(k)fluoranthene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-15 name=substance-types" type="checkbox"><label for="substance-type-15"><span class="category">Organics</span> <span class="name">Butadiene (13-Butadiene)</span></label>
+					  <input id="substance-type-15" type="checkbox">
+						<label for="substance-type-15">Butadiene (13-Butadiene)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-16 name=substance-types" type="checkbox"><label for="substance-type-16"><span class="category">Organics</span> <span class="name">Carbon tetrachloride (Tetrachloromethane)</span></label>
+					  <input id="substance-type-16" type="checkbox">
+						<label for="substance-type-16">Carbon tetrachloride (Tetrachloromethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-17 name=substance-types" type="checkbox"><label for="substance-type-17"><span class="category">Organics</span> <span class="name">Chlordane</span></label>
+					  <input id="substance-type-17" type="checkbox">
+						<label for="substance-type-17">Chlordane</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-18 name=substance-types" type="checkbox"><label for="substance-type-18"><span class="category">Organics</span> <span class="name">Chlordecone</span></label>
+					  <input id="substance-type-18" type="checkbox">
+						<label for="substance-type-18">Chlordecone</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-19 name=substance-types" type="checkbox"><label for="substance-type-19"><span class="category">Organics</span> <span class="name">Chloroform (Trichloromethane)</span></label>
+					  <input id="substance-type-19" type="checkbox">
+						<label for="substance-type-19">Chloroform (Trichloromethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-20 name=substance-types" type="checkbox"><label for="substance-type-20"><span class="category">Organics</span> <span class="name">Dichlorodiphenyltrichloroethane (DDT)</span></label>
+					  <input id="substance-type-20" type="checkbox">
+						<label for="substance-type-20">Dichlorodiphenyltrichloroethane (DDT)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-21 name=substance-types" type="checkbox"><label for="substance-type-21"><span class="category">Organics</span> <span class="name">Dichloromethane (DCM) (Methylene chloride)</span></label>
+					  <input id="substance-type-21" type="checkbox">
+						<label for="substance-type-21">Dichloromethane (DCM) (Methylene chloride)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-22 name=substance-types" type="checkbox"><label for="substance-type-22"><span class="category">Organics</span> <span class="name">Dieldrin</span></label>
+					  <input id="substance-type-22" type="checkbox">
+						<label for="substance-type-22">Dieldrin</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-23 name=substance-types" type="checkbox"><label for="substance-type-23"><span class="category">Organics</span> <span class="name">Di(2-ethylhexyl)phthalate (DEHP)</span></label>
+					  <input id="substance-type-23" type="checkbox">
+						<label for="substance-type-23">Di(2-ethylhexyl)phthalate (DEHP)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-24 name=substance-types" type="checkbox"><label for="substance-type-24"><span class="category">Organics</span> <span class="name">Endrin</span></label>
+					  <input id="substance-type-24" type="checkbox">
+						<label for="substance-type-24">Endrin</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-25 name=substance-types" type="checkbox"><label for="substance-type-25"><span class="category">Organics</span> <span class="name">Ethylene dichloride (12-Dichloroethane)</span></label>
+					  <input id="substance-type-25" type="checkbox">
+						<label for="substance-type-25">Ethylene dichloride (12-Dichloroethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-26 name=substance-types" type="checkbox"><label for="substance-type-26"><span class="category">Organics</span> <span class="name">Ethylene oxide (12-Epoxyethane)</span></label>
+					  <input id="substance-type-26" type="checkbox">
+						<label for="substance-type-26">Ethylene oxide (12-Epoxyethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-27 name=substance-types" type="checkbox"><label for="substance-type-27"><span class="category">Organics</span> <span class="name">Heptachlor</span></label>
+					  <input id="substance-type-27" type="checkbox">
+						<label for="substance-type-27">Heptachlor</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-28 name=substance-types" type="checkbox"><label for="substance-type-28"><span class="category">Organics</span> <span class="name">Hexabromobiphenyl</span></label>
+					  <input id="substance-type-28" type="checkbox">
+						<label for="substance-type-28">Hexabromobiphenyl</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-29 name=substance-types" type="checkbox"><label for="substance-type-29"><span class="category">Organics</span> <span class="name">Hexachlorobenzene</span></label>
+					  <input id="substance-type-29" type="checkbox">
+						<label for="substance-type-29">Hexachlorobenzene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-30 name=substance-types" type="checkbox"><label for="substance-type-30"><span class="category">Organics</span> <span class="name">Hexachlorocyclohexane – all isomers</span></label>
+					  <input id="substance-type-30" type="checkbox">
+						<label for="substance-type-30">Hexachlorocyclohexane – all isomers</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-31 name=substance-types" type="checkbox"><label for="substance-type-31"><span class="category">Organics</span> <span class="name">Indeno(123-cd)pyrene</span></label>
+					  <input id="substance-type-31" type="checkbox">
+						<label for="substance-type-31">Indeno(123-cd)pyrene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-32 name=substance-types" type="checkbox"><label for="substance-type-32"><span class="category">Organics</span> <span class="name">Lindane</span></label>
+					  <input id="substance-type-32" type="checkbox">
+						<label for="substance-type-32">Lindane</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-33 name=substance-types" type="checkbox"><label for="substance-type-33"><span class="category">Organics</span> <span class="name">Methane</span></label>
+					  <input id="substance-type-33" type="checkbox">
+						<label for="substance-type-33">Methane</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-34 name=substance-types" type="checkbox"><label for="substance-type-34"><span class="category">Organics</span> <span class="name">Methyl chloroform (111-Trichloroethane)</span></label>
+					  <input id="substance-type-34" type="checkbox">
+						<label for="substance-type-34">Methyl chloroform (111-Trichloroethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-35 name=substance-types" type="checkbox"><label for="substance-type-35"><span class="category">Organics</span> <span class="name">Mirex</span></label>
+					  <input id="substance-type-35" type="checkbox">
+						<label for="substance-type-35">Mirex</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-36 name=substance-types" type="checkbox"><label for="substance-type-36"><span class="category">Organics</span> <span class="name">Naphthalene</span></label>
+					  <input id="substance-type-36" type="checkbox">
+						<label for="substance-type-36">Naphthalene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-37 name=substance-types" type="checkbox"><label for="substance-type-37"><span class="category">Organics</span> <span class="name">Pentachlorobenzene</span></label>
+					  <input id="substance-type-37" type="checkbox">
+						<label for="substance-type-37">Pentachlorobenzene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-38 name=substance-types" type="checkbox"><label for="substance-type-38"><span class="category">Organics</span> <span class="name">Pentachlorophenol</span></label>
+					  <input id="substance-type-38" type="checkbox">
+						<label for="substance-type-38">Pentachlorophenol</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-39 name=substance-types" type="checkbox"><label for="substance-type-39"><span class="category">Organics</span> <span class="name">Tetrachloroethane (1122-Tetrachloroethane)</span></label>
+					  <input id="substance-type-39" type="checkbox">
+						<label for="substance-type-39">Tetrachloroethane (1122-Tetrachloroethane)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-40 name=substance-types" type="checkbox"><label for="substance-type-40"><span class="category">Organics</span> <span class="name">Tetrachloroethylene</span></label>
+					  <input id="substance-type-40" type="checkbox">
+						<label for="substance-type-40">Tetrachloroethylene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-41 name=substance-types" type="checkbox"><label for="substance-type-41"><span class="category">Organics</span> <span class="name">Toxaphene</span></label>
+					  <input id="substance-type-41" type="checkbox">
+						<label for="substance-type-41">Toxaphene</label>
 					</div>
 					<div class="multiple-choice">
-				  <input id="substance-type-42 name=substance-types" type="checkbox"><label for="substance-type-42"><span class="category">Organics</span> <span class="name">Trichlorobenzene – all isomers</span></label>
-				</div>
+				  		<input id="substance-type-42" type="checkbox">
+						<label for="substance-type-42">Trichlorobenzene – all isomers</label>
+					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-43 name=substance-types" type="checkbox"><label for="substance-type-43"><span class="category">Organics</span> <span class="name">Trichloroethylene</span></label>
+					  <input id="substance-type-43" type="checkbox">
+						<label for="substance-type-43">Trichloroethylene</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-44 name=substance-types" type="checkbox"><label for="substance-type-44"><span class="category">Organics</span> <span class="name">Vinyl chloride</span></label>
+					  <input id="substance-type-44" type="checkbox">
+						<label for="substance-type-44">Vinyl chloride</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-45 name=substance-types" type="checkbox"><label for="substance-type-45"><span class="category">Metals and compounds</span> <span class="name">Arsenic</span></label>
+					  <input id="substance-type-45" type="checkbox">
+						<label for="substance-type-45">Arsenic</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-46 name=substance-types" type="checkbox"><label for="substance-type-46"><span class="category">Metals and compounds</span> <span class="name">Cadmium</span></label>
+					  <input id="substance-type-46" type="checkbox">
+						<label for="substance-type-46">Cadmium</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-47 name=substance-types" type="checkbox"><label for="substance-type-47"><span class="category">Metals and compounds</span> <span class="name">Chromium</span></label>
+					  <input id="substance-type-47" type="checkbox">
+						<label for="substance-type-47">Chromium</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-48 name=substance-types" type="checkbox"><label for="substance-type-48"><span class="category">Metals and compounds</span> <span class="name">Copper</span></label>
+					  <input id="substance-type-48" type="checkbox">
+						<label for="substance-type-48">Copper</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-49 name=substance-types" type="checkbox"><label for="substance-type-49"><span class="category">Metals and compounds</span> <span class="name">Lead</span></label>
+					  <input id="substance-type-49" type="checkbox">
+						<label for="substance-type-49">Lead</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-50 name=substance-types" type="checkbox"><label for="substance-type-50"><span class="category">Metals and compounds</span> <span class="name">Mercury</span></label>
+					  <input id="substance-type-50" type="checkbox">
+						<label for="substance-type-50">Mercury</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-51 name=substance-types" type="checkbox"><label for="substance-type-51"><span class="category">Metals and compounds</span> <span class="name">Nickel</span></label>
+					  <input id="substance-type-51" type="checkbox">
+						<label for="substance-type-51">Nickel</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-52 name=substance-types" type="checkbox"><label for="substance-type-52"><span class="category">Metals and compounds</span> <span class="name">Selenium</span></label>
+					  <input id="substance-type-52" type="checkbox">
+						<label for="substance-type-52">Selenium</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-53 name=substance-types" type="checkbox"><label for="substance-type-53"><span class="category">Metals and compounds</span> <span class="name">Zinc</span></label>
+					  <input id="substance-type-53" type="checkbox">
+						<label for="substance-type-53">Zinc</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-54 name=substance-types" type="checkbox"><label for="substance-type-54"><span class="category">Other substance groups</span> <span class="name">Chlorine and inorganic compounds – as HCl</span></label>
+					  <input id="substance-type-54" type="checkbox">
+						<label for="substance-type-54">Chlorine and inorganic compounds – as HCl</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-55 name=substance-types" type="checkbox"><label for="substance-type-55"><span class="category">Other substance groups</span> <span class="name">Chlorofluorocarbons (CFCs)</span></label>
+					  <input id="substance-type-55" type="checkbox">
+						<label for="substance-type-55">Chlorofluorocarbons (CFCs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-56 name=substance-types" type="checkbox"><label for="substance-type-56"><span class="category">Other substance groups</span> <span class="name">Dioxins and furans (PCDDs/PCDFs) – as I-TEQ</span></label>
+					  <input id="substance-type-56" type="checkbox">
+						<label for="substance-type-56">Dioxins and furans (PCDDs/PCDFs) – as I-TEQ</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-57 name=substance-types" type="checkbox"><label for="substance-type-57"><span class="category">Other substance groups</span> <span class="name">Dioxins and furans (PCDDs/PCDFs) – as WHO-TEQ</span></label>
+					  <input id="substance-type-57" type="checkbox">
+						<label for="substance-type-57">Dioxins and furans (PCDDs/PCDFs) – as WHO-TEQ</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-58 name=substance-types" type="checkbox"><label for="substance-type-58"><span class="category">Other substance groups</span> <span class="name">Fluorine and inorganic compounds – as HF</span></label>
+					  <input id="substance-type-58" type="checkbox">
+						<label for="substance-type-58">Fluorine and inorganic compounds – as HF</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-59 name=substance-types" type="checkbox"><label for="substance-type-59"><span class="category">Other substance groups</span> <span class="name">Halons 1</span></label>
+					  <input id="substance-type-59" type="checkbox">
+						<label for="substance-type-59">Halons 1</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-60 name=substance-types" type="checkbox"><label for="substance-type-60"><span class="category">Other substance groups</span> <span class="name">Hydrochlorofluorocarbons (HCFCs)</span></label>
+					  <input id="substance-type-60" type="checkbox">
+						<label for="substance-type-60">Hydrochlorofluorocarbons (HCFCs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-61 name=substance-types" type="checkbox"><label for="substance-type-61"><span class="category">Other substance groups</span> <span class="name">Hydrofluorocarbons (HFCs)</span></label>
+					  <input id="substance-type-61" type="checkbox">
+						<label for="substance-type-61">Hydrofluorocarbons (HFCs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-62 name=substance-types" type="checkbox"><label for="substance-type-62"><span class="category">Other substance groups</span> <span class="name">Nitrogen oxides – NO and NO2 as NO2</span></label>
+					  <input id="substance-type-62" type="checkbox">
+						<label for="substance-type-62">Nitrogen oxides – NO and NO2 as NO2</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-63 name=substance-types" type="checkbox"><label for="substance-type-63"><span class="category">Other substance groups</span> <span class="name">Non-methane volatile organic compounds (NMVOCs)</span></label>
+					  <input id="substance-type-63" type="checkbox">
+						<label for="substance-type-63">Non-methane volatile organic compounds (NMVOCs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-64 name=substance-types" type="checkbox"><label for="substance-type-64"><span class="category">Other substance groups</span> <span class="name">Particulate matter – PM2.5</span></label>
+					  <input id="substance-type-64" type="checkbox">
+						<label for="substance-type-64">Particulate matter – PM2.5</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-65 name=substance-types" type="checkbox"><label for="substance-type-65"><span class="category">Other substance groups</span> <span class="name">Particulate matter – PM10</span></label>
+					  <input id="substance-type-65" type="checkbox">
+						<label for="substance-type-65">Particulate matter – PM10</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-66 name=substance-types" type="checkbox"><label for="substance-type-66"><span class="category">Other substance groups</span> <span class="name">Particulate matter – total</span></label>
+					  <input id="substance-type-66" type="checkbox">
+						<label for="substance-type-66">Particulate matter – total</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-67 name=substance-types" type="checkbox"><label for="substance-type-67"><span class="category">Other substance groups</span> <span class="name">Perfluorocarbons (PFCs)</span></label>
+					  <input id="substance-type-67" type="checkbox">
+						<label for="substance-type-67">Perfluorocarbons (PFCs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-68 name=substance-types" type="checkbox"><label for="substance-type-68"><span class="category">Other substance groups</span> <span class="name">Polychlorinated biphenyls (PCBs)</span></label>
+					  <input id="substance-type-68" type="checkbox">
+						<label for="substance-type-68">Polychlorinated biphenyls (PCBs)</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-69 name=substance-types" type="checkbox"><label for="substance-type-69"><span class="category">Other substance groups</span> <span class="name">Polychlorinated biphenyls (PCBs) – as WHO TEQ</span></label>
+					  <input id="substance-type-69" type="checkbox">
+						<label for="substance-type-69">Polychlorinated biphenyls (PCBs) – as WHO TEQ</label>
 					</div>
 					<div class="multiple-choice">
-					  <input id="substance-type-70 name=substance-types" type="checkbox"><label for="substance-type-70"><span class="category">Other substance groups</span> <span class="name">Sulphur oxides – SO2 and SO3 as SO2</span></label>
+					  <input id="substance-type-70" type="checkbox">
+						<label for="substance-type-70">Sulphur oxides – SO2 and SO3 as SO2</label>
 					</div>
 				</div>
 				<!-- /list -->
@@ -244,28 +308,5 @@
 		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
 	</form>
 </main>
-<script>
-	$(document).ready(function() {
-		var options = {
-			valueNames: ['category', 'name']
-		};
-		var userList = new List('search-results', options);
-		//filter
-		$('.filter').change(function() {
-			var bool = this.checked;
-			var value = $(this).data("value");
-			userList.filter(function(item) {
-				if (item.values().category == value && bool == true) {
-					return true;
-				} else if (userList.filtered && bool == false) {
-					return true;
-				} else {
-					return false;
-				}
-			});
-			return false;
-		});
-	});
-</script>
 
 {% endblock %}
