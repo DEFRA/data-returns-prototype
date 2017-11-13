@@ -1,0 +1,52 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototyping kit {% endblock %} {% block content %}
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/releases-table" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	      <h2 class="heading-large error-summary-heading" id="error-summary-heading-example-2">
+	        Check your carbon dioxide report
+	      </h2>
+	      <p>There are issues with the data</p>
+	      <ul class="error-summary-list">
+	        <li><a href="#releases">Your 2017 total must be a number or BRT</a></li>
+	      </ul>
+	  </div>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<table class="more-detail table-control mobile-format">
+					<thead> </thead>
+					<tbody>
+						<tr>
+							<th class="2017-reporting-threshold">2017 reporting threshold</th>
+							<td class="2017-reporting-threshold-value">1,000 kg</td>
+						</tr>
+						<tr>
+							<th class="2017-total-or-BRT">2017 total</th>
+							<td class="2017-total-or-BRT-value">
+								<div class="form-group-error" id="carbon-dioxide-check">
+									<label class="form-label visually-hidden" for="releases">Releases</label>
+								  	<input class="form-control form-control-error" id="releases" name="releases" type="text" value="foobar">
+									<span class="error-message">Must be a number or BRT</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th class="method">Method</th>
+							<td class="method">
+								<label class="form-label visually-hidden" for="select-box">Method</label> <select class="form-control" id="select-box" name="select-box">
+							    <option selected>Select method</option>
+							    <option>Calculation</option>
+							    <option>Measurement</option>
+							    <option>Estimation</option>
+							  </select>
+						  	</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</div>
+		</div>
+	</form>
+</main> {% endblock %}
