@@ -11,7 +11,8 @@
 	      <p>There are issues with the data</p>
 	      <ul class="error-summary-list">
 	        <li><a href="#releases-check">Your 2017 total must be a number or BRT</a></li>
-  	        <li><a href="#releases-check">You must select a method</a></li>
+  	        <li><a href="#unit-check">You must select a unit</a></li>
+  	        <li><a href="#method-check">You must select a method</a></li>
 	      </ul>
 	  </div>
 		<div class="grid-row">
@@ -34,11 +35,28 @@
 							</td>
 						</tr>
 						<tr>
+							<th class="unit">Unit</th>
+							<td class="unit">
+								<div class="form-group-error" id="unit-check">
+									<label class="form-label visually-hidden" for="select-box">Unit</label>
+									<select class="form-control form-control-error unit" id="select-box" name="select-box">
+										<option selected>--</option>
+										<option>kt</option>
+										<option>t</option>
+										<option>kg</option>
+										<option>g</option>
+										<option>mg</option>
+									</select>
+									<span class="error-message">You must select a unit</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
 							<th class="method">Method</th>
 							<td class="method">
-								<div class="form-group-error" id="releases-check">
+								<div class="form-group-error" id="method-check">
 									<label class="form-label visually-hidden" for="select-box">Method</label> <select class="form-control form-control-error" id="select-box" name="select-box">
-										<option selected>Select method</option>
+										<option selected>--</option>
 										<option>Calculation</option>
 										<option>Measurement</option>
 										<option>Estimation</option>
