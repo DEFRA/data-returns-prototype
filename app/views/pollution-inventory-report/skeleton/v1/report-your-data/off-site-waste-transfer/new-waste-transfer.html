@@ -12,6 +12,15 @@
 }
 th {
 	white-space: nowrap;
+	vertical-align: top;
+}
+table .numeric {
+	font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+	text-align:left;
+}
+.cancel {
+	display: inline-block;
+    padding: 8px 30px;
 }
 </style>
 
@@ -20,7 +29,7 @@ th {
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">More detail about sludges from on-site effluent treatment</h1>
+	<h1 class="heading-large">More detail about plastic transferred off-site</h1>
 
 	<form action="app/views/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/" method="post" class="form">
 		<div class="grid-row">
@@ -31,11 +40,20 @@ th {
 					<tbody>
 						<tr>
 							<th class="ewc-code">EWC code</th>
-							<td class="ewc-code-value"><span class="numeric">02 07 05</span> </td>
+							<td class="ewc-code-value">
+								<p class="numeric">16 01 19</p>
+								<ul class="list">
+									<li>Plastic</li>
+									<li>End-of-life vehicles from different means of transport (including off-road machinery) and wastes from dismantling of end-of-life vehicles and vehicle maintenance (except 13 - 14 - 16 06 and 16 08)</li>
+								</ul>
+							</td>
 						</tr>
 						<tr>
 							<th class="wfd-code">WFD code</th>
-							<td class="wfd-code-value">D15 Storage pending any of the operations numbered D1 to D14 (excluding temporary storage, pending collection, on the site where it is produced)</td>
+							<td class="wfd-code-value"><p class="numeric">D15</p>
+							<ul class="list">
+								<li>Storage pending any of the operations numbered D1 to D14 (excluding temporary storage, pending collection, on the site where it is produced)</li>
+							</td>
 						</tr>
 						<tr>
 							<th class="2016-total-or-BRT">2016 total</th>
@@ -48,10 +66,6 @@ th {
 								<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
 							</td>
 						</tr>
-						<tr>
-							<th class="detailed-method">Detailed method</th>
-							<td class="detailed-method">EN ISO 15682 (2001)</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -63,6 +77,7 @@ th {
 
 	    <div class="form-group">
 			<input class="button" type="submit" value="Continue">
+			<a class="cancel" href="#">Cancel</a>
 		</div>
 	</form>
 </main>
