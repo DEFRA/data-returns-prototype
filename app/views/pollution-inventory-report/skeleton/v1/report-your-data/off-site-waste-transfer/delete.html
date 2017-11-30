@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.link {
+		border:0;
+		padding-left:0;
+	}
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Confirm you want to remove the off-side waste transfer of hydrochloric acid </h1>
+	<p></p>
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table" method="post" class="form">
+        <div class="form-group">
+			<input class="button" type="submit" value="Remove">
+		</div>
+	    <div class="form-group">
+			<input type="button" class="link" value="Cancel and go back" onclick="history.back(-1)" />
+		</div>
+	</form>
+</main>
+
+{% endblock %}
