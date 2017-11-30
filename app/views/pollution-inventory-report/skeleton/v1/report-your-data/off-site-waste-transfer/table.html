@@ -33,33 +33,38 @@ th {
 	<div class='phase-banner'>
 		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 	</div>
-	<h1 class="heading-large">Report your off-site waste transfers in tonnes</h1>
+	<h1 class="heading-large">Report your off-site waste transfers</h1>
 
 	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/task-list-completed" method="post" class="form">
 
 		<table class="check-data table-control mobile-format">
 			<thead>
 				<tr>
-					<th class="th-description">Description</th>
-					<th class="th-ewc-code numeric">EWC code</th>
-					<th class="th-wfd-code numeric">WFD code</th>
+					<th class="th-ewc-code">EWC code</th>
+					<th class="th-waste">Waste</th>
+					<th class="th-wfd-code">WFD code</th>
 					<th class="th-2017-total">2017 total</th>
-					<th class="th-action"><span class="visually-hidden">More detail</span></th>
+					<th class="th-more-detail"><span class="visually-hidden">More detail</span></th>
+					<th class="th-delete"><span class="visually-hidden">Delete</span></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td class="td-description">Plastic</td>
-					<td class="td-ewc-code numeric">16 01 19</td>
-					<td class="td-wfd-code numeric">D15</td>
-					<td class="td-2017-total"> <label class="form-label visually-hidden" for="quantity">Quantity</label> <input class="form-control" id="quantity" name="quantity" type="text"> </td>
-					<td class="td-action"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail">More detail</a></td>
+					<td class="td-ewc-code">16 01 19</td>
+					<td class="td-description">Hydrochloric acid</td>
+					<td class="td-wfd-code">D15</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text" value="3.5"> tonnes
+					</td>
+					<td class="td-more-detail"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail">More detail</a></td>
+					<td class="td-delete"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail">Delete</a></td>
 				</tr>
 			</tbody>
 		</table>
 
 	    <div class="form-group">
-			<a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-chapter">Add a new off-site waste transfer</a>
+			<a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer">Add a new off-site waste transfer</a>
 		</div>
 
 	    <div class="form-group">

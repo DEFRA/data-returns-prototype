@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.parameter {
+		margin-bottom:10px;
+	}
+	.ewc-code {
+		margin-bottom:10px;
+	}
+</style>
+
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-d-and-r-code" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<div class="form-group">
+			<h1 class="heading-large parameter"><span class="heading-secondary">06 01 02 </span>Hydrochloric acid</h1>
+			<ul class="list">
+				<li>Manufacture - formulation - supply and use of acids,</li>
+				<li>Inorganic chemical processing</span></li>
+			</ul>
+		</div>
+		<h2 class="heading-medium">
+    		Is this the correct waste?
+		</h2>
+		<div class="form-group">
+			<fieldset class="inline">
+				<div class="multiple-choice">
+					<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+					<label for="radio-inline-1">Yes</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+					<label for="radio-inline-2">No</label>
+				</div>
+			</fieldset>
+		</div>
+        <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+{% endblock %}

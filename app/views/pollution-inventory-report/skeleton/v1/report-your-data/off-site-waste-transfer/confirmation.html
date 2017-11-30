@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.parameter {
+		margin-bottom:10px;
+	}
+	.ewc-code {
+		margin-bottom:10px;
+	}
+	table th:first-child {
+		width:20%
+	}
+	.action {
+		text-align: right;
+	}
+</style>
+
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+
+		<h1 class="heading-large">Confirm your codes </h2>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<table class="table-control mobile-format">
+						<thead>
+							<tr>
+								<th>Code</th>
+								<th>Description</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>06 01 02</td>
+								<td>
+									Hydrochloric acid<br>
+									from the Manufacture - formulation - supply and use of acids >
+									Inorganic chemical processing
+								</td>
+								<td class="action"><a href="">Change <span class="visuallyhidden">site address</span></a></td>
+							</tr>
+							<tr>
+								<td>D1</td>
+								<td>
+									Deposit into or onto land, e.g. landfill
+								</td>
+								<td class="action"><a href="">Change <span class="visuallyhidden">site address</span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+        <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+{% endblock %}
