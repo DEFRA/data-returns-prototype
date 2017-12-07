@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+input.quantity {
+	width:120px;
+}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/business-address" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+	        There are issues with the data</h2>
+	      <ul class="error-summary-list">
+	        <li><a href="#quantity">You must choose a method of transfer</a></li>
+	      </ul>
+	    </div>
+		<h1 class="heading-large">
+    		<span class="heading-secondary">Your overseas waste transfers</span>
+			How did you measure this waste?</h1>
+			<div class="form-group form-group-error" id="method">
+			<fieldset>
+				<div class="multiple-choice">
+					<input id="radio-inline-1" type="radio" name="why-increased" value="Disposal">
+					<label for="radio-inline-1">Calculation</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" type="radio" name="why-increased" value="Recovery">
+					<label for="radio-inline-2">Estimation</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" type="radio" name="why-increased" value="Recovery">
+					<label for="radio-inline-2">Weighing</label>
+				</div>
+			</fieldset>
+			<span class="error-message">You must choose a method of transfer</span>
+		</div>
+		<div class="form-group">
+				<input type="submit" class="button" value="Continue">
+		</div>
+	</form>
+</main> {% endblock %}

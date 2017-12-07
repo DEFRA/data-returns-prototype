@@ -13,15 +13,22 @@ input.quantity {
 </style>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/operation-error" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/measurement" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
+		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+	        There are issues with the data</h2>
+	      <ul class="error-summary-list">
+	        <li><a href="#quantity">You must choose a method of transfer</a></li>
+	      </ul>
+	    </div>
 		<h1 class="heading-large">
     		<span class="heading-secondary">Your overseas waste transfers</span>
 			What was this waste sent for?
 		</h1>
-		<div class="form-group">
+		<div class="form-group form-group-error" id="operation">
 			<fieldset>
 				<div class="multiple-choice">
 					<input id="radio-inline-1" type="radio" name="why-increased" value="Disposal">
@@ -32,9 +39,10 @@ input.quantity {
 					<label for="radio-inline-2">Recovery</label>
 				</div>
 			</fieldset>
+			<span class="error-message">You must choose a method of transfer</span>
 		</div>
 		<div class="form-group">
-				<input type="submit" class="button" value="Continue">
+			<input type="submit" class="button" value="Continue">
 		</div>
 	</form>
 </main> {% endblock %}

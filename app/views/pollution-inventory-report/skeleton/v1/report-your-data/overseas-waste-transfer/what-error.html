@@ -1,14 +1,14 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototyping kit {% endblock %} {% block content %}
+{% extends "layout.html" %}
 
-<style>
-	.category {
-		display: none;
-	}
-</style>
-<script src="/public/javascripts/list.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/quantity" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -19,10 +19,11 @@
 	        <li><a href="#search-results">You must select a substance</a></li>
 	      </ul>
 	    </div>
-		<h1 class="heading-large">Add a release to air</h1>
-		<p>Select a substance to continue</p>
+		<h1 class="heading-large">
+    		<span class="heading-secondary">Your overseas waste transfers</span>
+			What waste did you transfer?
+		</h1>
 		<div id="search-results" class="grid-row">
-
 			<div class="column-two-thirds">
 				<div class="form-group list form-group-error">
 					<legend id="select-substance">
@@ -316,9 +317,8 @@
 			<!-- /column-two-thirds -->
 		</div>
 		<!-- /grid row -->
-
-		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+		<div class="form-group">
+				<input type="submit" class="button" value="Continue">
+		</div>
 	</form>
-</main>
-
-{% endblock %}
+</main> {% endblock %}
