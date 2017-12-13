@@ -11,22 +11,24 @@
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
+		<a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/task-list" class="link-back">Back to sections you must complete</a>
 		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
 	      <h1 class="heading-large error-summary-heading" id="error-summary-heading-example-2">
-	        Check your releases to air
+	        Check what you're reporting
 		</h1>
-	      <p>There are issues with the data</p>
+	      <p>You must enter a number or the letters ‘BRT’ (below reporting threshold).</p>
 	      <ul class="error-summary-list">
-	        <li><a href="#carbon-dioxide-check">Check your carbon dioxide report</a></li>
+	        <li><a href="#carbon-dioxide-check">Correct your carbon dioxide total</a></li>
 	      </ul>
 	    </div>
-		<table class="check-data table-control mobile-format">
+		<table class="table-control mobile-format summary-table">
 			<thead>
 				<tr>
 					<th class="th-substance">Substance</th>
 					<th class="th-reporting-threshold numeric">2017 threshold</th>
 					<th class="th-release">2017 total</th>
 					<th class="th-unit">Unit</th>
+					<th class="th-method">Method</th>
 					<th class="th-more-detail"><span class="visually-hidden">More detail</span></th>
 					<th class="th-delete"><span class="visually-hidden">Delete</span></th>
 				</tr>
@@ -39,7 +41,7 @@
 						<div class="form-group-error" id="carbon-dioxide-check">
 							<label class="form-label visually-hidden" for="releases">Releases</label>
 						  	<input class="form-control form-control-error" id="releases" name="releases" type="text" value="foobar">
-							<span class="error-message">Must be a number or BRT</span>
+							<span class="error-message">Enter a number or ‘BRT’</span>
 						</div>
 					</td>
 					<td class="td-unit">
@@ -51,6 +53,15 @@
 						    <option>kg</option>
 						    <option>g</option>
 						    <option>mg</option>
+						  </select>
+					  </td>
+  					<td class="td-method">
+						<label class="form-label visually-hidden" for="select-box">Unit</label>
+						<select class="form-control method" id="select-box" name="select-box">
+						    <option>--</option>
+						    <option selected>Est.</option>
+						    <option>Meas.</option>
+						    <option>Calc.</option>
 						  </select>
 					  </td>
 					<td class="td-action"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/release-to-air-detail">More detail</a></td>

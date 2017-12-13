@@ -235,6 +235,9 @@
 	}
 }
 
+
+
+
 /* PI reporting UI */
 .choose-parameter {
 	td:first-child + td { white-space: nowrap; }
@@ -250,7 +253,7 @@
 	}
 }
 
-table.check-data {
+table.summary-table {
 	th {
 		vertical-align: bottom;
 	}
@@ -263,10 +266,6 @@ table.check-data {
 			white-space: nowrap;
 		}
 	  }
-	.td-action {
-		text-align: right;
-		padding-right: 0;
-	}
 	.td-delete {
 		text-align: right;
 		padding-right: 0;
@@ -274,7 +273,7 @@ table.check-data {
 	.td-release {
 		width:10%;
 		input {
-			width:130px;
+			width:135px;
 		}
 	}
 	select {
