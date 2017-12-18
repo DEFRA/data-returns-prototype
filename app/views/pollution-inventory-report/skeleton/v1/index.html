@@ -1,4 +1,16 @@
-{% extends "layout.html" %} {% block page_title %} Data returns sandbox {% endblock %} {% block content %}
+{% extends "layout.html" %}
+{% block page_title %}
+Data returns sandbox
+{% endblock %}
+{% block content %}
+
+<style>
+	.code { width:10%; }
+	.name { padding-left:5px; }
+	.view { text-align:right; }
+</style>
+
+
 <main id="content" role="main">
 	<div class="grid-row">
 		<div class="column-two-thirds">
@@ -7,52 +19,183 @@
 			<p><a href="/pollution-inventory-report/changelog">Prototype change log</a></p>
 			<h2 class="heading-large">Skeleton build (beta)</h2>
 			<h2 class="heading-medium">Check your details</h2>
-			<ul class="list list-bullet">
-			</ul>
+			<table class="table-control mobile-format">
+				<tr>
+					<th>Code</th>
+					<th>Name</th>
+					<th class="view"></th>
+				</tr>
+				<tr>
+					<td class="code">PI0100</td>
+					<td class="name">Sections summary</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/task-list">View</a></td>
+				</tr>
+			</table>
 			<h2 class="heading-medium">Report your data</h2>
 			<h3 class="heading-small">Releases to air/land/controlled waters/off-site transfers in waste water</h3>
-			<ul class="list list-bullet">
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/task-list">PI0100 - Sections summary</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/">PI0110 - Challenge page</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new">PI0120 - Choose substance</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new-error">PI0120E - Choose substance error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail">PI0130 - Add values</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail-error">PI0130E - Add values error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table">PI0140 - Summary table</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table-error">PI0140 - Summary table error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/delete">PI0160 - Confirm delete</a></li>
-			</ul>
+			<table class="table-control mobile-format">
+				<tr>
+					<td class="code">PI0110</td>
+					<td class="name">Challenge page</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0120</td>
+					<td class="name">Choose substance</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0120E</td>
+					<td class="name">Choose substance error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0130</td>
+					<td class="name">Add values</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0130E</td>
+					<td class="name">Add values error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0140</td>
+					<td class="name">Summary table</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0140</td>
+					<td class="name">Summary table error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0160</td>
+					<td class="name">Confirm delete</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/delete">View</a></td>
+				</tr>
+			</table>
 			<h3 class="heading-small">Off-site waste transfer</h3>
-			<ul class="list list-bullet">
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/">PI0500 - Challenge page</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer">PI0510 - Add values</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer-error">PI0510E - Add values error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table">PI0520 Summary table</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table-error">PI0520E Summary table error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail">PI0550 - Details</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail-error">PI0550E - Details error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/delete">PI0540 - Confirm delete</a></li>
-			</ul>
+			<table class="table-control mobile-format">
+				<tr>
+					<td class="code">PI0500</td>
+					<td class="name">Challenge page</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0510</td>
+					<td class="name">Add values</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0510E</td>
+					<td class="name">Add values error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0520</td>
+					<td class="name">Summary table</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0520E</td>
+					<td class="name">Summary table error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/table-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0550</td>
+					<td class="name">Details</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0550E</td>
+					<td class="name">Details error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/detail-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0540</td>
+					<td class="name">Confirm delete</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/delete">View</a></td>
+				</tr>
+			</table>
 			<h3 class="heading-small">Overseas waste transfer</h3>
-			<ul class="list list-bullet">
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/">PI0610 - Challenge page</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/what">PI0620 - Choose substance</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/what-error">PI0620E - Choose substance error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/add-values">PI0620 - Add values</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/add-values-error">PI0620E - Add values error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/business-address">Transportation company address</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/business-address-error">Transportation company address error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/site-address">Destination address</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/site-address-error">Destination address error</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/confirmation">Confirmation</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/delete">Delete transfer</a></li>
-			</ul>
+			<table class="table-control mobile-format">
+				<tr>
+					<td class="code">PI0610</td>
+					<td class="name">Challenge page</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0620</td>
+					<td class="name">Choose substance</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/what">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0620E</td>
+					<td class="name">Choose substance error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/what-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0620</td>
+					<td class="name">Add values</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/add-values">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0620E</td>
+					<td class="name">Add values error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/add-values-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0630</td>
+					<td class="name">Transportation company address</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/business-address">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0630E</td>
+					<td class="name">Transportation company address error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/business-address-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0640</td>
+					<td class="name">Destination address</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/site-address">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0640E</td>
+					<td class="name">Destination address error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/site-address-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0645</td>
+					<td class="name">Transfer summary</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/confirmation">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0670</td>
+					<td class="name">Confirm delete</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/delete">View</a></td>
+				</tr>
+			</table>
 			<h2 class="heading-medium">Check and submit your report</h2>
-			<ul class="list list-bullet">
-				<li><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/check-your-data">Check your data</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/confirmation">Confirmation</a></li>
-				<li><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/submit-your-report">Submit your report</a></li>
-			</ul>
+			<table class="table-control mobile-format">
+				<tr>
+					<td class="code">PI0810</td>
+					<td class="name">Check your data</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/check-your-data">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0820</td>
+					<td class="name">Declaration</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/confirmation">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0830</td>
+					<td class="name">Confirmation</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/check-and-submit-your-report/submit-your-report">View</a></td>
+				</tr>
+			</table>
 		</div>
 	</div>
-</main> {% endblock %}
+</main>
+
+{% endblock %}
