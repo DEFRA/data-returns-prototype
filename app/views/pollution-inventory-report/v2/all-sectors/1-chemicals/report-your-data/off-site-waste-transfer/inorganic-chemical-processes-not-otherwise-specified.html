@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.ewc-code {
+		white-space: nowrap;
+	}
+	.hazardous {
+		white-space: nowrap;
+		text-align: right;
+	}
+	.hide {
+		display:none;
+	}
+	.list {
+		margin:0 0 40px 0;
+	}
+	.list li {
+		padding: 0.63158em 1.05263em 0.47368em 0;
+		border-bottom:1px solid #bfc1c3;
+	}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-waste-transfer/recovery-or-disposal" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large"><span class="heading-secondary">Inorganic chemical processing</span>
+		 Inorganic chemical processes not otherwise specified</h1>
+		<h2 class="heading-medium">Select your EWC Code</h2>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<fieldset>
+						<div class="multiple-choice">
+							<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="1">
+							<label for="radio-inline-1">06 13 01	inorganic plant protection products, wood-preserving agents and other biocides.</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="2">
+							<label for="radio-inline-2">06 13 02	spent activated carbon (except 06 07 02)</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-3" type="radio" name="radio-inline-group-1" value="3">
+							<label for="radio-inline-3">06 13 03	carbon black</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-4" type="radio" name="radio-inline-group-1" value="4">
+							<label for="radio-inline-4">06 13 04	wastes from asbestos processing</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-4" type="radio" name="radio-inline-group-1" value="4">
+							<label for="radio-inline-4">06 13 05	soot</label>
+						</div>
+						<div class="multiple-choice">
+							<input id="radio-inline-4" type="radio" checked name="radio-inline-group-1" value="4">
+							<label for="radio-inline-4">06 13 99	wastes not otherwise specified</label>
+						</div>
+					</fieldset>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

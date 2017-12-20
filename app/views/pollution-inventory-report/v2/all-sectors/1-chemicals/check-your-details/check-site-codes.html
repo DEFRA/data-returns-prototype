@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	td.name {
+		white-space: nowrap;
+	}
+</style>
+
+<main id="content" role="main">
+<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/task-list" method="post" class="form">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<h1 class="heading-large">Check your site codes</h1>
+	<div class="form-group">
+		<table class="codes table-control">
+			<thead>
+				<tr>
+					<th class="name">Name</th>
+					<th class="code-name">Code</th>
+					<th class="description">Description</th>
+					<th class="action"><span class="visually-hidden">Action</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="name">NACE</td>
+					<td>20.13</td>
+					<td>Manufacture of other inorganic basic chemicals</td>
+					<td class="change-answer"><a href="nace-code">Change <span class="visuallyhidden">NOSE-P codes</span></a></td>
+				</tr>
+				<tr>
+					<td class="name">NOSE-P</td>
+					<td>105.09</td>
+					<td>Manufacture of inorganic chemicals, NPK fertilisers, pesticides or explosives</td>
+					<td class="change-answer"><a href="nose-p-code">Change <span class="visuallyhidden">NACE code</span></a></td>
+				</tr>
+				<tr>
+					<td class="name">E-PRTR</td>
+					<td>4 (b)</td>
+					<td>Chemical installations for the production on an industrial scale of basic inorganic chemicals, such as: (i) Gases, (ii) Acids, (iii) Bases, (iv) salts, (v) Non-metals, metal oxides or other inorganic compounds </td>
+					<td class="change-answer"><a href="eprtr-code">Change <span class="visuallyhidden">E-PRTR code</span></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="form-group">
+		<input type="submit" class="button" value="Continue">
+	</div>
+</form>
+</main>
+{% endblock %}

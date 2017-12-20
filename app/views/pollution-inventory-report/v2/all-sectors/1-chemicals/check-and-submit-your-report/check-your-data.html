@@ -1,0 +1,202 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.td-substance {
+}
+.td-release {
+
+}
+.td-method {
+	width:10%;
+}
+.th-ewc-code, .th-wfd-code {
+	white-space: nowrap;
+	vertical-align: top;
+}
+.td-ewc-code {
+	vertical-align: top;
+}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/task-list-check-data" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+
+				<h1 class="heading-large">Your details</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/check-your-details/permit-number">Change your details</a></p>
+				<table class="check-data table-control mobile-format">
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="td-permit">Permit or reference number</th>
+							<td class="td-permit-value">DP3637SG</td>
+						</tr>
+						<tr>
+							<th class="td-site-address">Site address</th>
+							<td class="td-site-address-value">
+								Industrial Chemicals Limited<br>
+								Aluminium Based Products<br>
+								Titan works<br>
+								Hogg Lane<br>
+								Grays<br>
+								Essex<br>
+								RM17 5DU
+							</td>
+						</tr>
+						<tr>
+							<th class="td-contact-details">Contact details</th>
+							<td class="td-contact-details-value">
+								Miss Claire Harling<br>
+								Environmental Manager<br>
+								01375 389110<br>
+								charling@icgl.co.uk
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<h1 class="heading-large">Your site codes</h1>
+				<p><a href="/pollution-inventory-report/v1/intensive-farmer/check-your-details/check-site-codes">Change your site codes</a></p>
+				<table class="codes table-control">
+					<thead>
+						<tr>
+							<th class="name">Name</th>
+							<th class="code-name">Code</th>
+							<th class="description">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="name">NACE</td>
+							<td>20.13</td>
+							<td>Manufacture of other inorganic basic chemicals</td>
+						</tr>
+						<tr>
+							<td class="name">NOSE-P</td>
+							<td>105.09</td>
+							<td>Manufacture of inorganic chemicals, NPK fertilisers, pesticides or explosives</td>
+						</tr>
+						<tr>
+							<td class="name">E-PRTR</td>
+							<td>4 (b)</td>
+							<td>Chemical installations for the production on an industrial scale of basic inorganic chemicals, such as: (i) Gases, (ii) Acids, (iii) Bases, (iv) salts, (v) Non-metals, metal oxides or other inorganic compounds </td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+				<h1 class="heading-large">Your releases to air</h1>
+				<p><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/releases-to-air/">Change your data</a></p>
+				<table class="check-data table-control mobile-format">
+					<thead>
+						<tr>
+							<th class="th-substance">Substance</th>
+							<th class="th-release">2017 total</th>
+							<th class="th-action">Method</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td-substance">Carbon dioxide</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Carbon monoxide</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Nitrogen oxides (NO and NO2) as NO2</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Particulate matter - PM10</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+						<tr>
+							<td class="td-substance">Sulphur oxides (SO2 and SO3) as SO2</td>
+							<td class="td-release">BRT</td>
+							<td class="td-method">Calc.</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<h1 class="heading-large">Your off-site waste transfers</h1>
+				<table class="check-data table-control mobile-format">
+					<thead>
+						<tr>
+							<th class="th-ewc-code numeric">EWC code</th>
+							<th class="th-description">Description</th>
+							<th class="th-wfd-code numeric">WFD code</th>
+							<th class="th-total numeric">2017 total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="td-ewc-code numeric">06 03 14</td>
+							<td class="td-description">Solid salts and solutions other than those mentioned in 06 03 11 and 06 03 13</td>
+							<td class="td-wfd-code numeric">D1</td>
+							<td class="td-2016-total numeric">202.4</td>
+						</tr>
+						<tr>
+							<td class="td-ewc-code numeric">06 05 03</td>
+							<td class="td-description">Sludges from on-site effluent treatment other than those mentioned in 06 05 02</td>
+							<td class="td-wfd-code numeric">R5</td>
+							<td class="td-2016-total numeric">202.4</td>
+						</tr>
+						<tr>
+							<td class="td-ewc-code numeric">20 03 01</td>
+							<td class="td-description">Mixed municipal waste</td>
+							<td class="td-wfd-code numeric">D1</td>
+							<td class="td-2016-total numeric">58.2</td>
+						</tr>
+						<tr>
+							<td class="td-ewc-code numeric">06 13 99</td>
+							<td class="td-description">Wastes not otherwise specified</td>
+							<td class="td-wfd-code numeric">D1</td>
+							<td class="td-2016-total numeric">60.1</td>
+						</tr>
+					</tbody>
+				</table>
+
+		<h1 class="heading-large">Sharing your data</h1>
+		<p><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/share-your-data/">Change how you share your data</a></p>
+		<table class="codes table-control">
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Public contact information</td>
+					<td>Not provided</td>
+				</tr>
+				<tr>
+					<td>Number of staff on 31 December 2017</td>
+					<td>Not provided</td>
+				</tr>
+				<tr>
+					<td>Annual operating hours</td>
+					<td>Not provided</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+	</form>
+</main>
+
+{% endblock %}

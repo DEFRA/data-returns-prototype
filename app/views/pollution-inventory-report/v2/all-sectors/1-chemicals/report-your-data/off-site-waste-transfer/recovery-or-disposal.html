@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+	.ewc-code {
+		white-space: nowrap;
+	}
+	.hazardous {
+		white-space: nowrap;
+		text-align: right;
+	}
+	.hide {
+		display:none;
+	}
+	.list {
+		margin:0 0 40px 0;
+	}
+	.list li {
+		padding: 0.63158em 1.05263em 0.47368em 0;
+		border-bottom:1px solid #bfc1c3;
+	}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-waste-transfer/wdf-disposal-code" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<h1 class="heading-large"><span class="heading-secondary">Wastes not otherwise specified</span> What kind of operation was used to transfer this waste?</h1>
+
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<div class="form-group">
+					<div class="multiple-choice">
+					    <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-1">Recovery</label>
+					</div>
+					<div class="multiple-choice">
+					    <input id="radio-inline-2" type="radio" checked name="radio-inline-group-1" value="Yes">
+					    <label for="radio-inline-2">Disposal</label>
+					</div>
+				</div>
+				<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}

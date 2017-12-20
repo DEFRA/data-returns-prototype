@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns sandbox
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p><a class="link-back" href="/">Back to sandbox contents</a></p>
+			<h1 class="heading-xlarge">Pollution inventory report</h1>
+			<p><a href="/pollution-inventory-report/changelog">Prototype change log</a></p>
+			<h2 class="heading-large">Version 1.3: Food and drink</h2>
+			<h2 class="heading-medium">Check your details</h2>
+			<ul class="list list-bullet">
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/permit-number">What’s your site’s permit or reference number?</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/site-address">Is this the site you want to report on?</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/contact-details">Are your contact details correct?</a>
+					<ul class="list list-bullet">
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/update-contact-details">Update your contact details</a></li>
+					</ul>
+				</li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/check-site-codes">Check your site codes</a>
+					<ul class="list list-bullet">
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/nace-code">Your NACE code</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/nose-p-code">Your NOSE-P code(s)</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-your-details/eprtr-code">Your E-PRTR codes(s)</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h2 class="heading-medium">Report your data</h2>
+			<ul class="list list-bullet">
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/releases-to-air/">Your releases to air</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/releases-to-land/">Your releases to land</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/releases-to-controlled-waters/">Your releases to controlled waters</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-transfers-in-waste-water/">Your off-site transfers in waste water</a>
+					<ul class="list list-bullet">
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-transfers-in-waste-water/chromium">More details about chromium</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-transfers-in-waste-water/chromium-check">Check your chromium report</a></li>
+					</ul>
+				</li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/off-site-waste-transfer/">Your off-site waste transfers</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/what">Your overseas waste transfer</a>
+					<ul class="list list-bullet">
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/what">What waste did you transfer?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/quantity">How much hazardous waste did you transfer?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/operation">What was this waste sent for?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/method">How did you measure this waste?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/business-address">Which company transported this waste for you?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/site-address">Where did you send this waste?</a></li>
+						<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report-your-data/overseas-waste-transfer/confirmation">Your overseas waste transfers</a></li>
+					</ul>
+				</li>
+			</ul>
+			<h2 class="heading-medium">Check and submit your report</h2>
+			<ul class="list list-bullet">
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/share-your-data/">Share your data</a></li>
+				<ul class="list list-bullet">
+					<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/share-your-data/public-contact-information">Public contact information</a></li>
+					<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/share-your-data/number-of-staff">Number of staff</a></li>
+					<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/share-your-data/annual-operating-hours">Annual operating hours</a></li>
+				</ul>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/check-your-data">Check your data</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/submit-your-report">Submit your report</a></li>
+				<li><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/check-and-submit-your-report/confirmation">Confirmation</a></li>
+			</ul>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
