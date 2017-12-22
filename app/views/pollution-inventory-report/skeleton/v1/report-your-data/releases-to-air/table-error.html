@@ -17,8 +17,10 @@
 	        Check what you're reporting
 		</h1>
 	      <p>You must enter a number or the letters ‘BRT’ (below reporting threshold).</p>
-	      <ul class="error-summary-list">
-	        <li><a href="#carbon-dioxide-check">Correct your carbon dioxide total</a></li>
+		  <ul class="error-summary-list">
+	        <li><a href="#releases-check">Correct your carbon dioxide total </a></li>
+  	        <li><a href="#unit-check">Tell us your carbon dioxide measurement unit</a></li>
+  	        <li><a href="#method-check">Tell us your carbon dioxide measurement method</a></li>
 	      </ul>
 	    </div>
 		<table class="table-control mobile-format summary-table">
@@ -38,31 +40,37 @@
 					<td class="td-substance">Carbon dioxide</td>
 					<td class="td-reporting-threshold numeric">1.0E+7 kg</td>
 					<td class="td-release">
-						<div class="form-group-error" id="carbon-dioxide-check">
+						<div class="form-group-error" id="releases-check">
 							<label class="form-label visually-hidden" for="releases">Releases</label>
 						  	<input class="form-control form-control-error" id="releases" name="releases" type="text" value="foobar">
 							<span class="error-message">Enter a number or ‘BRT’</span>
 						</div>
 					</td>
 					<td class="td-unit">
-						<label class="form-label visually-hidden" for="select-box">Unit</label>
-						<select class="form-control unit" id="select-box" name="select-box">
-						    <option>--</option>
-						    <option selected>kt</option>
-						    <option>t</option>
-						    <option>kg</option>
-						    <option>g</option>
-						    <option>mg</option>
-						  </select>
+						<div class="form-group-error" id="unit-check">
+							<label class="form-label visually-hidden" for="select-box">Unit</label>
+							<select class="form-control unit" id="select-box" name="select-box">
+							    <option selected>--</option>
+							    <option>kt</option>
+							    <option>t</option>
+							    <option>kg</option>
+							    <option>g</option>
+							    <option>mg</option>
+							  </select>
+  							<span class="error-message">Select a type of unit</span>
+						  </div>
 					  </td>
   					<td class="td-method">
-						<label class="form-label visually-hidden" for="select-box">Unit</label>
-						<select class="form-control method" id="select-box" name="select-box">
-						    <option>--</option>
-						    <option selected>Est.</option>
-						    <option>Meas.</option>
-						    <option>Calc.</option>
-						  </select>
+						<div class="form-group-error" id="method-check">
+							<label class="form-label visually-hidden" for="select-box">Unit</label>
+							<select class="form-control method" id="select-box" name="select-box">
+							    <option selected>--</option>
+							    <option>Est.</option>
+							    <option>Meas.</option>
+							    <option>Calc.</option>
+							 </select>
+  							<span class="error-message">Select your method</span>
+						</div>
 					  </td>
 					<td class="td-action"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/release-to-air-detail">More detail</a></td>
 					<td class="td-delete"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/delete">Delete</a></td>

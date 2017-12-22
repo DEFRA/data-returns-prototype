@@ -51,9 +51,13 @@
 	.align-top {
 		vertical-align:top;
 	}
+	select {
+		width: auto;
+	}
+	.numeric {
+		font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+	}
 }
-
-
 
 @include media(mobile) {
 	.table-control {
@@ -257,7 +261,6 @@ table.summary-table {
 	th {
 		vertical-align: bottom;
 	}
-
 	  @include media($min-width: 500px){
 	  	.td-substance {
 	  		width:(100%/3);
@@ -275,12 +278,6 @@ table.summary-table {
 		input {
 			width:135px;
 		}
-	}
-	select {
-		width: 60px;
-	}
-	.numeric {
-		font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
 	}
 }
 
