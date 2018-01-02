@@ -8,17 +8,29 @@
 <script src="/public/javascripts/list.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new-error" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases/detail" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
-		<a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/task-list" class="link-back">Back to sections you must complete</a>
+		<a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/task-list" class="link-back">Back to sections you must complete</a>
+		<div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+	      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+	        Do you need to report any releases to air?</h2>
+	      <ul class="error-summary-list">
+	        <li><a href="#search-results">Select the substance you released</a></li>
+	      </ul>
+	    </div>
 		<h1 class="heading-large">Add a release to air</h1>
 		<p>Select a substance you need to report</p>
 		<div id="search-results" class="grid-row">
 
 			<div class="column-two-thirds">
-				<div class="form-group list">
+				<div class="form-group list form-group-error">
+					<legend id="select-substance">
+						<span class="error-message">
+							Select the substance you released
+						</span>
+					</legend>
 					<div class="multiple-choice">
 						<input id="substance-type-1" type="radio" name="radio-inline-group">
 						<label for="substance-type-1">Ammonia</label>
@@ -306,10 +318,7 @@
 		</div>
 		<!-- /grid row -->
 
-		<div class="form-group">
-			<input type="submit" class="button" value="Continue">
-			<a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/" class="link-cancel">Cancel</a>
-		</div>
+		<div class="form-group"> <input type="submit" class="button" value="Continue"> </div>
 	</form>
 </main>
 

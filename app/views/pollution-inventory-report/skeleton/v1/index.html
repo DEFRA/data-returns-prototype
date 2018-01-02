@@ -5,9 +5,12 @@ Data returns sandbox
 {% block content %}
 
 <style>
-	.code { width:10%; }
-	.name { padding-left:5px; }
-	.view { text-align:right; }
+	.code 	{ width:10%; }
+	.name 	{ padding-left:5px; }
+	.view 	{ text-align:right; }
+	.border	{ border: 1px solid #bfc1c3; }
+	.border	th { border-top: none; }
+	</style>
 </style>
 
 
@@ -19,64 +22,64 @@ Data returns sandbox
 			<p><a href="/pollution-inventory-report/changelog">Prototype change log</a></p>
 			<h2 class="heading-large">Skeleton build (beta)</h2>
 			<h2 class="heading-medium">Check your details</h2>
-			<table class="table-control mobile-format">
-				<tr>
-					<th>Code</th>
-					<th>Name</th>
-					<th class="view"></th>
-				</tr>
+			<table class="table-control mobile-format border">
 				<tr>
 					<td class="code">PI0100</td>
 					<td class="name">Sections summary</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/task-list">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/task-list">View</a></td>
 				</tr>
 			</table>
 			<h2 class="heading-medium">Report your data</h2>
 			<h3 class="heading-small">Releases to air/land/controlled waters/off-site transfers in waste water</h3>
-			<table class="table-control mobile-format">
+			<table class="table-control mobile-format border">
 				<tr>
 					<td class="code">PI0110</td>
 					<td class="name">Challenge page</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0120</td>
 					<td class="name">Choose substance</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/new">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0120E</td>
 					<td class="name">Choose substance error</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/new-error">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/new-error">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0130</td>
 					<td class="name">Add values</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/detail">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0130E</td>
 					<td class="name">Add values error</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/detail-error">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/detail-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0130E</td>
+					<td class="name">Add values reporting error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/detail-error">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0140</td>
 					<td class="name">Summary table</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/table">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0140</td>
 					<td class="name">Summary table error</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/table-error">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/table-error">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0160</td>
 					<td class="name">Confirm delete</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases-to-air/delete">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/releases/delete">View</a></td>
 				</tr>
 			</table>
 			<h3 class="heading-small">Off-site waste transfer</h3>
-			<table class="table-control mobile-format">
+			<table class="table-control mobile-format border">
 				<tr>
 					<td class="code">PI0500</td>
 					<td class="name">Challenge page</td>
@@ -85,12 +88,17 @@ Data returns sandbox
 				<tr>
 					<td class="code">PI0510</td>
 					<td class="name">Add values</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/add-values">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0510E</td>
 					<td class="name">Add values error</td>
-					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer-error">View</a></td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/add-values-error">View</a></td>
+				</tr>
+				<tr>
+					<td class="code">PI0510E</td>
+					<td class="name">Add values error</td>
+					<td class="view"><a href="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/add-values-reporting-error">View</a></td>
 				</tr>
 				<tr>
 					<td class="code">PI0520</td>
@@ -119,7 +127,7 @@ Data returns sandbox
 				</tr>
 			</table>
 			<h3 class="heading-small">Overseas waste transfer</h3>
-			<table class="table-control mobile-format">
+			<table class="table-control mobile-format border">
 				<tr>
 					<td class="code">PI0610</td>
 					<td class="name">Challenge page</td>
@@ -177,7 +185,7 @@ Data returns sandbox
 				</tr>
 			</table>
 			<h2 class="heading-medium">Check and submit your report</h2>
-			<table class="table-control mobile-format">
+			<table class="table-control mobile-format border">
 				<tr>
 					<td class="code">PI0810</td>
 					<td class="name">Check your data</td>

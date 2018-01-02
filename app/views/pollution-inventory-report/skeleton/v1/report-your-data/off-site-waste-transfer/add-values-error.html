@@ -22,7 +22,7 @@
 </style>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/new-waste-transfer-reporting-error" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/off-site-waste-transfer/add-values-reporting-error" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -40,7 +40,12 @@
 		<h1 class="heading-large">
     		Tell us about your waste transfer
 		</h1>
-
+		<div class="form-group form-group-error">
+			<p class="bold">2017 total</p>
+			<label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
+			<input class="form-control form-control-error total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"value="3.5t"> tonnes
+			<span class="error-message">Update your total</span>
+		</div>
 		<div class="form-group form-group-error">
 			<p class="bold">EWC code</p>
 			<label class="form-label visually-hidden" for="ewc-code"></label>
@@ -54,12 +59,6 @@
 			<span class="form-hint">For example ‘D5’ or ‘R13’.</span>
 			<input class="form-control form-control-error wfd-code" id="wfd-code" name="wfd-code" type="text" value="D19">
 			<span class="error-message">Enter a correct WFD code</span>
-		</div>
-		<div class="form-group form-group-error">
-			<p class="bold">2017 total</p>
-			<label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
-			<input class="form-control form-control-error total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"value="3.5t"> tonnes
-			<span class="error-message">Update your total</span>
 		</div>
 		<div class="form-group">
 			<input type="submit" class="button" value="Continue">
