@@ -7,7 +7,7 @@
 {% block content %}
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases/table-error" method="post" class="form">
+	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/releases/summary-table-error" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -26,7 +26,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr id="carbon-dioxide">
 					<td class="td-substance">Carbon dioxide</td>
 					<td class="td-reporting-threshold numeric">1.0E+7 kg</td>
 					<td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
