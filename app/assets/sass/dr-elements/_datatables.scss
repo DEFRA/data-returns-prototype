@@ -426,27 +426,36 @@ table.dataTable th {
 	.dataTables_info {
 		clear: both;
 		/* float: left; */
-		padding-top: 0.755em;
-		margin-bottom: 15px;
 	}
 	// Paging
 	.dataTables_paginate {
 		float: right;
 		text-align: right;
-		padding-top: 0.25em;
 		.paginate_button {
-			box-sizing: border-box;
+		  color: $link-colour;
+		  text-decoration: underline;
+			&:visited {
+			  color: $link-visited-colour;
+			}
+			&:hover {
+			  color: $link-hover-colour;
+			}
+			&:active {
+			  color: $link-colour;
+			}
+			cursor: pointer;
+			*cursor: hand;
+			margin-left: 1em;
+		/*  box-sizing: border-box;
 			display: inline-block;
 			min-width: 1.5em;
 			padding: 0.5em 1em;
 			margin-left: 2px;
 			text-align: center;
 			text-decoration: none !important;
-			cursor: pointer;
-			*cursor: hand;
 			color: $table-control-color !important;
 			border: 1px solid transparent;
-			border-radius: 2px;
+			border-radius: 0;
 			&.current,
 			&.current:hover {
 				color: $table-control-color !important;
@@ -471,7 +480,7 @@ table.dataTable th {
 				outline: none;
 				@include gradient( lighten($table-paging-button-hover, 10%), darken($table-paging-button-hover, 2%) );
 				box-shadow: inset 0 0 3px #111;
-			}
+			} */
 		}
 		.ellipsis {
 			padding: 0 1em;
@@ -503,6 +512,7 @@ table.dataTable th {
 	.dataTables_paginate,
 	.dataTables_processing {
 		color: $table-control-color;
+		margin:30px 0 15px;
 	}
 	// Scrolling
 	.dataTables_scroll {
