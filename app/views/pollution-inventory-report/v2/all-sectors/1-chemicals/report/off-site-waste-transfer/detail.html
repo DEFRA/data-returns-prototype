@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.total {
+	width:8rem;
+}
+th {
+	white-space: nowrap;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/task-list" class="link-back">Back to sections you must complete</a>
+	<div class="form-group">
+		<h1 class="heading-large parameter">More detail about your off-site transfer of hydrochloric acid</h1> </div>
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/detail-error" method="post" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<table class="more-detail table-control mobile-format">
+					<thead> </thead>
+					<tbody>
+						<tr>
+							<th class="ewc-code">EWC code</th>
+							<td class="ewc-code-value"><span class="numeric">06 03 14</span> </td>
+						</tr>
+						<tr>
+							<th class="ewc-code">EWC code description</th>
+							<td class="ewc-code-value"> Hydrochloric acid<br> Manufacture - formulation - supply and use of acids<br> Inorganic chemical processing </td>
+						</tr>
+						<tr>
+							<th class="wfd-code">WFD code</th>
+							<td class="wfd-code-value">D1</td>
+						</tr>
+						<tr>
+							<th class="wfd-code">WFD code description</th>
+							<td class="wfd-code-value">Deposit into or onto land, e.g. landfill</td>
+						</tr>
+						<!--
+				<tr>
+					<th class="2016-total-or-BRT">2016 total</th>
+					<td class="2016-total-or-BRT-value">202.4</td>
+				</td>
+				-->
+						<tr>
+							<th class="2017-total-or-BRT">2017 total</th>
+							<td class="2017-total-or-BRT-value"> <label class="form-label visually-hidden" for="2017-total-or-BRT-value">2017 total</label> <input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="3.5"> tonnes </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="form-group"> <input class="button" type="submit" value="Continue"> </div>
+	</form>
+</main>
+
+<script>
+	document.getElementById('waste-bark-and-wood-checkbox').onchange = function() {
+    	document.getElementById('waste-bark-and-wood-div').style.display = this.checked ? 'block' : 'none';
+	};
+</script>
+
+
+{% endblock %}
