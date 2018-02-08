@@ -1,0 +1,161 @@
+.drag-drop-indicator {
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	.drag-drop-message {
+		border: 10px solid $yellow;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		@include bold-48;
+	}
+}
+
+.file-drop-active .drag-drop-indicator {
+	display: table;
+	background: rgba(255,255,255,0.8);
+}
+
+.file-upload {
+	.uploader-container {
+		.form-control {
+			width: 75%;
+		}
+		p.choose-file {
+			display: inline-block;
+			margin-left: 10px;
+			margin-top: 8px;
+			vertical-align: top;
+		}
+		@include media(mobile) {
+			p.choose-file {
+				display: none;
+			}
+		}
+	}
+
+	.upload-list {
+		clear: both;
+		table-layout: fixed;
+		.file-pending {
+			background-image: url("/public/images/icons/loading.gif");
+		    background-position: right center;
+		    background-repeat: no-repeat;
+		    background-size: 32px auto;
+		    display: inline-block;
+		    padding-right: 30px;
+		}
+		/* Mobile formatting */
+		@include media(mobile) {
+			display: block;
+			.statusbar.statusbar-header::after {
+				content: "Your files";
+				@include bold-24;
+			}
+			.statusbar.statusbar-header {
+				.filename {
+					display: none;
+				}
+			}
+			thead, tr, tbody {
+				display: block;
+			}
+			.statusbar-header {
+				.filename, .status, .details, .remove {
+					display: none;
+				}
+			}
+			.filename, .status, .details, .remove {
+				display: block;
+				width: 100%;
+				padding-right: 0;
+				border-bottom: 0;
+			}
+			.filename {
+			}
+			.details, .remove {
+				width: 50%;
+				display: inline-block;
+			}
+		}
+	}
+
+	.statusbar {
+		border-top: none;
+		position: relative;
+		.filename, .status, .details, .remove {
+			position: relative;
+		}
+		.filename {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.remove {
+			text-align: right;
+			padding-right: 0;
+		}
+		@include media(tablet) {
+			.filename, .status, .details, .remove {
+			}
+			.filename {
+				width: 45%;
+			}
+			.status {
+				width: 25%;
+			}
+			.details {
+				width: 20%;
+			}
+			.remove {
+				width: 10%;
+			}
+		}
+	}
+	.status {
+		.file-error, .file-ready {
+			display: inline-block;
+			font-weight: bold;
+			padding: 2px 4px 0;
+			line-height: 1.1em;
+			@include border-radius(2px);
+		}
+		.file-ready {
+			color: $green;
+			border: 1px solid $green;
+		}
+		.file-error {
+			color: $red;
+			border: 1px solid $red;
+		}
+	}
+	@include media(mobile) {
+		.statusbar {
+			padding: 10px 0;
+			border-bottom: 1px solid $grey-2;
+		}
+	}
+	.action {
+		width: 60%;
+		display: inline-block;
+	}
+	.remove {
+		text-align: right;
+		.link {
+			background: transparent none repeat scroll 0 0;
+			border: 0;
+			padding-right: 0;
+			line-height: 1;
+		}
+		.link:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+/* Don't display the drag drop message in IE8 where it isn't supported */
+.lte-ie8 p.drag-drop-files-message {
+	display: none !important;
+}

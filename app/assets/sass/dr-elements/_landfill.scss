@@ -1,0 +1,38 @@
+@import "landfill/buttons";
+@import "landfill/components";
+@import "landfill/file-upload";
+@import "landfill/form-validation";
+@import "landfill/panels";
+@import "landfill/tables";
+@import "landfill/datatables";
+@import "landfill/tabs";
+@import "landfill/permit-lookup";
+@import "landfill/unit-lookup";
+@import "landfill/help";
+@import "landfill/forms";
+
+@import "landfill/select/core";
+@import "landfill/filter";
+@import "landfill/task-list";
+
+@import "landfill/document_list";
+@import "landfill/correction-list";
+@import "landfill/dr-dropzone";
+
+@import "landfill/dep";
+@import "landfill/allowed-values";
+
+@import "landfill/accessible-autocomplete";
+
+@import "landfill/option-select";
+@import "landfill/layout";
+
+
+a[rel="external"]::after {
+    background-position: right 4px;
+  }
+
+a:hover[rel="external"]::after {
+    background-position: right 4px;
+    color:$link-active-colour;
+  }

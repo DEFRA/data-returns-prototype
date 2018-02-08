@@ -1,0 +1,124 @@
+// Help notice
+.help-notice {
+  background:none;
+  background:url("/public/images/icons/icon-important.png") no-repeat scroll 0 0.2em;
+  @include device-pixel-ratio() {
+    background-image:url("/public/images/icons/icon-important-2x.png");
+    background-size: 34px 34px;
+  }
+  margin:$gutter 0;
+  p {
+    font-weight:600;
+    padding: 0 1em 0 2.5em;
+    a {
+      font-weight:600;
+    }
+  }
+}
+p + .help-notice {
+  margin-top: 2em;
+}
+
+// Used to display support links in footer.
+.ea-footer {
+  @include core-16();
+  line-height: 1.25;
+  padding-bottom: 1em;
+}
+
+// File Summary
+.file-summary {
+  .file-name {
+   width:100%;
+   overflow:hidden;
+   text-overflow: ellipsis;
+  }
+  .site-name {
+    font-weight: 600;
+  }
+  ul {
+    margin: 0 0 $gutter;
+  }
+}
+
+// Links in error
+.error-summary {
+    .error-summary-list {
+        .panel {
+            .link {
+              @include core-19();
+              color: $link-colour;
+              text-decoration: underline;
+            }
+
+            .link:visited {
+              color: $link-visited-colour;
+            }
+
+            .link:hover {
+              color: $link-hover-colour;
+            }
+
+            .link:active {
+              color: $link-colour;
+            }
+        }
+    }
+}
+
+// Four digit validation code sizing
+input.validation-code {
+	width:100px;
+}
+
+// Confirmation box
+.govuk-box-highlight {
+  padding: 2em 0 3em 0;
+}
+
+// Download icon alignment (Allowed values)
+.download {
+    .icon-file-download {
+        vertical-align: middle;
+        margin-right:5px;
+        @include media(mobile) {
+            width: 15px;
+            height: 19.5px;
+        }
+    }
+}
+
+//form-group inline
+.form-group.inline {
+    input.button {
+        line-height: 1.1;
+        @include media(mobile) {
+            margin-top: $gutter-one-third;
+        }
+    }
+}
+
+// Allowed value search
+.search-list {
+    margin-top:$gutter-half;
+}
+
+// Highlights words in the allowed values filter
+mark {
+    background-color: $yellow;
+    color: $text-colour;
+}
+
+// Used in the allowed values list to set priority order of version explanation
+.float-right {
+    float:right;
+    @include media(mobile) {
+        float: none;
+        margin-bottom: $gutter-half;
+    }
+}
+
+
+.nobreak {
+  white-space: nowrap;
+}

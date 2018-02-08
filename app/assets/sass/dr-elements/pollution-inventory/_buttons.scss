@@ -1,0 +1,26 @@
+.button-secondary {
+	@include button($grey-3);
+	text-align:center;
+}
+
+.button-secondary:active {
+	outline: 3px solid $yellow;
+}
+
+.link {
+	background: transparent none repeat scroll 0 0;
+	border: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.link:hover {
+	cursor: pointer;
+}
+
+.link-back {
+	border-radius:0 0 0 0;
+	border-bottom: 1px solid #0b0c0c;
+}
+.qq-upload-button-focus {
+	outline: 3px solid $yellow !important;
+}
