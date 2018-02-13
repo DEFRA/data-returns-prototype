@@ -279,7 +279,13 @@ table.summary-table {
 	.td-release {
 		width:10%;
 		input {
-			width:135px;
+			width:100%;
+		}
+	}
+	.td-release-history {
+		width:10%;
+		input {
+			width:120px;
 		}
 	}
 }
