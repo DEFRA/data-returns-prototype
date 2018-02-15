@@ -6,20 +6,6 @@
 
 {% block content %}
 
-<style>
-	input.ewc-code {
-		width:100px;
-	}
-	input.wfd-code {
-		width:50px;
-	}
-	input.total {
-		width:100px;
-	}
-	.bold {
-		margin-bottom:5px;
-	}
-</style>
 
 <main id="content" role="main">
 	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/table" method="post" class="form">
@@ -55,6 +41,23 @@
 			<label class="form-label" for="2017-total-or-BRT-value">2017 total</label>
 			<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"value="3.5t"> tonnes
 		</div>
+
+		<div class="form-group">
+			<fieldset class="inline">
+				<h1 class="heading-medium">
+				   Was this waste transferred overseas?
+				</h1>
+				<div class="multiple-choice">
+					<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes" onclick="show2();">
+					<label for="radio-inline-1">Yes</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No" onclick="show1();">
+					<label for="radio-inline-2">No</label>
+				</div>
+			</fieldset>
+		</div>
+
 		<div class="form-group">
 			<input type="submit" class="button" value="Continue">
 		</div>

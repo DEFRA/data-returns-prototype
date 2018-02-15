@@ -13,7 +13,7 @@ input.postal-code {
 </style>
 
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/overseas-waste-transfer/confirmation" method="post" class="form">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/site-address" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -29,9 +29,7 @@ input.postal-code {
 				<li><a href="#country">You must include a country</a></li>
 			</ul>
 		</div>
-		<h1 class="heading-large">
-	    		<span class="heading-secondary">Your overseas hazardous waste transfers</span>
-				Where did you send this waste?</h1>
+		<h1 class="heading-large">Which company transported this waste for you?</h1>
 		<div class="form-group">
 			<fieldset>
 				<div class="form-group form-group-error" id="business-name">
@@ -39,7 +37,7 @@ input.postal-code {
 					<label class="form-label" for="business-name">Business name</label> <input class="form-control form-control-error" type="text" name="business-name" value="">
 				</div>
 				<div class="form-group form-group-error" id="address-1">
-					<span class="error-message">You must include an address</span>
+				  <span class="error-message">You must include an address</span>
 				  <label class="form-label" for="address-line-1">Address line 1</label> <input class="form-control form-control-error" type="text" name="address-line-1" value="">
 			  </div>
 				<div class="form-group" id="address-2">
@@ -56,8 +54,8 @@ input.postal-code {
 					<input class="form-control form-control-error postal-code" id="postal-code" type="text" name="postal-code" value="">
 				</div>
 				<div class="form-group form-group-error" id="country">
-				<span class="error-message">You must include a country</span>
-				<label class="form-label" for="country">Country</label> <input class="form-control form-control-error" id="country" type="text" name="country" value="">
+				  <span class="error-message">You must include a country</span>
+				  <label class="form-label" for="country">Country</label> <input class="form-control form-control-error" id="country" type="text" name="country" value="">
 			  </div>
 			</fieldset>
 		</div>
