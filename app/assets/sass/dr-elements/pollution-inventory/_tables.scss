@@ -90,90 +90,9 @@
 				display:inline-block;
 				margin-right: 0.2em;
 			}
-
-			/*
-			.td-allowed-units {
-				&:before {
-					content:"Allowed units: ";
-				}
-			}
-			.td-field-heading {
-				&:before {
-					content:"Field heading: ";
-				}
-			}
-			.td-errors {
-				&:before {
-					content:"Errors: ";
-				}
-			}
-			.td-correction {
-				div:first-child p:first-child {
-					margin-top:-16px;
-				}
-				p:last-child {
-					margin-bottom:1em;
-				}
-				&:before {
-					content:"Correction: ";
-				}
-			}
-			.td-row {
-				&:before {
-					content:"Row number(s): ";
-				}
-			}
-			.td-error {
-				&:before {
-					content:"Error: ";
-				}
-			}
-			.td-data {
-				&:before {
-					content:"Your data: ";
-				}
-			}
-			*/
 		}
 	}
 }
-
-/* Legacy table */
-.corrections-table {
-	margin-bottom:30px;
-	caption {
-		text-align: left;
-		margin:15px 0;
-	}
-	/* Corrections table */
-	.th-field-heading {
-		width:percentage(1/6);
-	}
-	.th-errors {
-		width:percentage(1/6);
-	}
-	.th-correction {
-		width:percentage(2/3);
-	}
-
-	/* Corrections details table */
-	.th-row {
-		width:percentage(2/6);
-	}
-	.th-error {
-		width:percentage(1/6);
-	}
-	.th-data {
-		width:percentage(3/6);
-	}
-	td {
-		vertical-align:top;
-		p:first-child {
-			margin-top:0;
-		}
-	}
-}
-
 
 /* Mobile formatting */
 @include media(mobile) {

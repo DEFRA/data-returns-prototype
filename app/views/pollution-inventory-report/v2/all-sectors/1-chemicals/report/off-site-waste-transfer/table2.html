@@ -8,23 +8,30 @@
 
 
 <style>
-.hide {
-  display: none;
+.th-ewc-code {
+	width:12%;
 }
-.td-wfd-code select {
-	width:75px;
+.th-waste {
+	width:20%;
 }
-th {
-	white-space: nowrap;
+.th-wfd-code{
+	width:12%;
 }
-.td-description::first-letter {
-     text-transform: capitalize;
- }
-
- @media (min-width: 641px) {}
-	.form-control {
-	    width: 75px;
-	}
+.th-2017-total {
+	width:22%;
+}
+.td-2017-total .form-control {
+	width:67%;
+}
+.th-business-name {
+}
+.td-more-detail, .td-more-detail-overseas, .td-delete {
+	text-align: right;
+	padding-right: 0;
+}
+.th-delete {
+	width:10%;
+	padding-right: 0;
 }
 </style>
 
@@ -38,7 +45,7 @@ th {
 	<h1 class="heading-large">Your waste transferred off site</h1>
 	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/table-error" method="post" class="form">
 
-		<table class="check-data table-control summary-table mobile-format">
+		<table class="check-data table-control">
 			<thead>
 				<tr>
 					<th class="th-ewc-code">EWC code</th>
@@ -52,7 +59,7 @@ th {
 			<tbody>
 				<tr>
 					<td class="td-ewc-code">16 01 19</td>
-					<td class="td-description">Hydrochloric acid</td>
+					<td class="td-waste">Hydrochloric acid</td>
 					<td class="td-wfd-code">D15</td>
 					<td class="td-2017-total">
 						<label class="form-label visually-hidden" for="quantity">Quantity</label>
@@ -64,30 +71,30 @@ th {
 			</tbody>
 		</table>
 		<h2 class="heading-medium">Your overseas hazardous waste transfers</h2>
-		<table class="table-control mobile-format summary-table">
+		<table class="table-control summary-table">
 			<thead>
 				<tr>
 					<th class="th-ewc-code">EWC code</th>
 					<th class="th-waste">Waste</th>
 					<th class="th-wfd-code">WFD code</th>
-					<th class="th-total">2017 total</th>
+					<th class="th-2017-total">2017 total</th>
 					<th class="th-business-name">Transfer to</th>
-					<th class="th-more-detail"><span class="visually-hidden">More detail</span></th>
+					<th class="th-more-detail-overseas"><span class="visually-hidden">More detail</span></th>
 					<th class="th-delete"><span class="visually-hidden">Delete</span></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="td-ewc-code">06 01 04</td>
-					<td class="td-description">Nitric acid and nitrous acid</td>
-					<td class="td-wfd-code">D15</td>
+					<td class="td-waste">Nitric acid and nitrous acid</td>
+					<td class="td-wfd-code">R6</td>
 					<td class="td-2017-total">
 						<label class="form-label visually-hidden" for="quantity">Quantity</label>
 						<input class="form-control" id="quantity" name="quantity" type="text" value="3.5"> tonnes
 					</td>
 					<td class="td-business-name">Vanheede</td>
-					<td class="td-action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/overseas-waste-transfer/confirmation">View transfer</a></td>
-					<td class="td-delete"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/overseas-waste-transfer/delete">Delete</a></td>
+					<td class="td-more-detail-overseas"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/confirmation">More detail</a></td>
+					<td class="td-delete"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/delete">Delete</a></td>
 				</tr>
 			</tbody>
 		</table>
