@@ -26,9 +26,6 @@ GOV.UK prototyping kit
 		width:50px;
 		margin-bottom:10px;
 	}
-	hr {
-		clear:both;
-	}
 </style>
 <main id="content" role="main">
 	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/sections-summary" method="post" class="form">
@@ -36,7 +33,7 @@ GOV.UK prototyping kit
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div> <a class="link-back" href="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/sections-summary">Back to sections you must complete</a>
 
-		<h1 class="heading-large">Your site codes</h1>
+		<h1 class="heading-large">Check your site codes</h1>
 		<p>You will find your codes in the supplied guidance</p>
 
 		<div class="form-group form-group-error">
@@ -45,7 +42,6 @@ GOV.UK prototyping kit
 			<span class="error-message">Enter a correct NACE code</span>
 			<input class="form-control form-control-error nace" id="nace" name="ewc-code" type="text" value"20">
 		</div>
-		<hr>
 		<div class="form-group form-group-error">
 			<label class="form-label form-label-bold" for="nose-p">NOSE-P code</label>
 			<span class="form-hint">For example ‘105.09’.</span>
@@ -53,7 +49,6 @@ GOV.UK prototyping kit
 			<input class="form-control form-control-error nose-p" id="nose-p" name="nose-p" type="text" value"105">
 			<p><a href="">Add another NOSE-P code</a></p>
 		</div>
-		<hr>
 		<div class="form-group form-group-error">
 			<label class="form-label form-label-bold" for="e-prtr">E-PRTR code</label>
 			<span class="form-hint">For example ‘4b’.</span>
