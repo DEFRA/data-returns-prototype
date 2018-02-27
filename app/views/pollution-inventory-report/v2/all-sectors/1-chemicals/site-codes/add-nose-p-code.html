@@ -6,7 +6,7 @@
 
 {% block content %}
 <style>
- input.noce-p { width:120px; }
+ input.nose-p { width:100px; }
 </style>
 
 <main id="content" role="main">
@@ -17,17 +17,15 @@
 	<h1 class="heading-large">Your NOSE-P code(s)</h1>
 	<div class="grid-row">
 		<div class="column-two-thirds">
-			<p>Select the code(s) for your site's main activity:</p>
-			<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/eprtr-code" method="post" class="form">
+			<p>Enter the code(s) for your site's main activity:</p>
+			<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/new-nose-p-code-error" method="post" class="form">
 				<div class="form-group">
-					<div class="multiple-choice">
-						<input id="checkbox-3" type="checkbox" checked name="checkbox-group-1" value="No">
-						<label for="checkbox-3">105.09 Manufacture of organic chemicals / Manufacture of inorganic chemicals, NPK fertilisers, pesticides or
-explosives</label>
-					</div>
+					<label class="form-label form-label-bold" for="nose-p">NOSE-P code</label>
+					<span class="form-hint">For example ‘105.09’.</span>
+					<input class="form-control nose-p" id="nose-p" name="nose-p" type="text" value="">
 				</div>
 				<div class="form-group">
-					<a href="#">Add another NOSE-P code</a>
+					<p><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/new-nose-p-code">Add another NOSE-P code</a></p>
 				</div>
 	            <div class="form-group">
 					<input class="button" type="submit" value="Continue">

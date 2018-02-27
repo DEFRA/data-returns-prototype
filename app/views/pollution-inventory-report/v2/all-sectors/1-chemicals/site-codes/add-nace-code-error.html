@@ -6,7 +6,7 @@
 
 {% block content %}
 <style>
- input.nace { width:45px; }
+ input.nace { width:75px; }
 </style>
 
 <main id="content" role="main">
@@ -15,14 +15,24 @@
 	</div>
 	<a class="link-back" href="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/sections-summary">Back to sections you must complete</a>
 	<h1 class="heading-large">Your NACE code</h1>
+
+	<div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
+	  <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
+		Check what you’re reporting</h2>
+	  <ul class="error-summary-list">
+		<li><a href="#ewc-code">Enter a correct NACE code</a></li>
+	  </ul>
+	</div>
+
 	<div class="grid-row">
 		<div class="column-two-thirds">
 			<p>Enter the code for your site’s main activity:</p>
-			<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/nose-p-code/" method="post" class="form">
-				<div class="form-group">
+			<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/add-nose-p-code" method="post" class="form">
+				<div class="form-group form-group-error">
 					<label class="form-label form-label-bold" for="nace">NACE code</label>
 					<span class="form-hint">For example ‘20.13’.</span>
-					<input class="form-control nace" id="nace" name="ewc-code" type="text">
+					<span class="error-message">Enter a correct NACE code</span>
+					<input class="form-control form-control-error nace" id="nace" name="ewc-code" type="text" value"20">
 				</div>
 	            <div class="form-group">
 					<input class="button" type="submit" value="Continue">
