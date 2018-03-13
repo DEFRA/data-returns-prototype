@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<style>
+ input.nose-p { width:100px; }
+</style>
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+	<a class="link-back" href="/pollution-inventory-report/v2/all-sectors/1-chemicals/site-codes/sections-summary">Back to sections you must complete</a>
+	<h1 class="heading-large">Your NOSE-P code(s)</h1>
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<p>Enter the code(s) for your site's main activity:</p>
+			<form action="another-nose-p-code-error" method="post" class="form">
+				<div class="form-group">
+					<label class="form-label form-label-bold" for="nose-p">NOSE-P code</label>
+					<span class="form-hint">For example ‘105.09’.</span>
+					<input class="form-control nose-p" id="nose-p" name="nose-p" type="text" value="">
+				</div>
+				<div class="form-group">
+				</div>
+	            <div class="form-group">
+					<input class="button" type="submit" value="Continue">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
+
+{% endblock %}
