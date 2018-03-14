@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+.th-ewc-code {
+	width:12%;
+}
+.th-waste {
+	width:20%;
+}
+.th-wfd-code{
+	width:12%;
+}
+.th-2017-total {
+	width:22%;
+}
+.td-2017-total .form-control {
+	width:67%;
+}
+.th-business-name {
+}
+.td-more-detail, .td-more-detail-overseas, .td-delete {
+	text-align: right;
+	padding-right: 0;
+}
+.th-delete {
+	width:10%;
+	padding-right: 0;
+}
+</style>
+
+
+<main id="content" role="main">
+	<div class='phase-banner'>
+		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+	</div>
+
+	<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/sections-summary" class="link-back">Back to sections you must complete</a>
+	<h1 class="heading-large">Your waste transferred off site</h1>
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/table-error" method="post" class="form">
+
+		<table class="check-data table-control">
+			<thead>
+				<tr>
+					<th class="th-ewc-code">EWC code</th>
+					<th class="th-waste">Waste</th>
+					<th class="th-wfd-code">WFD code</th>
+					<th class="th-2017-total">2017 total</th>
+					<th class="th-more-detail"><span class="visually-hidden">More detail</span></th>
+					<th class="th-delete"><span class="visually-hidden">Delete</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-ewc-code">16 01 19</td>
+					<td class="td-waste">Hydrochloric acid</td>
+					<td class="td-wfd-code">D15</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text" value="3.5"> tonnes
+					</td>
+					<td class="td-more-detail"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/detail">More detail</a></td>
+					<td class="td-delete"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/delete">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2 class="heading-medium">Your overseas hazardous waste transfers</h2>
+		<table class="table-control summary-table">
+			<thead>
+				<tr>
+					<th class="th-ewc-code">EWC code</th>
+					<th class="th-waste">Waste</th>
+					<th class="th-wfd-code">WFD code</th>
+					<th class="th-2017-total">2017 total</th>
+					<th class="th-business-name">Transfer to</th>
+					<th class="th-more-detail-overseas"><span class="visually-hidden">More detail</span></th>
+					<th class="th-delete"><span class="visually-hidden">Delete</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-ewc-code">06 01 04</td>
+					<td class="td-waste">Nitric acid and nitrous acid</td>
+					<td class="td-wfd-code">R6</td>
+					<td class="td-2017-total">
+						<label class="form-label visually-hidden" for="quantity">Quantity</label>
+						<input class="form-control" id="quantity" name="quantity" type="text" value="3.5"> tonnes
+					</td>
+					<td class="td-business-name">Vanheede</td>
+					<td class="td-more-detail-overseas"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/confirmation">More detail</a></td>
+					<td class="td-delete"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/delete">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+	    <div class="form-group">
+			<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/add-values-overseas">Add a new off-site waste transfer</a>
+		</div>
+
+	    <div class="form-group">
+			<input class="button" type="submit" value="Continue">
+		</div>
+	</form>
+</main>
+
+
+{% endblock %}

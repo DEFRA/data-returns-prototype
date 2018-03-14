@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/business-address" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+
+		<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/sections-summary" class="link-back">Back to sections you must complete</a>
+		<h1 class="heading-large">Tell us about your transfer of waste off site</h1>
+
+		<div class="form-group">
+			<label class="form-label bold" for="ewc-code">EWC code</label>
+			<span class="form-hint">For example ‘13 12 01’.</span>
+			<input class="form-control ewc-code" id="ewc-code" name="ewc-code" type="text">
+		</div>
+		<div class="form-group">
+			<label class="form-label" for="wfd-code">WFD code</label>
+			<span class="form-hint">For example ‘D5’ or ‘R13’.</span>
+			<input class="form-control wfd-code" id="wfd-code" name="wfd-code" type="text">
+		</div>
+		<div class="form-group">
+			<label class="form-label" for="2017-total-or-BRT-value">2017 total</label>
+			<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
+		</div>
+
+		<div class="form-group">
+			<fieldset class="inline">
+				<h1 class="heading-medium">
+				   Was this waste transferred overseas?
+				</h1>
+				<div class="multiple-choice">
+					<input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes" onclick="show2();">
+					<label for="radio-inline-1">Yes</label>
+				</div>
+				<div class="multiple-choice">
+					<input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No" onclick="show1();">
+					<label for="radio-inline-2">No</label>
+				</div>
+			</fieldset>
+		</div>
+
+		<div class="form-group">
+			<input type="submit" class="button" value="Continue">
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

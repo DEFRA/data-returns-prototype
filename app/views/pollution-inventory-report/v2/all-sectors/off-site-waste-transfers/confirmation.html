@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+input.quantity {
+	width:120px;
+}
+</style>
+
+<main id="content" role="main">
+	<form action="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/table2" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/sections-summary" class="link-back">Back to sections you must complete</a>
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<h1 class="heading-large">Your transfer of zinc to Vanheede</h1>
+				<p>Please check and confirm these details.</p>
+				<div class="form-group">
+					<table class="codes table-control">
+						<tbody>
+							<tr>
+								<th class="name">EWC code</th>
+								<td>06 01 05</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/add-values-overseas">Change <span class="visuallyhidden">substance</span></a></td>
+							</tr>
+							<tr>
+								<th class="name">EWC code description</th>
+								<td>
+									Inorganic chemical processing<br>
+									Manufacture - formulation - supply and use of acids<br>
+									Nitric acid and nitrous acid<br>
+								</td>
+								<td class="action"></td>
+							</tr>
+							<tr>
+								<th class="name">WFD code</th>
+								<td>R6</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/add-values-overseas">Change <span class="visuallyhidden">operation</span></a></td>
+							</tr>
+							<tr>
+								<th class="name">WFD code description</th>
+								<td>Regeneration of acids or bases</td>
+								<td class="action"></td>
+							</tr>
+							<tr>
+								<th class="name">Quantity</th>
+								<td>3.5 tonnes</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/add-values-overseas">Change <span class="visuallyhidden">quantity</span></a></td>
+							</tr>
+							<tr>
+								<th class="name">Method</th>
+								<td>Weighing</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/add-values">Change <span class="visuallyhidden">method</span></a></td>
+							</tr>
+							<tr>
+								<th class="name">Transported by</th>
+								<td>
+									Vanheede<br>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/business-address">Change <span class="visuallyhidden">business address</span></a></td>
+							</tr>
+							<tr>
+								<th class="name">Transported to</th>
+								<td>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td class="action"><a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/site-address">Change <span class="visuallyhidden">site address</span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<input type="submit" class="button" value="Continue">
+		</div>
+	</form>
+</main> {% endblock %}
