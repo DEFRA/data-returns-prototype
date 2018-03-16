@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	<form action="sections-summary-completed" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+		<a href="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/task-list" class="link-back">Back to sections you must complete</a>
+		<div class="grid-row">
+			<div class="column">
+				<h1 class="heading-large">Your off-site &amp; overseas waste transfers</h1>
+				<p>Please check and confirm these details.</p>
+				<div class="form-group">
+					<table>
+					  <thead>
+					    <tr>
+					      <th scope="col">EWC</th>
+					      <th scope="col">WFD</th>
+					      <th scope="col">Tonnes</th>
+					      <th scope="col">Company details</th>
+					      <th scope="col">Site details</th>
+					      <th scope="col">In confidence</th>
+					      <th scope="col" colspan="2">Actions</th>
+					    </tr>
+					  </thead>
+						<tbody>
+							<tr>
+								<td>14&nbsp;02&nbsp;01</td>
+								<td>D10</td>
+								<td>250,000</td>
+								<td>
+									n/a
+								</td>
+								<td>
+									n/a
+								</td>
+								<td>yes</td>
+								<td class="action"><a href="add-values">Change <span class="visuallyhidden">transfer details</span></a></td>
+								<td class="action"><a href="delete">Remove <span class="visuallyhidden">this transfer</span></a></td>
+							</tr>
+							<tr>
+								<td>17&nbsp;05&nbsp;03</td>
+								<td>R1</td>
+								<td>2</td>
+								<td>
+									n/a
+								</td>
+								<td>
+									n/a
+								</td>
+								<td>No</td>
+								<td class="action"><a href="add-values">Change <span class="visuallyhidden">transfer details</span></a></td>
+								<td class="action"><a href="delete">Remove <span class="visuallyhidden">this transfer</span></a></td>
+							</tr>
+							<tr>
+								<td>11&nbsp;01&nbsp;02</td>
+								<td>R1</td>
+								<td>5.2</td>
+								<td>
+									Vanheede<br>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td>No</td>
+								<td class="action"><a href="add-values">Change <span class="visuallyhidden">transfer details</span></a></td>
+								<td class="action"><a href="delete">Remove <span class="visuallyhidden">this transfer</span></a></td>
+							</tr>
+							<tr>
+								<td>17&nbsp;05&nbsp;03</td>
+								<td>D8</td>
+								<td>25</td>
+								<td>
+									Vanheede<br>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td>
+									375 Avenue de Sofia<br>
+									62138<br>
+									Billy-Berclau<br>
+									France
+								</td>
+								<td>No</td>
+								<td class="action"><a href="add-values">Change <span class="visuallyhidden">transfer details</span></a></td>
+								<td class="action"><a href="delete">Remove <span class="visuallyhidden">this transfer</span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p><a href="add-values">Report another transfer</a></p>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="button" value="Continue">
+			</div>
+		</div>
+	</form>
+</main> {% endblock %}

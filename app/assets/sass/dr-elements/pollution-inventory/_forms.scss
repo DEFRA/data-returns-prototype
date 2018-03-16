@@ -1,11 +1,14 @@
 input {
-	&.ewc-code {
-	width:100px;
+  &.ewc-code,
+  &.wfd-code,
+  &.total {
+    width: 100px;
 	}
-	&.wfd-code {
-		width:50px;
-	}
-	&.total {
-		width:100px;
-	}
+  &.form-confidential {
+    height: 200px;
+  }
+}
+
+.notice.cleared {
+  clear: left;
 }
