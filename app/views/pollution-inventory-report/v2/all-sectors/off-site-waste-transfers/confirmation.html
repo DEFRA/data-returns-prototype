@@ -6,7 +6,7 @@
 
 {% block content %}
 <main id="content" role="main">
-	<form action="/pollution-inventory-report/skeleton/v1/report-your-data/overseas-waste-transfer/table" method="post" class="form">
+	<form action="table" method="post" class="form">
 		<div class='phase-banner'>
 			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
 		</div>
@@ -102,10 +102,11 @@
 						</tbody>
 					</table>
 				</div>
+				<p><a href="add-values">Report another transfer</a></p>
 			</div>
-		</div>
-		<div class="form-group">
-			<input type="submit" class="button" value="Continue">
+			<div class="form-group">
+				<input type="submit" class="button" value="Continue">
+			</div>
 		</div>
 	</form>
 </main> {% endblock %}

@@ -30,6 +30,25 @@
 an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below this threshold, insert ‘brt’ in the cell.</span>
 			<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
 		</div>
+
+    <div class="form-group">
+      <fieldset class="inline">
+        <label class="form-label" for="transfer-method">How was the mass of waste transferred decided?</label>
+        <div class="multiple-choice">
+          <input id="radio-inline-hd1" type="radio" name="radio-inline-group-hd" value="Yes">
+          <label for="radio-inline-hd1">Weight</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-inline-hd2" type="radio" name="radio-inline-group-hd" value="No">
+          <label for="radio-inline-hd2">Calculation</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-inline-hd3" type="radio" name="radio-inline-group-hd" value="No">
+          <label for="radio-inline-hd3">Estimation</label>
+        </div>
+      </fieldset>
+    </div>
+
 		<div class="form-group">
 			<fieldset>
 				<label class="form-label" for="confidential-checkbox">Is this confidential?</label>
@@ -62,6 +81,7 @@ an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below 
 				<p>Disposal covers operations other than recovery, for example landfill or burning of waste in an incineration plant.</p>
 		  </div>
 		</details>
+
 		<h1 class="heading-medium">Was this waste transferred overseas?</h1>
 		<div class="form-group">
 			<fieldset class="inline">
