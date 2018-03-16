@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	GOV.UK prototyping kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<form action="add-values-otpp-2" method="post" class="form">
+		<div class='phase-banner'>
+			<p> <strong class='phase-tag'>BETA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
+		</div>
+
+		<a href="/pollution-inventory-report/v2/all-sectors/1-chemicals/report/off-site-waste-transfer/sections-summary" class="link-back">Back to sections you must complete</a>
+		<h1 class="heading-large">Tell us about your transfer of waste off-site</h1>
+		<div class="form-group">
+			<h1 class="heading-medium">European Waste Catalogue (EWC) code</h1>
+			<span class="form-hint">For example ‘17 05 03’.</span>
+			<input class="form-control ewc-code" autofocus id="ewc-code" name="ewc-code" type="text">
+		</div>
+		<div class="form-group">
+			<h1 class="heading-medium">Waste Framework Directive (WFD) code</h1>
+			<span class="form-hint">For example ‘D5’ or ‘R13’.</span>
+			<input class="form-control wfd-code" id="wfd-code" name="wfd-code" type="text">
+		</div>
+		<div class="form-group">
+			<h1 class="heading-medium">Annual tonnage of waste transferred</h1>
+			<span class="form-hint">Report all hazardous waste transfers (no matter how many tonnes).<br />For other EWC/WFD disposal and recovery code combinations
+an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below this threshold, insert ‘brt’ in the cell.</span>
+			<input class="form-control total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
+		</div>
+		<div class="form-group">
+			<input type="submit" class="button" value="Continue">
+		</div>
+	</form>
+</main>
+
+{% endblock %}
