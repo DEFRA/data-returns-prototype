@@ -1,8 +1,10 @@
 input {
+  &.nace-code,
+  &.nose-p-code,
   &.ewc-code,
   &.wfd-code,
   &.total {
-    width: 100px;
+    width: 5em;
 	}
   &.form-confidential {
     height: 200px;
