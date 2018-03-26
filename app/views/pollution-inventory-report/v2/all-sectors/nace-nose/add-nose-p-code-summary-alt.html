@@ -6,41 +6,37 @@
 
 {% block content %}
 
-<style>
-	td.name {
-		white-space: nowrap;
-	}
-</style>
-
 <main id="content" role="main">
-<form action="index-nose-p" method="post" class="form">
-	<div class='phase-banner'>
-		<p> <strong class='phase-tag'>ALPHA</strong> <span>This is a new service – your <a target="blank" href="">feedback</a> will help us to improve it.</span> </p>
-	</div>
-	<h1 class="heading-large">Review your NOSE-P code(s)</h1>
-	<div class="form-group">
-		<table class="codes table-control">
-			<thead>
-				<tr>
-					<th class="code-name">Code</th>
-					<th class="description">Description</th>
-					<th class="action"><span class="visually-hidden">Action</span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>109.03</td>
-					<td>Other Activities. The Chemical Industry. Disposal or recycling of animal
-carcasses and animal waste. Incineration of animal carcasses and animal waste.</td>
-					<td class="change-answer"><a href="add-nose-p-code">Delete <span class="visuallyhidden">NOSE-P code</span></a></td>
-				</tr>
-			</tbody>
-		</table>
-		<p><a href="another-nose-p-code">Add another NOSE-P code</a></p>
-	</div>
-	<div class="form-group">
-		<input type="submit" class="button" value="Continue">
-	</div>
-</form>
+    <a class="link-back" href="">Back to sections you must complete</a>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Check your activity codes</span>
+                    Is this an accurate description of processes carried out on your site?
+            </h1>
+            <table class="codes table-control">
+                <thead>
+                    <tr>
+                        <th class="code-name">Code</th>
+                        <th class="description">Description</th>
+                        <th class="action"><span class="visually-hidden">Action</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+        				<td>109.03</td>
+        				<td>Other Activities. The Chemical Industry. Disposal or recycling of animal
+        carcasses and animal waste. Incineration of animal carcasses and animal waste.</td>
+        				<td class="change-answer"><a href="add-nose-p-code">Delete <span class="visuallyhidden">NOSE-P code</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="form-group"><a href="another-nose-p-code">Add another NOSE-P code</a></p>
+            <form action="index-nose-p" method="post" class="form">
+                <input type="submit" class="button" value="Continue">
+            </form>
+        </div>
+    </div>
 </main>
+
 {% endblock %}
