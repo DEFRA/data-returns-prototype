@@ -17,11 +17,12 @@
 			<div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
 	      <h2 class="heading-medium error-summary-heading" id="error-summary-heading">Check what you’re reporting</h2>
 	      <ul class="error-summary-list">
-	        <li><a href="#ewc-code">Enter a correct EWC code</a></li>
- 	        <li><a href="#wfd-code">Enter a correct WFD code</a></li>
+	        <li><a href="#ewc-code">Enter a valid EWC code</a></li>
+ 	        <li><a href="#wfd-code">Enter a valid WFD code</a></li>
  	        <li><a href="#2017-total-or-BRT-value">Enter a total in digits</a></li>
- 	        <li><a href="#transfer-method">Enter a total in digits</a></li>
- 	        <li><a href="#radio-inline-1">Indicate whether waste was transferred overseas</a></li>
+ 	        <li><a href="#transfer-method">Select a measurement method</a></li>
+          <li><a href="#transfer-method">TBC - confidentiality</a></li>
+ 	        <li><a href="#radio-inline-1">Select an answer</a></li>
 	      </ul>
 	    </div>
 
@@ -29,20 +30,20 @@
 		<div class="form-group form-group-error">
 			<label class="form-label" for="ewc-code">European Waste Catalogue (EWC) code</label>
 			<span class="form-hint">For example ‘17 05 03’.</span>
-			<span class="error-message">Enter a correct EWC code</span>
+			<span class="error-message">Enter a valid EWC code</span>
 			<input class="form-control form-control-error ewc-code" id="ewc-code" name="ewc-code" type="text">
 		</div>
 		<div class="form-group form-group-error">
 			<label class="form-label" for="wfd-code">Waste Framework Directive (WFD) code</label>
 			<span class="form-hint">For example ‘D5’ or ‘R13’.</span>
-			<span class="error-message">Enter a correct WFD code</span>
+			<span class="error-message">Enter a valid WFD code</span>
 			<input class="form-control form-control-error wfd-code" id="wfd-code" name="wfd-code" type="text">
 		</div>
 		<div class="form-group form-group-error">
 			<label class="form-label" for="2017-total-or-BRT-value">Annual tonnage of waste transferred</label>
 			<span class="form-hint">Report all hazardous waste transfers (no matter how many tonnes).<br />For other EWC/WFD disposal and recovery code combinations
 an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below this threshold, insert ‘brt’ in the cell.</span>
-			<span class="error-message">Enter a number</span>
+			<span class="error-message">Enter a total in digits</span>
 			<input class="form-control form-control-error total" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
 		</div>
 
@@ -50,7 +51,7 @@ an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below 
       <fieldset class="inline">
         <label class="form-label" for="transfer-method">How was the mass of waste transferred decided?</label>
         
-        <span class="error-message">Select a method</span>
+        <span class="error-message">Select a measurement method</span>
         <div class="multiple-choice">
           <input id="radio-inline-hd1" type="radio" name="radio-inline-group-hd" value="Yes">
           <label for="radio-inline-hd1">Weight</label>
@@ -76,7 +77,7 @@ an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below 
       <div class="panel panel-border-narrow js-hidden form-group-error" id="confidentiality-check-justify">
         <label class="form-label" for="confidential-justification-text">Enter justification</label>
         <span class="form-hint">You must justify this.</span>
-        <span class="error-message">Enter a justification</span>
+        <span class="error-message">TBC</span>
         <input class="form-control form-confidential" type="textarea" id="confidential-justification-text" name="confidential-justification-text">
       </div>
       </fieldset>
@@ -93,7 +94,7 @@ an annual reporting threshold of 5 tonnes applies.<br />If the tonnage is below 
 		<h1 class="heading-medium">Was this waste transferred overseas?</h1>
 		<div class="form-group form-group-error">
 			<fieldset class="inline">
-				<span class="error-message">Indicate whether waste was transferred overseas</span>
+				<span class="error-message">Select an answer</span>
 				<div class="multiple-choice">
 					<input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes" onclick="show2();">
 					<label for="radio-inline-1">Yes</label>
