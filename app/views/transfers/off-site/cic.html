@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Tell us about your transfer of waste off site
+            </h1>
+        </header>
+        <section>     
+            <form action="cic-error" method="post" class="form">
+                <div class="form-group">
+                    <fieldset>
+                        <h2 class="heading-medium">Do you want to request a commercial in confidence classification for this waste transfer information?</h2>
+                        <details class="form-group">
+                            <summary><span class="summary">What's commercial in confidence?</span></summary>
+                            <div class="panel panel-border-narrow">
+                                <p>If you think that some of the information you've entered is confidential, you can ask us to exclude it from the public register.</p>
+                            </div>
+                        </details>
+                        <fieldset class="inline">
+                            <div class="multiple-choice" data-target="confidentiality-check-justify">
+                                <input id="radio-inline-cic1" type="radio" name="radio-inline-group-cic" value="Yes">
+                                <label for="radio-inline-cic1">Yes</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-inline-cic2" type="radio" name="radio-inline-group-cic" checked="checked" value="No">
+                                <label for="radio-inline-cic2">No</label>
+                            </div>
+                        </fieldset>
+                        <div class="js-hidden" id="confidentiality-check-justify">
+                            <div class="panel panel-border-narrow">
+                                <label class="form-label" for="confidential-justification-text">Explanatory TBC</label>
+                                <input class="form-control form-confidential" type="textarea" id="confidential-justification-text" name="confidential-justification-text">
+                            </div>
+                            <div class="notice cleared">
+                                <i class="icon icon-important">
+                                <span class="visually-hidden">Warning</span>
+                                </i>
+                                <p><strong class="bold-small">We'll make a decision on your claim for confidentiality within 20 days from the date of your application, or within a later period if we agree. If you don't enclose a written justification for each item included in the confidentiality claim, we're likely to reject it straight away.</strong></p> 
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<style>
+input.postal-code {
+    width:120px;
+}
+</style>
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+            <header>
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Your off-site &amp; overseas waste transfers</span>
+                    Please check and confirm these details
+                </h1>
+            </header>
+            <section>     
+                <form action="/task-list" method="post" class="form">
+                    <div class="form-group">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">EWC</th>
+                                    <th scope="col">WFD</th>
+                                    <th scope="col">Tonnes</th>
+                                    <th scope="col">Company details</th>
+                                    <th scope="col">Site details</th>
+                                    <th scope="col">In confidence</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>14&nbsp;02&nbsp;01</td>
+                                    <td>D10</td>
+                                    <td>250,000</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>Yes</td>
+                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>17&nbsp;05&nbsp;03</td>
+                                    <td>R1</td>
+                                    <td>2</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>No</td>
+                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>11&nbsp;01&nbsp;02</td>
+                                    <td>R1</td>
+                                    <td>5.2</td>
+                                    <td>
+                                        Vanheede<br>
+                                        375 Avenue de Sofia<br>
+                                        62138<br>
+                                        Billy-Berclau<br>
+                                        France
+                                    </td>
+                                    <td>
+                                        375 Avenue de Sofia<br>
+                                        62138<br>
+                                        Billy-Berclau<br>
+                                        France
+                                    </td>
+                                    <td>No</td>
+                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
+                                </tr>
+                                <tr>
+                                    <td>17&nbsp;05&nbsp;03</td>
+                                    <td>D8</td>
+                                    <td>25</td>
+                                    <td>
+                                        Vanheede<br>
+                                        375 Avenue de Sofia<br>
+                                        62138<br>
+                                        Billy-Berclau<br>
+                                        France
+                                    </td>
+                                    <td>
+                                        375 Avenue de Sofia<br>
+                                        62138<br>
+                                        Billy-Berclau<br>
+                                        France
+                                    </td>
+                                    <td>No</td>
+                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><a href="../off-site/add-values">Report another transfer</a></p>
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Continue">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

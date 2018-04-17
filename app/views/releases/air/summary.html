@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Your releases to air
+            </h1>
+        </header>
+        <section>
+            <form action="/task-list" method="post" class="form">
+                <table class="table-control mobile-format summary-table">
+                    <thead>
+                        <tr>
+                            <th class="th-substance">Substance</th>
+                            <th class="th-reporting-threshold numeric">2017 threshold</th>
+                            <th class="th-release">2017 total</th>
+                            <th class="th-unit">Unit</th>
+                            <th class="th-method">Method</th>
+                            <th class="th-more-detail"><span class="visually-hidden">More detail</span></th>
+                            <th class="th-delete"><span class="visually-hidden">Delete</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="carbon-dioxide">
+                            <td class="td-substance">Carbon dioxide</td>
+                            <td class="td-reporting-threshold numeric">1.0E+7 kg</td>
+                            <td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+                            <td class="td-unit">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control unit" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>kt</option>
+                                    <option>t</option>
+                                    <option>kg</option>
+                                    <option>g</option>
+                                    <option>mg</option>
+                                  </select>
+                              </td>
+                            <td class="td-method">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control method" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>Est.</option>
+                                    <option>Meas.</option>
+                                    <option>Calc.</option>
+                                  </select>
+                              </td>
+                            <td class="td-action"><a href="more-detail">More detail</a></td>
+                            <td class="td-delete"><a href="delete">Delete</a></td>
+                        </tr>
+                        <tr id="carbon-monoxide">
+                            <td class="td-substance">Carbon monoxide</td>
+                            <td class="td-reporting-threshold numeric">100,000 kg</td>
+                            <td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text">
+                            </td>
+                            <td class="td-unit">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control unit" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>kt</option>
+                                    <option>t</option>
+                                    <option>kg</option>
+                                    <option>g</option>
+                                    <option>mg</option>
+                                  </select>
+                              </td>
+                            <td class="td-method">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control method" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>Est.</option>
+                                    <option>Meas.</option>
+                                    <option>Calc.</option>
+                                  </select>
+                              </td>
+                            <td class="td-action"><a href="more-detail">More detail</a></td>
+                            <td class="td-delete"><a href="delete">Delete</a></td>
+                        </tr>
+                        <tr id="nitrogen-oxides">
+                            <td class="td-substance">Nitrogen oxides (NO and NO2) as NO2</td>
+                            <td class="td-reporting-threshold numeric">100,000 kg</td>
+                            <td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+                            <td class="td-unit">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control unit" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>kt</option>
+                                    <option>t</option>
+                                    <option>kg</option>
+                                    <option>g</option>
+                                    <option>mg</option>
+                                  </select>
+                              </td>
+                            <td class="td-method">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control method" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>Est.</option>
+                                    <option>Meas.</option>
+                                    <option>Calc.</option>
+                                  </select>
+                              </td>
+                            <td class="td-action"><a href="more-detail">More detail</a></td>
+                            <td class="td-delete"><a href="delete">Delete</a></td>
+                        </tr>
+                        <tr id="particulate-matter-PM2-5">
+                            <td class="td-substance">Particulate matter - PM2.5</td>
+                            <td class="td-reporting-threshold numeric">1,000 kg</td>
+                            <td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+                            <td class="td-unit">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control unit" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>kt</option>
+                                    <option>t</option>
+                                    <option>kg</option>
+                                    <option>g</option>
+                                    <option>mg</option>
+                                  </select>
+                              </td>
+                            <td class="td-method">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control method" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>Est.</option>
+                                    <option>Meas.</option>
+                                    <option>Calc.</option>
+                                  </select>
+                              </td>
+                            <td class="td-action"><a href="more-detail">More detail</a></td>
+                            <td class="td-delete"><a href="delete">Delete</a></td>
+                        </tr>
+                        <tr id="particulate-matter-PM10">
+                            <td class="td-substance">Particulate matter - PM10</td>
+                            <td class="td-reporting-threshold numeric">1,000 kg</td>
+                            <td class="td-release"> <label class="form-label visually-hidden" for="releases">Releases</label> <input class="form-control" id="releases" name="releases" type="text"> </td>
+                            <td class="td-unit">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control unit" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>kt</option>
+                                    <option>t</option>
+                                    <option>kg</option>
+                                    <option>g</option>
+                                    <option>mg</option>
+                                  </select>
+                              </td>
+                            <td class="td-method">
+                                <label class="form-label visually-hidden" for="select-box">Unit</label>
+                                <select class="form-control method" id="select-box" name="select-box">
+                                    <option selected>--</option>
+                                    <option>Est.</option>
+                                    <option>Meas.</option>
+                                    <option>Calc.</option>
+                                  </select>
+                              </td>
+                            <td class="td-action"><a href="more-detail">More detail</a></td>
+                            <td class="td-delete"><a href="delete">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <a href="add-values">Add a substance</a>
+                </div>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Save and continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,36 +1,23 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Data returns sandbox
+  Data returns prototype kit
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <h1 class="heading-xlarge">Data returns prototypes</h1>
-      <p>A place to build patterns relating to the EA data returns service and to get them tested and capture feedback.</p>
-      <p>Old stuff lives in <a href="/ARCHIVE/">the archive</a></p>
-
-      <h2 class="heading-large">Prototypes</h2>
-      <h3 class="heading-small"><a href="/pollution-inventory-report/">Pollution inventory report</a></h3>
-      <h3 class="heading-small">Managing lists</h3>
-      <ul>
-        <li><a href="/managing-lists/editor">Editor</a></li>
-        <li><a href="/managing-lists/admin">Administrator</a></li>
-      </ul>
-
-      <h2 class="heading-large">Patterns</h2>
-      <ul>
-        <li><a href="/help/guidance">Draft GOV.UK guidance: Report landfill data draft GOV.UK detailed guide</a></li>
-        <li><a href="/examples/off-site-waste-transfer/">Waste code selection</a></li>
-      </ul>
-
-      <h3 class="heading-medium">Prototype kit examples and documentation</h3>
-      <ul class="list list-bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-      </ul>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">Report your pollution inventory</h1>
+        </header>
+        <section>
+            <a class="button button-start" href="task-list" role="button">Start now</a>
+            <h2 class="heading-medium">Before you start</h2>
+        </section>
     </div>
   </div>
 </main>

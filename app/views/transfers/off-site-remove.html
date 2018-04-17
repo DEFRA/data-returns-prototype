@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Are you sure you don’t need to report this off-site waste transfer?
+            </h1>
+        </header>
+        <section>
+            <div class="form-group">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">EWC</th>
+                                    <th scope="col">WFD</th>
+                                    <th scope="col">Tonnes</th>
+                                    <th scope="col">Company details</th>
+                                    <th scope="col">Site details</th>
+                                    <th scope="col">In confidence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>14&nbsp;02&nbsp;01</td>
+                                    <td>D10</td>
+                                    <td>250,000</td>
+                                    <td>n/a</td>
+                                    <td>n/a</td>
+                                    <td>Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>   
+            <form action="off-site-confirmation" method="post" class="form">
+                <div class="form-group">
+                    <input class="button" type="submit" value="Confirm">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="link" value="Cancel and go back" onclick="history.back(-1)" />
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
