@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading" tabindex="-1">
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading">
+            Check what you’re reporting</h2>
+            <ul class="error-summary-list">
+                <li><a href="#nose-p-code">Enter a correct NOSE-P code</a></li>
+                <li><a href="#nose-p-code">You have already entered this code</a></li>
+            </ul>
+        </div>
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Add your activity codes</span>
+                What is your NOSE-P code?
+            </h1>
+            <p class="lede">You can add extra NOSE-P codes later.</p>
+        </header>
+        <section>
+            <form action="nose-p-code-summary" method="post" class="form">
+                <div class="form-group form-group-error">
+                    <label class="form-label" for="nose-p-code">Enter the code for a process carried out on your site.</label>
+                    <span class="form-hint">For example ‘105.09’.</span>
+                    <span class="error-message">Enter a correct NOSE-P code</span>
+                    <input class="form-control form-control-error nose-p-code" id="nose-p-code" name="nose-p-code" type="text" value="">
+                </div>
+                <details class="form-group">
+                    <summary><span class="summary">How can I find my NOSE-P code(s)?</span></summary>
+                    <div class="panel panel-border-narrow">
+                        <p>Check <a href="https://www.gov.uk/government/publications/pollution-inventory-reporting-guidance-notes">the reporting codes guidance</a> to find the 5-digit code (or codes) for the main processes carried out on your site.</p>
+                    </div>
+                </details>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Save and continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-full">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Are you sure you don’t need to report any carbon dioxide releases to air?
+            </h1>
+        </header>
+        <section>
+           <form action="summary" method="post" class="form">
+                <div class="form-group">
+                    <input class="button" type="submit" value="Remove">
+                </div>
+                <div class="form-group">
+                    <input type="button" class="link" value="Cancel and go back" onclick="history.back(-1)" />
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

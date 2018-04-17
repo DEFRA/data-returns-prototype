@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Did you transfer any substances in waste water?
+            </h1>
+        </header>
+        <section>
+            <form action="/task-list" method="post" class="form">
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <div class="multiple-choice">
+                            <input id="radio-inline-1" checked type="radio" name="radio-inline-group-1" value="Yes">
+                            <label for="radio-inline-1">Yes</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="radio-inline-2" type="radio" name="radio-inline-group-1" value="No">
+                            <label for="radio-inline-2">No</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

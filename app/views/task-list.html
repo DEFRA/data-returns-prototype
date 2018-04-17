@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-large">
+                Report your pollution inventory
+                <span class="heading-secondary">PP3630BC - Kenwick Landfill</span>
+            </h1>
+        </header>
+        <section>
+           <ol class="task-list">
+                <li>
+                    <h2 class="task-list-section">
+                        <span class="task-list-section-number">1. </span>Add your activity code
+                    </h2>
+                    <ul class="task-list-items">
+                        <li class="task-list-item">
+                            <a href="details/nace-code" aria-describedby="nace-completed">
+                            NACE code
+                            </a>
+                            <strong class="task-completed" id="nace-completed">Completed</strong>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="details/nose-p-code" aria-describedby="nose-p-completed">
+                            NOSE-P code(s)
+                            </a>
+                            <strong class="task-completed" id="nace-completed">Completed</strong>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-list-section">
+                        <span class="task-list-section-number">2. </span>Report your data
+                    </h2>
+                    <ul class="task-list-items">
+                        <li class="task-list-item">
+                            <a href="releases/air/challenge" aria-describedby="air-completed">
+                            Releases to air
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="releases/land/challenge" aria-describedby="land-completed">
+                            Releases to land
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="releases/water/challenge" aria-describedby="water-completed">
+                            Releases to controlled waters
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="releases/sewers/challenge" aria-describedby="sewer-completed">
+                            Releases to sewers (RSR only)
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="transfers/wastewater/challenge" aria-describedby="transfer-wastewater-completed">
+                            Off-site transfers in wastewater
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="transfers/off-site/challenge" aria-describedby="off-site-transfer-completed">
+                            Off-site waste transfers
+                            </a>
+                            <strong class="task-completed" id="nace-completed">Completed</strong>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h2 class="task-list-section">
+                        <span class="task-list-section-number">3. </span>Check and submit your report
+                    </h2>
+                    <ul class="task-list-items">
+                        <li class="task-list-item">
+                            <a href="check/check" aria-describedby="check-completed">
+                            Check your data
+                            </a>
+                        </li>
+                        <li class="task-list-item">
+                            <a href="check/submit" aria-describedby="submit-completed">
+                            Submit your report
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

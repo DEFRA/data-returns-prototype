@@ -8,6 +8,7 @@ input {
 	}
   &.form-confidential {
     height: 200px;
+    width: 100%;
   }
 }
 
@@ -16,5 +17,10 @@ input {
 }
 
 input.details-follow {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
+}
+
+textarea.hazardous-business-addess {
+  height: 150px;
+  width: 75%;
+}

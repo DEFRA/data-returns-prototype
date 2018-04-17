@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Tell us about your transfer of waste off site
+            </h1>
+        </header>
+        <section>     
+            <form action="add-values-error" method="post" class="form">
+                <h2 class="heading-medium">Enter your waste transfer codes</h2>
+                <div class="form-group">
+                    <label class="form-label">European Waste Catalogue (EWC) code
+                    <span class="form-hint">For example ‘17 05 03’.</span></label>
+                    <input class="form-control ewc-code details-follow" autofocus id="ewc-code" name="ewc-code" type="text">
+                    <details class="form-group">
+                        <summary><span class="summary">How can I find my EWC code?</span></summary>
+                        <div class="panel panel-border-narrow">
+                            <p>Check the <a href="https://www.gov.uk/government/publications/pollution-inventory-reporting-guidance-notes" target="_blank">reporting codes guidance</a> (opens in a new tab) to find the relevant 6-digit code for your site's industry and process.</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Waste Framework Directive (WFD) code
+                    <span class="form-hint">For example ‘D5’ or ‘R13’.</span></label>
+                    <input class="form-control wfd-code details-follow" id="wfd-code" name="wfd-code" type="text">
+                    <details class="form-group">
+                        <summary><span class="summary">How can I find my WFD code?</span></summary>
+                        <div class="panel panel-border-narrow">
+                            <p>Check the <a href="https://www.gov.uk/government/publications/pollution-inventory-reporting-guidance-notes" target="_blank">reporting codes guidance</a> (opens in a new tab) to find the 2 or 3-digit recovery or disposal code that describes what happened to this waste.</p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="heading-medium">Total waste transferred under these codes</h2>
+                <div class="form-group">    
+                    <label class="form-label">Total waste transferred</label>
+                    <input class="form-control total details-follow" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text"> tonnes
+                    <details class="form-group">
+                    <summary><span class="summary">How should I calculate this?</span></summary>
+                        <div class="panel panel-border-narrow">
+                            <p>TBC</p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="heading-medium">How did you reach this total?</h2>
+                <div class="form-group">
+                  <fieldset class="inline">    
+                    <div class="multiple-choice">
+                      <input id="radio-inline-hd1" type="radio" name="radio-inline-group-hd" value="Yes">
+                      <label for="radio-inline-hd1">Weight</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-hd2" type="radio" name="radio-inline-group-hd" value="No">
+                      <label for="radio-inline-hd2">Calculation</label>
+                    </div>
+                    <div class="multiple-choice">
+                      <input id="radio-inline-hd3" type="radio" name="radio-inline-group-hd" value="No">
+                      <label for="radio-inline-hd3">Estimation</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
