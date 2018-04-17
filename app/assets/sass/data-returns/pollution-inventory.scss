@@ -1,0 +1,29 @@
+input {
+  &.nace-code,
+  &.nose-p-code,
+  &.ewc-code,
+  &.wfd-code,
+  &.total {
+    width: 5em;
+	}
+
+  &.form-confidential {
+    height: 200px;
+    width: 100%;
+  }
+
+  &.details-follow {
+    margin-bottom: 20px;
+  }
+}
+
+.notice.cleared {
+  clear: left;
+}
+
+textarea {
+  .hazardous-business-addess {
+    height: 150px;
+    width: 75%;
+  }
+}

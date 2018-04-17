@@ -7,6 +7,5 @@ router.get('/', function (req, res) {
 })
 
 // add your routes here
-// Branching
 
 module.exports = router
