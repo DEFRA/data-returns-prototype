@@ -16,62 +16,16 @@
                 <span class="heading-secondary">Report your data</span>
                 Add a release to air
             </h1>
+            <p>If your release is below a specific number, you do not need to tell us the exact amount. This is called being BRT (below reporting threshold).</p>
         </header>
         <section>
             <form action="add-values-error" method="post" class="form">
-                <h2 class="heading-large">More about your release of carbon dioxide</h1>
-                <div class="form-group">
-                    <table class="more-detail table-control mobile-format">
-                        <thead> </thead>
-                        <tbody>
-                            <tr>
-                                <th class="2016-total">2017 total</th>
-                                <td class="2016-total-value">1,234 kg</td>
-                            </tr>
-                            <tr>
-                                <th class="2017-reporting-threshold">2018 reporting threshold</th>
-                                <td class="2017-reporting-threshold-value">1,000 kg</td>
-                            </tr>
-                            <tr>
-                                <th class="2017-total-or-BRT">2018 total</th>
-                                <td class="2017-total-or-BRT-value">
-                                    <label class="form-label visually-hidden" for="2017-total-or-BRT-value"></label>
-                                    <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="unit">Unit</th>
-                                <td class="unit">
-                                    <label class="form-label visually-hidden" for="select-box">Unit</label>
-                                    <select class="form-control unit" id="select-box" name="select-box">
-                                        <option selected>--</option>
-                                        <option>kt</option>
-                                        <option>t</option>
-                                        <option>kg</option>
-                                        <option>g</option>
-                                        <option>mg</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="method">Method</th>
-                                <td class="method">
-                                    <label class="form-label visually-hidden" for="select-box">Method</label>
-                                    <select class="form-control method" id="select-box" name="select-box">
-                                        <option selected>--</option>
-                                        <option>Calculation</option>
-                                        <option>Measurement</option>
-                                        <option>Estimation</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
                 <div class="form-group">
                     <fieldset class="inline">
-                        <h1 class="heading-medium">Was this a notifiable release?</h1>
-                        <div class="multiple-choice" data-target="contact-by-email">
+                        <legend>
+                            <h2 class="heading-medium">Did you release more than 1,234 kg of carbon dioxide in 2018?</h2>
+                        </legend>
+                        <div class="multiple-choice" data-target="above-threshold-release-yes">
                             <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
                             <label for="radio-inline-1">Yes</label>
                         </div>
@@ -79,41 +33,67 @@
                             <input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No">
                             <label for="radio-inline-2">No</label>
                         </div>
-                        <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
-                            <table class="more-detail table-control mobile-format">
-                                <thead> </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="release-amount">Release amount</th>
-                                        <td class="release-amount-value">
-                                            <label class="form-label visually-hidden" for="notifiable-release-total">Notifiable release total</label>
-                                            <input class="form-control" id="notifiable-release-total" name="notifiable-release-total" type="text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="unit">Unit of measurement</th>
-                                        <td class="unit-value"> <label class="form-label visually-hidden" for="select-box">Unit</label>
-                                            <select class="form-control" id="select-box" name="select-box">
-                                                <option>--</option>
-                                                <option>kt</option>
-                                                <option>t</option>
-                                                <option selected>kg</option>
-                                                <option>g</option>
-                                                <option>mg</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="cause">What caused this release?</th>
-                                        <td class="cause-value">
-                                            <textarea style="height:150px; width:100%"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                </tbody>
-                            </table>
-                          </div>
                     </fieldset>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="above-threshold-release-yes">
+                    <div class="form-group">
+                        <label class="form-label" for="2017-total-or-BRT-value">Enter your 2018 total</label>
+                        <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <h3 class="form-label">Select unit for total</h3>
+                            </legend>
+
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="milligrams">
+                                <label for="radio-1">milligrams</label>
+                            </div>
+                                <div class="multiple-choice">
+                                <input id="radio-2" type="radio" name="radio-group" value="grams">
+                                <label for="radio-2">grams</label>
+                            </div>
+                                <div class="multiple-choice">
+                                <input id="radio-3" type="radio" name="radio-group" checked value="kilograms">
+                                <label for="radio-3">kilograms</label>
+                            </div>
+                                <div class="multiple-choice">
+                                <input id="radio-4" type="radio" name="radio-group" value="tonnes">
+                                <label for="radio-4">tonnes</label>
+                            </div>
+                                <div class="multiple-choice">
+                                <input id="radio-5" type="radio" name="radio-group" value="kilotonnes">
+                                <label for="radio-5">kilotonnes</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <h3 class="form-label">Select method for total</h3>
+                            </legend>
+
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group-2" value="Calculation">
+                                <label for="radio-1">Calculation</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-2" type="radio" name="radio-group-2" checked value="Estimation">
+                                <label for="radio-2">Estimation</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-3" type="radio" name="radio-group-2" value="Measurement">
+                                <label for="radio-3">Measurement</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="textarea">
+                          Please provide details of method used
+                        </label>
+                        <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input class="button" type="submit" value="Save and continue">
