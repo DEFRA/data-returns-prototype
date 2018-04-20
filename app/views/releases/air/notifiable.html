@@ -14,11 +14,11 @@
         <header>
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Report your data</span>
-                Did you release any substances to air?
+                Add a release to air
             </h1>
         </header>
         <section>
-            <form action="notifiable-error" method="post" class="form">
+            <form action="summary" method="post" class="form">
                 <div class="form-group">
                     <fieldset class="inline">
                         <h1 class="heading-medium">Was this a notifiable release?</h1>
@@ -31,39 +31,9 @@
                             <label for="radio-inline-2">No</label>
                         </div>
                         <div class="panel panel-border-narrow js-hidden" id="notifiable-release-yes">
-                            <table class="more-detail table-control mobile-format">
-                                <thead> </thead>
-                                <tbody>
-                                    <tr>
-                                        <th class="release-amount">Release amount</th>
-                                        <td class="release-amount-value">
-                                            <label class="form-label visually-hidden" for="notifiable-release-total">Notifiable release total</label>
-                                            <input class="form-control" id="notifiable-release-total" name="notifiable-release-total" type="text">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="unit">Unit of measurement</th>
-                                        <td class="unit-value"> <label class="form-label visually-hidden" for="select-box">Unit</label>
-                                            <select class="form-control" id="select-box" name="select-box">
-                                                <option>--</option>
-                                                <option>kt</option>
-                                                <option>t</option>
-                                                <option selected>kg</option>
-                                                <option>g</option>
-                                                <option>mg</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="cause">What caused this release?</th>
-                                        <td class="cause-value">
-                                            <textarea style="height:150px; width:100%"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                </tbody>
-                            </table>
-                          </div>
+                            <label>What caused this release?</label>
+                            <textarea style="height:150px; width:100%"></textarea>
+                        </div>
                     </fieldset>
                 </div>
                 <div class="form-group">
