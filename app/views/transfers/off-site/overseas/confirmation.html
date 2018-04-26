@@ -13,7 +13,7 @@ input.postal-code {
 
 <main id="content" role="main">
     <div class="grid-row">
-        <div class="column-full">
+        <div class="column-two-thirds">
             {% block breadcrumbs %}
                 {% include "includes/breadcrumb_examples.html" %}
             {% endblock %}
@@ -26,80 +26,143 @@ input.postal-code {
             <section>     
                 <form action="/task-list" method="post" class="form">
                     <div class="form-group">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope="col">EWC</th>
-                                    <th scope="col">WFD</th>
-                                    <th scope="col">Tonnes</th>
-                                    <th scope="col">Company details</th>
-                                    <th scope="col">Site details</th>
-                                    <th scope="col">In confidence</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>14&nbsp;02&nbsp;01</td>
-                                    <td>D10</td>
-                                    <td>250,000</td>
-                                    <td>n/a</td>
-                                    <td>n/a</td>
-                                    <td>Yes</td>
-                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td>17&nbsp;05&nbsp;03</td>
-                                    <td>R1</td>
-                                    <td>2</td>
-                                    <td>n/a</td>
-                                    <td>n/a</td>
-                                    <td>No</td>
-                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td>11&nbsp;01&nbsp;02</td>
-                                    <td>R1</td>
-                                    <td>5.2</td>
-                                    <td>
-                                        Vanheede<br>
-                                        375 Avenue de Sofia<br>
-                                        62138<br>
-                                        Billy-Berclau<br>
-                                        France
-                                    </td>
-                                    <td>
-                                        375 Avenue de Sofia<br>
-                                        62138<br>
-                                        Billy-Berclau<br>
-                                        France
-                                    </td>
-                                    <td>No</td>
-                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
-                                </tr>
-                                <tr>
-                                    <td>17&nbsp;05&nbsp;03</td>
-                                    <td>D8</td>
-                                    <td>25</td>
-                                    <td>
-                                        Vanheede<br>
-                                        375 Avenue de Sofia<br>
-                                        62138<br>
-                                        Billy-Berclau<br>
-                                        France
-                                    </td>
-                                    <td>
-                                        375 Avenue de Sofia<br>
-                                        62138<br>
-                                        Billy-Berclau<br>
-                                        France
-                                    </td>
-                                    <td>No</td>
-                                    <td class="action"><a href="remove">Remove <span class="visuallyhidden">this transfer</span></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <h2 class="heading-medium">
+                        Transfer details for 01 03 05/R4
+                        </h2>
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                            <div>
+                                <dt class="cya-question">
+                                    EWC Code
+                                </dt>
+                                <dd class="cya-answer">
+                                    01 03 05 (other tailings containing dangerous substances)
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> EWC Code</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Disposal or Recovery Code (WFD)
+                                </dt>
+                                <dd class="cya-answer">
+                                    R6 (Regeneration of acids or bases)
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> WFD Code</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Quantity
+                                </dt>
+                                <dd class="cya-answer">
+                                    250,000 tonnes
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> quantity</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Method used
+                                </dt>
+                                <dd class="cya-answer">
+                                    Weighing
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> tonnage</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Commercial in confidence
+                                </dt>
+                                <dd class="cya-answer">
+                                    No
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> tonnage</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Company address
+                                </dt>
+                                <dd class="cya-answer">
+                                    Vanheede, 375 Avenue de Sofia, 62138, Billy-Berclau, France
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> company address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Site address
+                                </dt>
+                                <dd class="cya-answer">
+                                    1 Philadelphia Street, Bristol BS1 3BZ
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> site address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Company address
+                                </dt>
+                                <dd class="cya-answer">
+                                    Vanheede, 375 Avenue de Sofia, 62138, Billy-Berclau, France
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> company address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Site address
+                                </dt>
+                                <dd class="cya-answer">
+                                    1 Philadelphia Street, Bristol BS1 3BZ
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> site address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt class="cya-question">
+                                    Site address
+                                </dt>
+                                <dd class="cya-answer">
+                                    1 Philadelphia Street, Bristol BS1 3BZ
+                                </dd>
+                                <dd class="cya-change">
+                                    <a href="#">
+                                    Change<span class="visually-hidden"> site address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                        </dl>
                     </div>
+                    <p><a href="../off-site/add-values">Delete this transfer</a></p>
                     <p><a href="../off-site/add-values">Report another transfer</a></p>
                     <div class="form-group">
                         <input type="submit" class="button" value="Continue">
