@@ -14,32 +14,16 @@
         <header>
             <h1 class="heading-xlarge">
                 <span class="heading-secondary">Report your data</span>
-                More about your release of Ammonia
+                Add a release to air
             </h1>
-            <p>If your release is below a specific number, you do not need to tell us the exact amount. This is called being BRT (below reporting threshold).</p>
         </header>
         <section>
             <form action="summary" method="post" class="form">
+                <h2 class="heading-large">Edit your release of carbon dioxide</h1>
                 <div class="form-group">
-                    <fieldset class="inline">
-                        <legend>
-                            <h2 class="heading-medium">Did you release more than 1,234 kg of ammonia in 2018?</h2>
-                        </legend>
-                        <div class="multiple-choice" data-target="above-threshold-release-yes">
-                            <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
-                            <label for="radio-inline-1">Yes</label>
-                        </div>
-                        <div class="multiple-choice">
-                            <input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No">
-                            <label for="radio-inline-2">No</label>
-                        </div>
-                    </fieldset>
+                    <label class="form-label" for="2017-total-or-BRT-value"><h3 class="heading-small">Your 2018 total</h3></label>
+                    <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text" value="1.0E+7">
                 </div>
-                <div class="panel panel-border-narrow js-hidden" id="above-threshold-release-yes">
-                    <div class="form-group">
-                        <label class="form-label" for="2017-total-or-BRT-value"><h3 class="heading-small">Enter your 2018 total</h3></label>
-                        <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
-                    </div>
                     <div class="form-group">
                       <fieldset class="inline">
                             <legend>
@@ -125,16 +109,15 @@
                             <label for="radio-1">OTH - Other calculation method</label>
                         </div>
                     </div>
-                </div>
-                 <div class="form-group">
+                    <div class="form-group">
                     <fieldset class="inline">
                         <h1 class="heading-medium">Does this amount include a notifiable release?</h1>
                         <div class="multiple-choice" data-target="notifiable-release-yes">
-                            <input id="radio-inline-1" type="radio" name="radio-inline-group-2" value="Yes">
+                            <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
                             <label for="radio-inline-1">Yes</label>
                         </div>
                         <div class="multiple-choice">
-                            <input id="radio-inline-2" checked type="radio" name="radio-inline-group-2" value="No">
+                            <input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No">
                             <label for="radio-inline-2">No</label>
                         </div>
                     </fieldset>
@@ -144,7 +127,7 @@
                             <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
                         </div>
                         <div class="form-group">
-                            <fieldsetm class="inline">
+                            <fieldset class="inline">
                                 <legend>
                                     <h3 class="heading-small">Select unit for total</h3>
                                 </legend>

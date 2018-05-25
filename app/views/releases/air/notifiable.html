@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Data returns prototype kit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            {% block breadcrumbs %}
+                {% include "includes/breadcrumb_examples.html" %}
+            {% endblock %}
+        <header>
+            <h1 class="heading-xlarge">
+                <span class="heading-secondary">Report your data</span>
+                Add a release to air
+            </h1>
+        </header>
+        <section>
+            <form action="add-values" method="post" class="form">
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <h1 class="heading-medium">Does this amount include a notifiable release?</h1>
+                        <div class="multiple-choice" data-target="notifiable-release-yes">
+                            <input id="radio-inline-1" type="radio" name="radio-inline-group-1" value="Yes">
+                            <label for="radio-inline-1">Yes</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="radio-inline-2" checked type="radio" name="radio-inline-group-1" value="No">
+                            <label for="radio-inline-2">No</label>
+                        </div>
+                    </fieldset>
+                    <div class="panel panel-border-narrow js-hidden" id="notifiable-release-yes">
+                        <div class="form-group">
+                            <label class="form-label" for="2017-total-or-BRT-value">Enter total for notifiable release</label>
+                            <input class="form-control" id="2017-total-or-BRT-value" name="2017-total-or-BRT-value" type="text">
+                        </div>
+                        <div class="form-group">
+                            <fieldset class="inline">
+                                <legend>
+                                    <h3 class="heading-small">Select unit for total</h3>
+                                </legend>
+
+                                <div class="multiple-choice">
+                                    <input id="radio-1" type="radio" name="radio-group" value="milligrams">
+                                    <label for="radio-1">mg</label>
+                                </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-2" type="radio" name="radio-group" value="grams">
+                                    <label for="radio-2">g</label>
+                                </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-3" type="radio" name="radio-group" checked value="kilograms">
+                                    <label for="radio-3">kg</label>
+                                </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-4" type="radio" name="radio-group" value="tonnes">
+                                    <label for="radio-4">t</label>
+                                </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-5" type="radio" name="radio-group" value="kilotonnes">
+                                    <label for="radio-5">kt</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset class="inline">
+                                <legend>
+                                    <h3 class="heading-small">Select method for total</h3>
+                                </legend>
+
+                                <div class="multiple-choice">
+                                    <input id="radio-1" type="radio" name="radio-group-2" value="Calculation">
+                                    <label for="radio-1">Calculation</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="radio-2" type="radio" name="radio-group-2" checked value="Estimation">
+                                    <label for="radio-2">Estimation</label>
+                                </div>
+                                <div class="multiple-choice">
+                                    <input id="radio-3" type="radio" name="radio-group-2" value="Measurement">
+                                    <label for="radio-3">Measurement</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <legend>
+                                <h3 class="heading-small">Please provide details of method used</h3>
+                            </legend>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="ETS">
+                                <label for="radio-1">ETS - Method from the guidelines for the monitoring and reporting of greenhouse gas releases under the Emission Trading Scheme</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="IPCC">
+                                <label for="radio-1">IPCC - Method from the IPCC guidelines</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="UNECE/EMEP">
+                                <label for="radio-1">UNECE/EMEP - Method from the EMEP/CORINAIR atmospheric emission inventory guidebook</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="PER">
+                                <label for="radio-1">PER - Calculation method prescribed by us in an operating permit or licence for the installation</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="NRB">
+                                <label for="radio-1">NRB - National or regional binding calculation method prescribed by legal act for the substance and installation concerned</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="MAB">
+                                <label for="radio-1">MAB - Mass balance method approved by us</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="SSC">
+                                <label for="radio-1">SSC - European sector-specific calculation method</label>
+                            </div>
+                            <div class="multiple-choice">
+                                <input id="radio-1" type="radio" name="radio-group" value="OTH">
+                                <label for="radio-1">OTH - Other calculation method</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>What caused this release?</label>
+                            <textarea style="height:150px; width:100%"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+            </form>
+        </section>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
